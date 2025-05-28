@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display, Merriweather, Work_Sans, EB_Garamond, IBM_Plex_Sans, Lora, Space_Grotesk, Roboto_Slab, Cormorant_Garamond, Bodoni_Moda, Prata, DM_Serif_Display, Libre_Baskerville, Vollkorn, Spectral } from 'next/font/google';
+import { Inter, Playfair_Display, Merriweather, Work_Sans, EB_Garamond, IBM_Plex_Sans, Lora, Space_Grotesk, Roboto_Slab, Cormorant_Garamond, Prata, DM_Serif_Display, Libre_Baskerville, Vollkorn, Spectral } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -10,7 +10,6 @@ const lora = Lora({ subsets: ['latin'], variable: '--font-lora' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-spacegrotesk' });
 const robotoSlab = Roboto_Slab({ subsets: ['latin'], variable: '--font-robotoslab' });
 const cormorantGaramond = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-cormorantgaramond' });
-const bodoniModa = Bodoni_Moda({ subsets: ['latin'], variable: '--font-bodonimoda' });
 const prata = Prata({ subsets: ['latin'], weight: ['400'], variable: '--font-prata' });
 const dmSerifDisplay = DM_Serif_Display({ subsets: ['latin'], weight: ['400'], variable: '--font-dmserifdisplay' });
 const libreBaskerville = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-librebaskerville' });
@@ -126,21 +125,6 @@ export default function FontTestPage() {
       </section>
 
       {/* Editorial & Modern - More Examples */}
-      <section>
-        <div className="mb-2 text-sm text-accent-light dark:text-accent-dark font-semibold">Editorial & Modern</div>
-        <div className="mb-4">
-          <span className="text-xs uppercase tracking-widest text-gray-400">Bodoni Moda + Inter</span>
-        </div>
-        <h1 className={`${bodoniModa.variable} font-serif text-5xl mb-6`} style={{ fontFamily: 'var(--font-bodonimoda), serif' }}>
-          Headline Example
-        </h1>
-        <blockquote className={`${bodoniModa.variable} font-serif italic text-3xl mb-6`} style={{ fontFamily: 'var(--font-bodonimoda), serif', fontStretch: 'condensed' }}>
-          {sampleQuote}
-        </blockquote>
-        <p className={`${inter.variable} font-sans text-lg`} style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
-          {sampleBody}
-        </p>
-      </section>
       <section>
         <div className="mb-2 text-sm text-accent-light dark:text-accent-dark font-semibold">Editorial & Modern</div>
         <div className="mb-4">

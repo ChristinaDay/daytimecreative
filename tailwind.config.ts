@@ -56,6 +56,7 @@ const config: Config = {
       fontSize: {
         '5xl': ['3rem', { lineHeight: '1.25' }],
         '6xl': ['3.75rem', { lineHeight: '1.25' }],
+        '7xl': ['4.5rem', { lineHeight: '1.25' }],
         '4xl': ['2.25rem', { lineHeight: '1.25' }],
         '3xl': ['1.875rem', { lineHeight: '1.25' }],
         '2xl': ['1.5rem', { lineHeight: '1.25' }],

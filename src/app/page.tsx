@@ -261,7 +261,7 @@ export default function Home() {
       <header className="relative z-10 w-full min-h-screen flex flex-col justify-between">
         {/* Large headline */}
         <div className="flex flex-col items-start justify-center flex-1 pt-48 pb-56">
-          <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-20">
+          <h1 className="text-left text-6xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-20">
             I'm Christina, a designer based in Oakland. Keep reading to learn more about me and my work.
           </h1>
         </div>
@@ -317,7 +317,7 @@ export default function Home() {
           {/* Right: Image */}
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <img 
-              src="/images/HackerDAO/hackerdao-illustration-big.png" 
+              src="/images/hackerdao-illustration-big.png" 
               alt="HackerDAO Project" 
               className="rounded-xl shadow-2xl w-full h-auto object-contain" 
             />
@@ -338,7 +338,7 @@ export default function Home() {
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <div className="bg-white rounded-xl shadow-2xl w-full aspect-[4/3] flex items-center justify-center p-8">
               <img 
-                src="/images/Betterview/Property Intelligence/betterview-propertyintelligence2.png" 
+                src="/images/betterview-propertyintelligence2.png" 
                 alt="Property Intelligence Platform" 
                 className="w-full h-full object-contain" 
               />
@@ -360,7 +360,7 @@ export default function Home() {
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <div className="bg-white rounded-xl shadow-2xl w-full aspect-[4/3] flex items-center justify-center p-8">
               <img 
-                src="/images/Betterview/Customizable UI/betterview-propertyintelligence1.png"
+                src="/images/betterview-propertyintelligence1.png"
                 alt="Customizable UI Dashboard Configuration"
                 className="w-full h-full object-contain" 
               />
@@ -382,7 +382,7 @@ export default function Home() {
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <div className="bg-white rounded-xl shadow-2xl w-full aspect-[4/3] flex items-center justify-center p-8">
               <img 
-                src="/images/Betterview/Spotlights/betterview-spotlights1.png" 
+                src="/images/betterview-spotlights1.png" 
                 alt="Spotlights Reporting at Betterview" 
                 className="w-full h-full object-contain" 
               />
@@ -403,7 +403,7 @@ export default function Home() {
           {/* Right: Image (Placeholder) */}
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <img 
-              src="/images/ZeroCater/SnacksKitchens/zerocater_snacks.jpg" 
+              src="/images/zerocater_snacks.jpg" 
               alt="ZeroCater Snacks & Kitchens" 
               className="rounded-xl shadow-2xl w-full h-auto object-contain" 
             />

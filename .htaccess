@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# Allow access to images directory and files
+<Directory "/public_html/images">
+    Options +Indexes
+    AllowOverride None
+    Require all granted
+</Directory>
+
+# Allow access to image files specifically
+<FilesMatch "\.(png|jpg|jpeg|gif|svg|webp)$">
+    Require all granted
+</FilesMatch>
+
+# If the request is not a file or directory, but a .html file exists, serve it
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L] 

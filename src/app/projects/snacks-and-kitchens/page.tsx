@@ -40,7 +40,7 @@ export default function SnacksAndKitchensPage() {
           className="mb-16 w-full relative aspect-[16/9] bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden"
         >
           <Image
-            src="/images/ZeroCater/SnacksKitchens/zerocater_snacks.jpg"
+            src="/images/zerocater_snacks.jpg"
             alt="Curated snack selections for every office."
             fill
             className="object-cover"
@@ -72,7 +72,7 @@ export default function SnacksAndKitchensPage() {
             </div>
             <div>
               <Image
-                src="/images/ZeroCater/SnacksKitchens/catering-snacks-customer-dashboards.jpg"
+                src="/images/catering-snacks-customer-dashboards.jpg"
                 alt="Customer dashboard for managing snack and kitchen subscriptions."
                 width={500}
                 height={400}
@@ -113,7 +113,7 @@ export default function SnacksAndKitchensPage() {
                 className="w-full relative aspect-[16/9] bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden"
               >
                 <Image
-                  src="/images/ZeroCater/SnacksKitchens/zc_snacks_data-driven.jpg"
+                  src="/images/zc_snacks_data-driven.jpg"
                   alt="Data-driven insights for optimizing office snack programs."
                   fill
                   className="object-cover"
@@ -131,7 +131,7 @@ export default function SnacksAndKitchensPage() {
             className="mt-16 mb-8 w-full relative aspect-[16/9] bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/ZeroCater/SnacksKitchens/zerocater_snacks-dashboard3.jpg"
+              src="/images/zerocater_snacks-dashboard3.jpg"
               alt="Snacks & Kitchens dashboard for office managers."
               fill
               className="object-cover"
@@ -157,7 +157,7 @@ export default function SnacksAndKitchensPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/ZeroCater/SnacksKitchens/zerocater_snacks-user-flows.png"
+              src="/images/zerocater_snacks-user-flows.png"
               alt="User flows for the Snacks & Kitchens platform."
               fill
               className="object-contain"
@@ -170,7 +170,7 @@ export default function SnacksAndKitchensPage() {
             <div className="flex flex-col">
               <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
                 <Image
-                  src="/images/ZeroCater/SnacksKitchens/Feedback form A - Multiple choice.png"
+                  src="/images/Feedback form A - Multiple choice.png"
                   alt="Feedback form: Multiple choice"
                   width={700}
                   height={500}
@@ -185,7 +185,7 @@ export default function SnacksAndKitchensPage() {
             <div className="flex flex-col">
               <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
                 <Image
-                  src="/images/ZeroCater/SnacksKitchens/Feedback form B - Icons.png"
+                  src="/images/Feedback form B - Icons.png"
                   alt="Feedback form: Icons"
                   width={700}
                   height={500}
@@ -200,7 +200,7 @@ export default function SnacksAndKitchensPage() {
             <div className="flex flex-col">
               <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
                 <Image
-                  src="/images/ZeroCater/SnacksKitchens/Feedback form C - Cards.png"
+                  src="/images/Feedback form C - Cards.png"
                   alt="Feedback form: Cards"
                   width={700}
                   height={500}
@@ -215,7 +215,7 @@ export default function SnacksAndKitchensPage() {
             <div className="flex flex-col">
               <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
                 <Image
-                  src="/images/ZeroCater/SnacksKitchens/Feedback form E - Simple.png"
+                  src="/images/Feedback form E - Simple.png"
                   alt="Feedback form: Simple"
                   width={700}
                   height={500}
@@ -253,7 +253,7 @@ export default function SnacksAndKitchensPage() {
             </div>
             <div>
               <Image
-                src="/images/ZeroCater/SnacksKitchens/onsite-staff-powered-by-technology.jpg"
+                src="/images/onsite-staff-powered-by-technology.jpg"
                 alt="Onsite staff powered by technology for seamless service."
                 width={700}
                 height={500}
