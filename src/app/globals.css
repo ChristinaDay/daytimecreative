@@ -7,6 +7,25 @@
     font-family: var(--font-prata), serif;
     line-height: 1.25;
   }
+  
+  h1 {
+    font-size: 3.75rem; /* text-6xl */
+    line-height: 1.25 !important;
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.75rem; /* text-6xl */
+      line-height: 1.25 !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 4.5rem; /* text-7xl */
+      line-height: 1.25 !important;
+    }
+  }
 }
 
 :root {

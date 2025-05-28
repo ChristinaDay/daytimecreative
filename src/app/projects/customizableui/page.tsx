@@ -39,7 +39,7 @@ export default function CustomizableUIPage() {
           className="mb-2 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block"
         >
           <Image
-            src="/images/Betterview/Customizable UI/betterview-propertyintelligence1.png"
+            src="/images/betterview-propertyintelligence1.png"
             alt="Customizable UI Hero Image"
             fill
             className="object-contain p-4"
@@ -91,7 +91,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block mb-4"
             >
               <Image
-                src="/images/Betterview/Customizable UI/portfolio-betterviewAsset+28@2x.png"
+                src="/images/portfolio-betterviewAsset+28@2x.png"
                 alt="Dashboard Configuration Overview"
                 fill
                 className="object-contain p-4"
@@ -110,7 +110,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block"
             >
               <Image
-                src="/images/Betterview/Customizable UI/Permits.png"
+                src="/images/Permits.png"
                 alt="Implementation Example - Permits Module"
                 fill
                 className="object-contain p-4"
@@ -162,7 +162,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block mb-4"
             >
               <Image
-                src="/images/Betterview/Customizable UI/Screen+Shot+2021-03-22+at+11.39.36+AM.jpg"
+                src="/images/Screen+Shot+2021-03-22+at+11.39.36+AM.jpg"
                 alt="Research and Discovery Process"
                 fill
                 className="object-contain p-4"
@@ -219,7 +219,7 @@ export default function CustomizableUIPage() {
                 className="w-full h-[400px] relative bg-white rounded-lg overflow-hidden shadow-xl mb-4"
               >
                 <Image
-                  src="/images/Betterview/Customizable UI/Screen+Shot+2022-03-24+at+11.41.12+PM-4.jpg"
+                  src="/images/Screen+Shot+2022-03-24+at+11.41.12+PM-4.jpg"
                   alt="Design Iterations and Refinements"
                   fill
                   className="object-contain p-4"
@@ -239,7 +239,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block"
             >
               <Image
-                src="/images/Betterview/Customizable UI/use_screen-quote.png"
+                src="/images/use_screen-quote.png"
                 alt="User Feedback and Testimonials"
                 fill
                 className="object-contain p-4"
@@ -293,7 +293,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block"
             >
               <Image
-                src="/images/Betterview/Customizable UI/betterview-customizableUI1.png"
+                src="/images/betterview-customizableUI1.png"
                 alt="Implementation Overview - Customizable UI"
                 fill
                 className="object-contain p-4"
@@ -343,7 +343,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block"
             >
               <Image
-                src="/images/Betterview/Customizable UI/betterview-configurableuiAsset+44@2x.png"
+                src="/images/betterview-configurableuiAsset+44@2x.png"
                 alt="Final Implementation - Configurable UI"
                 fill
                 className="object-contain p-4"

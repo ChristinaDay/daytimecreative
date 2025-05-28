@@ -39,7 +39,7 @@ export default function SpotlightsReportingPage() {
           className="mb-16 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
         >
           <Image
-            src="/images/Betterview/Spotlights/betterview-spotlights1.png"
+            src="/images/betterview-spotlights1.png"
             alt="Spotlights Reporting Feature Overview"
             fill
             className="object-contain p-4"
@@ -237,7 +237,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Spotlights/Screen+Shot+2021-03-10+at+10.32.02+PM.png"
+                src="/images/Screen+Shot+2021-03-10+at+10.32.02+PM.png"
                 alt="Initial sketches for stakeholder buy-in"
                 fill
                 className="object-contain p-4"
@@ -264,7 +264,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Spotlights/Screen+Shot+2021-03-12+at+2.29.41+PM.png"
+                src="/images/Screen+Shot+2021-03-12+at+2.29.41+PM.png"
                 alt="Prototypes created in Sketch App"
                 fill
                 className="object-contain p-4"
@@ -281,7 +281,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Spotlights/Screen+Shot+2021-03-12+at+2.20.47+PM.png"
+                src="/images/Screen+Shot+2021-03-12+at+2.20.47+PM.png"
                 alt="Additional prototype explorations"
                 fill
                 className="object-contain p-4"
@@ -298,7 +298,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Spotlights/Screen+Shot+2021-03-12+at+2.16.28+PM.png"
+                src="/images/Screen+Shot+2021-03-12+at+2.16.28+PM.png"
                 alt="Design development process"
                 fill
                 className="object-contain p-4"
@@ -350,7 +350,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+1@2x.png"
+              src="/images/portfolio-betterviewAsset+1@2x.png"
               alt="Exploring Engineering Solutions for Legibility"
               fill
               className="object-contain p-4"
@@ -367,7 +367,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+2@2x.png"
+              src="/images/portfolio-betterviewAsset+2@2x.png"
               alt="Visual solutions for representing graphic data"
               fill
               className="object-contain p-4"
@@ -384,7 +384,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+3@2x.png"
+              src="/images/portfolio-betterviewAsset+3@2x.png"
               alt="Creating a Key, or Legend for the map data"
               fill
               className="object-contain p-4"
@@ -436,7 +436,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+15@2x.png"
+              src="/images/portfolio-betterviewAsset+15@2x.png"
               alt="Converting dynamic maps into static datapoints"
               fill
               className="object-contain p-4"
@@ -453,7 +453,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+16+(2)@2x.png"
+              src="/images/portfolio-betterviewAsset+16+(2)@2x.png"
               alt="Static images with visual flags"
               fill
               className="object-contain p-4"
@@ -470,7 +470,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+19@2x.png"
+              src="/images/portfolio-betterviewAsset+19@2x.png"
               alt="An exported page from the new Spotlight Reporting feature"
               fill
               className="object-contain p-4"
@@ -487,7 +487,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/Screen+Shot+2022-12-18+at+3.28.21+AM.png"
+              src="/images/Screen+Shot+2022-12-18+at+3.28.21+AM.png"
               alt="Reducing complex map imagery to static Spotlight Reports"
               fill
               className="object-contain p-4"
@@ -504,7 +504,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/Screen+Shot+2022-12-18+at+3.47.03+AM.jpg"
+              src="/images/Screen+Shot+2022-12-18+at+3.47.03+AM.jpg"
               alt="Additional result screenshots"
               fill
               className="object-contain p-4"
@@ -521,7 +521,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/Screen+Shot+2022-12-18+at+3.46.09+AM.jpg"
+              src="/images/Screen+Shot+2022-12-18+at+3.46.09+AM.jpg"
               alt="Final implementation showcase"
               fill
               className="object-contain p-4"
@@ -538,7 +538,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/businesscardfoilAsset+13+(2)@2x.png"
+              src="/images/businesscardfoilAsset+13+(2)@2x.png"
               alt="Design system elements"
               fill
               className="object-contain p-4"
@@ -555,7 +555,7 @@ export default function SpotlightsReportingPage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Spotlights/portfolio-betterviewAsset+3@2x (1).png"
+              src="/images/portfolio-betterviewAsset+3@2x (1).png"
               alt="Alternative design exploration"
               fill
               className="object-contain p-4"

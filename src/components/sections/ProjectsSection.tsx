@@ -15,14 +15,14 @@ const projects: Project[] = [
   {
     title: "HackerDAO",
     description: "A decentralized autonomous organization platform for developers and hackers to collaborate on Web3 projects.",
-    thumbnail: "/images/HackerDAO/hackerdao-illustration-bw.png",
+    thumbnail: "/images/hackerdao-illustration-bw.png",
     slug: "hackerdao",
     tags: ["Ethereum", "Solidity", "Web3.js", "React"]
   },
   {
     title: "Property Intelligence Platform",
     description: "A sophisticated system leveraging AI and predictive analytics to transform property data into actionable insights for insurance underwriting.",
-    thumbnail: "/images/Betterview/Property Intelligence/BV_Platform_Screen_CAT-Response_Wildfire-Colorado_blur.jpg",
+    thumbnail: "/images/BV_Platform_Screen_CAT-Response_Wildfire-Colorado_blur.jpg",
     slug: "propertyintelligence",
     tags: ["UX Design", "Product Design", "AI/ML", "Insurance Tech"]
   },

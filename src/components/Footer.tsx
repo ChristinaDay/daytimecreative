@@ -5,7 +5,7 @@ const footerTextColor = 'text-[rgb(178,148,198)]';
 export default function Footer() {
   return (
     <footer className="w-full py-12 border-t border-surface-light/20 dark:border-surface-dark/20 dark:bg-[#0f172a]">
-      <div className="max-w-[100rem] mx-auto px-2">
+      <div className="max-w-[100rem] mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <h2 className="font-sans text-xl font-semibold mb-2 text-text-light dark:text-white">

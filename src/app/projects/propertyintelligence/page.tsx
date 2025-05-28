@@ -45,7 +45,7 @@ export default function PropertyIntelligencePage() {
           className="mb-16 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
         >
           <Image
-            src="/images/Betterview/Property Intelligence/betterview-propertyintelligence2.png"
+            src="/images/betterview-propertyintelligence2.png"
             alt="Property Intelligence Platform Hero"
             fill
             className="object-contain p-4"
@@ -98,7 +98,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-manage+risk.png"
+              src="/images/Betterview-manage+risk.png"
               alt="Property Risk Management Interface"
               fill
               className="object-contain p-4"
@@ -115,7 +115,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/BV_Platform_Screen_CAT-Response_Wildfire-Colorado_blur.jpg"
+              src="/images/BV_Platform_Screen_CAT-Response_Wildfire-Colorado_blur.jpg"
               alt="Property Intelligence Platform Overview"
               fill
               className="object-contain p-4"
@@ -184,7 +184,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-flag-builder.jpg"
+              src="/images/Betterview-flag-builder.jpg"
               alt="Flag Builder Interface"
               fill
               className="object-contain p-4"
@@ -211,7 +211,7 @@ export default function PropertyIntelligencePage() {
               className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Property Intelligence/Betterview-create-flag.jpg"
+                src="/images/Betterview-create-flag.jpg"
                 alt="Various types of flags that can be applied to a property"
                 fill
                 className="object-contain p-4"
@@ -262,7 +262,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-actionflag-builder.jpg"
+              src="/images/Betterview-actionflag-builder.jpg"
               alt="Early functional prototypes of the new Action Flag Builder System"
               fill
               className="object-contain p-4"
@@ -279,7 +279,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-dashboard.png"
+              src="/images/Betterview-dashboard.png"
               alt="Property Intelligence Dashboard"
               fill
               className="object-contain p-4"
@@ -296,7 +296,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-flag-dashboard.png"
+              src="/images/Betterview-flag-dashboard.png"
               alt="Flag Dashboard with custom conditions and alerts"
               fill
               className="object-contain p-4"
@@ -359,7 +359,7 @@ export default function PropertyIntelligencePage() {
               className="relative aspect-[4/3] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Betterview/Property Intelligence/Automation+notifications.png"
+                src="/images/Automation+notifications.png"
                 alt="Automation Notifications Interface"
                 fill
                 className="object-contain p-4"
@@ -374,7 +374,7 @@ export default function PropertyIntelligencePage() {
             className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
           >
             <Image
-              src="/images/Betterview/Property Intelligence/Betterview-exportable-datapoints-printable.jpg"
+              src="/images/Betterview-exportable-datapoints-printable.jpg"
               alt="Exportable Data Points"
               fill
               className="object-contain p-4"

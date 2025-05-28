@@ -37,12 +37,10 @@ export default function HackerDaoProject() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-16 w-full relative aspect-[16/9]"
       >
-        <Image
+        <img
           src="/images/hackerdao-illustration-hero.png"
-          alt="HackerDAO Project"
-          fill
-          className="object-contain"
-          priority
+          alt="HackerDAO Project Hero"
+          className="w-full h-full object-contain"
         />
       </motion.div>
 
@@ -65,11 +63,10 @@ export default function HackerDaoProject() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-4 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
         >
-          <Image
+          <img
             src="/images/hackerdao-illustration-big.png"
             alt="HackerDAO Detailed Illustration"
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
         </motion.div>
         <p className="text-sm text-text-light/60 dark:text-text-dark/60 mb-6 text-center">
@@ -108,11 +105,10 @@ export default function HackerDaoProject() {
         >
           <div className="absolute inset-0 flex items-center justify-center p-8 pl-20">
             <div className="w-full h-full relative">
-              <Image
+              <img
                 src="/images/hackerdao-illustration-bw.png"
                 alt="HackerDAO Process Illustration"
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
@@ -141,11 +137,10 @@ export default function HackerDaoProject() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="mt-8 mb-4 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
         >
-          <Image
+          <img
             src="/images/hackerdao-logos.png"
             alt="HackerDAO Logo Designs"
-            fill
-            className="object-contain p-8"
+            className="w-full h-full object-contain p-8"
           />
         </motion.div>
         <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
