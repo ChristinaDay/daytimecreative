@@ -1,0 +1,34 @@
+import { GeistMono } from 'geist/font/mono'
+import { MainLayout } from '@/components/layout/MainLayout'
+import { ThemeProvider } from 'next-themes'
+import Footer from '@/components/Footer'
+import './globals.css'
+import { Inter, Prata } from 'next/font/google'
+import { Navbar } from '@/components/layout/Navbar'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const prata = Prata({ subsets: ['latin'], weight: ['400'], variable: '--font-prata' });
+
+export const metadata = {
+  title: 'Christina Day - Design Portfolio',
+  description: 'Design portfolio of Christina Day',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className={`${inter.variable} ${prata.variable} ${GeistMono.variable}`}>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="min-h-screen flex flex-col">
+            <MainLayout>{children}</MainLayout>
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
+  )
+}
