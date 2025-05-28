@@ -5,7 +5,7 @@ set -e
 
 # FTP credentials
 FTP_HOST="106.0.62.101"
-FTP_USER="christinaday@daytimecreative.com"
+FTP_USER="christinaday@christinamday.com"
 FTP_PASS="N@tsum3S0s3k1!"
 REMOTE_DIR="public_html" # Try without leading slash
 
