@@ -92,9 +92,26 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       />
 
       <Navbar />
-      <main className="pt-16 px-4 md:px-12 lg:px-20 relative z-10">
+      <main className="pt-16 px-4 md:px-12 lg:px-20 relative z-10 pb-64">
         {children}
       </main>
+      
+      {/* Cascade SVG */}
+      <div className="w-full absolute bottom-0 left-0 z-10">
+        {/* Background covering 1/4 of SVG height */}
+        <div 
+          className="absolute bottom-0 left-0 w-full h-1/4 bg-[#0f172a]"
+          style={{ zIndex: -1 }}
+        />
+        <img 
+          src="/cascade2.svg" 
+          alt="Cascade design" 
+          className="w-full h-auto relative z-10"
+          style={{ 
+            backgroundColor: 'transparent'
+          }}
+        />
+      </div>
     </div>
   );
 } 

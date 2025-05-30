@@ -257,6 +257,7 @@ export default function Home() {
           }}
         />
       </div>
+      
       {/* Hero area */}
       <header className="relative z-10 w-full min-h-screen flex flex-col justify-between">
         {/* Large headline */}
@@ -265,6 +266,7 @@ export default function Home() {
             I'm Christina, a designer based in Oakland. Keep reading to learn more about me and my work.
           </h1>
         </div>
+        
         {/* Down arrow */}
         <div className="absolute bottom-1/4">
           <div className="relative w-[36px] h-[144px]">
