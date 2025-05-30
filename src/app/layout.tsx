@@ -22,11 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${prata.variable} ${GeistMono.variable}`}>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="min-h-screen flex flex-col">
-            <MainLayout>{children}</MainLayout>
-            <Footer />
-          </div>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Navbar />
+          <MainLayout>
+            {children}
+          </MainLayout>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
