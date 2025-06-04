@@ -7,7 +7,7 @@ import { Blockquote } from '@/components/typography/DropQuote';
 
 export default function SnacksAndKitchensPage() {
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 py-16 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
+    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-96 text-[#0f172a] dark:text-white">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

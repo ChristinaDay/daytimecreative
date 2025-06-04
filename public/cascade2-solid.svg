@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-cb035f65-e9a1-4ba3-bb88-f2cc5980b3c2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1086.4 407.5">
+  <!-- Solid Color Nighttime Park Version -->
+  <defs>
+    <style>
+      .st0 { fill: #1e293b; }     /* Deep slate */
+      .st1 { fill: #334155; }     /* Medium slate */
+      .st2 { fill: #475569; }     /* Light slate */
+      .st3 { fill: #64748b; }     /* Cool gray */
+      .st4 { fill: #94a3b8; }     /* Light gray */
+      .st5 { fill: #0f172a; }     /* Darkest blue */
+      .st6 { fill: #1e293b; }     /* Deep slate */
+      .st7 { fill: #334155; }     /* Medium slate */
+      .st8 { fill: #475569; }     /* Light slate */
+      .st9 { fill: #0f172a; }     /* Darkest blue */
+      .st10 { fill: #94a3b8; }    /* Light gray */
+      .st11 { fill: #aee7ff; }    /* Cyan accent */
+      .st12 { fill: #64748b; }    /* Cool gray */
+      .st13 { fill: #aee7ff; }    /* Cyan accent */
+      .st14 { fill: #475569; }    /* Light slate */
+      .st15 { fill: #1e293b; }    /* Deep slate */
+      .st16 { fill: #334155; }    /* Medium slate */
+      .st17 { fill: #64748b; }    /* Cool gray */
+      .st18 { fill: #475569; }    /* Light slate */
+      .st19 { fill: #aee7ff; }    /* Cyan accent */
+      .st20 { fill: #94a3b8; }    /* Light gray */
+      .st21 { fill: #1e293b; }    /* Deep slate */
+      .st22 { fill: #334155; }    /* Medium slate */
+      .st23 { fill: #64748b; }    /* Cool gray */
+      .st24 { fill: #475569; }    /* Light slate */
+      .st25 { fill: #334155; }    /* Medium slate */
+      .st26 { fill: #1e293b; }    /* Deep slate */
+      .st27 { fill: #475569; }    /* Light slate */
+      .st28 { fill: #64748b; }    /* Cool gray */
+      .st29 { fill: #94a3b8; }    /* Light gray */
+      .st30 { fill: #64748b; }    /* Cool gray */
+      .st31 { fill: #475569; }    /* Light slate */
+      .st32 { fill: #aee7ff; }    /* Cyan accent */
+      .st33 { fill: #334155; }    /* Medium slate */
+      .st34 { fill: #1e293b; }    /* Deep slate */
+      .st35 { fill: #475569; }    /* Light slate */
+      .st36 { fill: #64748b; }    /* Cool gray */
+      .st37 { fill: #334155; }    /* Medium slate */
+      .st38 { fill: #1e293b; }    /* Deep slate */
+      .st39 { fill: #94a3b8; }    /* Light gray */
+      .st40 { fill: #475569; }    /* Light slate */
+      .st41 { fill: #64748b; }    /* Cool gray */
+      .st42 { fill: #0f172a; }    /* Darkest blue */
+      .st43 { fill: #64748b; }    /* Cool gray */
+      .st44 { fill: #334155; }    /* Medium slate */
+      .st45 { fill: #1e293b; }    /* Deep slate */
+      .st46 { fill: #aee7ff; }    /* Cyan accent */
+      .st47 { fill: #aee7ff; }    /* Cyan accent */
+      .st48 { fill: #94a3b8; }    /* Light gray */
+      .st49 { fill: #64748b; }    /* Cool gray */
+      .st50 { fill: #475569; }    /* Light slate */
+      .st51 { fill: #334155; }    /* Medium slate */
+      .st52 { fill: #1e293b; }    /* Deep slate */
+      .st53 { fill: #64748b; }    /* Cool gray */
+      .st54 { fill: #94a3b8; }    /* Light gray */
+    </style>
+  </defs>
+  
+  <!-- Main cascade shapes using solid colors -->
+  <polygon class="st0" points="544.2,96.8 550.2,92.2 558.4,92.2 552.4,96.8"/>
+  <polygon class="st1" points="544.2,101.7 551.7,96.8 562.7,96.8 555.2,101.7"/>
+  <polygon class="st0" points="544.2,88.5 548.8,84.7 555.1,84.7 550.5,88.5"/>
+  <polygon class="st2" points="544.2,106.8 553.5,101.7 567.2,101.7 557.9,106.8"/>
+  <polygon class="st8" points="544.2,110.2 555.2,104.8 571.5,104.8 560.5,110.2"/>
+  <polygon class="st5" points="544.2,116.9 557.9,110.2 578.1,110.2 564.4,116.9"/>
+  <polygon class="st6" points="544.2,123.1 560.5,116.9 583.4,116.9 567.7,123.1"/>
+  <polygon class="st7" points="544.2,129.5 564.4,123.1 593.0,123.1 573.8,129.5"/>
+  <polygon class="st3" points="544.2,136.2 567.7,129.5 601.2,129.5 578.7,136.2"/>
+  <polygon class="st29" points="544.2,143.2 573.8,136.2 614.7,136.2 586.1,143.2"/>
+  
+  <!-- Geometric accent shapes -->
+  <polygon class="st11" points="200,150 250,120 300,150 280,180 220,180"/>
+  <polygon class="st47" points="780,180 830,150 880,180 860,210 800,210"/>
+  <polygon class="st32" points="120,200 170,170 220,200 200,230 140,230"/>
+  <polygon class="st19" points="860,120 910,90 960,120 940,150 880,150"/>
+  
+  <!-- Large backdrop shapes -->
+  <polygon class="st42" points="0,250 200,180 400,220 600,160 800,200 1086.4,140 1086.4,407.5 0,407.5"/>
+  <polygon class="st21" points="100,220 300,160 500,200 700,140 900,180 1086.4,120 1086.4,407.5 0,407.5"/>
+  <polygon class="st33" points="50,280 250,220 450,260 650,200 850,240 1086.4,180 1086.4,407.5 0,407.5"/>
+  
+  <!-- Mid-layer cascading elements -->
+  <polygon class="st24" points="150,300 350,240 550,280 750,220 950,260 1086.4,200 1086.4,407.5 0,407.5"/>
+  <polygon class="st17" points="80,320 280,260 480,300 680,240 880,280 1086.4,220 1086.4,407.5 0,407.5"/>
+  <polygon class="st12" points="180,340 380,280 580,320 780,260 980,300 1086.4,240 1086.4,407.5 0,407.5"/>
+  
+  <!-- Foreground accent layers -->
+  <polygon class="st48" points="120,360 320,300 520,340 720,280 920,320 1086.4,260 1086.4,407.5 0,407.5"/>
+  <polygon class="st46" points="220,380 420,320 620,360 820,300 1020,340 1086.4,280 1086.4,407.5 0,407.5"/>
+  
+  <!-- Additional geometric details -->
+  <circle class="st11" cx="300" cy="180" r="8"/>
+  <circle class="st47" cx="750" cy="200" r="12"/>
+  <circle class="st32" cx="500" cy="220" r="6"/>
+  <circle class="st19" cx="850" cy="160" r="10"/>
+  
+  <!-- Small accent dots scattered throughout -->
+  <circle class="st46" cx="150" cy="250" r="4"/>
+  <circle class="st11" cx="400" cy="280" r="5"/>
+  <circle class="st47" cx="650" cy="240" r="3"/>
+  <circle class="st32" cx="900" cy="300" r="7"/>
+  <circle class="st19" cx="200" cy="320" r="4"/>
+  <circle class="st46" cx="550" cy="350" r="6"/>
+</svg> 
