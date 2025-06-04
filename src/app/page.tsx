@@ -404,11 +404,35 @@ export default function Home() {
           </div>
           {/* Right: Image (Placeholder) */}
           <div className="w-full md:w-3/5 flex items-center justify-center">
-            <img 
-              src="/images/zerocater_snacks.jpg" 
-              alt="ZeroCater Snacks & Kitchens" 
-              className="rounded-xl shadow-2xl w-full h-auto object-contain" 
-            />
+            <div className="bg-white rounded-xl shadow-2xl inline-block">
+              <img 
+                src="/images/zerocater-snacks1.png" 
+                alt="ZeroCater Snacks & Kitchens" 
+                className="w-full h-auto object-contain rounded-xl" 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Makersquare Preview Section */}
+      <section className="w-full py-24 px-2 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
+          {/* Left: Text */}
+          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
+            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Makersquare Logo Design & Branding</h2>
+            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Creating a comprehensive branding overhaul for a premier coding bootcamp across multiple cities.</p>
+            <Link href="/projects/makersquare" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
+          </div>
+          {/* Right: Image */}
+          <div className="w-full md:w-3/5 flex items-center justify-center">
+            <div className="rounded-xl shadow-2xl w-full aspect-[4/3] flex items-center justify-center">
+              <img 
+                src="/images/makeersquare-logo.png" 
+                alt="MakerSquare Logo" 
+                className="w-full h-full object-cover rounded-xl" 
+              />
+            </div>
           </div>
         </div>
       </section>

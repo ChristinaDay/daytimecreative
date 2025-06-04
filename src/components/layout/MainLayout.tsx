@@ -1,8 +1,15 @@
 'use client';
 
 import { Navbar } from './Navbar';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden">
       {/* Light mode daytime sky background */}
@@ -92,26 +99,9 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       />
 
       <Navbar />
-      <main className="pt-16 px-4 md:px-12 lg:px-20 relative z-10 pb-64">
+      <main className="mt-4 px-4 md:px-12 lg:px-20 relative z-20 pb-96 mb-32">
         {children}
       </main>
-      
-      {/* Cascade SVG */}
-      <div className="w-full absolute bottom-0 left-0 z-10">
-        {/* Background covering 1/4 of SVG height */}
-        <div 
-          className="absolute bottom-0 left-0 w-full h-1/4 bg-[#0f172a]"
-          style={{ zIndex: -1 }}
-        />
-        <img 
-          src="/cascade2.svg" 
-          alt="Cascade design" 
-          className="w-full h-auto relative z-10"
-          style={{ 
-            backgroundColor: 'transparent'
-          }}
-        />
-      </div>
     </div>
   );
 } 
