@@ -336,6 +336,89 @@ export default function StyleGuidePage() {
   </div>
 </section>`}</code></pre>
               </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Homepage Case Study Preview Image:</h4>
+                <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm overflow-x-auto"><code>{`<div className="w-full md:w-3/5 flex items-center justify-center">
+  <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] 
+       flex items-center justify-center p-8">
+    <img 
+      src="/images/project-image.png" 
+      alt="Project Name" 
+      className="w-full h-full object-contain" 
+    />
+  </div>
+</div>`}</code></pre>
+                <p className="text-sm text-text-light/60 dark:text-text-dark/60 mt-2">
+                  Standard: White background container with 16:9 aspect ratio, 8px padding, rounded corners and shadow.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Scrollable Image Container (Long Vertical Images):</h4>
+                <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm overflow-x-auto"><code>{`<ScrollableImageContainer
+  src="/images/long-vertical-interface.png"
+  alt="Interface Documentation"
+  caption="Detailed interface showing full workflow"
+  frameType="laptop"
+  height="large"
+  backgroundColor="transparent"
+/>`}</code></pre>
+                <p className="text-sm text-text-light/60 dark:text-text-dark/60 mt-2">
+                  For wireframes, long interfaces, and documentation. Options: frameType="laptop|browser|none", height="small|medium|large", backgroundColor="white|transparent".
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Image Container Padding Standards */}
+          <div>
+            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Image Container Padding Standards</h3>
+            <div className="bg-opal-light-blue dark:bg-opal-dark-blue p-6 rounded-lg mb-6">
+              <h4 className="font-semibold mb-4 text-text-light dark:text-text-dark">White Background Container Padding</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <h5 className="font-semibold text-sm mb-2">Large Padding (p-8)</h5>
+                  <code className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded block mb-2">32px padding</code>
+                  <p className="text-sm">Homepage previews, hero images, marketing materials</p>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-sm mb-2">Medium Padding (p-4)</h5>
+                  <code className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded block mb-2">16px padding</code>
+                  <p className="text-sm">Case study images, interface screenshots, detailed views</p>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-sm mb-2">Small Padding (p-2)</h5>
+                  <code className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded block mb-2">8px padding</code>
+                  <p className="text-sm">Small UI elements, thumbnails, compact layouts</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold mb-2">Homepage Case Study Preview (Large Padding):</h4>
+                <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm overflow-x-auto"><code>{`<div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] 
+     flex items-center justify-center p-8">
+  <img className="w-full h-full object-contain" />
+</div>`}</code></pre>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Case Study Detail Image (Medium Padding):</h4>
+                <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm overflow-x-auto"><code>{`<div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] 
+     flex items-center justify-center p-4">
+  <img className="w-full h-full object-contain" />
+</div>`}</code></pre>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-2">Interface Screenshot (Small Padding):</h4>
+                <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm overflow-x-auto"><code>{`<div className="bg-white rounded-lg shadow-lg w-full aspect-[16/9] 
+     flex items-center justify-center p-2">
+  <img className="w-full h-full object-contain" />
+</div>`}</code></pre>
+              </div>
             </div>
           </div>
         </div>
@@ -356,10 +439,12 @@ export default function StyleGuidePage() {
               <li>• Use object-cover for filled containers</li>
               <li>• Apply consistent spacing (mb-16, mb-8, mb-6)</li>
               <li>• Use flexbox for image-caption pairs</li>
-              <li>• Remove unnecessary padding/margins</li>
+              <li>• Use appropriate padding: p-8 (homepage), p-4 (case studies), p-2 (interfaces)</li>
               <li>• Maintain 16:9 or 4:3 aspect ratios</li>
               <li>• Use proper typography hierarchy</li>
               <li>• Stagger animation delays by 0.2s</li>
+              <li>• Use ScrollableImageContainer for long vertical images</li>
+              <li>• Add browser frames for interface documentation</li>
             </ul>
           </div>
           <div>
