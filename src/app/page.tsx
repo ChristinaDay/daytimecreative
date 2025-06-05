@@ -362,8 +362,8 @@ export default function Home() {
           <div className="w-full md:w-3/5 flex items-center justify-center">
             <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
               <img 
-                src="/images/betterview-PartnerHub+Dashboard.png" 
-                alt="PartnerHub Dashboard Interface" 
+                src="/images/betterview-partnerhub2.png" 
+                alt="PartnerHub Interface Design Elements" 
                 className="w-full h-full object-contain" 
               />
             </div>
@@ -437,7 +437,7 @@ export default function Home() {
         </div>
       </section>
       {/* Makersquare Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
+      <section className="w-full py-24 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
           {/* Left: Text */}
           <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
@@ -448,7 +448,7 @@ export default function Home() {
           </div>
           {/* Right: Image */}
           <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="rounded-xl shadow-2xl w-full aspect-[4/3] flex items-center justify-center">
+            <div className="rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center overflow-hidden">
               <img 
                 src="/images/makeersquare-logo.png" 
                 alt="MakerSquare Logo" 
