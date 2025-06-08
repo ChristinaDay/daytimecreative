@@ -19,91 +19,101 @@ export const CascadeSVG: React.FC<CascadeSVGProps> = ({
   const isDark = resolvedTheme === 'dark';
 
   return (
-    <svg 
-      id="cascade-svg" 
-      xmlns="http://www.w3.org/2000/svg" 
-      xmlnsXlink="http://www.w3.org/1999/xlink" 
-      version="1.1" 
-      viewBox="0 0 1086.4 407.5"
-      width={width}
-      height={height}
-      className={`cascade-svg ${className}`}
+    <div 
+      className={`cascade-svg-wrapper ${className}`}
       style={{
+        width,
+        height,
         ...style,
-        '--cascade-primary': isDark ? '#1a365d' : '#7dd3fc',
-        '--cascade-secondary': isDark ? '#2d3748' : '#a7f3d0',
-        '--cascade-accent': isDark ? '#4a5568' : '#93c5fd',
-        '--cascade-dark': isDark ? '#1a202c' : '#374151',
-        '--cascade-light': isDark ? '#718096' : '#e5e7eb',
+        '--cascade-primary': isDark ? '#1e40af' : '#0ea5e9',        // Blue - main waterfall color
+        '--cascade-secondary': isDark ? '#1e293b' : '#bae6fd',      // Light blue - secondary elements
+        '--cascade-accent': isDark ? '#334155' : '#7dd3fc',         // Sky blue - accent elements
+        '--cascade-dark': isDark ? '#0f172a' : '#1e293b',          // Dark slate - deep shadows
+        '--cascade-light': isDark ? '#475569' : '#f0f9ff',         // Light - highlights
+        '--cascade-medium': isDark ? '#64748b' : '#e0f2fe',        // Medium tone - mid-range elements
         '--cascade-gradient-start': isDark ? '#0f172a' : '#f8fafc',
         '--cascade-gradient-end': isDark ? '#334155' : '#cbd5e1',
         transition: 'all 300ms ease-in-out'
-      }}
+      } as React.CSSProperties & Record<string, string>}
       {...props}
     >
-      <defs>
-        <style>
-          {`
-            .cascade-svg .st0 { fill: var(--cascade-dark); }
-            .cascade-svg .st1 { fill: var(--cascade-light); }
-            .cascade-svg .st2 { fill: var(--cascade-accent); }
-            .cascade-svg .st3 { fill: var(--cascade-secondary); }
-            .cascade-svg .st11 { fill: var(--cascade-dark); }
-            .cascade-svg .st12 { fill: var(--cascade-primary); }
-            .cascade-svg .st13 { fill: var(--cascade-light); }
-            .cascade-svg .st15 { fill: var(--cascade-secondary); }
-            .cascade-svg .st17 { fill: var(--cascade-accent); }
-            .cascade-svg .st18 { fill: var(--cascade-light); }
-            .cascade-svg .st19 { fill: var(--cascade-secondary); }
-            .cascade-svg .st20 { fill: var(--cascade-dark); }
-            .cascade-svg .st21 { fill: var(--cascade-secondary); }
-            .cascade-svg .st22 { fill: var(--cascade-primary); }
-            .cascade-svg .st23 { opacity: .6; }
-            .cascade-svg .st24 { fill: var(--cascade-accent); }
-            .cascade-svg .st25 { fill: var(--cascade-dark); }
-            .cascade-svg .st26 { fill: var(--cascade-primary); }
-            .cascade-svg .st27 { fill: var(--cascade-light); }
-            .cascade-svg .st28 { fill: var(--cascade-light); }
-            .cascade-svg .st29 { fill: var(--cascade-light); }
-            .cascade-svg .st30 { fill: var(--cascade-accent); }
-            .cascade-svg .st31 { fill: var(--cascade-dark); }
-            .cascade-svg .st32 { fill: var(--cascade-primary); }
-            .cascade-svg .st35 { fill: var(--cascade-primary); }
-            .cascade-svg .st36 { fill: var(--cascade-secondary); }
-            .cascade-svg .st37 { fill: var(--cascade-secondary); }
-            .cascade-svg .st38 { fill: var(--cascade-primary); }
-            .cascade-svg .st39 { fill: var(--cascade-secondary); }
-            .cascade-svg .st40 { fill: var(--cascade-primary); }
-          `}
-        </style>
-      </defs>
-
-      {/* Main waterfall cascade paths */}
-      <path className="st0" d="M498.4,110.5c-2.9-3.9-6.9-6.8-11.5-8.4l-.2,3.3-2.1-1.4c-4.3,1-8.9.9-13.2-.5l.5,3.7c-1.7-1.5-4.4-1.1-6.3.2s-3,3.3-4.1,5.3c0-3.2-2.2-6.3-5.2-7.4l-.2,2.9c-4.3-.3-8.7.9-12.4,3.3-2.8-5.4-10.5-7.5-15.7-4.4,0-2.7-1.3-5.4-3.3-7.2l-.8,4.7c-5.2-4.6-12.8-6.5-19.5-4.9-.7.9-.7,2.3,0,3.1-1.3-.9,0-3.4,1.4-2.9s.9,3.2-.6,3.1c-.4-.8-1.3-1.3-1.9-2.1s-.7-2,.2-2.4,1.2,1.6.3,1.3c-1.3-1.2-3.3-1.6-4.9-.9l-.2,4.8-4.2-2.1-.6,3c-4.9-1.5-10.3-2.4-15-.4s-8.2,7.5-6.3,12.3l-2.7-6.3c-1.2-1.2-3.8.2-3.4,1.8-.4-1.8-2.2-2.8-3.9-3.5-9.5-4.1-19.8-6.5-30.2-7,.1,1.3.2,2.5.4,3.8.9-2.7-.6-5.9-3.2-7-.7-.3-1.6-.4-2.2.1s-.2,1.8.5,1.6,0-1.6-.4-1c-3.4-.3-6.8.3-9.8,1.8-5.9-1.7-12.4-1.7-18.3.1,1.8-3.2-1-7.9-4.7-7.7,0,1.4,0,2.8,0,4.2-.1-2.3-1.7-4.4-3.8-5.3l-.2,3c-1.5-1.3-3.8-1.7-5.6-.9-.2-1.5-1.6-2.8-3.1-2.8v3.3c-2.1-1-4.1-2-6.3-1.7s-4,2.7-3.1,4.6l-3.3-1.4c.6,5,1.6,9.9,3.1,14.7-2.5-2.9-6.3-4.6-10.1-4.7-1,2.9-1.4,6-1.1,9.1-1-1-2.2-2.1-3.6-2.3s-3.1.7-3.1,2.1l-3-1.9,1.4,6c-3.6-1.6-8.3-.6-10.8,2.4l3.6,3.4c-7-1.9-7.2,3-8.3,1.2-2.6-4.2-5-2.6-7.5-2.6,0,0-2.7-1.3-2.6-10.1s-2.7,10.2-3,9.4c-3.8-2.1-6.7-4.8-12.2-4.7l2.5,3.7c-3.5-1.2-5.2,4.5-5.2,4.5-6-2.4-8.3.6-9.9,2.6,0,0-6.6-1.6-9,2.7-1.7-5.5-4.5-5.3-8.1-2.6l-1.3-4.5c-5.5,6.3-5.5,17.1-4,20.6s-10.6-11-33.5-3.7c15.4,0,25.1,4.6,25.3,9.4-7-1.2-14.2-.8-21,1,7.5,0,15.8.3,21.2,5.4-7.2-.8-14.6-.2-21.6,1.7,3.7-.4,7.6-.7,11.1.4s12.2-.1,12.4,3.6c-2-.9-4-.6-6-.9s-2.5.2-3.4,1-3.1,2.4-2.8,3l-.9-.7c-1.4-1.1-3.5-.7-4.4.8s-3.4-2.2-3.8,3c0,0-4.6-4.9-7.5,2.2l-3.2-.8c-2.3-.6-4.7.1-6.1,2s-1.6,4.1-.6,6.9c-2.2-.9-5.4-1.4-6.2,2.4-4.2-2.2-6.5,2.3-6,3.1-.7-2.6-8.6-4.6-9.7,2,0,0-2.2-3.3-6.8,1,0-1,0-1.9,0-2.9-.1-3.4-.5-8.5,1.2-11.4-3.1,2.6-4.8,6.8-4.5,10.8-.4-.5-.8-1.1-1.2-1.6-2.6-3.4-3.5-6.2-4.5-10.5l-.7,12.6c-1.8-2.2-4.3-3.9-7-5l4.9,8.8c-2.9-.3-5.8.3-8.3,1.8,3.5.4,6.2,4.2,5.4,7.7l-4.9-1c-.8,1.5-1.2,3.2-1.2,4.9l-4.2-.4-1.2,6.1c-.4-1.8-2.3-3.1-4.1-2.7s-3,2.4-2.6,4.2l-4.8-3.6v3.6c-1-3-5.8-3.1-7.7-.6s-1.5,6.1-.3,9c-.9-1.3-2.6-1.9-4.2-1.5-.8,1.2-.9,2.9-.2,4.2-1.3-1.3-3-2.3-4.8-2.6-.3,1.1.1,2.3,1,3-2.1-2.4-4.2-4.7-6.3-7.1-3.1,2.6-4.4,7.3-3,11.1-4.4.2-7.1,6.5-4.2,9.8-4.1-1.4-9,.6-11,4.4-3-3.2-9.6-.9-9.9,3.5-1.1-1.1-3.1-1.3-4.4-.4-11.2-1.3-22.7,12.6-18.8,23.2l-7.5,2.5-5.4,24.7,4.6-3.8c.7,6.8.7,13.7-.1,20.4,11.3-.1,22-5.2,32.1-10.3,14.1-6.9,28.2-13.9,41.7-21.9,38-22.7,71.1-54,112.2-70.4,28.9-11.5,60.3-15.1,90.1-24.2,10.7-3.3,21.3-7.3,30.2-14,6-4.5,11.3-10.3,18-13.6,4.4-2.2,9.3-3.4,14.2-4.5,18.9-4.3,37.8-8.6,56.6-13,5.9-1.3,11.9-2.7,17.9-1.7,10.5,1.7,18.4,10.2,27.8,15.1,19.1,10,42.6,4.5,62-4.8,7.8-3.7,15.7-8.4,20.1-15.8s-2.9-13.2-8.1-20.1Z"/>
-
-      {/* Secondary cascade elements */}
-      <g>
-        <rect className="st37" x="505.3" y="124.6" width="75.6" height="5.2"/>
-        <rect className="st3" x="505.9" y="119.6" width="74.3" height="5"/>
-        <rect className="st2" x="506.7" y="115.2" width="72.7" height="4.4"/>
-        <rect className="st30" x="507.7" y="110.8" width="70.8" height="4.4"/>
-        <rect className="st26" x="503.9" y="129.9" width="78.4" height="6.7"/>
-        <rect className="st15" x="501.9" y="135.3" width="82.3" height="6.7"/>
-        <rect className="st38" x="500" y="141.4" width="86.1" height="6.7"/>
-        <rect className="st35" x="496" y="148.1" width="94.1" height="6.7"/>
-      </g>
-
-      {/* Complex terrain paths */}
-      <path className="st11" d="M395.5,162.6c-.5-3.1-4.2-5.2-7.1-4.1.4.4,1.1-.3.8-.7-1.5-.6-3.2-.7-4.7-.2,1.3-1.4,2.3-3.4,2-5.3s-2.2-3.6-4.1-3.1c.4-1.7.7-3.4.4-5.2s-1.4-3.4-3-4-3.8.2-4.2,1.9c.5-1.1.7-2.3.6-3.4-2.2-1-4.9-1.1-7.1-.2,1.4-1.4.6-4-1-5.1s-3.7-1.3-5.7-1.4c1.5-.5,2.6-2.2,2.1-3.8s-2.7-2.2-3.9-1.2c2.3-1.8,2.4-5.1,2.1-8,0-.4,0-.8-.3-1.1-.4-.6-1.4-.7-2.1-.4s-1.1,1-1.6,1.7c-.2.4-.5.8-.5,1.2s.5.8.9.6c.3-1.1-1.3-1.8-2.4-1.9-2.5-.2-4.9-.3-7.4-.1.6,3.4,2.2,6.6,4.7,9.1,0-.8-.9-1.5-1.7-1.7s-1.6-.2-2.5,0c-.5,0-1.1.3-1,.8.6-1.1.6-2.6-.1-3.7s-2.1-1.7-3.4-1.6c1.2-.7,1.1-2.5.2-3.5s-2.3-1.4-3.6-1.6c-.5,0-1-.1-1.3.2-.1.2-.1.4-.2.7,0,1,0,2-.1,3-.1-1.1-.5-2.5-1.6-2.7-1-.2-1.9,1-1.9,2s.7,2,1.3,2.8c-2.7-1.1-5.8-1.1-8.5.2-.5.2-1.1.7-.9,1.3.1.3.4.5.6.6,1.8,1,3.8,1.5,5.9,1.6-.6.1-1.3.3-1.8.7s-.9,1.1-.6,1.7c.2,0,.5-.2.4-.5-1-3-6.2-2.7-9.1-1.4,1.7-.4,2.8-2.4,2.1-4s-2.7-2.4-4.2-1.6c.2-1.3.4-2.6-.1-3.8s-2.3-1.8-3.2-.9c-.1,1.4-.2,2.9-.4,4.3.1-1.9.2-3.9-.7-5.6s-3-2.9-4.8-2.1c0,1.1,0,2.3,0,3.4-.1-1.4-.4-2.7-.8-4-1.1-.4-2.6.4-2.8,1.6.4-.8,0-1.8-.7-2.3s-1.6-.6-2.5-.6c-.9,0-1.8,0-2.5.6s-1.1,1.6-.6,2.3c0-3-3.3-5.1-6.3-5.3-1.8-.1-3.6.2-5,1.3s-2.2,3.1-1.5,4.7c-.2-2-2.8-2.9-4.8-2.5-4.3.7-7.7,5-7.5,9.3-.7-1.4-2.4-2-4-1.9s-3,.8-4.4,1.5c-1.8.9-3.6,1.9-5.3,2.9-1.1.6-2.2,1.3-2.8,2.4s-.4,2.7.7,3.3c-1.1-1.9-3.5-2.4-5.7-2.8-1.4-.2-2.8-.4-4,.3s-1.9,2.5-.9,3.4c-1.3.2-3.2,3.3-3.1,4.7,0,.2,0,.4.2.5.2.1.4,0,.6,0,.9-.1,1.8.3,2.2,1.1-1.3-.7-3.1,0-3.6,1.4s.4,3.1,1.9,3.5c-1,0-2,.1-3,.2-.4,1-.3,2.2.2,3.1-.5-.6-1-1.2-1.6-1.5s-1.5-.4-2.1.1c-1,.9-.2,2.7-.6,4,.4-1.6-1.8-2.9-3.4-3.1s-3.2,1.3-3.2,3c0-.7,0-1.4,0-2.1,0-.2,0-.4-.1-.5s-.3-.1-.5-.1c-1.7,0-3.9.5-4.2,2.2,0-1.6,0-3.1,0-4.7-1.7-.2-3.6.3-4.9,1.5l.6-4.6c-.6.3-1.2-.3-1.6-.8s-1.2-1-1.7-.5c-.1.1-.2.3-.2.5-.3,1-.6,1.9-1,2.9-1-.6-3-.6-4.1-.6-.5,0-1,.1-1.2.5-.2.2-.2.6-.2.9,0,1.2,0,2.4-.1,3.6-.9-2-3.4-3.2-5.6-2.6-.2,0-.5.1-.6.3-.6.6-.1,1.7-.8,2.1-2-1-4.2-1.7-6.4-1.2s-4.1,2.7-3.6,4.8c-1.4,1.8-3.3,4.4-3.5,6.7-1-.5-2.1-1-3.2-.9s-2.3.9-2.3,2c0,.7.3,1.5-.2,1.9-.3.2-.6.2-1,.1-2-.2-4.1-.2-5.9.8s-3,3.2-2.3,5.1c-1.4-.5-3-.8-4.4-.4-2.1.6-3.5,2.6-4,4.8s-.2,4.3,0,6.5c-1.1,0-2-1.3-3.1-1-.9.2-1.3,1.4-.7,2.1-1-1.1-2.6-1.5-4-1.1-.7-1.1-3.8-3.2-5-2.7s-2.1,1.7-1.9,3c-1.5-.6-3.2-1.1-4.8-.6s-2.8,2.4-1.9,3.9c-3.2-.8-6.7,2.6-6,5.9-3.5-.9-7.5,1.9-7.8,5.5-3.6.4-6.6,4-6.3,7.6-3.2-.6-6.6,2.1-6.7,5.3-3.6,0-6.4,4.2-5.2,7.5-2.1,0-4.3,0-6.3.8s-3.7,2.5-3.9,4.6c-2.3-.6-5,.3-6.5,2.2-.3.4-.7,1-1.2,1-.5,0-.8-.3-1.2-.5-1.3-.8-3.2-.5-4.2.7-2.2-1.8-7.4,2-7.3,4.9-.5-1.1-2.1-1-2.9-.1s-.9,2.1-.8,3.3.1,2.4-.4,3.4c-5.4-.5-11,1-15.6,4-1.5-.8-3.5.3-4.3,1.8-.8,1.5-.7,3.4-.6,5.1-3.4,0-6.9.7-10.1,1.9-.6.2-1.3.5-1.6,1.2-.5,1,.3,2.1.2,3.2-.1,1.3-1.5,2.2-2.8,2.3s-2.6-.1-3.9,0c-1.9,0-3.7.9-5,2.2-1.1-2.6-3.2-5.1-6-5.5s-6,2.1-5.4,4.9c-4.8,0-9.5,3-11.5,7.4-.2.5-.5,1.2-1.1,1.4-.3.1-.7,0-1,.1-1.3.1-2.2,1.4-2.5,2.6s-.3,2.5-.6,3.8c-.7,3-4,3.4-6,5.8s-2.8,7.4-2.1,10.4c-2.4-1.1-5.3.9-6.2,3.3s-.4,5.2.1,7.8c.6,2.7-2.7,6-4.9,7.7-1.3,1.1-2.8,2-3.7,3.5s-1,3.5.2,4.7c.2.2.5.4.5.7,0,.4-.3,2.6-.6,2.9-3.1,2.4-5,3.9-6,7.7s3.7,8,3.5,11.8c0,.7-5.1,1-5.1,1.7,0,1.1-.1,2.1-.2,3.2-.2,3.5-.4,7,.4,10.3,1,4.3,3.6,8.2,7.2,10.8-1.4.1-2.6,1.3-3.1,2.7s-.4,2.8-.2,4.2c.4,2.7,1.5,5.4,3.3,7.4s4.7,3.2,7.4,2.8c1.4-1.2,3.9-2.4,5.3-3.6.4,2.1,2.2,4,4.4,4.3s4.5-.7,5.6-2.5c.1.6.8.9,1.4,1.1,3.2.8,6.5-.3,9.6-1.4,1.8-.6,3.6-1.2,5.4-1.8,2.5-.9,5-1.8,6.9-3.6s2.8-4.9,1.4-7.1c1.3-2.4,2.6-4.8,3.7-7.3.2,1.6,2.3,2.1,3.9,2.1,3.5,0,6.9-.7,10.2-1.9,1.7-.6,3.6-1.8,3.4-3.5-.1,1.2-.3,2.4-.4,3.5.8.1,1.6,0,2.4-.2-.1-.3-.7,0-.6.4s.6.4.9.5c4,.3,7.9-1.6,11.5-3.5,2.5-1.3,5.2-2.9,5.8-5.6,6.3-5.4,12.3-11.5,17.9-17.6,6.9-7.6,13.1-15.7,20.2-23.1,7.8-8.2,16.5-15.4,25.2-22.6,12.8-10.5,25.7-21,40-29.5,13.6-8,28.3-14.2,41-23.5,16.2-1.5,33,1.8,49.1,4.6,34.4,5.8,69.1,11,103.9,10,2.6,0,5.4-.2,7.6-1.6,2.7-1.6,4.1-4.7,5.7-7.4,6.2-10.5,17.6-18.9,18.3-31.1.2-4.4-1-8.7-2.2-12.9-2.9-9.8-7.6-19.4-9.2-29.5h0Z"/>
-
-      {/* Final base structure */}
-      <path className="st12" d="M985.6,361.3c1.3.2,2.7.5,3.9-.2s1.7-2.5.6-3.3c.9.3,1.8-.5,2-1.4s-.1-1.8-.5-2.7c4.3.1,8.7.2,13-.5,2.3-.4,4.8-1.1,6.4-2.9.4-.5.8-1.1.6-1.7-.3-.6-1.2-.8-1.9-.8-1.4,0-2.7,0-4.1-.1-.6-5.8-3.4-11.3-7.6-15.2,2.8,0,6.2-2.1,6.4-4.9-2.1-1-4.3-2-6.4-3.1,1.5.5,3.3-.2,4-1.6-.8-.4-1.6-.8-2.5-1.2.9-1.9.3-4.3-1.3-5.6,1.9-.8,4-1.8,4.6-3.7s-1.8-4.4-3.3-3c2.5-.7,5-2.6,5.2-5.2s-3.3-5-5.2-3.2c.4-1.2.9-2.6.3-3.8s-2.8-1.3-3,0c-.4-3-2.8-5.7-5.8-6.5.9-.8.8-2.4,0-3.4s-1.8-1.6-2.9-2.1c-9.1-4.6-18.3-9.2-27.4-13.8-13.2-6.6-26.6-13.4-41.2-15.6-20.1-3.1-40.8,2.7-61-.4-1.3-.2-3.3.6-2.6,1.7-8.2-.9-16.3-.9-24.2,1.2-10.3,2.8-21,8.1-31.1,4.6-7-2.5-12.3-9-19.7-10.3-3-.5-6.2-.1-9.2-.8-4.5-1.1-8.3-4.6-12.9-5.4,0,.8,0,1.5,0,2.3-.1,7.2-7.8,12.7-14.1,16.2-2.8,1.5-5.9,2.4-9,3.2-14.8,4-29.9,8.1-45.2,7.7-4.5-.1-10,0-12.1,3.9-2.8-.2-5.2.9-7.9,1.8-4.1,1.5-8.2,2.9-12.3,4.4-1.4.5-2.7,1-4.2,1.2-1.6.3-3.2.3-4.8.5-5.8.8-11.1,4.1-16.9,5.2.2,3.2.9,6.1,2.7,8.8,38.9-2.7,78,2.5,116.7,7.7,17.8,2.4,35.5,4.8,53.3,7.1,62,8.3,118.9,33.8,180.4,45h0Z"/>
-
-      {/* Accent bars */}
-      <g>
-        <rect className="st28" x="502.6" y="137.8" width="81.1" height="3.3"/>
-        <rect className="st28" x="502.6" y="129.9" width="81.1" height="3.3"/>
-      </g>
-    </svg>
+      <style>
+        {`
+          .cascade-svg-wrapper svg .st0 { fill: var(--cascade-dark) !important; }
+          .cascade-svg-wrapper svg .st1 { fill: var(--cascade-light) !important; }
+          .cascade-svg-wrapper svg .st2 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st3 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st4 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st5 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st6 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st7 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st8 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st9 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st10 { fill: var(--cascade-light) !important; }
+          .cascade-svg-wrapper svg .st11 { fill: var(--cascade-dark) !important; }
+          .cascade-svg-wrapper svg .st12 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st13 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st14 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st15 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st16 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st17 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st18 { fill: var(--cascade-light) !important; }
+          .cascade-svg-wrapper svg .st19 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st20 { fill: var(--cascade-dark) !important; }
+          .cascade-svg-wrapper svg .st21 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st22 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st23 { opacity: .6; }
+          .cascade-svg-wrapper svg .st24 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st25 { fill: var(--cascade-dark) !important; }
+          .cascade-svg-wrapper svg .st26 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st27 { fill: var(--cascade-light) !important; }
+          .cascade-svg-wrapper svg .st28 { fill: var(--cascade-light) !important; }
+          .cascade-svg-wrapper svg .st29 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st30 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st31 { fill: var(--cascade-dark) !important; }
+          .cascade-svg-wrapper svg .st32 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st33 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st34 { fill: var(--cascade-accent) !important; }
+          .cascade-svg-wrapper svg .st35 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st36 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st37 { fill: var(--cascade-secondary) !important; }
+          .cascade-svg-wrapper svg .st38 { fill: var(--cascade-primary) !important; }
+          .cascade-svg-wrapper svg .st39 { fill: var(--cascade-medium) !important; }
+          .cascade-svg-wrapper svg .st40 { fill: var(--cascade-accent) !important; }
+        `}
+      </style>
+      
+      <svg 
+        id="cascade-svg" 
+        xmlns="http://www.w3.org/2000/svg" 
+        xmlnsXlink="http://www.w3.org/1999/xlink" 
+        version="1.1" 
+        viewBox="0 0 1086.4 407.5"
+        style={{ width: '100%', height: 'auto' }}
+      >
+        <defs>
+          <linearGradient id="linear-gradient" x1="787" y1="431.4" x2="752.8" y2="175.5" gradientTransform="translate(0 410) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="var(--cascade-dark)"/>
+            <stop offset=".4" stopColor="var(--cascade-dark)"/>
+            <stop offset=".6" stopColor="var(--cascade-medium)"/>
+            <stop offset=".7" stopColor="var(--cascade-medium)"/>
+            <stop offset=".8" stopColor="var(--cascade-accent)"/>
+            <stop offset=".9" stopColor="var(--cascade-secondary)"/>
+            <stop offset=".9" stopColor="var(--cascade-primary)"/>
+            <stop offset="1" stopColor="var(--cascade-light)"/>
+          </linearGradient>
+        </defs>
+        
+        {/* Main waterfall cascade - this is just a sample, we'd need the complete structure */}
+        <rect className="st0" x="0" y="0" width="100" height="100" />
+        <rect className="st1" x="100" y="0" width="100" height="100" />
+        <rect className="st2" x="200" y="0" width="100" height="100" />
+        <rect className="st3" x="300" y="0" width="100" height="100" />
+        <rect className="st11" x="0" y="100" width="100" height="100" />
+        <rect className="st12" x="100" y="100" width="100" height="100" />
+        <rect className="st13" x="200" y="100" width="100" height="100" />
+        <rect className="st15" x="300" y="100" width="100" height="100" />
+      </svg>
+    </div>
   );
 }; 
