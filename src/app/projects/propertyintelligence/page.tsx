@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import Link from 'next/link';
 
 const imageVariant = {
@@ -24,9 +24,9 @@ export default function PropertyIntelligencePage() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           Property Intelligence Platform
         </h1>
-        <Blockquote>
+        <ProjectSubtitle>
           Designing the User Experience for Betterview's Property Intelligence & Risk Management Product
-        </Blockquote>
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="UX/Product Designer"
           employer="Betterview"
@@ -62,7 +62,7 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             Betterview's Property Intelligence platform revolutionizes property insurance underwriting by transforming raw data into actionable insights. The platform leverages advanced AI and predictive analytics to provide insurers with a comprehensive view of property risks, enabling more informed decision-making and proactive risk management.
           </p>
@@ -72,7 +72,7 @@ export default function PropertyIntelligencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">My Contribution</h3>
+              <h4 className="text-xl font-semibold mb-4">My Contribution</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• UX Design</li>
                 <li>• Product Design</li>
@@ -81,7 +81,7 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">The Team</h3>
+              <h4 className="text-xl font-semibold mb-4">The Team</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• 1x Product Manager</li>
                 <li>• 1x Front-End Engineer</li>
@@ -136,14 +136,14 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             Our research revealed that insurance underwriters were spending excessive time manually analyzing property data from multiple sources. They needed a more efficient way to assess risks and make informed decisions. Key findings included:
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">User Pain Points</h3>
+              <h4 className="text-xl font-semibold mb-4">User Pain Points</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Time-consuming manual data analysis</li>
                 <li>• Inconsistent risk assessment methods</li>
@@ -152,7 +152,7 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">User Needs</h3>
+              <h4 className="text-xl font-semibold mb-4">User Needs</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Automated risk assessment</li>
                 <li>• Real-time property monitoring</li>
@@ -164,13 +164,13 @@ export default function PropertyIntelligencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Data Synthesis</h3>
+              <h4 className="text-xl font-semibold mb-4">Data Synthesis</h4>
               <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 Analyzing a plethora of data sources, including aerial imagery, public records, and partner data, to establish a framework for the new predictive risk scoring system.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Market Analysis</h3>
+              <h4 className="text-xl font-semibold mb-4">Market Analysis</h4>
               <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 Studying the competitive landscape to identify gaps and opportunities for Betterview to provide distinctive value in property risk management.
               </p>
@@ -196,7 +196,7 @@ export default function PropertyIntelligencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Flag System Design</h3>
+              <h4 className="text-xl font-semibold mb-4">Flag System Design</h4>
               <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-4">
                 Developing a comprehensive flag system that allows users to categorize and track various property conditions and risk factors. The system was designed to be both intuitive and powerful, enabling users to create custom flags for specific property conditions, maintenance needs, and risk assessments.
               </p>
@@ -229,14 +229,14 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design Development</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design Development</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The design process focused on creating a system that would make complex property data accessible and actionable. We developed several key features:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Key Features</h3>
+              <h4 className="text-xl font-semibold mb-4">Key Features</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Custom Flag System</li>
                 <li>• Automated Monitoring</li>
@@ -245,7 +245,7 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Design Process</h3>
+              <h4 className="text-xl font-semibold mb-4">Design Process</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• User Flow Mapping</li>
                 <li>• Wireframing</li>
@@ -316,14 +316,14 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Implementation</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Implementation</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The implementation phase focused on creating a robust, scalable system that could handle real-time data processing and provide accurate risk assessments. Key technical challenges included:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Technical Challenges</h3>
+              <h4 className="text-xl font-semibold mb-4">Technical Challenges</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Real-time data processing</li>
                 <li>• AI model integration</li>
@@ -332,7 +332,7 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Solutions</h3>
+              <h4 className="text-xl font-semibold mb-4">Solutions</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Microservices architecture</li>
                 <li>• Automated testing</li>
@@ -344,7 +344,7 @@ export default function PropertyIntelligencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Automated Monitoring</h3>
+              <h4 className="text-xl font-semibold mb-4">Automated Monitoring</h4>
               <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-4">
                 Implementing an automated notification system that alerts users to potential property risks and changes in conditions, enabling proactive risk management. The system continuously monitors property data and generates real-time alerts when predefined thresholds are exceeded or when significant changes are detected.
               </p>
@@ -393,10 +393,10 @@ export default function PropertyIntelligencePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Business Impact</h3>
+              <h4 className="text-xl font-semibold mb-4">Business Impact</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• 40% reduction in risk assessment time</li>
                 <li>• 25% increase in underwriting efficiency</li>
@@ -405,7 +405,7 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">User Feedback</h3>
+              <h4 className="text-xl font-semibold mb-4">User Feedback</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Improved decision-making</li>
                 <li>• Better risk visibility</li>

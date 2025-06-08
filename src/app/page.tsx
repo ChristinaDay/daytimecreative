@@ -4,6 +4,7 @@ import { ProjectsSection } from '@/components/sections/ProjectsSection';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 import { useEffect, useRef } from 'react';
 
@@ -301,9 +302,9 @@ export default function Home() {
         className="flex flex-col items-start justify-center flex-1 py-16 mt-0 relative z-10"
       >
         <div className="w-full md:w-1/2">
-          <Blockquote>
+          <ProjectSubtitle>
             I specialize in product design, UX, and creative direction for web, apps, and brands.
-          </Blockquote>
+          </ProjectSubtitle>
         </div>
       </motion.section>
       {/* Featured Case Study Section */}

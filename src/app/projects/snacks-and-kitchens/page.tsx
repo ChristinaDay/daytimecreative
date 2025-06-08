@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function SnacksAndKitchensPage() {
   return (
@@ -18,9 +18,9 @@ export default function SnacksAndKitchensPage() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           ZeroCater – Snacks & Kitchens
         </h1>
-        <Blockquote>
+        <ProjectSubtitle>
           Designing a subscription-based office snack and kitchen service for modern workplaces.
-        </Blockquote>
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="Product Designer, UX, User Research"
           employer="ZeroCater"
@@ -62,7 +62,7 @@ export default function SnacksAndKitchensPage() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center mb-8">
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+              <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
               <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
                 As the sole Product Designer, I led the creation of ZeroCater's Snacks & Kitchens dashboard—a subscription-based platform that redefined office catering. Through user research, market analysis, and close collaboration with engineering, we delivered a seamless experience for office managers to manage snack and kitchen supplies, track usage, and optimize workplace satisfaction.
               </p>
@@ -97,7 +97,7 @@ export default function SnacksAndKitchensPage() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h2>
+              <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h3>
               <ul className="space-y-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
                 <li>• Conducted stakeholder interviews, market analysis, and user behavior studies to inform design.</li>
                 <li>• Synthesized complex information into user-friendly dashboard designs through iterative feedback.</li>
@@ -146,7 +146,7 @@ export default function SnacksAndKitchensPage() {
       {/* Feedback & User Flows Section */}
       <div className="py-16">
         <section>
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Feedback & User Flows</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Feedback & User Flows</h3>
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-8 max-w-2xl">
             User feedback was central to the design process. We tested multiple feedback form styles to ensure the experience was intuitive, accessible, and engaging for all office managers and employees.
           </p>
@@ -239,7 +239,7 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
             <div>
               <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">

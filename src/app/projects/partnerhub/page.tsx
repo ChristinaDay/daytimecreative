@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
 
 export default function PartnerHubPage() {
@@ -47,9 +47,9 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-16"
       >
-        <Blockquote>
+        <ProjectSubtitle>
           Revolutionizing the integration of third-party property data for insurers through a unique Customizable UI that automates and enhances decision-making workflows.
-        </Blockquote>
+        </ProjectSubtitle>
       </motion.div>
 
       {/* Hero Interface Showcase */}
@@ -76,7 +76,7 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           PartnerHub is a pivotal extension of Betterview's platform that revolutionizes how insurers access and utilize third-party property data. This feature centralizes disparate data sources such as geospatial and weather information, automating decision-making workflows and transforming how property risk assessments are conducted.
         </p>
@@ -85,7 +85,7 @@ export default function PartnerHubPage() {
         </p>
 
         <div className="bg-surface-light dark:bg-surface-dark p-6 rounded-lg mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h3>
+          <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
             <div>
               <strong>Design & Strategy:</strong>
@@ -112,7 +112,7 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Research & Discovery</h2>
+        <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Research & Discovery</h3>
         
         {/* Two-column intro layout */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
@@ -126,7 +126,7 @@ export default function PartnerHubPage() {
           </div>
           <div className="lg:col-span-2">
             <div className="bg-opal-light-blue dark:bg-opal-dark-blue p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 text-text-light dark:text-text-dark">Research Timeline</h3>
+              <h4 className="text-lg font-semibold mb-3 text-text-light dark:text-text-dark">Research Timeline</h4>
               <div className="space-y-3 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <div className="flex justify-between">
                   <span>Duration:</span>
@@ -147,7 +147,7 @@ export default function PartnerHubPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-surface-light dark:bg-surface-dark p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Research</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Research</h4>
             <ul className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-3">
               <li>• Conducted interviews with Betterview clients to capture workflow challenges and data usage patterns</li>
               <li>• Analyzed user feedback to determine essential features and interface requirements</li>
@@ -156,7 +156,7 @@ export default function PartnerHubPage() {
           </div>
 
           <div className="bg-surface-light dark:bg-surface-dark p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Competitive Analysis</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Competitive Analysis</h4>
             <ul className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-3">
               <li>• Reviewed existing solutions and third-party data integrations</li>
               <li>• Benchmarked against industry standards</li>
@@ -167,7 +167,7 @@ export default function PartnerHubPage() {
 
         {/* Enhanced Research Scale Stats */}
         <div className="bg-gradient-to-br from-accent-light/10 to-accent-light/5 dark:from-accent-dark/10 dark:to-accent-dark/5 p-8 rounded-xl mb-12">
-          <h3 className="text-2xl font-semibold mb-8 text-text-light dark:text-text-dark text-center">Research Scale & Impact</h3>
+          <h4 className="text-2xl font-semibold mb-8 text-text-light dark:text-text-dark text-center">Research Scale & Impact</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-accent-light dark:text-accent-dark mb-3">155</div>
@@ -201,7 +201,7 @@ export default function PartnerHubPage() {
 
         {/* Technical Exploration */}
         <div className="border-l-4 border-accent-light dark:border-accent-dark pl-6 mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Exploration & Strategy</h3>
+          <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Exploration & Strategy</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ul className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
               <li>• Collaborated with engineering teams to understand constraints and possibilities</li>
@@ -245,7 +245,7 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 1.0 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Design Development</h2>
+        <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Design Development</h3>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-2">
@@ -258,7 +258,7 @@ export default function PartnerHubPage() {
           </div>
           <div className="lg:col-span-1">
             <div className="bg-opal-light-purple dark:bg-opal-dark-purple p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 text-text-light dark:text-text-dark">Design Phase</h3>
+              <h4 className="text-lg font-semibold mb-3 text-text-light dark:text-text-dark">Design Phase</h4>
               <div className="space-y-3 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <div className="flex justify-between">
                   <span>Duration:</span>
@@ -299,50 +299,50 @@ export default function PartnerHubPage() {
         {/* Methods and Tools - Enhanced Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="bg-gradient-to-br from-surface-light to-surface-light/50 dark:from-surface-dark dark:to-surface-dark/50 p-8 rounded-xl">
-            <h3 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark flex items-center">
+            <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark flex items-center">
               <span className="w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full mr-3"></span>
               Design Methods
-            </h3>
+            </h4>
             <div className="space-y-4">
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Wireframing</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Wireframing</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Rapid concept exploration</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Sketching</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Sketching</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Early ideation and flow mapping</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">High-Resolution Mockups</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">High-Resolution Mockups</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Detailed interface design</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Interactive Prototypes</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Interactive Prototypes</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">User testing and validation</p>
               </div>
             </div>
           </div>
 
           <div className="bg-gradient-to-br from-surface-light to-surface-light/50 dark:from-surface-dark dark:to-surface-dark/50 p-8 rounded-xl">
-            <h3 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark flex items-center">
+            <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark flex items-center">
               <span className="w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full mr-3"></span>
               Tools & Applications
-            </h3>
+            </h4>
             <div className="space-y-4">
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Sketch App</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Sketch App</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Primary design tool</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Figma</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Figma</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Collaborative prototyping</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Adobe Creative Suite</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Adobe Creative Suite</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">Asset creation</p>
               </div>
               <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
-                <h4 className="font-semibold text-text-light dark:text-text-dark">Miro</h4>
+                <h5 className="font-semibold text-text-light dark:text-text-dark">Miro</h5>
                 <p className="text-sm text-text-light/70 dark:text-text-dark/70">User flow mapping and team collaboration</p>
               </div>
             </div>
@@ -351,14 +351,14 @@ export default function PartnerHubPage() {
 
         {/* Design Challenges - Improved Layout */}
         <div className="bg-opal-light-green dark:bg-opal-dark-green p-8 rounded-xl mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Design Challenges</h3>
+          <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Design Challenges</h4>
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             One of the primary challenges was designing for complex data visualization while maintaining an intuitive user experience. The system needed to accommodate multiple data formats from various third-party sources, each requiring custom UI considerations for optimal presentation and usability.
           </p>
         </div>
 
         <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-xl mb-8">
-          <h3 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Key Design Decisions</h3>
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Key Design Decisions</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -366,7 +366,7 @@ export default function PartnerHubPage() {
                   <span className="text-white text-xs">1</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-text-light dark:text-text-dark">Modular Interface</h4>
+                  <h5 className="font-semibold text-text-light dark:text-text-dark">Modular Interface</h5>
                   <p className="text-sm text-text-light/70 dark:text-text-dark/70">Created flexible UI components that could adapt to different data types</p>
                 </div>
               </div>
@@ -375,7 +375,7 @@ export default function PartnerHubPage() {
                   <span className="text-white text-xs">2</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-text-light dark:text-text-dark">Progressive Disclosure</h4>
+                  <h5 className="font-semibold text-text-light dark:text-text-dark">Progressive Disclosure</h5>
                   <p className="text-sm text-text-light/70 dark:text-text-dark/70">Implemented layered information architecture to prevent cognitive overload</p>
                 </div>
               </div>
@@ -386,7 +386,7 @@ export default function PartnerHubPage() {
                   <span className="text-white text-xs">3</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-text-light dark:text-text-dark">Customizable Layouts</h4>
+                  <h5 className="font-semibold text-text-light dark:text-text-dark">Customizable Layouts</h5>
                   <p className="text-sm text-text-light/70 dark:text-text-dark/70">Enabled users to personalize their workspace based on workflow preferences</p>
                 </div>
               </div>
@@ -395,7 +395,7 @@ export default function PartnerHubPage() {
                   <span className="text-white text-xs">4</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-text-light dark:text-text-dark">Visual Hierarchy</h4>
+                  <h5 className="font-semibold text-text-light dark:text-text-dark">Visual Hierarchy</h5>
                   <p className="text-sm text-text-light/70 dark:text-text-dark/70">Established clear data prioritization through typography and spacing</p>
                 </div>
               </div>
@@ -403,7 +403,7 @@ export default function PartnerHubPage() {
           </div>
         </div>
 
-        <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Collaborative Process</h3>
+        <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Collaborative Process</h4>
         <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
           The design development phase involved intensive collaboration sessions with the Product Manager and Director of Design. We conducted regular Miro sessions for user flow prototyping, where team members contributed feedback, mock-ups, and suggestions, ensuring the final design was both technically feasible and user-validated.
         </p>
@@ -454,7 +454,7 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 1.2 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical Implementation</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical Implementation</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           With the design refined and validated through rigorous user testing, the focus shifted to technical implementation — the phase where design meets development. This required close collaboration to ensure the vision translated accurately into functional code.
         </p>
@@ -480,7 +480,7 @@ export default function PartnerHubPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Engineering Collaboration</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Engineering Collaboration</h4>
             <ul className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
               <li>• Development sprints with front-end and back-end engineers</li>
               <li>• Translated design blueprints into functional specifications</li>
@@ -489,7 +489,7 @@ export default function PartnerHubPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Quality Assurance</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Quality Assurance</h4>
             <ul className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
               <li>• Thorough testing for robustness and reliability</li>
               <li>• Security and data integrity emphasis</li>
@@ -498,7 +498,7 @@ export default function PartnerHubPage() {
           </div>
         </div>
 
-        <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Integration Challenges</h3>
+        <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Integration Challenges</h4>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           One of the most significant technical hurdles was integrating PartnerHub seamlessly within the existing Betterview platform while ensuring data from various third-party sources flowed reliably into the system. This required careful API design and robust error handling to maintain system stability.
         </p>
@@ -532,21 +532,21 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 1.4 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           The launch of PartnerHub marked a significant milestone for Betterview, with immediate and measurable results that transformed how property risk assessments are conducted across the platform.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="bg-accent-light/10 dark:bg-accent-dark/10 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Workflow Automation</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Workflow Automation</h4>
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
               PartnerHub automated critical aspects of property risk assessment workflows, reducing manual data aggregation and analysis time for underwriters by an estimated 60%.
             </p>
           </div>
 
           <div className="bg-surface-light dark:bg-surface-dark p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Enhanced Decision-Making</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Enhanced Decision-Making</h4>
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
               By providing comprehensive property risk profiles, the feature empowered insurers to make more informed decisions, improving policy recommendation accuracy.
             </p>
@@ -554,7 +554,7 @@ export default function PartnerHubPage() {
         </div>
 
         <div className="bg-opal-light-blue dark:bg-opal-dark-blue p-8 rounded-lg mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Business Impact</h3>
+          <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Business Impact</h4>
           <ul className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 space-y-3">
             <li>• <strong>User Engagement:</strong> Measurable improvement in platform engagement metrics</li>
             <li>• <strong>Client Satisfaction:</strong> Received excellent feedback from users noting enhanced efficiency</li>
@@ -564,7 +564,7 @@ export default function PartnerHubPage() {
         </div>
 
         <div className="border border-accent-light/20 dark:border-accent-dark/20 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Related Innovation</h3>
+          <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Related Innovation</h4>
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
             The implementation of PartnerHub also required developing a new Customizable UI system to accommodate the diverse data modalities. This innovation became a cornerstone feature that enhanced the entire Betterview platform experience.
           </p>
@@ -578,7 +578,7 @@ export default function PartnerHubPage() {
         transition={{ duration: 0.8, delay: 1.6 }}
       >
         <div className="bg-surface-light dark:bg-surface-dark p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Key Takeaways</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Key Takeaways</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The success of PartnerHub underscores the value of integrating user-centered design with robust technical development. By focusing on real user needs and maintaining close collaboration throughout the development process, we produced a product that not only meets current market needs but also anticipates future industry trends.
           </p>

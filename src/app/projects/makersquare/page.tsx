@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function MakersquareProject() {
   return (
@@ -18,9 +18,9 @@ export default function MakersquareProject() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           Makersquare Logo Design, Branding & Marketing
         </h1>
-        <Blockquote>
+        <ProjectSubtitle>
           Creating a comprehensive branding overhaul for a premier coding bootcamp
-        </Blockquote>
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="Lead Designer"
           employer="MakerSquare"
@@ -51,7 +51,7 @@ export default function MakersquareProject() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           MakerSquare, now known as Hack Reactor, required a comprehensive branding overhaul to reflect its standing as a premier coding bootcamp. 
           The challenge was to create a visual identity that would resonate across its locations in Austin, San Francisco, New York and Los Angeles, 
@@ -70,7 +70,7 @@ export default function MakersquareProject() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h3>
         
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           I undertook the creative process to craft MakerSquare's new logo and visual elements, ensuring they aligned with the brand's educational 
@@ -146,7 +146,7 @@ export default function MakersquareProject() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Branding Materials</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Branding Materials</h3>
         
         {/* Comprehensive Branding Overview */}
         <motion.div
@@ -231,7 +231,7 @@ export default function MakersquareProject() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.0 }}
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
         
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           My efforts culminated in a successful brand update that was instrumental in MakerSquare's market presence, significantly contributing to its recognition and growth.

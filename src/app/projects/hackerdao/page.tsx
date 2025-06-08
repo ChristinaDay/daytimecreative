@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function HackerDaoProject() {
   return (
@@ -18,9 +18,9 @@ export default function HackerDaoProject() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           HackerDAO Branding
         </h1>
-        <Blockquote>
+        <ProjectSubtitle>
           Creating a Custom Logo & Illustrations for HackerDAO
-        </Blockquote>
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="Contract Designer"
           employer="HackerDAO"
@@ -51,7 +51,7 @@ export default function HackerDaoProject() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           HackerDAO is a revolutionary blockchain-education startup aimed at building a community of engineers and mentors. 
           In the nascent stages of blockchain technology education, HackerDAO needed a strong brand identity to establish 
@@ -86,7 +86,7 @@ export default function HackerDaoProject() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Tools Used</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Tools Used</h3>
         <div className="flex flex-wrap gap-3 mb-8">
           {['Adobe Illustrator', 'Adobe Photoshop', 'Sketch App'].map((tool) => (
             <span
@@ -125,7 +125,7 @@ export default function HackerDaoProject() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="mb-16"
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h3>
         <ul className="space-y-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
           <li>• Engaged with engineers and mentors to understand the culture and values of the HackerDAO community</li>
           <li>• Ensured branding consistency across all touchpoints to build a coherent and recognizable identity</li>
@@ -154,7 +154,7 @@ export default function HackerDaoProject() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.0 }}
       >
-        <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
           The branding design was successfully implemented, resulting in increased visibility for HackerDAO. 
           Feedback from stakeholders indicated a strong reception of the new branding, aligning with the 

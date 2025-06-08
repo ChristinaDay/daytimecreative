@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function SpotlightsReportingPage() {
   return (
@@ -18,9 +18,9 @@ export default function SpotlightsReportingPage() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           Spotlights Reporting at Betterview
         </h1>
-        <Blockquote>
-          Transforming dynamic map data into accessible, exportable reports for insurance professionals.
-        </Blockquote>
+        <ProjectSubtitle>
+          Creating an intuitive interface for converting interactive data into structured reports for insurance professionals.
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="Product Designer, UI/UX, User Research"
           employer="Betterview"
@@ -56,7 +56,7 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             Betterview, an online platform providing actionable insights on property risk aimed at insurance professionals, offered valuable property risk insights but lacked a means for insurance professionals to export this data in a comprehensive format.
           </p>
@@ -66,7 +66,7 @@ export default function SpotlightsReportingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">My Contribution</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">My Contribution</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Product Design</li>
                 <li>• UI & UX Design</li>
@@ -74,7 +74,7 @@ export default function SpotlightsReportingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• 1x Designer (Myself)</li>
                 <li>• 1x Product Manager</li>
@@ -93,21 +93,21 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             Collaborating closely with a team of engineers, I tackled the challenge of transforming Betterview's dynamic visual data into a static, exportable format. This required integrating complex mapping tools with third-party data and crafting a design that would accommodate both PDF and .CSV outputs.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Client Challenges</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Client Challenges</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• No exportable map data</li>
                 <li>• Incomplete Reporting</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Engineering Challenges</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Engineering Challenges</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Map tool unable to export text data</li>
                 <li>• Data from map tool not automatic</li>
@@ -125,24 +125,24 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h3>
           
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Research on Past Limitations</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Research on Past Limitations</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
               I investigated previous challenges that prevented the inclusion of an exportable feature, gaining insights into potential solutions and understanding feasibility constraints.
             </p>
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Research & Analysis</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Research & Analysis</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
               I initiated the project by diving into a comprehensive user research phase, conducting interviews with internal teams to grasp the nuanced challenges faced by our clients. This was coupled with an in-depth analysis of previous limitations, which provided a historical context and helped in identifying viable pathways for our solution.
             </p>
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Interviews with Internal Team</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Interviews with Internal Team</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
               I conducted interviews with Betterview's Client Success team and key Account Executives to understand the pain points related to the lack of exportable Spotlights data.
             </p>
@@ -158,21 +158,21 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical & Design Synthesis</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical & Design Synthesis</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             Drawing from the insights gained, I engaged in a series of technical interviews, gathering key input that informed our iterative prototyping process. The design requirements were then defined, balancing the need for both web and print accessibility, ensuring that our solutions were not only technically feasible but also aligned with our users' workflows.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Users Interviewed</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Users Interviewed</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Over 100 (Via Online Survey)</li>
                 <li>• 20 (In Person, Over Video Call)</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Interviews</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Interviews</h4>
               <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 I spoke with Engineering team members to gather technical perspectives and direction for addressing the challenges.
               </p>
@@ -180,7 +180,7 @@ export default function SpotlightsReportingPage() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Exploration of Engineering Solutions</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Exploration of Engineering Solutions</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
               I worked on creating a layout that did not rely solely on color to convey information, ensuring legibility and creating a key or legend for the static map visualization.
             </p>
@@ -199,14 +199,14 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Solution Development</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Solution Development</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
             The actual development of the solution involved rapid sketching and exploration of various engineering possibilities. This phase was critical in translating the dynamic image mapping into a static format without losing the essence of our interactive tools. The result was a design that did not rely solely on color, incorporating a clear legend that maintained the legibility of our data in a printable format.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Skills Used</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Skills Used</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Sketch App for Prototyping</li>
                 <li>• Hand-Drawn Explorations</li>
@@ -214,7 +214,7 @@ export default function SpotlightsReportingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Process</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Process</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Initial Sketching</li>
                 <li>• Prototyping in Sketch App</li>
@@ -224,7 +224,7 @@ export default function SpotlightsReportingPage() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Initial Sketching</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Initial Sketching</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
               Utilized pen-and-paper sketches to quickly communicate potential solutions and gain stakeholder buy-in.
             </p>
@@ -249,7 +249,7 @@ export default function SpotlightsReportingPage() {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Prototyping in Sketch App</h3>
+            <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Prototyping in Sketch App</h4>
             <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
               Collaborated with engineers to brainstorm and prototype solutions, considering both design and technical constraints.
             </p>
@@ -319,14 +319,14 @@ export default function SpotlightsReportingPage() {
           transition={{ duration: 0.8, delay: 1.5 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Solving for Accessibility Issues</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Solving for Accessibility Issues</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
             Worked with engineering to find practical ways to translate the datapoints provided by Betterview's dynamic, interactive mapping tool into a legible, static report. New labeling was required in the form of keys or legends printed next to the imagery that they are analyzing.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Solution</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Solution</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• High-contrast colors</li>
                 <li>• Variegated outlines</li>
@@ -334,7 +334,7 @@ export default function SpotlightsReportingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Issues</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Issues</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Lack of contrast</li>
                 <li>• Lack of legibility</li>
@@ -403,14 +403,14 @@ export default function SpotlightsReportingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.9 }}
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The Spotlights Reporting feature was successfully implemented, profoundly enhancing the platform's functionality and user experience. The feature now allows for a complete property risk profile to be exported, including the previously interactive map's visual insights. This pivotal improvement has streamlined the workflow for Betterview's clients, such as underwriters at Nationwide and State Farm, enabling them to leverage comprehensive reports for informed decision-making. The feature's launch was met with positive feedback, affirming its impact on the company's service offering.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Outcome</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Outcome</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Pivotal Improvement</li>
                 <li>• Positive User Feedback</li>
@@ -419,7 +419,7 @@ export default function SpotlightsReportingPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Audience</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Audience</h4>
               <ul className="space-y-2 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• State Farm Employees</li>
                 <li>• Nationwide Employees</li>
