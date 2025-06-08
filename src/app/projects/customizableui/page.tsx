@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
-import { Blockquote } from '@/components/typography/DropQuote';
+import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function CustomizableUIPage() {
   return (
@@ -18,9 +18,9 @@ export default function CustomizableUIPage() {
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           Customizable Dashboards & Betterview Insight Reporting
         </h1>
-        <Blockquote>
-          Designing a New Dashboard With a Modular, Customizable User Interface
-        </Blockquote>
+        <ProjectSubtitle>
+          Designing a modular, customizable dashboard system for Betterview's PartnerHub integration, empowering users to personalize their data visualization experience.
+        </ProjectSubtitle>
         <ProjectDetailTags
           role="UX Designer, Product Designer, User Researcher"
           employer="Betterview"
@@ -56,7 +56,7 @@ export default function CustomizableUIPage() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The introduction of PartnerHub to the Betterview platform brought an unprecedented influx of new data points, necessitating a more adaptable and user-centric dashboard. Recognizing the potential for data overload and the varied needs of our clients, the challenge was to design a Customizable UI that would allow users to not only manage the complexity but also to personalize their data visualization experience.
           </p>
@@ -66,7 +66,7 @@ export default function CustomizableUIPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-16">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">My Contribution</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">My Contribution</h4>
               <ul className="list-none space-y-1 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>UX Design</li>
                 <li>Product Design</li>
@@ -74,7 +74,7 @@ export default function CustomizableUIPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h4>
               <ul className="list-none space-y-1 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>1x Product Manager</li>
                 <li>4x Engineers</li>
@@ -128,14 +128,14 @@ export default function CustomizableUIPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The project kicked off with a deep dive into the current landscape of Betterview's platform and the new data challenges presented by PartnerHub.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Pain Points</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Pain Points</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Data overload from multiple sources</li>
                 <li>• Limited customization options</li>
@@ -144,7 +144,7 @@ export default function CustomizableUIPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Needs</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Needs</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Personalized dashboard layouts</li>
                 <li>• Flexible data visualization</li>
@@ -183,7 +183,7 @@ export default function CustomizableUIPage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Design Development</h2>
+          <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Design Development</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
             The design process focused on creating a modular system that would make complex property data accessible and actionable. Through iterative design and user testing, we developed a flexible interface that could adapt to various user needs while maintaining consistency and usability.
           </p>
@@ -192,7 +192,7 @@ export default function CustomizableUIPage() {
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Key Features</h3>
+                  <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Key Features</h4>
                   <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                     <li>• Modular Dashboard Components</li>
                     <li>• Drag-and-Drop Interface</li>
@@ -201,7 +201,7 @@ export default function CustomizableUIPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Design Process</h3>
+                  <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Design Process</h4>
                   <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                     <li>• User Flow Mapping</li>
                     <li>• Wireframing</li>
@@ -259,14 +259,14 @@ export default function CustomizableUIPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Implementation</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Implementation</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The implementation phase focused on creating a robust, scalable system that could handle real-time data processing and provide accurate risk assessments. Key technical challenges included:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Challenges</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Technical Challenges</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Real-time data processing</li>
                 <li>• State management</li>
@@ -275,7 +275,7 @@ export default function CustomizableUIPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Solutions</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Solutions</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Modular architecture</li>
                 <li>• Efficient data caching</li>
@@ -309,14 +309,14 @@ export default function CustomizableUIPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
         >
-          <h2 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h2>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
             The introduction of the Customizable UI to the Betterview platform marked a significant advancement in how insurance underwriters interact with property data. The successful implementation of this feature led to several key outcomes:
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Business Impact</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Business Impact</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• 40% increase in user engagement</li>
                 <li>• 35% improvement in task completion</li>
@@ -325,7 +325,7 @@ export default function CustomizableUIPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Feedback</h3>
+              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Feedback</h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Improved workflow efficiency</li>
                 <li>• Better data visualization</li>
