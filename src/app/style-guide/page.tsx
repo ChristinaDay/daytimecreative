@@ -66,12 +66,12 @@ export default function StyleGuidePage() {
       <section className="mb-16">
         <h2 className="text-3xl font-bold mb-6">Typography</h2>
         <div className="space-y-4">
-          <h1 className="text-5xl font-serif font-bold">Heading 1 / .text-5xl .font-serif .font-bold</h1>
-          <h2 className="text-4xl font-serif font-semibold">Heading 2 / .text-4xl .font-serif .font-semibold</h2>
-          <h3 className="text-3xl font-serif font-semibold">Heading 3 / .text-3xl .font-serif .font-semibold</h3>
-          <h4 className="text-2xl font-serif font-medium">Heading 4 / .text-2xl .font-serif .font-medium</h4>
-          <h5 className="text-xl font-serif font-medium">Heading 5 / .text-xl .font-serif .font-medium</h5>
-          <h6 className="text-lg font-serif font-medium">Heading 6 / .text-lg .font-serif .font-medium</h6>
+          <h1 className="text-5xl font-serif font-normal">Heading 1 / .text-5xl .font-serif .font-normal</h1>
+          <h2 className="text-4xl font-serif font-normal">Heading 2 / .text-4xl .font-serif .font-normal</h2>
+          <h3 className="text-3xl font-serif font-normal">Heading 3 / .text-3xl .font-serif .font-normal</h3>
+          <h4 className="text-2xl font-serif font-normal">Heading 4 / .text-2xl .font-serif .font-normal</h4>
+          <h5 className="text-xl font-serif font-normal">Heading 5 / .text-xl .font-serif .font-normal</h5>
+          <h6 className="text-lg font-serif font-normal">Heading 6 / .text-lg .font-serif .font-normal</h6>
           <p className="text-base font-sans">Body text / .text-base .font-sans</p>
           <a href="#" className="text-accent-light dark:text-accent-dark underline font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Link / .text-accent-light .dark:text-accent-dark .underline .font-bold .dark:drop-shadow-[0_0_8px_#aee7ff]</a>
           <Blockquote className="mb-8">Blockquote: "Design is intelligence made visible."</Blockquote>
