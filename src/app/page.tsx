@@ -307,6 +307,7 @@ export default function Home() {
           </ProjectSubtitle>
         </div>
       </motion.section>
+      
       {/* Featured Case Study Section */}
       <section className="w-full py-24 px-2 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
