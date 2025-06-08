@@ -1,7 +1,6 @@
 import { GeistMono } from 'geist/font/mono'
 import { MainLayout } from '@/components/layout/MainLayout'
 import { ThemeProvider } from 'next-themes'
-import Footer from '@/components/Footer'
 import './globals.css'
 import { Inter, Prata } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
@@ -21,13 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${prata.variable} ${GeistMono.variable}`}>
-      <body>
+      <body className="bg-transparent">
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
           <MainLayout>
             {children}
           </MainLayout>
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

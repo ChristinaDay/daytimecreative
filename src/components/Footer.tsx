@@ -4,40 +4,40 @@ const footerTextColor = 'text-[rgb(178,148,198)]';
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 border-t border-surface-light/20 dark:border-surface-dark/20 dark:bg-[#0f172a]">
+    <footer className="w-full py-6 pt-48 -mt-40 bg-slate-100 dark:bg-gray-800 border-t-2 border-gray-300 dark:border-surface-dark/20 relative z-50">
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 md:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
-            <h2 className="font-sans text-xl font-semibold mb-2 text-text-light dark:text-white">
+            <h2 className="font-sans text-lg font-semibold mb-1 text-text-light dark:text-white">
               daytime creative ⚆
             </h2>
-            <p className="text-sm text-[rgb(178,148,198)]">
+            <p className="text-xs text-[rgb(178,148,198)]">
               Design Portfolio of Christina Day
             </p>
-            <div className="mt-4 text-sm text-[rgb(178,148,198)]">
+            <div className="mt-2 text-xs text-[rgb(178,148,198)]">
               ©{new Date().getFullYear()}
             </div>
           </div>
           
           <div className="flex flex-col items-center md:items-end gap-2">
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <Link 
                 href="/contact" 
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Contact
               </Link>
               <Link 
                 href="/resume" 
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Resume ✰
               </Link>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a 
                 href="mailto:your.email@example.com" 
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Email ✉︎
               </a>
@@ -45,7 +45,7 @@ export default function Footer() {
                 href="https://linkedin.com/in/yourprofile" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 LinkedIn ⎆
               </a>
@@ -53,7 +53,7 @@ export default function Footer() {
                 href="https://github.com/yourusername" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 GitHub ⎆
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
                 href="https://instagram.com/yourusername" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Instagram ⎆
               </a>
@@ -69,7 +69,7 @@ export default function Footer() {
                 href="https://dribbble.com/yourusername" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium`}
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Dribbble ⎆
               </a>

@@ -4,7 +4,6 @@
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-prata), serif;
     line-height: 1.25;
   }
   
@@ -43,9 +42,5 @@
 body {
   font-family: var(--font-inter), sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  background: transparent;
 }
