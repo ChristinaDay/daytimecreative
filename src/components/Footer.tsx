@@ -25,8 +25,10 @@ export default function Footer() {
                 href="/art-fabrication" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
-                Fab Lab
+                Fab Lab ✰
               </Link>
+            </div>
+            <div className="flex gap-3">
               <Link 
                 href="/contact" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -37,10 +39,8 @@ export default function Footer() {
                 href="/resume" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
-                Resume ✰
+                Resume
               </Link>
-            </div>
-            <div className="flex gap-3">
               <a 
                 href="mailto:your.email@example.com" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
