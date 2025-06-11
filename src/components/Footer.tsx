@@ -25,7 +25,7 @@ export default function Footer() {
                 href="/art-fabrication" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
-                Fab Lab ✰
+                Fab Lab! Art Fabrication & Installation
               </Link>
             </div>
             <div className="flex gap-3">
