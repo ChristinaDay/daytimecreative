@@ -4,7 +4,7 @@ import { Navbar } from './Navbar';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Footer from '../Footer';
-import CascadeSVG from '../CascadeSVG';
+
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
   const { resolvedTheme } = useTheme();
@@ -105,10 +105,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       
-      {/* Cascade SVG - positioned at bottom of main content */}
-      <div className="w-full flex justify-center relative z-[60] -mt-32">
-        <CascadeSVG />
-      </div>
+
       
       <Footer />
     </div>

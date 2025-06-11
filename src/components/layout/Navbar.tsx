@@ -20,15 +20,9 @@ export function Navbar() {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/about" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
-              About
-            </Link>
-            {/* <Link href="/case-studies" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
-              Case Studies
-            </Link> */}
-            <Link href="/contact" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
+            <a href="mailto:christinamday@gmail.com" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
               Contact
-            </Link>
+            </a>
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full hover:bg-surface-light/20 dark:hover:bg-surface-dark/20"

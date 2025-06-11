@@ -1,8 +1,11 @@
 'use client';
 
-import { Metadata } from 'next';
 import Image from 'next/image';
 import { getFabProjectImages, getImagePath } from '../../utils/fabImages';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+import Footer from '../../components/Footer';
+import { ThemeToggle } from '../../components/layout/ThemeToggle';
 
 // Project data interface
 interface FabProject {
@@ -256,11 +259,13 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
   
   return (
     <>
-      <div className="mb-16" id={sectionAnchor}>
-        <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4">
-          {sectionTitle}
-        </h2>
-      </div>
+      {sectionTitle !== "Featured Projects" && (
+        <div className="mb-16" id={sectionAnchor}>
+          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4">
+            {sectionTitle}
+          </h2>
+        </div>
+      )}
       
       {projects.map((project, projectIndex) => {
         const images = getFabProjectImages(project.folderName);
@@ -331,106 +336,207 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
 }
 
 export default function ArtFabrication2Page() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
   return (
-    <div className="min-h-screen">
-      {/* Header Section */}
-      <div className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-16">
-        <div className="mb-16">
-          <span className="text-base text-text-light dark:text-text-dark mb-2 block">Portfolio</span>
-          <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
-            Fab Lab
-          </h1>
-          <p className="text-xl text-text-light/80 dark:text-text-dark/80 max-w-4xl">
-            In addition to crafting bespoke digital experiences, I also work as an art fabricator 
-            for various studios in the Bay Area. This collection showcases my hands-on work at 
-            Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
-            custom installations and artistic pieces.
-          </p>
-        </div>
+    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden">
+      {/* Light mode daytime sky background */}
+      <div 
+        className="absolute inset-0 dark:hidden"
+        style={{
+          background: 'linear-gradient(to bottom, #b6d6f9 0%, #eaf6ff 100%)',
+          opacity: 1,
+        }}
+      />
+      {/* Sun glow (light mode only) */}
+      <div
+        className="absolute top-[-10vw] left-[-10vw] w-[40vw] h-[40vw] rounded-full dark:hidden"
+        style={{
+          background: 'radial-gradient(circle at 60% 40%, #fffbe6 0%, #ffe9a7 40%, transparent 80%)',
+          opacity: 0.45,
+          filter: 'blur(30px)',
+        }}
+      />
+      {/* Clouds (light mode only) */}
+      <div
+        className="absolute top-[20%] left-[10%] w-[30vw] h-[10vw] rounded-full dark:hidden"
+        style={{
+          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #eaf6ff 100%)',
+          opacity: 0.7,
+          filter: 'blur(24px)',
+        }}
+      />
+      <div
+        className="absolute top-[35%] left-[50%] w-[40vw] h-[12vw] rounded-full dark:hidden"
+        style={{
+          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #b6d6f9 100%)',
+          opacity: 0.5,
+          filter: 'blur(32px)',
+        }}
+      />
+      <div
+        className="absolute bottom-[15%] left-[30%] w-[35vw] h-[10vw] rounded-full dark:hidden"
+        style={{
+          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #eaf6ff 100%)',
+          opacity: 0.6,
+          filter: 'blur(28px)',
+        }}
+      />
+      
+      {/* Base gradient layer */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.3), rgba(173, 216, 230, 0.3), rgba(221, 160, 221, 0.3))',
+          opacity: 1,
+          filter: 'blur(6px)'
+        }}
+      />
+      
+      {/* Pink light leak from top right */}
+      <div 
+        className="absolute top-0 right-0 w-[20vw] h-[20vw]"
+        style={{
+          background: 'radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.3), transparent 70%)',
+          transform: 'translate(10%, -10%)',
+          opacity: 1,
+          filter: 'blur(6px)'
+        }}
+      />
+      
+      {/* Blue light leak from bottom left */}
+      <div 
+        className="absolute bottom-0 left-0 w-[20vw] h-[20vw]"
+        style={{
+          background: 'radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.3), transparent 70%)',
+          transform: 'translate(-10%, 10%)',
+          opacity: 1,
+          filter: 'blur(6px)'
+        }}
+      />
+      
+      {/* Purple light leak from center */}
+      <div 
+        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw]"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, rgba(221, 160, 221, 0.22), transparent 70%)',
+          transform: 'translate(-50%, -50%)',
+          opacity: 1,
+          filter: 'blur(6px)'
+        }}
+      />
+
+      {/* Floating Theme Toggle */}
+      <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-50">
+        <ThemeToggle className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow" />
       </div>
 
-      {/* Gallery Layout */}
-      <div className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20">
-        {/* Featured Projects Section */}
-        {renderProjectSection(featuredProjects, "Featured Projects", 0)}
-        
-        {/* Collaborative Projects Section */}
-        <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24">
-          {renderProjectSection(collaborativeProjects, "Collaborative Projects", featuredProjects.length)}
-        </div>
-        
-        {/* Process Gallery Section */}
-        <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24">
-          {renderProjectSection(processProjects, "Process Gallery", featuredProjects.length + collaborativeProjects.length)}
-        </div>
-        
-        {/* Other Projects Section */}
-        {otherProjects.length > 0 && (
-          <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24">
-            {renderProjectSection(otherProjects, "Additional Projects", featuredProjects.length + collaborativeProjects.length + processProjects.length)}
+      {/* Main Content */}
+      <main className="relative z-20 pb-96 mb-32">
+        {/* Header Section */}
+        <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-12 md:pb-16">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <span className="text-sm sm:text-base text-text-light dark:text-text-dark mb-2 block">Portfolio</span>
+            <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4 sm:mb-6 md:mb-8">
+              Fab Lab
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+              In addition to crafting bespoke digital experiences, I also work as an art fabricator 
+              for various studios in the Bay Area. This collection showcases my hands-on work at 
+              Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
+              custom installations and artistic pieces.
+            </p>
           </div>
-        )}
-      </div>
-
-      {/* Process Gallery Section */}
-      <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24" id="process-gallery-images">
-        <div className="mb-16">
-          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-8">
-            Process Gallery
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl">
-            A collection of images showcasing various fabrication processes, techniques, and studio work.
-          </p>
         </div>
 
-        {/* Process Images Grid */}
-        <ProcessImageGrid />
-      </div>
-
-      {/* Shop and Studio Section */}
-      <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24" id="shop-and-studio">
-        <div className="mb-16">
-          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-8">
-            Shop and Studio
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl">
-            Behind-the-scenes documentation of fabrication processes and workspace organization within the art production environment, revealing the methodology behind creative work.
-          </p>
+        {/* Gallery Layout */}
+        <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20">
+          {/* Featured Projects Section */}
+          {renderProjectSection(featuredProjects, "Featured Projects", 0)}
+          
+          {/* Collaborative Projects Section */}
+          <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
+            {renderProjectSection(collaborativeProjects, "Collaborative Projects", featuredProjects.length)}
+          </div>
+          
+          {/* Process Gallery Section */}
+          <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
+            {renderProjectSection(processProjects, "Process Gallery", featuredProjects.length + collaborativeProjects.length)}
+          </div>
+          
+          {/* Other Projects Section */}
+          {otherProjects.length > 0 && (
+            <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
+              {renderProjectSection(otherProjects, "Additional Projects", featuredProjects.length + collaborativeProjects.length + processProjects.length)}
+            </div>
+          )}
         </div>
 
-        {/* Shop and Studio Images Grid */}
-        <ShopAndStudioGrid />
-      </div>
+        {/* Process Gallery Section */}
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="process-gallery-images">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+              Process Gallery
+            </h2>
+            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+              A collection of images showcasing various fabrication processes, techniques, and studio work.
+            </p>
+          </div>
 
-      {/* Crating and Shipping Section */}
-      <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24" id="crating-and-shipping">
-        <div className="mb-16">
-          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-8">
-            Crating and Shipping
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl">
-            Professional art handling services including custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.
-          </p>
+          {/* Process Images Grid */}
+          <ProcessImageGrid />
         </div>
 
-        {/* Crating and Shipping Images Grid */}
-        <CratingAndShippingGrid />
-      </div>
+        {/* Shop and Studio Section */}
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="shop-and-studio">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+              Shop and Studio
+            </h2>
+            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+              Behind-the-scenes documentation of fabrication processes and workspace organization within the art production environment, revealing the methodology behind creative work.
+            </p>
+          </div>
 
-      {/* Neighborhood Section */}
-      <div className="mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-24" id="neighborhood">
-        <div className="mb-16">
-          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-8">
-            Neighborhood
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl">
-            Community-themed artwork exploring urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.
-          </p>
+          {/* Shop and Studio Images Grid */}
+          <ShopAndStudioGrid />
         </div>
 
-        {/* Neighborhood Images Grid */}
-        <NeighborhoodGrid />
-      </div>
+        {/* Crating and Shipping Section */}
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="crating-and-shipping">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+              Crating and Shipping
+            </h2>
+            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+              Professional art handling services including custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.
+            </p>
+          </div>
+
+          {/* Crating and Shipping Images Grid */}
+          <CratingAndShippingGrid />
+        </div>
+
+        {/* Neighborhood Section */}
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+              Neighborhood
+            </h2>
+            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+              Community-themed artwork exploring urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.
+            </p>
+          </div>
+
+          {/* Neighborhood Images Grid */}
+          <NeighborhoodGrid />
+        </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 }
@@ -464,22 +570,22 @@ function ProcessImageGrid() {
   });
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {allProcessImages.map((item, index) => {
-        // Simple pattern: every 6th image is larger
+        // Simple pattern: every 6th image is larger, but not on mobile
         const isLarge = index % 6 === 0;
 
         return (
           <div 
             key={`${item.folderName}-${item.imageName}`}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
           >
             <Image
               src={getImagePath(item.folderName, item.imageName)}
               alt={`Process image from ${item.folderName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -493,22 +599,22 @@ function ShopAndStudioGrid() {
   const shopImages = getFabProjectImages('Shop and Studio');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {shopImages.map((imageName, index) => {
-        // Simple pattern: every 7th image is larger
+        // Simple pattern: every 7th image is larger, but not on mobile
         const isLarge = index % 7 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Shop and Studio', imageName)}
               alt={`Shop and Studio - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -522,22 +628,22 @@ function CratingAndShippingGrid() {
   const cratingImages = getFabProjectImages('Crating and Shipping');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {cratingImages.map((imageName, index) => {
-        // Simple pattern: every 8th image is larger
+        // Simple pattern: every 8th image is larger, but not on mobile
         const isLarge = index % 8 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Crating and Shipping', imageName)}
               alt={`Crating and Shipping - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -551,22 +657,22 @@ function NeighborhoodGrid() {
   const neighborhoodImages = getFabProjectImages('Neighborhood');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {neighborhoodImages.map((imageName, index) => {
-        // Simple pattern: every 4th image is larger
+        // Simple pattern: every 4th image is larger, but not on mobile
         const isLarge = index % 4 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Neighborhood', imageName)}
               alt={`Neighborhood - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -581,22 +687,22 @@ function ProjectImageGrid({ images, projectName, projectIndex }: {
   projectIndex: number;
 }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {images.map((imageName, index) => {
-        // Simple pattern: every 5th image is larger
+        // Simple pattern: every 5th image is larger, but not on mobile
         const isLarge = index % 5 === 0;
         
         return (
           <div 
             key={imageName} 
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
           >
             <Image
               src={getImagePath(projectName, imageName)}
               alt={`${projectName} - Image ${index + 1}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
