@@ -1,0 +1,51 @@
+:root {
+  /* Color Variables */
+  --mountain-color: #4a4a4a;
+  --building-color: #2c2c2c;
+  --foreground-color: #3a3a3a;
+  --roof-color: #1a1a1a;
+  --accent-color: #666666;
+}
+
+/* SVG Element Classes */
+.mountain-left {
+  fill: var(--mountain-color);
+}
+
+.main-building {
+  fill: var(--building-color);
+}
+
+.foreground-rects rect {
+  fill: var(--foreground-color);
+}
+
+.roof-details path {
+  fill: var(--roof-color);
+}
+
+/* Hover Effects */
+.mountain-left:hover,
+.main-building:hover,
+.foreground-rects rect:hover,
+.roof-details path:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+/* Animation Example */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mountain-left,
+.main-building,
+.foreground-rects,
+.roof-details {
+  animation: fadeIn 1s ease-in;
+} 

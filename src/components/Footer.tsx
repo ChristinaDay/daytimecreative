@@ -29,12 +29,12 @@ export default function Footer() {
               </Link>
             </div>
             <div className="flex gap-3">
-              <Link 
-                href="/contact" 
+              <a 
+                href="mailto:christinamday@gmail.com" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Contact
-              </Link>
+              </a>
               <Link 
                 href="/resume" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -42,7 +42,7 @@ export default function Footer() {
                 Resume
               </Link>
               <a 
-                href="mailto:your.email@example.com" 
+                href="mailto:christinamday@gmail.com" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Email ✉︎
