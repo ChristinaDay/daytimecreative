@@ -464,7 +464,7 @@ function ProcessImageGrid() {
   });
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-min">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
       {allProcessImages.map((item, index) => {
         // Golden ratio layout pattern
         const position = index % 8;
@@ -519,7 +519,7 @@ function ShopAndStudioGrid() {
   const shopImages = getFabProjectImages('Shop and Studio');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-min">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
       {shopImages.map((imageName, index) => {
         // Golden ratio layout pattern
         const position = index % 8;
@@ -574,7 +574,7 @@ function CratingAndShippingGrid() {
   const cratingImages = getFabProjectImages('Crating and Shipping');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-min">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
       {cratingImages.map((imageName, index) => {
         // Golden ratio layout pattern
         const position = index % 8;
@@ -629,7 +629,7 @@ function NeighborhoodGrid() {
   const neighborhoodImages = getFabProjectImages('Neighborhood');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-min">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
       {neighborhoodImages.map((imageName, index) => {
         // Golden ratio layout pattern
         const position = index % 8;
@@ -762,7 +762,7 @@ function ProjectImageGrid({ images, projectName, projectIndex }: {
   const layouts = createGoldenLayout(images.length, projectIndex);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 auto-rows-min">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
       {images.map((imageName, index) => {
         const layout = layouts[index];
         
