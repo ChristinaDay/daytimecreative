@@ -464,48 +464,22 @@ function ProcessImageGrid() {
   });
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {allProcessImages.map((item, index) => {
-        // Golden ratio layout pattern
-        const position = index % 8;
-        let layout;
-        
-        switch (position) {
-          case 0:
-            layout = { span: 'col-span-2', aspect: 'aspect-[1618/1000]' };
-            break;
-          case 1:
-          case 4:
-          case 7:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-            break;
-          case 2:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1000/1618]' };
-            break;
-          case 3:
-            layout = { span: 'col-span-2', aspect: 'aspect-[3/2]' };
-            break;
-          case 5:
-            layout = { span: 'col-span-2', aspect: 'aspect-square' };
-            break;
-          case 6:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1618/1000]' };
-            break;
-          default:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-        }
+        // Simple pattern: every 6th image is larger
+        const isLarge = index % 6 === 0;
 
         return (
           <div 
             key={`${item.folderName}-${item.imageName}`}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 ${layout.span} ${layout.aspect}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
           >
             <Image
               src={getImagePath(item.folderName, item.imageName)}
               alt={`Process image from ${item.folderName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.67vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -519,48 +493,22 @@ function ShopAndStudioGrid() {
   const shopImages = getFabProjectImages('Shop and Studio');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {shopImages.map((imageName, index) => {
-        // Golden ratio layout pattern
-        const position = index % 8;
-        let layout;
-        
-        switch (position) {
-          case 0:
-            layout = { span: 'col-span-2', aspect: 'aspect-[1618/1000]' };
-            break;
-          case 1:
-          case 4:
-          case 7:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-            break;
-          case 2:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1000/1618]' };
-            break;
-          case 3:
-            layout = { span: 'col-span-2', aspect: 'aspect-[3/2]' };
-            break;
-          case 5:
-            layout = { span: 'col-span-2', aspect: 'aspect-square' };
-            break;
-          case 6:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1618/1000]' };
-            break;
-          default:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-        }
+        // Simple pattern: every 7th image is larger
+        const isLarge = index % 7 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 ${layout.span} ${layout.aspect}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Shop and Studio', imageName)}
               alt={`Shop and Studio - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.67vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -574,48 +522,22 @@ function CratingAndShippingGrid() {
   const cratingImages = getFabProjectImages('Crating and Shipping');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {cratingImages.map((imageName, index) => {
-        // Golden ratio layout pattern
-        const position = index % 8;
-        let layout;
-        
-        switch (position) {
-          case 0:
-            layout = { span: 'col-span-2', aspect: 'aspect-[1618/1000]' };
-            break;
-          case 1:
-          case 4:
-          case 7:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-            break;
-          case 2:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1000/1618]' };
-            break;
-          case 3:
-            layout = { span: 'col-span-2', aspect: 'aspect-[3/2]' };
-            break;
-          case 5:
-            layout = { span: 'col-span-2', aspect: 'aspect-square' };
-            break;
-          case 6:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1618/1000]' };
-            break;
-          default:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-        }
+        // Simple pattern: every 8th image is larger
+        const isLarge = index % 8 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 ${layout.span} ${layout.aspect}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Crating and Shipping', imageName)}
               alt={`Crating and Shipping - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.67vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -629,48 +551,22 @@ function NeighborhoodGrid() {
   const neighborhoodImages = getFabProjectImages('Neighborhood');
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {neighborhoodImages.map((imageName, index) => {
-        // Golden ratio layout pattern
-        const position = index % 8;
-        let layout;
-        
-        switch (position) {
-          case 0:
-            layout = { span: 'col-span-2', aspect: 'aspect-[1618/1000]' };
-            break;
-          case 1:
-          case 4:
-          case 7:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-            break;
-          case 2:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1000/1618]' };
-            break;
-          case 3:
-            layout = { span: 'col-span-2', aspect: 'aspect-[3/2]' };
-            break;
-          case 5:
-            layout = { span: 'col-span-2', aspect: 'aspect-square' };
-            break;
-          case 6:
-            layout = { span: 'col-span-1', aspect: 'aspect-[1618/1000]' };
-            break;
-          default:
-            layout = { span: 'col-span-1', aspect: 'aspect-square' };
-        }
+        // Simple pattern: every 4th image is larger
+        const isLarge = index % 4 === 0;
 
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 ${layout.span} ${layout.aspect}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
           >
             <Image
               src={getImagePath('Neighborhood', imageName)}
               alt={`Neighborhood - ${imageName}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.67vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
@@ -684,99 +580,23 @@ function ProjectImageGrid({ images, projectName, projectIndex }: {
   projectName: string;
   projectIndex: number;
 }) {
-  // Golden ratio and Fibonacci-based layout system
-  const createGoldenLayout = (imageCount: number, projectIndex: number) => {
-    const layouts = [];
-    const goldenRatio = 1.618;
-    
-    // Fibonacci sequence for layout variety: 1, 1, 2, 3, 5, 8...
-    const fibonacciPattern = [1, 1, 2, 3, 5, 8];
-    
-    for (let i = 0; i < imageCount; i++) {
-      const position = (i + projectIndex) % 8; // Cycle through 8 positions for variety
-      
-      let layout;
-      
-      switch (position) {
-        case 0: // Large golden rectangle
-          layout = {
-            span: 'col-span-2',
-            aspect: 'aspect-[1618/1000]' // Golden ratio
-          };
-          break;
-        case 1: // Small square
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-square'
-          };
-          break;
-        case 2: // Tall golden
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-[1000/1618]' // Inverse golden ratio
-          };
-          break;
-        case 3: // Medium horizontal
-          layout = {
-            span: 'col-span-2',
-            aspect: 'aspect-[3/2]'
-          };
-          break;
-        case 4: // Small square
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-square'
-          };
-          break;
-        case 5: // Large square focal point
-          layout = {
-            span: 'col-span-2',
-            aspect: 'aspect-square'
-          };
-          break;
-        case 6: // Small golden
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-[1618/1000]'
-          };
-          break;
-        case 7: // Small square
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-square'
-          };
-          break;
-        default:
-          layout = {
-            span: 'col-span-1',
-            aspect: 'aspect-square'
-          };
-      }
-      
-      layouts.push(layout);
-    }
-    
-    return layouts;
-  };
-
-  const layouts = createGoldenLayout(images.length, projectIndex);
-
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 auto-rows-fr">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {images.map((imageName, index) => {
-        const layout = layouts[index];
+        // Simple pattern: every 5th image is larger
+        const isLarge = index % 5 === 0;
         
         return (
           <div 
             key={imageName} 
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 ${layout.span} ${layout.aspect}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'col-span-2 row-span-2' : ''}`}
           >
             <Image
               src={getImagePath(projectName, imageName)}
               alt={`${projectName} - Image ${index + 1}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16.67vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
         );
