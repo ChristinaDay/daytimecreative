@@ -22,6 +22,12 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-end gap-2">
             <div className="flex gap-3">
               <Link 
+                href="/art-fabrication" 
+                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
+              >
+                Fab Lab
+              </Link>
+              <Link 
                 href="/contact" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
@@ -32,12 +38,6 @@ export default function Footer() {
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Resume ✰
-              </Link>
-              <Link 
-                href="/art-fabrication" 
-                className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
-              >
-                Fab Lab
               </Link>
             </div>
             <div className="flex gap-3">
