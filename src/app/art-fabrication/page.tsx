@@ -88,7 +88,7 @@ const collaborativeProjects: FabProject[] = [
   { 
     displayName: 'Teal and Stone Antique Mirrors', 
     folderName: 'Teal and Stone Antique Mirrors',
-    description: 'These antique mirrors were carefully restored and customized for installation at the Leonessa Rooftop at The Conrad NY Downtown hotel, blending historical preservation with contemporary luxury design through the addition of green marble accents.',
+    description: 'These antique mirrors were carefully restored and customized for installation, blending historical preservation with contemporary luxury design through the addition of green marble accents.',
     skills: ['Surface Preparation', 'Sanding', 'Priming', 'Installation'],
     client: 'The Conrad NY Downtown - Leonessa Rooftop',
     role: 'Contributing Fabricator - Responsible for extensive surface preparation/sanding, priming, assisted with finishing process, and helped install specially ordered antique mirrors. Coworkers completed finishing and marble accent installation.'
@@ -146,8 +146,9 @@ const collaborativeProjects: FabProject[] = [
   { 
     displayName: 'Firestation Waterpipes', 
     folderName: 'Pipes',
-    description: 'These industrial pipe structures were repurposed and transformed into artistic installations for the Hilton Nobleman in Fort Worth, Texas, a luxury hotel housed within a historic firestation. The pieces explore themes of infrastructure and urban history while honoring the building\'s firefighting heritage.',
+    description: 'These industrial pipe structures were repurposed and transformed into artistic installations. The pieces explore themes of infrastructure and urban history while honoring the building\'s firefighting heritage.',
     skills: ['Material Preparation', 'Painting', 'Assembly'],
+    client: 'Hilton Nobleman, Fort Worth TX',
     role: 'Contributing Fabricator - Assisted with material preparation, painting/finishing, and assembly under senior fabricator guidance.'
   },
   { 
@@ -192,18 +193,19 @@ const collaborativeProjects: FabProject[] = [
     description: 'These functional wooden privacy screens were designed with decorative elements that combine architectural function with artistic craftsmanship, creating beautiful room dividers that enhance interior spaces.',
     skills: ['Wood Staining', 'Sealing'],
     role: 'Contributing Fabricator - Responsible for staining and sealing all wooden screen components.'
+  },
+  { 
+    displayName: 'Circular Wall Decor', 
+    folderName: 'Circular Wall Decor',
+    description: 'These geometric wall installations feature circular motifs and patterns that create dynamic visual interest through careful repetition and variation. Each piece explores how modular elements can work together to transform architectural spaces while maintaining individual character.',
+    skills: ['Assembly', 'Installation', 'Mounting'],
+    client: 'Hotel Business Center',
+    role: 'Contributing Fabricator - Assisted with fabrication and installation under senior fabricator guidance.'
   }
 ];
 
 // Process Gallery Projects - Technical/Process Images
 const processProjects: FabProject[] = [
-  { 
-    displayName: 'Circular Wall Decor', 
-    folderName: 'Circular Wall Decor',
-    description: 'These geometric wall installations feature circular motifs and patterns that create dynamic visual interest through careful repetition and variation. Created specifically to hang in a series of niches within a business center inside a hotel, each piece explores how modular elements can work together to transform architectural spaces while maintaining individual character.',
-    skills: ['Assembly', 'Installation', 'Mounting'],
-    role: 'Contributing Fabricator - Assisted with fabrication and installation under senior fabricator guidance.'
-  },
   { 
     displayName: 'Enclave Decor Samples', 
     folderName: 'Enclave Decor Samples',
@@ -284,6 +286,12 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
                 </div>
               )}
               
+              {project.role && (
+                <div className="text-sm text-text-light/60 dark:text-text-dark/60 italic mb-6">
+                  {project.role}
+                </div>
+              )}
+              
               {project.description && (
                 <div className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6 max-w-5xl leading-relaxed">
                   {project.description}
@@ -299,18 +307,12 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
                     {project.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="px-3 py-1 text-sm bg-text-light/10 dark:bg-text-dark/10 text-text-light dark:text-text-dark rounded-full"
+                        className="px-3 py-1 text-xs bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full border border-accent-light/20 dark:border-accent-dark/20"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
-                </div>
-              )}
-              
-              {project.role && (
-                <div className="text-sm text-text-light/60 dark:text-text-dark/60 italic">
-                  {project.role}
                 </div>
               )}
             </div>
