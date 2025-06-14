@@ -6,8 +6,10 @@ import { Navbar } from './Navbar';
 export function ConditionalNavbar() {
   const pathname = usePathname();
   
-  // Hide navbar on art-fabrication page
-  if (pathname === '/art-fabrication') {
+  // Hide navbar on art-fabrication page - check multiple variations
+  if (pathname && (pathname === '/art-fabrication' || 
+      pathname === '/art-fabrication/' || 
+      pathname.startsWith('/art-fabrication'))) {
     return null;
   }
   

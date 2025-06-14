@@ -207,53 +207,22 @@ const collaborativeProjects: FabProject[] = [
   }
 ];
 
+// Merge all projects into a single array, preserving order
+const allProjects: FabProject[] = [
+  ...featuredProjects.map(({ role, ...rest }) => rest),
+  ...collaborativeProjects.map(({ role, ...rest }) => rest),
+];
+
 // Process Gallery Projects - Technical/Process Images
 const processProjects: FabProject[] = [
-  { 
-    displayName: 'Enclave Decor Samples', 
-    folderName: 'Enclave Decor Samples',
-    description: 'These material and finish samples were created for architectural projects to showcase various textures, colors, and treatments, allowing clients to visualize how different finishes would appear in their specific environments.',
-    skills: ['Material Preparation', 'Surface Preparation', 'Fine Finishing'],
-    role: 'Contributing Fabricator - Assisted with sample preparation and finishing under senior fabricator guidance.'
-  },
-  { 
-    displayName: 'Abstract Relief Carving Panel', 
-    folderName: 'Abstract Relief Carving Panel',
-    description: 'These relief carvings were designed to add dimensional texture and visual interest to architectural surfaces, combining traditional carving techniques with contemporary artistic expression.',
-    skills: ['Relief Carving', 'Surface Preparation', 'Fine Finishing']
-  },
-  { 
-    displayName: 'Ceramic Metal Plates', 
-    folderName: 'Ceramic Metal Plates',
-    description: 'These hybrid artworks were designed to explore the intersection of ceramic and metal working techniques, creating unique surface treatments and textures.',
-    skills: ['Ceramic Work', 'Metal Work', 'Mixed Media']
-  },
-  { 
-    displayName: 'Firehose Weaving', 
-    folderName: 'Firehose Weaving',
-    description: 'These textile installations were created by repurposing industrial firehose materials through traditional weaving techniques, creating unexpected textures and patterns from utilitarian materials.',
-    skills: ['Textile Weaving', 'Industrial Materials', 'Pattern Making']
-  }
 ];
 
 // Other Projects (role to be determined)
 const otherProjects: FabProject[] = [
-  { 
-    displayName: 'Crating and Shipping', 
-    folderName: 'Crating and Shipping',
-    description: 'These professional art handling services were designed to include custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.',
-    skills: ['Art Handling', 'Custom Crating', 'Shipping Logistics', 'Protective Packaging']
-  },
-  { 
-    displayName: 'Neighborhood', 
-    folderName: 'Neighborhood',
-    description: 'This community-themed artwork was designed to explore urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.',
-    skills: ['Urban Art', 'Community Themes', 'Architectural Forms', 'Social Commentary']
-  }
 ];
 
 // Helper function to render project sections
-function renderProjectSection(projects: FabProject[], sectionTitle: string, startIndex: number = 0) {
+function renderProjectSection(projects: FabProject[], sectionTitle: string, startIndex: number = 0, setLightbox?: (img: {src: string, alt: string}) => void) {
   // Create section anchor from title
   const sectionAnchor = sectionTitle.toLowerCase().replace(/\s+/g, '-');
   
@@ -291,12 +260,6 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
                 </div>
               )}
               
-              {project.role && (
-                <div className="text-sm text-text-light/60 dark:text-text-dark/60 italic mb-6">
-                  {project.role}
-                </div>
-              )}
-              
               {project.description && (
                 <div className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6 max-w-5xl leading-relaxed">
                   {project.description}
@@ -327,6 +290,7 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
               images={images} 
               projectName={project.folderName}
               projectIndex={startIndex + projectIndex}
+              setLightbox={setLightbox}
             />
           </div>
         );
@@ -338,8 +302,23 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
 export default function ArtFabrication2Page() {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  // Lightbox modal state
+  const [lightbox, setLightbox] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
 
   useEffect(() => setMounted(true), []);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    if (!lightbox) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') setLightbox(null);
+    }
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [lightbox]);
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden">
@@ -431,7 +410,7 @@ export default function ArtFabrication2Page() {
 
       {/* Floating Theme Toggle */}
       <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-50">
-        <ThemeToggle className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-shadow" />
+        <ThemeToggle className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50" />
       </div>
 
       {/* Main Content */}
@@ -454,23 +433,12 @@ export default function ArtFabrication2Page() {
 
         {/* Gallery Layout */}
         <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20">
-          {/* Featured Projects Section */}
-          {renderProjectSection(featuredProjects, "Featured Projects", 0)}
-          
-          {/* Collaborative Projects Section */}
-          <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
-            {renderProjectSection(collaborativeProjects, "Collaborative Projects", featuredProjects.length)}
-          </div>
-          
-          {/* Process Gallery Section */}
-          <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
-            {renderProjectSection(processProjects, "Process Gallery", featuredProjects.length + collaborativeProjects.length)}
-          </div>
-          
+          {/* Unified Projects Section - no heading, just list all projects */}
+          {renderProjectSection(allProjects, "", 0, setLightbox)}
           {/* Other Projects Section */}
           {otherProjects.length > 0 && (
             <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
-              {renderProjectSection(otherProjects, "Additional Projects", featuredProjects.length + collaborativeProjects.length + processProjects.length)}
+              {renderProjectSection(otherProjects, "Additional Projects", allProjects.length + processProjects.length)}
             </div>
           )}
         </div>
@@ -487,7 +455,7 @@ export default function ArtFabrication2Page() {
           </div>
 
           {/* Process Images Grid */}
-          <ProcessImageGrid />
+          <ProcessImageGrid setLightbox={setLightbox} />
         </div>
 
         {/* Shop and Studio Section */}
@@ -502,7 +470,7 @@ export default function ArtFabrication2Page() {
           </div>
 
           {/* Shop and Studio Images Grid */}
-          <ShopAndStudioGrid />
+          <ShopAndStudioGrid setLightbox={setLightbox} />
         </div>
 
         {/* Crating and Shipping Section */}
@@ -517,10 +485,10 @@ export default function ArtFabrication2Page() {
           </div>
 
           {/* Crating and Shipping Images Grid */}
-          <CratingAndShippingGrid />
+          <CratingAndShippingGrid setLightbox={setLightbox} />
         </div>
 
-        {/* Neighborhood Section */}
+        {/* Neighborhood Section - moved to bottom */}
         <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
           <div className="mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
@@ -532,17 +500,43 @@ export default function ArtFabrication2Page() {
           </div>
 
           {/* Neighborhood Images Grid */}
-          <NeighborhoodGrid />
+          <NeighborhoodGrid setLightbox={setLightbox} />
         </div>
       </main>
       
+      {/* Lightbox Modal */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fade-in"
+          onClick={() => setLightbox(null)}
+          aria-modal="true"
+          role="dialog"
+        >
+          <button
+            className="absolute top-6 right-8 text-white text-3xl font-bold bg-black/40 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70 transition"
+            onClick={e => { e.stopPropagation(); setLightbox(null); }}
+            aria-label="Close image preview"
+            tabIndex={0}
+          >
+            ×
+          </button>
+          <div className="relative max-w-3xl w-full max-h-[90vh] flex items-center justify-center" onClick={e => e.stopPropagation()}>
+            <img
+              src={lightbox.src}
+              alt={lightbox.alt}
+              className="w-auto h-auto max-h-[80vh] max-w-full rounded-lg shadow-2xl border-2 border-white"
+              style={{ background: '#222' }}
+            />
+          </div>
+        </div>
+      )}
       <Footer />
     </div>
   );
 }
 
 // Process Gallery Component
-function ProcessImageGrid() {
+function ProcessImageGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const processImageFolders = [
     'Abstract Relief Carving Panel',
     'Ceramic Metal Plates',
@@ -557,7 +551,8 @@ function ProcessImageGrid() {
     'Tropical Relief Panels and Glass Panels',
     'Wailea',
     'White Leafs',
-    'Z-Gel Finishing'
+    'Z-Gel Finishing',
+    'Enclave Decor Samples'
   ];
 
   const allProcessImages: { imageName: string; folderName: string }[] = [];
@@ -574,15 +569,21 @@ function ProcessImageGrid() {
       {allProcessImages.map((item, index) => {
         // Simple pattern: every 6th image is larger, but not on mobile
         const isLarge = index % 6 === 0;
-
+        const src = getImagePath(item.folderName, item.imageName);
+        const alt = `Process image from ${item.folderName}`;
         return (
           <div 
             key={`${item.folderName}-${item.imageName}`}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            onClick={() => setLightbox && setLightbox({ src, alt })}
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
+            role="button"
+            aria-label="Expand image"
           >
             <Image
-              src={getImagePath(item.folderName, item.imageName)}
-              alt={`Process image from ${item.folderName}`}
+              src={src}
+              alt={alt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -595,7 +596,7 @@ function ProcessImageGrid() {
 }
 
 // Shop and Studio Gallery Component
-function ShopAndStudioGrid() {
+function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const shopImages = getFabProjectImages('Shop and Studio');
 
   return (
@@ -603,15 +604,21 @@ function ShopAndStudioGrid() {
       {shopImages.map((imageName, index) => {
         // Simple pattern: every 7th image is larger, but not on mobile
         const isLarge = index % 7 === 0;
-
+        const src = getImagePath('Shop and Studio', imageName);
+        const alt = `Shop and Studio - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            onClick={() => setLightbox && setLightbox({ src, alt })}
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
+            role="button"
+            aria-label="Expand image"
           >
             <Image
-              src={getImagePath('Shop and Studio', imageName)}
-              alt={`Shop and Studio - ${imageName}`}
+              src={src}
+              alt={alt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -624,7 +631,7 @@ function ShopAndStudioGrid() {
 }
 
 // Crating and Shipping Gallery Component
-function CratingAndShippingGrid() {
+function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const cratingImages = getFabProjectImages('Crating and Shipping');
 
   return (
@@ -632,15 +639,21 @@ function CratingAndShippingGrid() {
       {cratingImages.map((imageName, index) => {
         // Simple pattern: every 8th image is larger, but not on mobile
         const isLarge = index % 8 === 0;
-
+        const src = getImagePath('Crating and Shipping', imageName);
+        const alt = `Crating and Shipping - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            onClick={() => setLightbox && setLightbox({ src, alt })}
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
+            role="button"
+            aria-label="Expand image"
           >
             <Image
-              src={getImagePath('Crating and Shipping', imageName)}
-              alt={`Crating and Shipping - ${imageName}`}
+              src={src}
+              alt={alt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -653,7 +666,7 @@ function CratingAndShippingGrid() {
 }
 
 // Neighborhood Gallery Component
-function NeighborhoodGrid() {
+function NeighborhoodGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const neighborhoodImages = getFabProjectImages('Neighborhood');
 
   return (
@@ -661,15 +674,21 @@ function NeighborhoodGrid() {
       {neighborhoodImages.map((imageName, index) => {
         // Simple pattern: every 4th image is larger, but not on mobile
         const isLarge = index % 4 === 0;
-
+        const src = getImagePath('Neighborhood', imageName);
+        const alt = `Neighborhood - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            onClick={() => setLightbox && setLightbox({ src, alt })}
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
+            role="button"
+            aria-label="Expand image"
           >
             <Image
-              src={getImagePath('Neighborhood', imageName)}
-              alt={`Neighborhood - ${imageName}`}
+              src={src}
+              alt={alt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -681,25 +700,32 @@ function NeighborhoodGrid() {
   );
 }
 
-function ProjectImageGrid({ images, projectName, projectIndex }: { 
+function ProjectImageGrid({ images, projectName, projectIndex, setLightbox }: { 
   images: string[]; 
   projectName: string;
   projectIndex: number;
+  setLightbox?: (img: {src: string, alt: string}) => void;
 }) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {images.map((imageName, index) => {
         // Simple pattern: every 5th image is larger, but not on mobile
         const isLarge = index % 5 === 0;
-        
+        const src = getImagePath(projectName, imageName);
+        const alt = `${projectName} - Image ${index + 1}`;
         return (
           <div 
             key={imageName} 
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            onClick={() => setLightbox && setLightbox({ src, alt })}
+            tabIndex={0}
+            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
+            role="button"
+            aria-label="Expand image"
           >
             <Image
-              src={getImagePath(projectName, imageName)}
-              alt={`${projectName} - Image ${index + 1}`}
+              src={src}
+              alt={alt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"

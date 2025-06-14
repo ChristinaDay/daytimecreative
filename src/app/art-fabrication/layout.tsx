@@ -6,22 +6,31 @@ import { Inter, Prata } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const prata = Prata({ subsets: ['latin'], weight: ['400'], variable: '--font-prata' });
 
+export const metadata = {
+  title: 'Art Fabrication - Christina Day',
+  description: 'Art fabrication gallery showcasing hands-on work at Local Language studio in Oakland, CA',
+}
+
 export default function ArtFabricationLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${prata.variable} ${GeistMono.variable}`}>
-      <head>
-        <title>Art Fabrication - Christina Day</title>
-        <meta name="description" content="Art fabrication gallery showcasing hands-on work at Local Language studio in Oakland, CA" />
-      </head>
-      <body className="bg-transparent">
-        <ThemeProvider attribute="class" defaultTheme="light">
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          /* Force hide any navbar elements on art-fabrication page */
+          nav, .navbar, [role="navigation"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+          }
+        `
+      }} />
+      {children}
+    </>
   )
 } 
