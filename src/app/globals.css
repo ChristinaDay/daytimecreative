@@ -47,3 +47,13 @@ body {
   color: rgb(var(--foreground-rgb));
   background: transparent;
 }
+
+/* Masonry column styles */
+.masonry-column {
+  padding-left: 8px; /* gap-2 equivalent */
+  background-clip: padding-box;
+}
+
+.masonry-column:first-child {
+  padding-left: 0;
+}
