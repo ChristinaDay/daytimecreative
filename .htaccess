@@ -1,19 +1,15 @@
 RewriteEngine On
 
-# Allow access to images directory and files
-<Directory "/public_html/images">
-    Options +Indexes
-    AllowOverride None
-    Require all granted
-</Directory>
-
-# Allow access to image files specifically
-<FilesMatch "\.(png|jpg|jpeg|gif|svg|webp)$">
-    Require all granted
+# Allow access to static assets
+<FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico|css|js|woff|woff2|ttf|eot|pdf|json|xml|txt)$">
+    Order allow,deny
+    Allow from all
 </FilesMatch>
 
-# If the request is not a file or directory, but a .html file exists, serve it
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L] 
+# Skip rewriting for existing files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [S=1]
+
+# Route everything else to index.html for Next.js to handle
+RewriteRule ^(.*)$ /index.html [L] 

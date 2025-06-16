@@ -48,12 +48,18 @@ body {
   background: transparent;
 }
 
-/* Masonry column styles */
-.masonry-column {
-  padding-left: 8px; /* gap-2 equivalent */
+/* Masonry grid styles */
+.masonry-grid {
+  display: flex;
+  margin-left: -4px; /* gutter size offset */
+  width: auto;
+}
+
+.masonry-grid-column {
+  padding-left: 4px; /* gutter size */
   background-clip: padding-box;
 }
 
-.masonry-column:first-child {
-  padding-left: 0;
+.masonry-grid-column > div {
+  margin-bottom: 4px; /* space between items */
 }
