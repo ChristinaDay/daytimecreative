@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
+import { getImageUrl } from '@/utils/imageUtils';
 
 export default function SnacksAndKitchensPage() {
   return (
@@ -40,7 +41,7 @@ export default function SnacksAndKitchensPage() {
           className="mb-16 w-full relative aspect-[16/9] bg-surface-light dark:bg-surface-dark rounded-lg overflow-hidden"
         >
           <Image
-            src="/images/zerocater_snacks.jpg"
+            src={getImageUrl("zerocater_snacks.jpg")}
             alt="Curated snack selections for every office."
             fill
             className="object-cover"

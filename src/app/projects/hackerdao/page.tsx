@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
+import { getImageUrl } from '@/utils/imageUtils';
 
 export default function HackerDaoProject() {
   return (
@@ -38,7 +39,7 @@ export default function HackerDaoProject() {
         className="mb-16 w-full relative aspect-[16/9]"
       >
         <img
-          src="/images/hackerdao-illustration-hero.png"
+          src={getImageUrl("hackerdao-illustration-hero.png")}
           alt="HackerDAO Project Hero"
           className="w-full h-full object-contain"
         />
