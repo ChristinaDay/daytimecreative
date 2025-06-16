@@ -605,11 +605,14 @@ export const formatProjectPath = (projectName: string): string => {
   return projectName.replace(/\s+/g, '-'); // Replace spaces with hyphens
 };
 
-export const getImagePath = (projectName: string, imageName: string): string => {
-  // Convert project name to hyphenated format for file paths
-  const hyphenatedName = projectName.replace(/\s+/g, '-');
-  
-  // Use CDN URL from environment variable, fallback to local path
-  const baseUrl = process.env.NEXT_PUBLIC_CDN_URL || '';
-  return `${baseUrl}/images/fab-lab/${hyphenatedName}/${imageName}`;
+// Re-export from the new universal image utilities
+export { getFabImageUrl as getImagePath, getFabImageUrl } from './imageUtils';
+
+// Legacy compatibility - these will now use the CDN
+import { getFabImageUrl } from './imageUtils';
+
+// Keep existing project structure exports but route through CDN
+export const fabImages = {
+  // Example: getImagePath will now return CDN URLs
+  getImagePath: getFabImageUrl
 };
