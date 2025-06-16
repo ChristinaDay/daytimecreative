@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import { ThemeToggle } from '../../components/layout/ThemeToggle';
+import Masonry from 'react-masonry-css';
 
 // Project data interface
 interface FabProject {
@@ -414,7 +415,7 @@ export default function ArtFabrication2Page() {
       </div>
 
       {/* Main Content */}
-      <main className="relative z-20 pb-96 mb-32">
+      <main className="relative z-20 pb-24 mb-16">
         {/* Header Section */}
         <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-12 md:pb-16">
           <div className="mb-8 sm:mb-12 md:mb-16">
@@ -422,7 +423,7 @@ export default function ArtFabrication2Page() {
             <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4 sm:mb-6 md:mb-8">
               Fab Lab
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
               In addition to crafting bespoke digital experiences, I also work as an art fabricator 
               for various studios in the Bay Area. This collection showcases my hands-on work at 
               Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
@@ -489,7 +490,7 @@ export default function ArtFabrication2Page() {
         </div>
 
         {/* Neighborhood Section - moved to bottom */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-16 sm:pb-20 md:pb-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
           <div className="mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
               Neighborhood
@@ -564,17 +565,31 @@ function ProcessImageGrid({ setLightbox }: { setLightbox?: (img: {src: string, a
     });
   });
 
+  // Create a smooth pattern that avoids sawtooth effect
+  const createSmoothPattern = (totalImages: number) => {
+    const pattern: boolean[] = [];
+    const targetLargeCount = Math.floor(totalImages / 8); // Roughly 1 in 8 images is large
+    
+    // Distribute large images evenly throughout the array
+    for (let i = 0; i < totalImages; i++) {
+      const shouldBeLarge = i > 0 && i % Math.max(8, Math.floor(totalImages / targetLargeCount)) === 0;
+      pattern.push(shouldBeLarge);
+    }
+    
+    return pattern;
+  };
+
+  const largeImagePattern = createSmoothPattern(allProcessImages.length);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {allProcessImages.map((item, index) => {
-        // Simple pattern: every 6th image is larger, but not on mobile
-        const isLarge = index % 6 === 0;
         const src = getImagePath(item.folderName, item.imageName);
         const alt = `Process image from ${item.folderName}`;
         return (
           <div 
             key={`${item.folderName}-${item.imageName}`}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -599,17 +614,31 @@ function ProcessImageGrid({ setLightbox }: { setLightbox?: (img: {src: string, a
 function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const shopImages = getFabProjectImages('Shop and Studio');
 
+  // Create a smooth pattern that avoids sawtooth effect
+  const createSmoothPattern = (totalImages: number) => {
+    const pattern: boolean[] = [];
+    const targetLargeCount = Math.floor(totalImages / 7); // Roughly 1 in 7 images is large
+    
+    // Distribute large images evenly throughout the array
+    for (let i = 0; i < totalImages; i++) {
+      const shouldBeLarge = i > 0 && i % Math.max(7, Math.floor(totalImages / targetLargeCount)) === 0;
+      pattern.push(shouldBeLarge);
+    }
+    
+    return pattern;
+  };
+
+  const largeImagePattern = createSmoothPattern(shopImages.length);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {shopImages.map((imageName, index) => {
-        // Simple pattern: every 7th image is larger, but not on mobile
-        const isLarge = index % 7 === 0;
         const src = getImagePath('Shop and Studio', imageName);
         const alt = `Shop and Studio - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -634,17 +663,31 @@ function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, 
 function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const cratingImages = getFabProjectImages('Crating and Shipping');
 
+  // Create a smooth pattern that avoids sawtooth effect
+  const createSmoothPattern = (totalImages: number) => {
+    const pattern: boolean[] = [];
+    const targetLargeCount = Math.floor(totalImages / 8); // Roughly 1 in 8 images is large
+    
+    // Distribute large images evenly throughout the array
+    for (let i = 0; i < totalImages; i++) {
+      const shouldBeLarge = i > 0 && i % Math.max(8, Math.floor(totalImages / targetLargeCount)) === 0;
+      pattern.push(shouldBeLarge);
+    }
+    
+    return pattern;
+  };
+
+  const largeImagePattern = createSmoothPattern(cratingImages.length);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {cratingImages.map((imageName, index) => {
-        // Simple pattern: every 8th image is larger, but not on mobile
-        const isLarge = index % 8 === 0;
         const src = getImagePath('Crating and Shipping', imageName);
         const alt = `Crating and Shipping - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -669,17 +712,31 @@ function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: str
 function NeighborhoodGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
   const neighborhoodImages = getFabProjectImages('Neighborhood');
 
+  // Create a smooth pattern that avoids sawtooth effect
+  const createSmoothPattern = (totalImages: number) => {
+    const pattern: boolean[] = [];
+    const targetLargeCount = Math.floor(totalImages / 6); // Roughly 1 in 6 images is large
+    
+    // Distribute large images evenly throughout the array
+    for (let i = 0; i < totalImages; i++) {
+      const shouldBeLarge = i > 0 && i % Math.max(6, Math.floor(totalImages / targetLargeCount)) === 0;
+      pattern.push(shouldBeLarge);
+    }
+    
+    return pattern;
+  };
+
+  const largeImagePattern = createSmoothPattern(neighborhoodImages.length);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {neighborhoodImages.map((imageName, index) => {
-        // Simple pattern: every 4th image is larger, but not on mobile
-        const isLarge = index % 4 === 0;
         const src = getImagePath('Neighborhood', imageName);
         const alt = `Neighborhood - ${imageName}`;
         return (
           <div 
             key={imageName}
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -706,17 +763,31 @@ function ProjectImageGrid({ images, projectName, projectIndex, setLightbox }: {
   projectIndex: number;
   setLightbox?: (img: {src: string, alt: string}) => void;
 }) {
+  // Create a smooth pattern that avoids sawtooth effect
+  const createSmoothPattern = (totalImages: number) => {
+    const pattern: boolean[] = [];
+    const targetLargeCount = Math.floor(totalImages / 5); // Roughly 1 in 5 images is large
+    
+    // Distribute large images evenly throughout the array
+    for (let i = 0; i < totalImages; i++) {
+      const shouldBeLarge = i > 0 && i % Math.max(5, Math.floor(totalImages / targetLargeCount)) === 0;
+      pattern.push(shouldBeLarge);
+    }
+    
+    return pattern;
+  };
+
+  const largeImagePattern = createSmoothPattern(images.length);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {images.map((imageName, index) => {
-        // Simple pattern: every 5th image is larger, but not on mobile
-        const isLarge = index % 5 === 0;
         const src = getImagePath(projectName, imageName);
         const alt = `${projectName} - Image ${index + 1}`;
         return (
           <div 
             key={imageName} 
-            className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 aspect-square ${isLarge ? 'sm:col-span-2 sm:row-span-2' : ''} cursor-pointer`}
+            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
