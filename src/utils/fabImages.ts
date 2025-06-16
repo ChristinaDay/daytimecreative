@@ -608,5 +608,8 @@ export const formatProjectPath = (projectName: string): string => {
 export const getImagePath = (projectName: string, imageName: string): string => {
   // Convert project name to hyphenated format for file paths
   const hyphenatedName = projectName.replace(/\s+/g, '-');
-  return `/images/fab-lab/${hyphenatedName}/${imageName}`;
+  
+  // Use CDN URL from environment variable, fallback to local path
+  const baseUrl = process.env.NEXT_PUBLIC_CDN_URL || '';
+  return `${baseUrl}/images/fab-lab/${hyphenatedName}/${imageName}`;
 };
