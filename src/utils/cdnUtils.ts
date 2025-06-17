@@ -4,7 +4,7 @@
  */
 
 // Configuration
-const EXTERNAL_CDN_URL = process.env.NEXT_PUBLIC_EXTERNAL_CDN_URL || 'https://cdn.christinamday.com';
+const EXTERNAL_CDN_URL = process.env.NEXT_PUBLIC_EXTERNAL_CDN_URL || 'http://cdn.christinamday.com';
 const VERCEL_CDN_URL = process.env.NEXT_PUBLIC_CDN_URL || '';
 const LARGE_IMAGE_THRESHOLD_MB = 1; // Images over 1MB go to external CDN
 
