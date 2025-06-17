@@ -4,14 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp .htaccess out/.htaccess",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
+    "export": "next build && next export && cp .htaccess out/.htaccess",
     "optimize-images": "node scripts/optimize-images.js",
     "build-optimized": "npm run optimize-images && npm run build",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "check-size": "node scripts/check-deployment-size.js",
+    "check-large-images": "node scripts/check-large-images.js",
+    "pre-deploy": "npm run check-size && npm run check-large-images",
+    "migrate-images": "node scripts/migrate-large-images.js",
+    "update-image-refs": "node scripts/update-image-refs.js",
+    "remove-migrated-images": "node scripts/remove-migrated-images.js"
   },
   "dependencies": {
     "@eslint/config-array": "^0.20.0",
