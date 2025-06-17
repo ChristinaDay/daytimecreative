@@ -48,8 +48,10 @@ export function getImageUrl(filename: string): string {
  * @returns Full CDN URL for fab-lab image
  */
 export function getFabImageUrl(projectName: string, imageName: string): string {
+  // Convert spaces to hyphens for URL compatibility
+  const formattedProjectName = projectName.replace(/\s+/g, '-');
   // Force fab images to use relative paths for now
-  return `/images/fab-lab/${projectName}/${imageName}`;
+  return `/images/fab-lab/${formattedProjectName}/${imageName}`;
 }
 
 /**
