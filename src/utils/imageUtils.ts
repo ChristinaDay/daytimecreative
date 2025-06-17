@@ -1,35 +1,44 @@
 /**
- * Universal Image CDN Utilities
- * Handles both regular images and fab-lab images with CDN delivery
+ * Universal Image CDN Utilities with Smart Routing
+ * Routes large images to external CDN, small images to Vercel
  */
+
+import { getSmartImageUrl } from './cdnUtils';
 
 const CDN_URL = process.env.NEXT_PUBLIC_CDN_URL || '';
 
 /**
- * Get the full CDN URL for any image
+ * Get the full CDN URL for any image (legacy function)
  * @param imagePath - The image path (e.g., '/images/zerocater-web-2015.png' or 'zerocater-web-2015.png')
  * @returns Full CDN URL for the image
  */
 export function getCDNImageUrl(imagePath: string): string {
-  // Remove leading slash if present
+  // Extract filename from path
+  const filename = imagePath.split('/').pop() || '';
+  
+  // Use smart routing for individual images
+  if (filename && imagePath.includes('images/') && !imagePath.includes('fab-lab/')) {
+    return getSmartImageUrl(filename);
+  }
+  
+  // Fallback to original logic for other paths
   const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
   
-  // If no CDN URL is configured, return the original path
   if (!CDN_URL) {
     return imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
   }
   
-  // Return CDN URL
   return `${CDN_URL}/${cleanPath}`;
 }
 
 /**
- * Get CDN URL for regular portfolio images (case studies, etc.)
+ * Get CDN URL for regular portfolio images with smart routing
+ * Large images go to external CDN, small images stay on Vercel
  * @param filename - Just the filename (e.g., 'zerocater-web-2015.png')
- * @returns Full CDN URL
+ * @returns Full CDN URL with smart routing
  */
 export function getImageUrl(filename: string): string {
-  return getCDNImageUrl(`images/${filename}`);
+  return getSmartImageUrl(filename);
 }
 
 /**

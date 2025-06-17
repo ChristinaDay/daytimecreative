@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
+import { getImageUrl } from '@/utils/imageUtils';
 
 export default function SpotlightsReportingPage() {
   return (
@@ -264,7 +265,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Screen+Shot+2021-03-12+at+2.29.41+PM.png"
+                src={getImageUrl('Screen+Shot+2021-03-12+at+2.29.41+PM.png')}
                 alt="Prototypes created in Sketch App"
                 fill
                 className="object-contain p-4"
@@ -281,7 +282,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Screen+Shot+2021-03-12+at+2.20.47+PM.png"
+                src={getImageUrl('Screen+Shot+2021-03-12+at+2.20.47+PM.png')}
                 alt="Additional prototype explorations"
                 fill
                 className="object-contain p-4"
@@ -298,7 +299,7 @@ export default function SpotlightsReportingPage() {
               className="mb-8 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/Screen+Shot+2021-03-12+at+2.16.28+PM.png"
+                src={getImageUrl('Screen+Shot+2021-03-12+at+2.16.28+PM.png')}
                 alt="Design development process"
                 fill
                 className="object-contain p-4"
