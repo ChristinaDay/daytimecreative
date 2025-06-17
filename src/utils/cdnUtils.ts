@@ -40,7 +40,6 @@ const LARGE_IMAGES = [
   'Makersquare-Screen+Shot+2020-06-15+at+1.08.35+AM.png',
   'zc_website-hero_2020.gif',
   'zerocater-hero-2020.gif',
-  'hackerdao-illustration-hero.png',
   'portfolio-betterviewAsset+16+(2)@2x.png'
 ];
 
