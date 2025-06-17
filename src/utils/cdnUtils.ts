@@ -23,6 +23,7 @@ const LARGE_IMAGES = [
   'zc_website2014.gif',
   'zerocater-web-2014.gif',
   'Screen+Shot+2021-03-12+at+2.16.28+PM.png',
+  'test-large.png',  // Test file for workflow
   
   // MEDIUM Priority (1-2MB) - candidates for external CDN
   'betterview-customizableUI4.png',
