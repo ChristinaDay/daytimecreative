@@ -6,7 +6,7 @@ echo "🚀 Moving large images to web-accessible location..."
 
 # FTP connection details
 FTP_HOST="106.0.62.101"
-FTP_USER="christinaday@christinamday.com"
+FTP_USER="chris194"
 FTP_PASS="N@tsum3S0s3k1!"
 
 # List of large images to move

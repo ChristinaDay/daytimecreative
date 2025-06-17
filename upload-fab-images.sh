@@ -5,7 +5,7 @@ echo "🚀 Uploading fab-lab images to christinamday.com..."
 
 # Configuration (corrected for christinamday.com)
 FTP_HOST="106.0.62.101"
-FTP_USER="christinaday@christinamday.com"  # Fixed: was using @daytimecreative.com
+FTP_USER="chris194"
 FTP_PASS="N@tsum3S0s3k1!"
 REMOTE_BASE_DIR="public_html/images"  # Fixed: use public_html structure
 

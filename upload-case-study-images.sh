@@ -5,7 +5,7 @@ echo "🚀 Uploading case study images to christinamday.com CDN..."
 
 # Configuration (same as working credentials)
 FTP_HOST="106.0.62.101"
-FTP_USER="christinaday@christinamday.com"
+FTP_USER="chris194"
 FTP_PASS="N@tsum3S0s3k1!"
 REMOTE_BASE_DIR="public_html/images"
 

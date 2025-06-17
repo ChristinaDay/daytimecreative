@@ -7,7 +7,7 @@ echo "🚀 Uploading HIGH priority images to CDN..."
 
 lftp -c "
 set ftp:ssl-allow no
-open -u christinaday@christinamday.com,N@tsum3S0s3k1! 106.0.62.101
+open -u chris194,N@tsum3S0s3k1! 106.0.62.101
 put "public/images/zc_website_2015.gif" "public_html/images/zc_website_2015.gif"
 put "public/images/zc_website_2017.gif" "public_html/images/zc_website_2017.gif"
 put "public/images/Screen Shot 2020-06-15 at 7.36.53 PM.png" "public_html/images/Screen Shot 2020-06-15 at 7.36.53 PM.png"
