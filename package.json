@@ -17,7 +17,10 @@
     "pre-deploy": "npm run check-size && npm run check-large-images",
     "migrate-images": "node scripts/migrate-large-images.js",
     "update-image-refs": "node scripts/update-image-refs.js",
-    "remove-migrated-images": "node scripts/remove-migrated-images.js"
+    "remove-migrated-images": "node scripts/remove-migrated-images.js",
+    "help": "echo '📚 Image Workflow Help:' && echo '  Small images: Just add to public/images/ and commit' && echo '  Large images: See IMAGE-WORKFLOW.md for full guide' && echo '  Check size: npm run check-size' && echo '  Find large images: npm run check-large-images'",
+    "workflow": "cat IMAGE-WORKFLOW.md",
+    "docs": "cat docs/README.md"
   },
   "dependencies": {
     "@eslint/config-array": "^0.20.0",
