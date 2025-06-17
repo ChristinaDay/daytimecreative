@@ -262,14 +262,14 @@ export default function Home() {
       {/* Hero area */}
       <header className="relative z-10 w-full min-h-screen flex flex-col justify-between">
         {/* Large headline */}
-        <div className="flex flex-col items-start justify-center flex-1 pt-48 pb-56">
-          <h1 className="text-left text-6xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-20">
+        <div className="flex flex-col items-start justify-center flex-1 pt-24 pb-32 md:pt-48 md:pb-56">
+          <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8 md:mb-20">
             I'm Christina, a designer based in Oakland. Keep reading to learn more about me and my work.
           </h1>
         </div>
         
         {/* Down arrow */}
-        <div className="absolute bottom-1/4">
+        <div className="absolute bottom-8 md:bottom-12 lg:bottom-1/4">
           <div className="relative w-[36px] h-[144px]">
             <svg width="36" height="144" viewBox="0 0 36 144" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative">
               {/* Glow lines (behind, thicker, blurred, low opacity, animated) */}
