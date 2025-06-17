@@ -21,7 +21,7 @@ export function getCDNImageUrl(imagePath: string): string {
     return getSmartImageUrl(filename);
   }
   
-  // Fallback to original logic for other paths
+  // For fab-lab images and other paths, always use relative paths when no CDN_URL is set
   const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
   
   if (!CDN_URL) {
@@ -48,7 +48,8 @@ export function getImageUrl(filename: string): string {
  * @returns Full CDN URL for fab-lab image
  */
 export function getFabImageUrl(projectName: string, imageName: string): string {
-  return getCDNImageUrl(`images/fab-lab/${projectName}/${imageName}`);
+  // Force fab images to use relative paths for now
+  return `/images/fab-lab/${projectName}/${imageName}`;
 }
 
 /**
