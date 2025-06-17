@@ -48,13 +48,13 @@ All other images stay on Vercel for optimal performance.
 ### Development (.env.local)
 ```bash
 NEXT_PUBLIC_CDN_URL=http://localhost:3000
-NEXT_PUBLIC_EXTERNAL_CDN_URL=https://cdn.christinamday.com
+NEXT_PUBLIC_EXTERNAL_CDN_URL=http://cdn.christinamday.com
 ```
 
 ### Production (Vercel Dashboard)
 ```bash
 NEXT_PUBLIC_CDN_URL=https://christinamday.com
-NEXT_PUBLIC_EXTERNAL_CDN_URL=https://cdn.christinamday.com
+NEXT_PUBLIC_EXTERNAL_CDN_URL=http://cdn.christinamday.com
 ```
 
 ## Benefits
