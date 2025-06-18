@@ -362,9 +362,7 @@ export default function Home() {
               <p>
                 When I'm not designing digital experiences, you'll find me in my fabrication studio creating physical art installations—because there's something magical about working with your hands that informs everything I design on screen.
               </p>
-              <p>
-                <strong className="text-accent-light dark:text-accent-dark">Currently:</strong> Senior Product Designer at Betterview, transforming how insurance companies assess property risk through AI-powered insights.
-              </p>
+
             </motion.div>
             
             <motion.div
