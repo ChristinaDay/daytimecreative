@@ -571,9 +571,9 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="w-full py-24 px-2 relative z-10 bg-surface-light/5 dark:bg-surface-dark/5"
+        className="w-full py-24 relative z-10 bg-surface-light/30 dark:bg-surface-dark/20"
       >
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-4 md:px-12 lg:px-20">
           <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-4">
             Beyond Digital
           </h2>
@@ -598,28 +598,30 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="w-full pt-24 pb-8 px-2 relative z-10 text-center"
+        className="w-full pt-24 pb-32 relative z-10 text-center"
       >
-        <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
-          Let's create something amazing together
-        </h2>
-        <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
-          Whether you need a complete product redesign, user research insights, or creative direction for your next big idea, I'd love to hear about your project.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:christina@christinamday.com" 
-            className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
-          >
-            Get In Touch
-          </Link>
-          <Link 
-            href="/christina-day-resume.pdf" 
-            target="_blank"
-            className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
-          >
-            Download Resume
-          </Link>
+        <div className="px-4 md:px-12 lg:px-20">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
+            Let's create something amazing together
+          </h2>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
+            Whether you need a complete product redesign, user research insights, or creative direction for your next big idea, I'd love to hear about your project.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="mailto:christina@christinamday.com" 
+              className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
+            >
+              Get In Touch
+            </Link>
+            <Link 
+              href="/christina-day-resume.pdf" 
+              target="_blank"
+              className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
+            >
+              Download Resume
+            </Link>
+          </div>
         </div>
       </motion.section>
     </>
