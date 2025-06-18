@@ -250,7 +250,7 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
         return (
           <div key={project.folderName} className="mb-24" id={projectAnchor}>
             {/* Project Title and Info */}
-            <div className="mb-12">
+            <div className="mb-12 p-8 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl">
               <h3 className="text-3xl font-bold text-text-light dark:text-text-dark mb-4">
                 {project.displayName}
               </h3>
@@ -276,7 +276,7 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
                     {project.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="px-3 py-1 text-xs bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full border border-accent-light/20 dark:border-accent-dark/20"
+                        className="px-3 py-1 text-xs bg-white/40 dark:bg-white/10 text-text-light dark:text-text-dark rounded-full border border-white/30 dark:border-white/20 backdrop-blur-sm"
                       >
                         {skill}
                       </span>
@@ -322,7 +322,7 @@ export default function ArtFabrication2Page() {
   }, [lightbox]);
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden">
+    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -415,7 +415,7 @@ export default function ArtFabrication2Page() {
       </div>
 
       {/* Main Content */}
-      <main className="relative z-20 pb-24 mb-16">
+      <main className="relative z-20 flex-1">
         {/* Header Section */}
         <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-12 md:pb-16">
           <div className="mb-8 sm:mb-12 md:mb-16">
@@ -445,63 +445,74 @@ export default function ArtFabrication2Page() {
         </div>
 
         {/* Process Gallery Section */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="process-gallery-images">
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-              Process Gallery
-            </h2>
-            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-              A collection of images showcasing various fabrication processes, techniques, and studio work.
-            </p>
-          </div>
+        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/20 dark:bg-surface-dark/10 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="process-gallery-images">
+          <div className="max-w-[100rem] mx-auto">
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+                Process Gallery
+              </h2>
+              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+                A documentation of various fabrication processes, techniques, and studio work from my time at Local Language. This section primarily features work created by other fabricators in the studio, showcasing the diverse range of techniques and projects I was exposed to during my time there. While a few images may include my own contributions, the majority represent the skilled work of my colleagues and the broader fabrication environment I learned within.
+              </p>
+            </div>
 
-          {/* Process Images Grid */}
-          <ProcessImageGrid setLightbox={setLightbox} />
+            {/* Process Images Grid */}
+            <ProcessImageGrid setLightbox={setLightbox} />
+            <div className="pb-12 sm:pb-18 md:pb-24"></div>
+          </div>
         </div>
 
         {/* Shop and Studio Section */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="shop-and-studio">
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-              Shop and Studio
-            </h2>
-            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-              Behind-the-scenes documentation of fabrication processes and workspace organization within the art production environment, revealing the methodology behind creative work.
-            </p>
-          </div>
+        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/30 dark:bg-surface-dark/15 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="shop-and-studio">
+          <div className="max-w-[100rem] mx-auto">
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+                Shop and Studio
+              </h2>
+              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+                Behind-the-scenes documentation of fabrication processes and workspace organization within the art production environment, revealing the methodology behind creative work.
+              </p>
+            </div>
 
-          {/* Shop and Studio Images Grid */}
-          <ShopAndStudioGrid setLightbox={setLightbox} />
+            {/* Shop and Studio Images Grid */}
+            <ShopAndStudioGrid setLightbox={setLightbox} />
+            <div className="pb-12 sm:pb-18 md:pb-24"></div>
+          </div>
         </div>
 
         {/* Crating and Shipping Section */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="crating-and-shipping">
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-              Crating and Shipping
-            </h2>
-            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-              Professional art handling services including custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.
-            </p>
-          </div>
+        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/25 dark:bg-surface-dark/12 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="crating-and-shipping">
+          <div className="max-w-[100rem] mx-auto">
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+                Crating and Shipping
+              </h2>
+              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+                Professional art handling services including custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.
+              </p>
+            </div>
 
-          {/* Crating and Shipping Images Grid */}
-          <CratingAndShippingGrid setLightbox={setLightbox} />
+            {/* Crating and Shipping Images Grid */}
+            <CratingAndShippingGrid setLightbox={setLightbox} />
+            <div className="pb-12 sm:pb-18 md:pb-24"></div>
+          </div>
         </div>
 
         {/* Neighborhood Section - moved to bottom */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-16 sm:pb-20 md:pb-24 max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-              Neighborhood
-            </h2>
-            <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-              Community-themed artwork exploring urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.
-            </p>
-          </div>
+        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-16 sm:pb-20 md:pb-24 bg-surface-light/35 dark:bg-surface-dark/18 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
+          <div className="max-w-[100rem] mx-auto">
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
+                Neighborhood
+              </h2>
+              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+                Community-themed artwork exploring urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.
+              </p>
+            </div>
 
-          {/* Neighborhood Images Grid */}
-          <NeighborhoodGrid setLightbox={setLightbox} />
+            {/* Neighborhood Images Grid */}
+            <NeighborhoodGrid setLightbox={setLightbox} />
+          </div>
         </div>
       </main>
       
@@ -589,7 +600,7 @@ function ProcessImageGrid({ setLightbox }: { setLightbox?: (img: {src: string, a
         return (
           <div 
             key={`${item.folderName}-${item.imageName}`}
-            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
+            className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-white/10 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -638,7 +649,7 @@ function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, 
         return (
           <div 
             key={imageName}
-            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
+            className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-white/10 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -687,7 +698,7 @@ function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: str
         return (
           <div 
             key={imageName}
-            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
+            className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-white/10 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -736,7 +747,7 @@ function NeighborhoodGrid({ setLightbox }: { setLightbox?: (img: {src: string, a
         return (
           <div 
             key={imageName}
-            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
+            className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-white/10 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
@@ -787,7 +798,7 @@ function ProjectImageGrid({ images, projectName, projectIndex, setLightbox }: {
         return (
           <div 
             key={imageName} 
-            className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:scale-[1.02] transition-transform duration-300 cursor-pointer aspect-square"
+            className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-white/10 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer aspect-square"
             onClick={() => setLightbox && setLightbox({ src, alt })}
             tabIndex={0}
             onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') setLightbox && setLightbox({ src, alt }); }}
