@@ -336,25 +336,8 @@ export default function Home() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="w-full py-24 px-2 relative z-10"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 w-full max-w-7xl mx-auto">
-          {/* Left: Photo */}
-          <div className="w-full lg:w-2/5 flex items-center justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-accent-light/10 to-accent-dark/10 border border-accent-light/20 dark:border-accent-dark/20 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👋</div>
-                  <div className="text-sm text-text-light/60 dark:text-text-dark/60 font-medium">
-                    Photo coming soon
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-accent-light dark:bg-accent-dark rounded-xl flex items-center justify-center text-white dark:text-gray-900 text-xl shadow-lg">
-                ✨
-              </div>
-            </div>
-          </div>
-          {/* Right: Text */}
-          <div className="w-full lg:w-3/5 flex flex-col items-start justify-center">
+        <div className="flex flex-col items-center justify-center w-full max-w-4xl mx-auto text-center">
+          <div className="w-full flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
