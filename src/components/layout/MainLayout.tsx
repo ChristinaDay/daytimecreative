@@ -13,7 +13,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden">
+    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -101,11 +101,9 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       />
 
       <Navbar />
-      <main className="mt-4 px-4 md:px-12 lg:px-20 relative z-20 pb-96 mb-32">
+      <main className="flex-1 mt-4 px-4 md:px-12 lg:px-20 relative z-20 mb-24">
         {children}
       </main>
-      
-
       
       <Footer />
     </div>
