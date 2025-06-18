@@ -598,7 +598,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="w-full py-24 px-2 relative z-10 text-center"
+        className="w-full pt-24 pb-8 px-2 relative z-10 text-center"
       >
         <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
           Let's create something amazing together
