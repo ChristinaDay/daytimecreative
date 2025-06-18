@@ -264,8 +264,25 @@ export default function Home() {
         {/* Large headline */}
         <div className="flex flex-col items-start justify-center flex-1 pt-24 pb-32 md:pt-48 md:pb-56">
           <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8 md:mb-20">
-            I'm Christina, a designer based in Oakland. Keep reading to learn more about me and my work.
+            I design products that solve real problems and delight users.
           </h1>
+          <div className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl">
+            Product designer and creative director with 8+ years transforming complex challenges into intuitive experiences for startups and Fortune 500 companies.
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Link 
+              href="#featured-work" 
+              className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center"
+            >
+              View My Work
+            </Link>
+            <Link 
+              href="#about" 
+              className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center"
+            >
+              About Me
+            </Link>
+          </div>
         </div>
         
         {/* Down arrow */}
@@ -293,173 +310,249 @@ export default function Home() {
           </div>
         </div>
       </header>
-      {/* Drop-quote blurb below hero */}
+
+      {/* About Section with Personal Branding */}
+      <motion.section
+        id="about"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="w-full py-24 px-2 relative z-10"
+      >
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 w-full">
+          {/* Left: Photo */}
+          <div className="w-full lg:w-2/5 flex items-center justify-center">
+            <div className="relative">
+              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-accent-light/20 to-accent-dark/20 flex items-center justify-center text-6xl font-bold text-text-light/40 dark:text-text-dark/40">
+                👋
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-accent-light dark:bg-accent-dark rounded-full flex items-center justify-center text-white dark:text-gray-900 font-bold">
+                ✨
+              </div>
+            </div>
+          </div>
+          {/* Right: Text */}
+          <div className="w-full lg:w-3/5 flex flex-col items-start justify-center">
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
+              Hi, I'm Christina
+            </h2>
+            <div className="text-lg text-text-light/80 dark:text-text-dark/80 space-y-4 mb-8">
+              <p>
+                I'm a product designer based in Oakland who believes great design should feel effortless, even when solving complex problems. My approach combines user research, strategic thinking, and a love for beautiful, functional interfaces.
+              </p>
+              <p>
+                When I'm not designing digital experiences, you'll find me in my fabrication studio creating physical art installations—because there's something magical about working with your hands that informs everything I design on screen.
+              </p>
+              <p>
+                <strong>Currently:</strong> Senior Product Designer at Betterview, transforming how insurance companies assess property risk through AI-powered insights.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 mb-8">
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium">Product Design</span>
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium">UX Research</span>
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium">Design Systems</span>
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium">Creative Direction</span>
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium">Art Fabrication</span>
+            </div>
+            <Link 
+              href="mailto:christina@christinamday.com" 
+              className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
+            >
+              Let's Work Together
+            </Link>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Featured Work Section - Only 3 Key Projects */}
+      <section id="featured-work" className="w-full py-24 px-2 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-4">
+            Featured Work
+          </h2>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto">
+            A selection of my most impactful projects, showcasing how thoughtful design drives business results.
+          </p>
+        </motion.div>
+
+        {/* Project 1: HackerDAO */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
+            <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
+              <span className="text-sm uppercase tracking-wider text-accent-light dark:text-accent-dark font-semibold mb-2">Featured Project</span>
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">HackerDAO</h3>
+              <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">Creating a vibrant brand identity and platform for Web3 developers to collaborate and build together. Led the complete design system from concept to launch.</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Brand Design</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Product Design</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Illustration</span>
+              </div>
+              <Link href="/projects/hackerdao" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">View Case Study →</Link>
+            </div>
+            <div className="w-full md:w-3/5 flex items-center justify-center">
+              <img 
+                src="/images/hackerdao-illustration-big.png" 
+                alt="HackerDAO Project" 
+                className="rounded-xl shadow-2xl w-full h-auto object-contain" 
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Project 2: Property Intelligence Platform */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 w-full">
+            <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
+              <span className="text-sm uppercase tracking-wider text-accent-light dark:text-accent-dark font-semibold mb-2">Featured Project</span>
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Property Intelligence Platform</h3>
+              <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">Building an AI-powered platform that transforms property data into actionable insights for insurance professionals. Reduced claim processing time by 40%.</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Product Strategy</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">UX Research</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Data Visualization</span>
+              </div>
+              <Link href="/projects/propertyintelligence" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">View Case Study →</Link>
+            </div>
+            <div className="w-full md:w-3/5 flex items-center justify-center">
+              <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
+                <img 
+                  src="/images/betterview-propertyintelligence2.png" 
+                  alt="Property Intelligence Platform" 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Project 3: ZeroCater */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
+            <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
+              <span className="text-sm uppercase tracking-wider text-accent-light dark:text-accent-dark font-semibold mb-2">Featured Project</span>
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">ZeroCater</h3>
+              <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">Designing a subscription-based office snack and kitchen service for modern workplaces. Scaled from startup to serving 1000+ companies nationwide.</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Service Design</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Growth Design</span>
+                <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Mobile</span>
+              </div>
+              <Link href="/projects/snacks-and-kitchens" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">View Case Study →</Link>
+            </div>
+            <div className="w-full md:w-3/5 flex items-center justify-center">
+              <div className="bg-white rounded-xl shadow-2xl inline-block">
+                <img 
+                  src="/images/zerocater-snacks1.png" 
+                  alt="ZeroCater Snacks & Kitchens" 
+                  className="w-full h-auto object-contain rounded-xl" 
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* View All Work CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mt-16"
+        >
+          <Link 
+            href="/projects" 
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white dark:hover:text-gray-900 transition-all duration-300"
+          >
+            View All Projects
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* Creative Process/Fab Lab Teaser */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.7 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="flex flex-col items-start justify-center flex-1 py-16 mt-0 relative z-10"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        className="w-full py-24 px-2 relative z-10 bg-surface-light/5 dark:bg-surface-dark/5"
       >
-        <div className="w-full md:w-1/2">
-          <ProjectSubtitle>
-            I specialize in product design, UX, and creative direction for web, apps, and brands.
-          </ProjectSubtitle>
+        <div className="text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-4">
+            Beyond Digital
+          </h2>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
+            My hands-on approach to problem-solving extends beyond screens. I also work as an art fabricator, creating custom installations and bringing digital concepts into physical reality.
+          </p>
+          <Link 
+            href="/art-fabrication" 
+            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
+          >
+            Explore Fabrication Work
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </motion.section>
-      
-      {/* Featured Case Study Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">HackerDAO Brand & Product Design</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Creating a vibrant brand identity and platform for Web3 developers to collaborate and build together.</p>
-            <Link href="/projects/hackerdao" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <img 
-              src="/images/hackerdao-illustration-big.png" 
-              alt="HackerDAO Project" 
-              className="rounded-xl shadow-2xl w-full h-auto object-contain" 
-            />
-          </div>
+
+      {/* Contact CTA */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        className="w-full py-24 px-2 relative z-10 text-center"
+      >
+        <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
+          Let's create something amazing together
+        </h2>
+        <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
+          Whether you need a complete product redesign, user research insights, or creative direction for your next big idea, I'd love to hear about your project.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            href="mailto:christina@christinamday.com" 
+            className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
+          >
+            Get In Touch
+          </Link>
+          <Link 
+            href="/christina-day-resume.pdf" 
+            target="_blank"
+            className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
+          >
+            Download Resume
+          </Link>
         </div>
-      </section>
-      {/* Property Intelligence Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Property Intelligence Platform</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Building an AI-powered platform that transforms property data into actionable insights for insurance professionals.</p>
-            <Link href="/projects/propertyintelligence" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
-              <img 
-                src="/images/betterview-propertyintelligence2.png" 
-                alt="Property Intelligence Platform" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* PartnerHub Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">PartnerHub – Third-Party Data Integration</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Revolutionizing third-party property data integration for insurers through a customizable UI that automates decision-making workflows.</p>
-            <Link href="/projects/partnerhub" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
-              <img 
-                src="/images/betterview-partnerhub2.png" 
-                alt="PartnerHub Interface Design Elements" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Customizable UI Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Customizable UI</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Designing a modular, customizable dashboard system for Betterview's PartnerHub integration, empowering users to personalize their data visualization experience.</p>
-            <Link href="/projects/customizableui" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
-              <img 
-                src="/images/betterview-propertyintelligence1.png"
-                alt="Customizable UI Dashboard Configuration"
-                className="w-full h-full object-contain" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Spotlights Reporting Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Spotlights Reporting at Betterview</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Transforming dynamic map data into accessible, exportable reports for insurance professionals.</p>
-            <Link href="/projects/spotlightsreporting" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center p-8">
-              <img 
-                src="/images/betterview-spotlights1.png" 
-                alt="Spotlights Reporting at Betterview" 
-                className="w-full h-full object-contain" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ZeroCater Snacks & Kitchens Preview Section */}
-      <section className="w-full py-24 px-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">ZeroCater – Snacks & Kitchens</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Designing a subscription-based office snack and kitchen service for modern workplaces.</p>
-            <Link href="/projects/snacks-and-kitchens" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image (Placeholder) */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="bg-white rounded-xl shadow-2xl inline-block">
-              <img 
-                src="/images/zerocater-snacks1.png" 
-                alt="ZeroCater Snacks & Kitchens" 
-                className="w-full h-auto object-contain rounded-xl" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Makersquare Preview Section */}
-      <section className="w-full py-24 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full">
-          {/* Left: Text */}
-          <div className="w-full md:w-2/5 flex flex-col items-start justify-center mb-12 md:mb-0">
-            <span className="text-base text-text-light dark:text-text-dark mb-2">Case study</span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-text-light dark:text-text-dark mb-6">Makersquare Logo Design & Branding</h2>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-4">Creating a comprehensive branding overhaul for a premier coding bootcamp across multiple cities.</p>
-            <Link href="/projects/makersquare" className="text-lg underline underline-offset-4 text-accent-light dark:text-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition font-bold dark:drop-shadow-[0_0_8px_#aee7ff]">Read more</Link>
-          </div>
-          {/* Right: Image */}
-          <div className="w-full md:w-3/5 flex items-center justify-center">
-            <div className="rounded-xl shadow-2xl w-full aspect-[16/9] flex items-center justify-center overflow-hidden">
-              <img 
-                src="/images/makeersquare-logo.png" 
-                alt="MakerSquare Logo" 
-                className="w-full h-full object-cover rounded-xl" 
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      </motion.section>
     </>
   );
 }
