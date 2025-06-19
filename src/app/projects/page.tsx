@@ -7,21 +7,21 @@ import Image from 'next/image';
 const featuredProjects = [
   {
     title: "Design System & Component Library",
-    subtitle: "Building scalable design infrastructure for rapid product development",
     description: "Created a comprehensive design system with 50+ React components, design tokens, and engineering workflows that reduced development time by 60% and ensured consistency across 3 major product lines.",
-    href: "/projects/design-system",
-    image: "/images/betterview-design-system-overview.png",
+    link: "/projects/design-system",
+    image: "/images/betterview-Extension+Marketplace.png",
     tags: ["Design Systems", "React Components", "Design Tokens", "Engineering Collaboration"],
-    featured: true
+    year: "2023",
+    bgColor: "from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10"
   },
   {
     title: "Property Intelligence Platform",
-    subtitle: "AI-powered insights for insurance underwriters",
     description: "Designed an intuitive data visualization platform that processes complex property risk data, reducing claim processing time by 40% and improving underwriter decision-making accuracy.",
-    href: "/projects/propertyintelligence", 
-    image: "/images/betterview-propertyintelligence1.png",
+    link: "/projects/propertyintelligence", 
+    image: "/images/betterview-propertyintelligence2.png",
     tags: ["Product Design", "Data Visualization", "AI/ML", "Insurance Tech"],
-    featured: true
+    year: "2022-2023",
+    bgColor: "from-emerald-500/15 via-3% via-transparent via-97% to-teal-600/12 dark:from-emerald-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-teal-500/10"
   },
   {
     title: 'HackerDAO',
@@ -29,7 +29,8 @@ const featuredProjects = [
     image: '/images/hackerdao-illustration-big.png',
     link: '/projects/hackerdao',
     tags: ['Brand Design', 'Product Design', 'Illustration'],
-    year: '2023'
+    year: '2023',
+    bgColor: "from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10"
   },
   {
     title: 'ZeroCater',
@@ -37,7 +38,8 @@ const featuredProjects = [
     image: '/images/zerocater-snacks1.png',
     link: '/projects/snacks-and-kitchens',
     tags: ['Service Design', 'Growth Design', 'Mobile'],
-    year: '2014-2017'
+    year: '2014-2017',
+    bgColor: "from-orange-500/15 via-3% via-transparent via-97% to-red-500/12 dark:from-orange-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-red-400/10"
   }
 ];
 
@@ -48,15 +50,17 @@ const additionalProjects = [
     image: '/images/betterview-partnerhub2.png',
     link: '/projects/partnerhub',
     tags: ['Enterprise UX', 'Data Integration', 'Dashboard Design'],
-    year: '2023'
+    year: '2023',
+    bgColor: "from-cyan-500/15 via-3% via-transparent via-97% to-blue-600/12 dark:from-cyan-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10"
   },
   {
     title: 'Customizable UI System',
     description: 'Modular dashboard system empowering users to personalize their data visualization experience.',
-    image: '/images/betterview-propertyintelligence1.png',
+    image: '/images/betterview-customizableUI1.png',
     link: '/projects/customizableui',
     tags: ['Design Systems', 'Component Library', 'User Personalization'],
-    year: '2023'
+    year: '2023',
+    bgColor: "from-pink-500/15 via-3% via-transparent via-97% to-rose-600/12 dark:from-pink-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-rose-500/10"
   },
   {
     title: 'Spotlights Reporting',
@@ -64,7 +68,8 @@ const additionalProjects = [
     image: '/images/betterview-spotlights1.png',
     link: '/projects/spotlightsreporting',
     tags: ['Data Visualization', 'Reporting', 'Maps'],
-    year: '2022'
+    year: '2022',
+    bgColor: "from-amber-500/15 via-3% via-transparent via-97% to-yellow-600/12 dark:from-amber-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-yellow-500/10"
   },
   {
     title: 'MakerSquare Branding',
@@ -72,7 +77,8 @@ const additionalProjects = [
     image: '/images/makeersquare-logo.png',
     link: '/projects/makersquare',
     tags: ['Brand Design', 'Logo Design', 'Identity Systems'],
-    year: '2014'
+    year: '2014',
+    bgColor: "from-green-500/15 via-3% via-transparent via-97% to-emerald-600/12 dark:from-green-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-emerald-500/10"
   }
 ];
 
@@ -86,11 +92,11 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
       className="group"
     >
       <Link href={project.link} className="block h-full">
-        <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+        <div className="bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
           {featured ? (
             /* Featured card - horizontal layout on larger screens */
             <div className="flex flex-col lg:flex-row h-full">
-              <div className="relative aspect-[16/9] lg:aspect-[3/2] lg:w-1/2 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 overflow-hidden">
+              <div className={`relative aspect-[16/9] lg:aspect-[3/2] lg:w-1/2 bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -98,7 +104,8 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                   className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-transparent to-white/0 group-hover:from-black/5 group-hover:to-white/5 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-transparent to-white/25 group-hover:from-white/20 group-hover:to-white/35 transition-all duration-300" />
+                <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
               </div>
               <div className="p-6 lg:p-8 flex-1 flex flex-col lg:w-1/2">
                 <div className="flex items-center justify-between mb-4">
@@ -117,7 +124,7 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                   {project.tags.map((tag: string, index: number) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-surface-light/10 dark:bg-surface-dark/10 text-text-light/70 dark:text-text-dark/70 rounded text-sm"
+                      className="px-3 py-1 bg-white/20 dark:bg-white/15 backdrop-blur-sm border border-white/30 dark:border-white/20 text-text-light/80 dark:text-text-dark/80 rounded text-sm"
                     >
                       {tag}
                     </span>
@@ -128,7 +135,7 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
           ) : (
             /* Regular card - vertical layout */
             <>
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 overflow-hidden">
+              <div className={`relative aspect-[4/3] bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -136,7 +143,8 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                   className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-transparent to-white/0 group-hover:from-black/5 group-hover:to-white/5 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-transparent to-white/25 group-hover:from-white/20 group-hover:to-white/35 transition-all duration-300" />
+                <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center justify-between mb-3">
@@ -152,7 +160,7 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                   {project.tags.map((tag: string, index: number) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-surface-light/10 dark:bg-surface-dark/10 text-text-light/70 dark:text-text-dark/70 rounded text-xs"
+                      className="px-2 py-1 bg-white/20 dark:bg-white/15 backdrop-blur-sm border border-white/30 dark:border-white/20 text-text-light/80 dark:text-text-dark/80 rounded text-xs"
                     >
                       {tag}
                     </span>

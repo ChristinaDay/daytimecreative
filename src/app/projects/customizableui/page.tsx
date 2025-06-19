@@ -162,7 +162,7 @@ export default function CustomizableUIPage() {
               className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block mb-4"
             >
               <Image
-                src="/images/Screen+Shot+2021-03-22+at+11.39.36+AM.jpg"
+                src="/images/betterview-Screen+Shot+2021-03-22+at+11.39.36+AM.jpg"
                 alt="Research and Discovery Process"
                 fill
                 className="object-contain p-4"
@@ -219,7 +219,7 @@ export default function CustomizableUIPage() {
                 className="w-full h-[400px] relative bg-white rounded-lg overflow-hidden shadow-xl mb-4"
               >
                 <Image
-                  src="/images/Screen+Shot+2022-03-24+at+11.41.12+PM-4.jpg"
+                  src="/images/betterview-Screen+Shot+2022-03-24+at+11.41.12+PM-4.jpg"
                   alt="Design Iterations and Refinements"
                   fill
                   className="object-contain p-4"
