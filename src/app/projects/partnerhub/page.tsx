@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
+import { getImageUrl } from '@/utils/imageUtils';
 
 export default function PartnerHubPage() {
   return (
@@ -60,7 +61,7 @@ export default function PartnerHubPage() {
         className="mb-16"
       >
         <ScrollableImageContainer
-          src="/images/Betterview-phub-Below+The+Fold.png"
+          src={getImageUrl("Betterview-phub-Below+The+Fold.png")}
           alt="PartnerHub Complete Interface"
           caption="Complete PartnerHub platform interface showcasing data integration capabilities and customizable dashboard features"
           frameType="browser"
@@ -227,7 +228,7 @@ export default function PartnerHubPage() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img 
-              src="/images/Betterview-phub-research.png" 
+              src={getImageUrl("Betterview-phub-research.png")} 
               alt="PartnerHub User Research Documentation" 
               className="w-full h-full object-cover" 
             />
@@ -286,7 +287,7 @@ export default function PartnerHubPage() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img 
-              src="/images/Betterview-phub-miro.png" 
+              src={getImageUrl("Betterview-phub-miro.png")} 
               alt="PartnerHub Design Collaboration in Miro" 
               className="w-full h-full object-cover" 
             />
@@ -417,7 +418,7 @@ export default function PartnerHubPage() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img 
-              src="/images/betterview-partnerhub2.png" 
+              src={getImageUrl("betterview-partnerhub2.png")} 
               alt="PartnerHub Interface Design Elements" 
               className="w-full h-full object-contain" 
             />
@@ -436,7 +437,7 @@ export default function PartnerHubPage() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img 
-              src="/images/betterview-PartnerHub+Dashboard.png" 
+              src={getImageUrl("betterview-PartnerHub+Dashboard.png")} 
               alt="PartnerHub Main Dashboard Interface" 
               className="w-full h-full object-contain" 
             />
@@ -468,7 +469,7 @@ export default function PartnerHubPage() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img 
-              src="/images/betterview-PartnerHub+Dashboard2.png" 
+              src={getImageUrl("Betterview-PartnerHub+Dashboard.png")} 
               alt="PartnerHub Alternative Dashboard View" 
               className="w-full h-full object-contain" 
             />
@@ -515,7 +516,7 @@ export default function PartnerHubPage() {
           className="w-full mt-8 mb-12 flex flex-col"
         >
           <ScrollableImageContainer
-            src="/images/Betterview-phub-image+(2).png"
+            src={getImageUrl("Betterview-phub-image+(2).png")}
             alt="PartnerHub Development Process"
             caption="Development process documentation showing the transition from design concepts to functional implementation"
             frameType="browser"

@@ -302,43 +302,7 @@ export default function Home() {
             </Link>
           </motion.div>
           
-          {/* Interactive Design Demo - TinyCrowbar Inspired */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
-            className="mt-12 p-6 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl max-w-md mx-auto sm:mx-0"
-          >
-            <div className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-3">
-              Try this interactive component I designed:
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="w-3 h-3 bg-green-400 rounded-full group-hover:scale-110 transition-transform"></div>
-                <span className="text-sm text-text-light dark:text-text-dark">User research insights</span>
-                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="w-3 h-3 bg-blue-400 rounded-full group-hover:scale-110 transition-transform"></div>
-                <span className="text-sm text-text-light dark:text-text-dark">Design system creation</span>
-                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-                <div className="w-3 h-3 bg-purple-400 rounded-full group-hover:scale-110 transition-transform"></div>
-                <span className="text-sm text-text-light dark:text-text-dark">Prototype & validation</span>
-                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-            <div className="text-xs text-text-light/60 dark:text-text-dark/60 mt-3 text-center">
-              This demonstrates my approach to progressive disclosure
-            </div>
-          </motion.div>
+
         </div>
         
         {/* Subtle scroll indicator */}
@@ -434,6 +398,200 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </motion.section>
+
+      {/* Interactive Proven Results Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+        className="w-full py-24 px-2 relative z-10 bg-gradient-to-b from-surface-light/20 to-transparent dark:from-surface-dark/20"
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
+              Proven Results
+            </h2>
+            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto">
+              Here's how my design approach has driven measurable business impact across different industries and company stages.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Metric 1: User Engagement */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   +40%
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   User Engagement
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Average increase in user engagement through strategic UX improvements and data-driven design decisions
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   PartnerHub • Property Intelligence • ZeroCater
+                 </div>
+               </div>
+            </motion.div>
+
+            {/* Metric 2: Development Speed */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   60%
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   Faster Development
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Reduction in development time through comprehensive design systems and component libraries
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   Betterview Design System • Component Libraries
+                 </div>
+               </div>
+            </motion.div>
+
+            {/* Metric 3: Cost Reduction */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   -30%
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   Development Costs
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Reduction in development costs through efficient design processes and reusable components
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   Design Systems • Process Optimization
+                 </div>
+               </div>
+            </motion.div>
+
+            {/* Metric 4: Time to Market */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   3x
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   Faster Launches
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Accelerated time-to-market through rapid prototyping and validated design decisions
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   HackerDAO • Customizable UI • Spotlights
+                 </div>
+               </div>
+            </motion.div>
+
+            {/* Metric 5: User Satisfaction */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   4.8/5
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   User Satisfaction
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Average user satisfaction score through user-centered design and usability testing
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   User Research • Usability Testing • Iteration
+                 </div>
+               </div>
+            </motion.div>
+
+            {/* Metric 6: Scale Achievement */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="group cursor-pointer"
+            >
+                             <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                 <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
+                   1000+
+                 </div>
+                 <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
+                   Companies Served
+                 </h3>
+                 <p className="text-text-light/60 dark:text-text-dark/60 text-sm leading-relaxed">
+                   Products I've designed now serve over 1000 companies, from startups to Fortune 500s
+                 </p>
+                 <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                   ZeroCater • Betterview • Enterprise Scale
+                 </div>
+               </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-center mt-16"
+          >
+            <p className="text-text-light/70 dark:text-text-dark/70 mb-6">
+              Ready to see similar results for your product?
+            </p>
+            <Link 
+              href="/projects" 
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              View Case Studies
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </motion.div>
         </div>
       </motion.section>
 
