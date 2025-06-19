@@ -6,20 +6,30 @@ import Image from 'next/image';
 
 const featuredProjects = [
   {
+    title: "Design System & Component Library",
+    subtitle: "Building scalable design infrastructure for rapid product development",
+    description: "Created a comprehensive design system with 50+ React components, design tokens, and engineering workflows that reduced development time by 60% and ensured consistency across 3 major product lines.",
+    href: "/projects/design-system",
+    image: "/images/betterview-design-system-overview.png",
+    tags: ["Design Systems", "React Components", "Design Tokens", "Engineering Collaboration"],
+    featured: true
+  },
+  {
+    title: "Property Intelligence Platform",
+    subtitle: "AI-powered insights for insurance underwriters",
+    description: "Designed an intuitive data visualization platform that processes complex property risk data, reducing claim processing time by 40% and improving underwriter decision-making accuracy.",
+    href: "/projects/propertyintelligence", 
+    image: "/images/betterview-propertyintelligence1.png",
+    tags: ["Product Design", "Data Visualization", "AI/ML", "Insurance Tech"],
+    featured: true
+  },
+  {
     title: 'HackerDAO',
     description: 'Brand identity and platform design for Web3 developers to collaborate and build together.',
     image: '/images/hackerdao-illustration-big.png',
     link: '/projects/hackerdao',
     tags: ['Brand Design', 'Product Design', 'Illustration'],
     year: '2023'
-  },
-  {
-    title: 'Property Intelligence Platform',
-    description: 'AI-powered platform transforming property data into actionable insights for insurance professionals.',
-    image: '/images/betterview-propertyintelligence2.png',
-    link: '/projects/propertyintelligence',
-    tags: ['Product Strategy', 'UX Research', 'Data Visualization'],
-    year: '2022-2024'
   },
   {
     title: 'ZeroCater',
