@@ -279,7 +279,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl"
           >
-            Product designer and creative director with 8+ years transforming complex challenges into intuitive experiences for startups and Fortune 500 companies.
+            I help startups and enterprises <strong className="text-accent-light dark:text-accent-dark">increase user engagement by 40%</strong> and <strong className="text-accent-light dark:text-accent-dark">reduce development costs by 30%</strong> through strategic product design and user research.
           </motion.div>
           
           <motion.div
@@ -300,6 +300,44 @@ export default function Home() {
             >
               About Me
             </Link>
+          </motion.div>
+          
+          {/* Interactive Design Demo - TinyCrowbar Inspired */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
+            className="mt-12 p-6 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl max-w-md mx-auto sm:mx-0"
+          >
+            <div className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-3">
+              Try this interactive component I designed:
+            </div>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="w-3 h-3 bg-green-400 rounded-full group-hover:scale-110 transition-transform"></div>
+                <span className="text-sm text-text-light dark:text-text-dark">User research insights</span>
+                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="w-3 h-3 bg-blue-400 rounded-full group-hover:scale-110 transition-transform"></div>
+                <span className="text-sm text-text-light dark:text-text-dark">Design system creation</span>
+                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-white/40 dark:bg-white/10 rounded-lg hover:bg-white/60 dark:hover:bg-white/15 transition-all duration-300 cursor-pointer group">
+                <div className="w-3 h-3 bg-purple-400 rounded-full group-hover:scale-110 transition-transform"></div>
+                <span className="text-sm text-text-light dark:text-text-dark">Prototype & validation</span>
+                <svg className="w-4 h-4 ml-auto text-text-light/50 dark:text-text-dark/50 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div className="text-xs text-text-light/60 dark:text-text-dark/60 mt-3 text-center">
+              This demonstrates my approach to progressive disclosure
+            </div>
           </motion.div>
         </div>
         

@@ -56,6 +56,35 @@ export default function PropertyIntelligencePage() {
         </div>
       </motion.div>
 
+      {/* Executive Summary - TinyCrowbar Style */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="mb-20 p-8 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-lg font-bold text-text-light dark:text-text-dark mb-3">The Problem</h3>
+            <p className="text-text-light/80 dark:text-text-dark/80">
+              Insurance underwriters spent 3-5 hours manually analyzing property data, leading to inconsistent risk assessments and reactive decision-making.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-text-light dark:text-text-dark mb-3">My Solution</h3>
+            <p className="text-text-light/80 dark:text-text-dark/80">
+              AI-powered platform with automated risk scoring, real-time monitoring, and intuitive data visualization to streamline the underwriting process.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-text-light dark:text-text-dark mb-3">Impact</h3>
+            <p className="text-text-light/80 dark:text-text-dark/80">
+              <strong className="text-accent-light dark:text-accent-dark">40% faster processing</strong>, 60% improved accuracy, and <strong className="text-accent-light dark:text-accent-dark">$2M+ annual savings</strong> for the business.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
