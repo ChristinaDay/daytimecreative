@@ -379,38 +379,38 @@ export default function PropertyIntelligencePage() {
         <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Design Challenges & Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 bg-surface-light/5 dark:bg-surface-dark/5 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-red-500">Challenge: Information Overload</h3>
+            <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Challenge: Information Overload</h3>
             <p className="text-text-light/80 dark:text-text-dark/80 mb-4">
               Users were overwhelmed by the volume of property data and couldn't quickly identify the most critical information.
             </p>
-            <p className="text-text-light/80 dark:text-text-dark/80 font-medium">
+            <p className="text-accent-light dark:text-accent-dark font-medium">
               Solution: Created a progressive disclosure system with smart defaults and customizable views.
             </p>
           </div>
           <div className="p-6 bg-surface-light/5 dark:bg-surface-dark/5 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-red-500">Challenge: Complex Data Relationships</h3>
+            <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Challenge: Complex Data Relationships</h3>
             <p className="text-text-light/80 dark:text-text-dark/80 mb-4">
               Property data comes from multiple sources with complex interdependencies that were difficult to visualize.
             </p>
-            <p className="text-text-light/80 dark:text-text-dark/80 font-medium">
+            <p className="text-accent-light dark:text-accent-dark font-medium">
               Solution: Designed intuitive data visualization patterns with clear hierarchies and relationships.
             </p>
           </div>
           <div className="p-6 bg-surface-light/5 dark:bg-surface-dark/5 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-red-500">Challenge: Workflow Integration</h3>
+            <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Challenge: Workflow Integration</h3>
             <p className="text-text-light/80 dark:text-text-dark/80 mb-4">
               The new system needed to integrate seamlessly with existing underwriting workflows and tools.
             </p>
-            <p className="text-text-light/80 dark:text-text-dark/80 font-medium">
+            <p className="text-accent-light dark:text-accent-dark font-medium">
               Solution: Conducted extensive workflow mapping and designed flexible integration points.
             </p>
           </div>
           <div className="p-6 bg-surface-light/5 dark:bg-surface-dark/5 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-red-500">Challenge: User Adoption</h3>
+            <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Challenge: User Adoption</h3>
             <p className="text-text-light/80 dark:text-text-dark/80 mb-4">
               Underwriters were resistant to changing established processes and learning new systems.
             </p>
-            <p className="text-text-light/80 dark:text-text-dark/80 font-medium">
+            <p className="text-accent-light dark:text-accent-dark font-medium">
               Solution: Designed familiar interaction patterns and provided comprehensive onboarding flows.
             </p>
           </div>
@@ -430,8 +430,8 @@ export default function PropertyIntelligencePage() {
             <h3 className="text-xl font-semibold mb-6 text-accent-light dark:text-accent-dark">Quantitative Results</h3>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 dark:text-green-400 font-bold">40%</span>
+                <div className="w-12 h-12 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center">
+                  <span className="text-accent-light dark:text-accent-dark font-bold">40%</span>
                 </div>
                 <div>
                   <div className="font-semibold text-text-light dark:text-text-dark">Faster Risk Assessment</div>
@@ -439,8 +439,8 @@ export default function PropertyIntelligencePage() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold">60%</span>
+                <div className="w-12 h-12 bg-surface-light/50 dark:bg-surface-dark/50 rounded-full flex items-center justify-center">
+                  <span className="text-text-light dark:text-text-dark font-bold">60%</span>
                 </div>
                 <div>
                   <div className="font-semibold text-text-light dark:text-text-dark">Improved Data Accuracy</div>
@@ -448,8 +448,8 @@ export default function PropertyIntelligencePage() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
-                  <span className="text-purple-600 dark:text-purple-400 font-bold">85%</span>
+                <div className="w-12 h-12 bg-surface-light/30 dark:bg-surface-dark/30 rounded-full flex items-center justify-center">
+                  <span className="text-text-light/80 dark:text-text-dark/80 font-bold">85%</span>
                 </div>
                 <div>
                   <div className="font-semibold text-text-light dark:text-text-dark">User Satisfaction</div>

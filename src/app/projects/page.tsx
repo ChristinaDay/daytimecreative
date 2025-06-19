@@ -9,7 +9,7 @@ const featuredProjects = [
     title: "Design System & Component Library",
     description: "Created a comprehensive design system with 50+ React components, design tokens, and engineering workflows that reduced development time by 60% and ensured consistency across 3 major product lines.",
     link: "/projects/design-system",
-    image: "/images/betterview-Extension+Marketplace.png",
+    image: "/images/zerocater-ZeroCater_design-system.png",
     tags: ["Design Systems", "React Components", "Design Tokens", "Engineering Collaboration"],
     year: "2023",
     bgColor: "from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10"
@@ -44,6 +44,15 @@ const featuredProjects = [
 ];
 
 const additionalProjects = [
+  {
+    title: 'ZeroCater Marketplace',
+    description: 'Comprehensive vendor marketplace connecting restaurants, caterers, and office food programs with seamless ordering and management tools.',
+    image: '/images/zerocater_marketplace.jpg',
+    link: '/projects/marketplace',
+    tags: ['Marketplace Design', 'Vendor Onboarding', 'Order Management', 'UX Research'],
+    year: '2015-2017',
+    bgColor: "from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10"
+  },
   {
     title: 'PartnerHub',
     description: 'Third-party property data integration platform with customizable UI for insurance workflows.',
@@ -108,8 +117,7 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                 <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
               </div>
               <div className="p-6 lg:p-8 flex-1 flex flex-col lg:w-1/2">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-accent-light dark:text-accent-dark font-semibold">{project.year}</span>
+                <div className="flex items-center justify-end mb-4">
                   <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">
                     Featured
                   </span>
@@ -147,9 +155,6 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
                 <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm text-accent-light dark:text-accent-dark font-semibold">{project.year}</span>
-                </div>
                 <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
                   {project.title}
                 </h3>
@@ -178,7 +183,7 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
 export default function ProjectsPage() {
   return (
     <>
-      <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 py-16 pb-24">
+      <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

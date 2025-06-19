@@ -23,11 +23,11 @@ export default function SnacksAndKitchensPage() {
           Designing a subscription-based office snack and kitchen service for modern workplaces.
         </ProjectSubtitle>
         <ProjectDetailTags
-          role="Product Designer, UX, User Research"
+          role="Product Designer & Front-End Engineer"
           employer="ZeroCater"
-          platforms="Web, SaaS"
-          areas="Product Design, UX, User Research"
-          year="2021"
+          platforms="React, Web, SaaS, GitHub"
+          areas="Product Design, Front-End Development, UX Research"
+          year="2014-2017"
         />
       </motion.div>
 
@@ -65,7 +65,7 @@ export default function SnacksAndKitchensPage() {
             <div>
               <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
               <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
-                As the sole Product Designer, I led the creation of ZeroCater's Snacks & Kitchens dashboard—a subscription-based platform that redefined office catering. Through user research, market analysis, and close collaboration with engineering, we delivered a seamless experience for office managers to manage snack and kitchen supplies, track usage, and optimize workplace satisfaction.
+                As Product Designer and Front-End Engineer, I led the creation of ZeroCater's Snacks & Kitchens dashboard—a subscription-based platform that redefined office catering. Through user research, market analysis, and hands-on development work, I delivered a seamless experience for office managers to manage snack and kitchen supplies, track usage, and optimize workplace satisfaction.
               </p>
               <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 The dashboard's intuitive design and data-driven insights empowered clients to make informed decisions, setting a new standard for workplace food services and driving ZeroCater's market expansion.
@@ -102,7 +102,7 @@ export default function SnacksAndKitchensPage() {
               <ul className="space-y-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
                 <li>• Conducted stakeholder interviews, market analysis, and user behavior studies to inform design.</li>
                 <li>• Synthesized complex information into user-friendly dashboard designs through iterative feedback.</li>
-                <li>• Collaborated with engineering to ensure technical viability and seamless integration.</li>
+                <li>• Implemented front-end code directly, participating in engineering workflows with GitHub pull requests and code reviews.</li>
                 <li>• Developed a design system and dashboard model for future product development at ZeroCater.</li>
               </ul>
             </div>
@@ -144,12 +144,12 @@ export default function SnacksAndKitchensPage() {
         </motion.section>
       </div>
 
-      {/* Feedback & User Flows Section */}
+      {/* User Flows Section */}
       <div className="py-16">
         <section>
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Feedback & User Flows</h3>
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">User Flows & Research</h3>
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-8 max-w-2xl">
-            User feedback was central to the design process. We tested multiple feedback form styles to ensure the experience was intuitive, accessible, and engaging for all office managers and employees.
+            Understanding user journeys was central to the design process. We mapped out comprehensive user flows to ensure the snacks and kitchen management experience was intuitive and efficient for office managers.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,68 +167,6 @@ export default function SnacksAndKitchensPage() {
           <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mb-8">
             User flows for the Snacks & Kitchens platform.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col">
-              <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Feedback form A - Multiple choice.png"
-                  alt="Feedback form: Multiple choice"
-                  width={700}
-                  height={500}
-                  className="object-contain w-full h-full"
-                  style={{ maxWidth: '100%', width: '100%', height: 'auto' }}
-                />
-              </div>
-              <div className="mt-2 text-sm text-text-light/60 dark:text-text-dark/60 text-center">
-                Feedback form: Multiple choice
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Feedback form B - Icons.png"
-                  alt="Feedback form: Icons"
-                  width={700}
-                  height={500}
-                  className="object-contain w-full h-full"
-                  style={{ maxWidth: '100%', width: '100%', height: 'auto' }}
-                />
-              </div>
-              <div className="mt-2 text-sm text-text-light/60 dark:text-text-dark/60 text-center">
-                Feedback form: Icons
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Feedback form C - Cards.png"
-                  alt="Feedback form: Cards"
-                  width={700}
-                  height={500}
-                  className="object-contain w-full h-full"
-                  style={{ maxWidth: '100%', width: '100%', height: 'auto' }}
-                />
-              </div>
-              <div className="mt-2 text-sm text-text-light/60 dark:text-text-dark/60 text-center">
-                Feedback form: Cards
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <div className="h-[900px] flex items-center justify-center bg-white rounded-lg overflow-hidden">
-                <Image
-                  src="/images/Feedback form E - Simple.png"
-                  alt="Feedback form: Simple"
-                  width={700}
-                  height={500}
-                  className="object-contain w-full h-full"
-                  style={{ maxWidth: '100%', width: '100%', height: 'auto' }}
-                />
-              </div>
-              <div className="mt-2 text-sm text-text-light/60 dark:text-text-dark/60 text-center">
-                Feedback form: Simple
-              </div>
-            </div>
-          </div>
         </section>
       </div>
 
