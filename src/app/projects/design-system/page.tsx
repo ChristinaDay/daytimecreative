@@ -202,7 +202,7 @@ export default function DesignSystemPage() {
           The design system enabled ZeroCater to maintain brand consistency while evolving the product experience. Here's how our website evolved from 2014 to 2020, showing the power of systematic design thinking.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
             <div className="aspect-[4/3] relative">
               <Image
@@ -210,12 +210,28 @@ export default function DesignSystemPage() {
                 alt="ZeroCater Website 2014"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">2014: Foundation</h3>
-              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Simple, clean design establishing core brand elements and user experience patterns.</p>
+              <p className="text-xs text-text-light/70 dark:text-text-dark/70">Simple, clean design establishing core brand elements.</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="aspect-[4/3] relative">
+              <Image
+                src="/images/zerocater_site-2.jpg"
+                alt="ZeroCater Website Design System Implementation"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">2016: System Implementation</h3>
+              <p className="text-xs text-text-light/70 dark:text-text-dark/70">Design system components applied across marketing and product pages.</p>
             </div>
           </div>
 
@@ -226,12 +242,12 @@ export default function DesignSystemPage() {
                 alt="ZeroCater Website 2017"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">2017: Systematic Growth</h3>
-              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Design system implementation showing consistent typography, spacing, and component usage.</p>
+              <p className="text-xs text-text-light/70 dark:text-text-dark/70">Consistent typography, spacing, and component usage.</p>
             </div>
           </div>
 
@@ -242,12 +258,12 @@ export default function DesignSystemPage() {
                 alt="ZeroCater Website 2020"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 25vw"
               />
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">2020: Mature System</h3>
-              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Refined design language with sophisticated animations and enterprise-ready components.</p>
+              <p className="text-xs text-text-light/70 dark:text-text-dark/70">Refined design language with sophisticated animations.</p>
             </div>
           </div>
         </div>
@@ -260,10 +276,31 @@ export default function DesignSystemPage() {
         transition={{ duration: 0.8, delay: 0.7 }}
         className="mb-20"
       >
-        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Style Guide: The Foundation</h2>
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          Before design tokens were widely adopted, we created a comprehensive style guide that served as our single source of truth. This living document ensured consistency across web, mobile, and admin interfaces while enabling rapid development.
+        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Comprehensive Documentation: The Foundation</h2>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
+          Before design tokens were widely adopted, we created extensive documentation that served as our single source of truth. This comprehensive system included detailed style guides, component specifications, and implementation guidelines that ensured consistency across web, mobile, and admin interfaces while enabling rapid development.
         </p>
+
+        {/* Documentation Overview */}
+        <div className="mb-12">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="aspect-[3/2] relative bg-white">
+              <Image
+                src="/images/zerocater-design-system-documentation.png"
+                alt="ZeroCater Design System Comprehensive Documentation"
+                fill
+                className="object-contain p-6"
+                sizes="100vw"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="text-2xl font-semibold mb-4 text-text-light dark:text-text-dark">Living Style Guide & Component Library</h3>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80 leading-relaxed">
+                Our comprehensive documentation system included detailed specifications for every component, interaction state, and design pattern. This wasn't just a static style guide—it was a living document that evolved with our product, ensuring every team member had access to the latest design standards and implementation guidelines.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
@@ -544,16 +581,16 @@ export default function DesignSystemPage() {
           <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
             <div className="aspect-[4/3] relative bg-white">
               <Image
-                src="/images/zerocater-emails.png"
-                alt="ZeroCater Email Design System"
+                src="/images/zerocater-email-system-comprehensive.png"
+                alt="ZeroCater Comprehensive Email Design System"
                 fill
                 className="object-contain p-4"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">Email Design System</h3>
-              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Consistent branding and typography extended to email communications, ensuring cohesive user experience across all touchpoints.</p>
+              <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">Comprehensive Email Design System</h3>
+              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Complete email template library with consistent branding, typography, and component usage across transactional, marketing, and notification emails—ensuring cohesive user experience across all digital touchpoints.</p>
             </div>
           </div>
         </div>
@@ -601,6 +638,77 @@ export default function DesignSystemPage() {
             <div className="p-6">
               <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">Design Iterations & A/B Testing</h3>
               <p className="text-sm text-text-light/70 dark:text-text-dark/70">Multiple design explorations and systematic A/B testing variations to optimize user engagement and conversion rates.</p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Physical Branding & Real-World Applications */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.88 }}
+        className="mb-20"
+      >
+        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Beyond Digital: Physical Brand Applications</h2>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
+          A comprehensive design system extends beyond screens to physical touchpoints. Our design standards guided everything from office signage to delivery packaging, ensuring consistent brand experience across all customer interactions.
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="aspect-[4/3] relative">
+              <Image
+                src="/images/zerocater-homepage-design-system.jpg"
+                alt="ZeroCater Homepage Design System Implementation"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">Digital Brand Consistency</h3>
+              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Homepage design showcasing consistent application of typography, color palette, spacing, and component patterns established in our design system.</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="aspect-[4/3] relative">
+              <Image
+                src="/images/zerocater-physical-branding.jpg"
+                alt="ZeroCater Physical Branding Applications"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark">Physical Brand Extensions</h3>
+              <p className="text-sm text-text-light/70 dark:text-text-dark/70">Design system principles applied to physical materials including signage, packaging, and promotional materials—ensuring brand consistency across all customer touchpoints.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl p-8">
+          <h3 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Holistic Brand Experience</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3">Digital Applications</h4>
+              <ul className="text-text-light/70 dark:text-text-dark/70 space-y-2 text-sm">
+                <li>• Website and mobile app interfaces</li>
+                <li>• Email templates and notifications</li>
+                <li>• Admin dashboards and reporting tools</li>
+                <li>• Social media templates and assets</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3">Physical Applications</h4>
+              <ul className="text-text-light/70 dark:text-text-dark/70 space-y-2 text-sm">
+                <li>• Office signage and environmental graphics</li>
+                <li>• Delivery packaging and branded materials</li>
+                <li>• Marketing collateral and sales materials</li>
+                <li>• Event displays and promotional items</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -825,48 +933,48 @@ export default function DesignSystemPage() {
         transition={{ duration: 0.8, delay: 1.0 }}
         className="mb-20"
       >
-        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Results & Business Impact</h2>
+        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Transformative Business Impact</h2>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
-          The design system's impact was immediate and measurable, transforming how our team shipped products and enabling the rapid development of PartnerHub, Property Intelligence, and Customizable UI initiatives.
+          The design system became the foundation that enabled ZeroCater to scale from a scrappy startup to a comprehensive enterprise platform. It transformed how our team shipped products, maintained quality at scale, and established the systematic approach that influenced the entire organization's design culture.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="text-center p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">60%</div>
+            <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">50%</div>
             <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">Faster Development</div>
-            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Feature delivery time reduced from 3 weeks to 1.2 weeks average</div>
+            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Reduced design-to-deployment time with reusable components</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <div className="text-3xl font-bold text-text-light dark:text-text-dark mb-2">90%</div>
-            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">Consistency Improvement</div>
-            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Reduction in UI inconsistencies across products</div>
+            <div className="text-3xl font-bold text-text-light dark:text-text-dark mb-2">10x</div>
+            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">User Growth</div>
+            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Scalable foundation supported massive expansion</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <div className="text-3xl font-bold text-text-light/80 dark:text-text-dark/80 mb-2">50+</div>
-            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">React Components</div>
-            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Production-ready components with full documentation</div>
+            <div className="text-3xl font-bold text-text-light/80 dark:text-text-dark/80 mb-2">100%</div>
+            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">Brand Consistency</div>
+            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Unified experience across all touchpoints</div>
           </div>
           <div className="text-center p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <div className="text-3xl font-bold text-text-light/70 dark:text-text-dark/70 mb-2">8</div>
-            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">Engineers Onboarded</div>
-            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Seamless adoption across front-end teams</div>
+            <div className="text-3xl font-bold text-text-light/70 dark:text-text-dark/70 mb-2">3</div>
+            <div className="text-sm font-semibold text-text-light dark:text-text-dark mb-1">Years of Evolution</div>
+            <div className="text-xs text-text-light/60 dark:text-text-dark/60">Continuous refinement and growth</div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">Engineering Team Feedback</h3>
+            <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">Engineering Team Impact</h3>
             <blockquote className="text-text-light/80 dark:text-text-dark/80 italic mb-4">
-              "The design system completely changed how we build features. Instead of spending days on UI implementation, we focus on business logic and user experience."
+              "The design system completely transformed our development process. We went from reinventing UI patterns for every feature to having a reliable foundation that let us focus on solving food service challenges."
             </blockquote>
-            <cite className="text-sm text-text-light/70 dark:text-text-dark/70">— Senior Frontend Engineer</cite>
+            <cite className="text-sm text-text-light/70 dark:text-text-dark/70">— Frontend Engineering Team</cite>
           </div>
           <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Product Team Impact</h3>
+            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Business Growth Enabler</h3>
             <blockquote className="text-text-light/80 dark:text-text-dark/80 italic mb-4">
-              "We shipped PartnerHub 40% faster than originally estimated because the design system eliminated so much implementation overhead."
+              "The design system was crucial to our ability to scale. As we grew from serving hundreds to thousands of companies, the consistent experience became our competitive advantage."
             </blockquote>
-            <cite className="text-sm text-text-light/70 dark:text-text-dark/70">— Product Manager</cite>
+            <cite className="text-sm text-text-light/70 dark:text-text-dark/70">— ZeroCater Leadership Team</cite>
           </div>
         </div>
       </motion.section>
@@ -878,24 +986,24 @@ export default function DesignSystemPage() {
         transition={{ duration: 0.8, delay: 1.0 }}
       >
         <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Key Learnings & Best Practices</h2>
+          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Key Learnings & Design System Legacy</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">What Worked Well</h3>
+              <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">What Made It Successful</h3>
               <ul className="space-y-3 text-text-light/80 dark:text-text-dark/80">
-                <li>• <strong>Engineer-first approach:</strong> Involving engineers in design system creation from day one</li>
-                <li>• <strong>Automated workflows:</strong> Removing manual sync points between design and code</li>
-                <li>• <strong>Progressive adoption:</strong> Starting with foundational components and building up</li>
-                <li>• <strong>Living documentation:</strong> Storybook as single source of truth for both teams</li>
+                <li>• <strong>Designer-developer hybrid:</strong> Direct implementation eliminated hand-off friction</li>
+                <li>• <strong>Startup-appropriate scope:</strong> Focused on essential patterns rather than comprehensive coverage</li>
+                <li>• <strong>Progressive enhancement:</strong> Started with foundational elements and grew organically</li>
+                <li>• <strong>Cross-platform thinking:</strong> Designed patterns that worked across web, mobile, and email</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Lessons Learned</h3>
+              <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Long-term Impact</h3>
               <ul className="space-y-3 text-text-light/80 dark:text-text-dark/80">
-                <li>• <strong>Governance is crucial:</strong> Clear processes for component updates and additions</li>
-                <li>• <strong>Migration strategy:</strong> Plan for gradual adoption across existing products</li>
-                <li>• <strong>Performance monitoring:</strong> Track bundle size impact as system grows</li>
-                <li>• <strong>User feedback loops:</strong> Regular check-ins with engineering teams using the system</li>
+                <li>• <strong>Cultural foundation:</strong> Established systematic design thinking across the organization</li>
+                <li>• <strong>Scalability enabler:</strong> Made rapid growth possible without sacrificing quality</li>
+                <li>• <strong>Industry influence:</strong> Early example of startup-scale design system implementation</li>
+                <li>• <strong>Career evolution:</strong> Demonstrated the value of design-development hybrid roles</li>
               </ul>
             </div>
           </div>

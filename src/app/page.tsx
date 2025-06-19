@@ -270,7 +270,7 @@ export default function Home() {
           >
             <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-6 md:mb-8">
               I design products that solve real problems and delight users.
-            </h1>
+          </h1>
           </motion.div>
           
           <motion.div
@@ -279,7 +279,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl"
           >
-            I help startups and enterprises <strong className="text-accent-light dark:text-accent-dark">increase user engagement by 40%</strong> and <strong className="text-accent-light dark:text-accent-dark">reduce development costs by 30%</strong> through strategic product design and user research.
+            I help startups and enterprises <strong className="text-accent-light dark:text-accent-dark">increase user engagement by 40%</strong> and <strong className="text-accent-light dark:text-accent-dark">reduce development costs by 30%</strong> through strategic product design, user research, and hands-on front-end development.
           </motion.div>
           
           <motion.div
@@ -362,7 +362,10 @@ export default function Home() {
                 I'm a product designer based in Oakland who believes great design should feel effortless, even when solving complex problems. My approach combines user research, strategic thinking, and a love for beautiful, functional interfaces.
               </p>
               <p>
-                When I'm not designing digital experiences, you'll find me in my fabrication studio creating physical art installations—because there's something magical about working with your hands that informs everything I design on screen.
+                What sets me apart is my unique blend of design and development skills. At ZeroCater, I transitioned from pure design to also taking on front-end engineering responsibilities, contributing directly to the codebase with my own GitHub account and participating fully in engineering workflows. This hybrid approach allows me to bridge the gap between design vision and technical implementation.
+              </p>
+              <p>
+                When I'm not designing digital experiences or writing code, you'll find me in my fabrication studio creating physical art installations—because there's something magical about working with your hands that informs everything I create, whether on screen or in the real world.
               </p>
 
             </motion.div>
@@ -375,6 +378,7 @@ export default function Home() {
               className="flex flex-wrap gap-3 mb-8"
             >
               <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium border border-surface-light/20 dark:border-surface-dark/20">Product Design</span>
+              <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium border border-surface-light/20 dark:border-surface-dark/20">Front-End Development</span>
               <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium border border-surface-light/20 dark:border-surface-dark/20">UX Research</span>
               <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium border border-surface-light/20 dark:border-surface-dark/20">Design Systems</span>
               <span className="px-4 py-2 bg-surface-light/10 dark:bg-surface-dark/10 rounded-full text-sm font-medium border border-surface-light/20 dark:border-surface-dark/20">Creative Direction</span>
@@ -400,7 +404,7 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
-
+      
       {/* Interactive Proven Results Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
@@ -509,7 +513,7 @@ export default function Home() {
                              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
                  <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
                    3x
-                 </div>
+          </div>
                  <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
                    Faster Launches
                  </h3>
@@ -518,8 +522,8 @@ export default function Home() {
                  </p>
                  <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                    HackerDAO • Customizable UI • Spotlights
-                 </div>
-               </div>
+          </div>
+        </div>
             </motion.div>
 
             {/* Metric 5: User Satisfaction */}
@@ -533,7 +537,7 @@ export default function Home() {
                              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
                  <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
                    4.8/5
-                 </div>
+          </div>
                  <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
                    User Satisfaction
                  </h3>
@@ -542,8 +546,8 @@ export default function Home() {
                  </p>
                  <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                    User Research • Usability Testing • Iteration
-                 </div>
-               </div>
+            </div>
+          </div>
             </motion.div>
 
             {/* Metric 6: Scale Achievement */}
@@ -557,7 +561,7 @@ export default function Home() {
                              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl hover:bg-white/60 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
                  <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3 group-hover:scale-105 transition-transform">
                    1000+
-                 </div>
+        </div>
                  <h3 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
                    Companies Served
                  </h3>
@@ -566,8 +570,8 @@ export default function Home() {
                  </p>
                  <div className="mt-3 text-xs text-accent-light/70 dark:text-accent-dark/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                    ZeroCater • Betterview • Enterprise Scale
-                 </div>
-               </div>
+          </div>
+            </div>
             </motion.div>
           </div>
 
@@ -636,17 +640,17 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
-              </div>
+          </div>
               <div className="w-full lg:w-3/5 flex items-center justify-center">
                 <div className="rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-800 p-8">
                   <img 
                     src="/images/hackerdao-illustration-big.png" 
                     alt="HackerDAO Project" 
                     className="w-full h-auto object-contain" 
-                  />
-                </div>
-              </div>
+              />
             </div>
+          </div>
+        </div>
           </motion.div>
 
           {/* Project 2: Property Intelligence Platform */}
@@ -672,17 +676,17 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
-              </div>
+          </div>
               <div className="w-full lg:w-3/5 flex items-center justify-center">
                 <div className="rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-800 p-8">
                   <img 
                     src="/images/betterview-propertyintelligence2.png" 
                     alt="Property Intelligence Platform" 
                     className="w-full h-auto object-contain" 
-                  />
-                </div>
-              </div>
+              />
             </div>
+          </div>
+        </div>
           </motion.div>
 
           {/* Project 3: ZeroCater */}
@@ -708,17 +712,17 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
-              </div>
+          </div>
               <div className="w-full lg:w-3/5 flex items-center justify-center">
                 <div className="rounded-2xl shadow-2xl overflow-hidden bg-white dark:bg-gray-800 p-4">
-                  <img 
-                    src="/images/zerocater-snacks1.png" 
-                    alt="ZeroCater Snacks & Kitchens" 
+              <img 
+                src="/images/zerocater-snacks1.png" 
+                alt="ZeroCater Snacks & Kitchens" 
                     className="w-full h-auto object-contain rounded-lg" 
-                  />
-                </div>
-              </div>
+              />
             </div>
+          </div>
+        </div>
           </motion.div>
         </div>
 
@@ -766,7 +770,7 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
-        </div>
+          </div>
       </motion.section>
 
       {/* Contact CTA */}
