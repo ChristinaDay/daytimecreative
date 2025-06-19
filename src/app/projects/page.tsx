@@ -24,6 +24,15 @@ const featuredProjects = [
     bgColor: "from-emerald-500/15 via-3% via-transparent via-97% to-teal-600/12 dark:from-emerald-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-teal-500/10"
   },
   {
+    title: 'ZeroCater Marketplace',
+    description: 'Comprehensive vendor marketplace connecting restaurants, caterers, and office food programs with seamless ordering and management tools.',
+    image: '/images/zerocater_marketplace.jpg',
+    link: '/projects/marketplace',
+    tags: ['Marketplace Design', 'Vendor Onboarding', 'Order Management', 'UX Research'],
+    year: '2015-2017',
+    bgColor: "from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10"
+  },
+  {
     title: 'HackerDAO',
     description: 'Brand identity and platform design for Web3 developers to collaborate and build together.',
     image: '/images/hackerdao-illustration-big.png',
@@ -44,15 +53,6 @@ const featuredProjects = [
 ];
 
 const additionalProjects = [
-  {
-    title: 'ZeroCater Marketplace',
-    description: 'Comprehensive vendor marketplace connecting restaurants, caterers, and office food programs with seamless ordering and management tools.',
-    image: '/images/zerocater_marketplace.jpg',
-    link: '/projects/marketplace',
-    tags: ['Marketplace Design', 'Vendor Onboarding', 'Order Management', 'UX Research'],
-    year: '2015-2017',
-    bgColor: "from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10"
-  },
   {
     title: 'PartnerHub',
     description: 'Third-party property data integration platform with customizable UI for insurance workflows.',
