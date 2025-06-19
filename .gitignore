@@ -40,6 +40,10 @@ next-env.d.ts
 *.sketch
 *.pdf
 
+# Keynote presentations (large files)
+keynote decks/
+"keynote decks/"
+
 # Ignore only specific large/unneeded image folders
 !public/images/ZeroCater/
 !public/images/ZeroCater/**
