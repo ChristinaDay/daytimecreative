@@ -14,7 +14,7 @@ export default function MarketplacePage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mb-16"
+        className="mb-12 pt-24"
       >
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           ZeroCater Marketplace
@@ -32,7 +32,7 @@ export default function MarketplacePage() {
       </motion.div>
 
       {/* Hero Section */}
-      <div className="py-16">
+      <div className="py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function MarketplacePage() {
       </div>
 
       {/* Overview Section */}
-      <div className="py-16">
+      <div className="py-12">
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -155,12 +155,12 @@ export default function MarketplacePage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
-              <div className="aspect-[4/3] relative bg-white p-6">
+              <div className="aspect-[4/3] relative bg-white">
                 <Image
-                  src="/images/laptop_mock-15132.png"
-                  alt="ZeroCater marketplace desktop interface mockup"
+                  src="/images/zerocater_marketplace-12175.jpg"
+                  alt="ZeroCater marketplace desktop interface showing restaurant listings and ordering options"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

@@ -20,6 +20,9 @@ export function Navbar() {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
+            <Link href="/projects" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
+              Projects
+            </Link>
             <a href="mailto:christinamday@gmail.com" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
               Contact
             </a>
