@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
+import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
 
 export default function AnyPerkProject() {
   return (
@@ -114,20 +115,16 @@ export default function AnyPerkProject() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="w-full mb-8 flex flex-col"
+          className="w-full mb-12"
         >
-          <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-white">
-            <Image
-              src="/images/anyperk-website-home.png"
-              alt="AnyPerk Website Homepage Design"
-              fill
-              className="object-contain"
-              sizes="(max-width: 1024px) 100vw, 100vw"
-            />
-          </div>
-          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-            Homepage design showcasing clean layout, custom iconography, and conversion-focused messaging
-          </p>
+          <ScrollableImageContainer
+            src="/images/anyperk-website-home.png"
+            alt="AnyPerk Website Homepage Design"
+            caption="Homepage design showcasing clean layout, custom iconography, and conversion-focused messaging"
+            frameType="browser"
+            height="large"
+            backgroundColor="white"
+          />
         </motion.div>
 
         {/* Website Features */}
@@ -135,20 +132,16 @@ export default function AnyPerkProject() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="w-full mb-8 flex flex-col"
+          className="w-full mb-12"
         >
-          <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-white">
-            <Image
-              src="/images/anyperk-website-features.png"
-              alt="AnyPerk Website Features Page"
-              fill
-              className="object-contain"
-              sizes="(max-width: 1024px) 100vw, 100vw"
-            />
-          </div>
-          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-            Features page demonstrating comprehensive use of custom iconography and clear information architecture
-          </p>
+          <ScrollableImageContainer
+            src="/images/anyperk-website-features.png"
+            alt="AnyPerk Website Features Page"
+            caption="Features page demonstrating comprehensive use of custom iconography and clear information architecture"
+            frameType="browser"
+            height="large"
+            backgroundColor="white"
+          />
         </motion.div>
 
         {/* Mobile App Showcase */}
@@ -156,20 +149,16 @@ export default function AnyPerkProject() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="w-full mb-8 flex flex-col"
+          className="w-full mb-12"
         >
-          <div className="relative aspect-[16/10] rounded-lg overflow-hidden bg-white">
-            <Image
-              src="/images/anyperk-website-mobile.png"
-              alt="AnyPerk Mobile App Showcase"
-              fill
-              className="object-contain"
-              sizes="(max-width: 1024px) 100vw, 100vw"
-            />
-          </div>
-          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-            Mobile app showcase page highlighting cross-platform design consistency and icon system implementation
-          </p>
+          <ScrollableImageContainer
+            src="/images/anyperk-website-mobile.png"
+            alt="AnyPerk Mobile App Showcase"
+            caption="Mobile app showcase page highlighting cross-platform design consistency and icon system implementation"
+            frameType="browser"
+            height="large"
+            backgroundColor="white"
+          />
         </motion.div>
       </motion.section>
 
