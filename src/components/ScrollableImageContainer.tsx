@@ -10,6 +10,7 @@ interface ScrollableImageContainerProps {
   height?: 'small' | 'medium' | 'large';
   backgroundColor?: 'white' | 'transparent';
   className?: string;
+  url?: string;
 }
 
 export function ScrollableImageContainer({
@@ -19,7 +20,8 @@ export function ScrollableImageContainer({
   frameType = 'browser',
   height = 'medium',
   backgroundColor = 'white',
-  className = ''
+  className = '',
+  url = 'example.com'
 }: ScrollableImageContainerProps) {
   const heightClasses = {
     small: 'h-80',
@@ -67,7 +69,7 @@ export function ScrollableImageContainer({
           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
         </div>
         <div className="flex-1 bg-gray-700 dark:bg-gray-600 rounded px-3 py-1 text-xs text-gray-300">
-          betterview.com/partnerhub
+          {url}
         </div>
       </div>
       {containerContent}

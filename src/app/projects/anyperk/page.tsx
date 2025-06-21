@@ -124,6 +124,7 @@ export default function AnyPerkProject() {
             frameType="browser"
             height="large"
             backgroundColor="white"
+            url="anyperk.com"
           />
         </motion.div>
 
@@ -141,6 +142,7 @@ export default function AnyPerkProject() {
             frameType="browser"
             height="large"
             backgroundColor="white"
+            url="anyperk.com/features"
           />
         </motion.div>
 
@@ -158,6 +160,7 @@ export default function AnyPerkProject() {
             frameType="browser"
             height="large"
             backgroundColor="white"
+            url="anyperk.com/mobile"
           />
         </motion.div>
       </motion.section>
