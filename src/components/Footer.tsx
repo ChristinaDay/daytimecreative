@@ -21,8 +21,9 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="flex flex-col items-center md:items-end gap-2">
-            <div className="flex gap-3">
+          <div className="flex flex-col items-center md:items-end gap-3">
+            {/* Art Fabrication Link */}
+            <div className="text-center md:text-right">
               <Link 
                 href="/art-fabrication" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -30,7 +31,9 @@ export default function Footer() {
                 FabLab! Art Fabrication & Installation ✰
               </Link>
             </div>
-            <div className="flex gap-3">
+            
+            {/* Main Navigation Links */}
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center">
               <a 
                 href="mailto:christinamday@gmail.com" 
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -49,6 +52,10 @@ export default function Footer() {
               >
                 Email ✉︎
               </a>
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center">
               <a 
                 href="https://linkedin.com/in/yourprofile" 
                 target="_blank" 
