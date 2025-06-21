@@ -174,7 +174,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img
-              src="/images/Makersquare-Screen+Shot+2020-06-15+at+6.13.59+PM.png"
+              src="/images/Makersquare-Screen+Shot+2020-06-15+at+1.10.01+AM.png"
               alt="MakerSquare Comprehensive Branding Overview"
               className="w-full h-full object-contain"
             />
