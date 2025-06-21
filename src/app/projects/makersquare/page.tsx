@@ -7,13 +7,13 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function MakersquareProject() {
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 py-16 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
+    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mb-16"
+        className="mb-16 pt-24"
       >
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           Makersquare Logo Design, Branding & Marketing
@@ -90,7 +90,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
             <img
-              src="/images/MakerSquare_sign.jpeg"
+              src="/images/makersquare-sign.jpeg"
               alt="MakerSquare Austin Congress Avenue Campus Sign"
               className="w-full h-full object-contain"
             />
@@ -118,7 +118,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <img
-              src="/images/MakerSquare_branding_reddit.jpeg"
+              src="/images/makersquare-reddit.jpeg"
               alt="Alexis Ohanian Reddit Event at MakerSquare Austin"
               className="w-full h-full object-contain"
             />
@@ -139,6 +139,23 @@ export default function MakersquareProject() {
         </p>
       </motion.section>
 
+      {/* Logo Design & Brand Identity */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.75 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Logo Design & Brand Identity</h3>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+          The MakerSquare logo needed to embody the intersection of craftsmanship and technology. The geometric "M" represents both the structural precision of code and the creative problem-solving mindset of makers. The square element reinforces the systematic approach to learning while maintaining approachability for students from diverse backgrounds.
+        </p>
+        
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+          Typography and color choices were carefully selected to appeal to both technical professionals and career changers, balancing professionalism with the innovative spirit of the coding bootcamp movement.
+        </p>
+      </motion.section>
+
       {/* Branding Materials Section */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -146,7 +163,7 @@ export default function MakersquareProject() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Branding Materials</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Comprehensive Brand System</h3>
         
         {/* Comprehensive Branding Overview */}
         <motion.div
@@ -176,7 +193,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <img
-              src="/images/MakerSquare_branding_swag.jpeg"
+              src="/images/makersquare-swag.jpeg"
               alt="MakerSquare Branded Materials and Swag"
               className="w-full h-full object-contain"
             />
@@ -195,7 +212,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <img
-              src="/images/MakerSquare_Branding_SanFran_shirts-environment.jpeg"
+              src="/images/makersquare-sanfran-shirts.jpeg"
               alt="MakerSquare San Francisco Campus Shirts and Environment"
               className="w-full h-full object-contain"
             />
@@ -214,7 +231,7 @@ export default function MakersquareProject() {
         >
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <img
-              src="/images/MakerSquare_LA_Branding.jpeg"
+              src="/images/makersquare-la-branding.jpeg"
               alt="MakerSquare Los Angeles Campus Branding"
               className="w-full h-full object-cover"
             />
@@ -225,25 +242,60 @@ export default function MakersquareProject() {
         </motion.div>
       </motion.section>
 
-      {/* Results Section */}
+      {/* Impact & Recognition */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.0 }}
+        className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Impact & Recognition</h3>
         
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-          My efforts culminated in a successful brand update that was instrumental in MakerSquare's market presence, significantly contributing to its recognition and growth.
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+          The comprehensive rebrand positioned MakerSquare as a leader in coding education, directly contributing to significant business milestones and industry recognition.
         </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="text-xl font-semibold mb-3 text-accent-light dark:text-accent-dark">National Recognition</h4>
+            <p className="text-text-light/80 dark:text-text-dark/80 mb-3">
+              The rebrand helped secure MakerSquare's invitation to the White House Tech Education Summit, validating our position as an industry leader.
+            </p>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Direct contribution to policy discussions on coding education and workforce development.
+            </p>
+          </div>
+          
+          <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="text-xl font-semibold mb-3 text-accent-light dark:text-accent-dark">Multi-City Expansion</h4>
+            <p className="text-text-light/80 dark:text-text-dark/80 mb-3">
+              Brand system successfully scaled across Austin, San Francisco, Los Angeles, and New York campuses.
+            </p>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Cohesive identity maintained across diverse markets and demographics.
+            </p>
+          </div>
+        </div>
         
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-          The branding was critically acclaimed and was involved in most design choices the company has made since its inception, showcasing the lasting impact of my work.
+          The brand's strength was validated through high-profile speaking engagements, including hosting Reddit co-founder Alexis Ohanian, demonstrating MakerSquare's credibility within the tech ecosystem.
+        </p>
+      </motion.section>
+
+      {/* Legacy & Acquisition */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.1 }}
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Legacy & Acquisition</h3>
+        
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
+          The comprehensive branding work contributed to MakerSquare's eventual acquisition by Hack Reactor, with brand elements and design principles continuing to influence the combined organization's visual identity.
         </p>
         
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-          My work directly influenced the school's growth trajectory, leading to increased visibility and enhanced reputation within the tech community. 
-          The brand refresh was not only aesthetic but served as a springboard for MakerSquare's expansion and its engagement with thought leaders in the industry.
+          This project demonstrated how thoughtful brand design can support rapid scaling, community building, and industry recognition—lessons that continue to inform my approach to system design and brand development in subsequent roles.
         </p>
       </motion.section>
     </article>
