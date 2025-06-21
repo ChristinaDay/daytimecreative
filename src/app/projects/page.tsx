@@ -54,6 +54,15 @@ const featuredProjects = [
 
 const additionalProjects = [
   {
+    title: 'AnyPerk Brand Design & Development',
+    description: 'Comprehensive iconography system, brand identity, and full-stack website development for employee perks platform (now Fond).',
+    image: '/images/anyperk-icons.png',
+    link: '/projects/anyperk',
+    tags: ['Icon Design', 'Brand Identity', 'WordPress Development', 'Designer-Developer'],
+    year: '2013-2015',
+    bgColor: "from-indigo-500/15 via-3% via-transparent via-97% to-purple-600/12 dark:from-indigo-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-purple-500/10"
+  },
+  {
     title: 'PartnerHub',
     description: 'Third-party property data integration platform with customizable UI for insurance workflows.',
     image: '/images/betterview-partnerhub2.png',
