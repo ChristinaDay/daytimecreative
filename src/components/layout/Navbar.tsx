@@ -15,15 +15,15 @@ export function Navbar() {
       <div className="max-w-none mx-auto">
         <div className="flex justify-between h-24">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-semibold text-text-light dark:text-white">
+            <Link href="/" className="text-lg sm:text-xl font-semibold text-text-light dark:text-white">
               daytime creative ⚆
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
-            <Link href="/projects" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <Link href="/projects" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark text-sm sm:text-base">
               Projects
             </Link>
-            <a href="mailto:christinamday@gmail.com" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
+            <a href="mailto:christinamday@gmail.com" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark text-sm sm:text-base">
               Contact
             </a>
             <button
