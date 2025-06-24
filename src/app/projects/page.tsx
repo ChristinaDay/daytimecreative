@@ -56,7 +56,7 @@ const additionalProjects = [
   {
     title: 'TenSpot Workforce Engagement Platform',
     description: 'Complete platform design and development for workplace wellness, combining social challenges, team building, and insurance partnerships.',
-    image: '/images/tenspot-hero-laptop-mockup.png',
+    image: '/images/Ten-Spot_Lifestyle-Tablet Mockup-1.jpg',
     link: '/projects/tenspot',
     tags: ['Platform Design', 'Workforce Wellness', 'Social Features', 'Insurance Tech'],
     year: '2016-2018',

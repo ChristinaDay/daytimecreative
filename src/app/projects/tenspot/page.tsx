@@ -36,11 +36,11 @@ export default function TenSpotProject() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="mb-16 w-full relative aspect-[16/9] rounded-lg overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20"
+        className="mb-16 w-full relative aspect-[3/2] rounded-lg overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20"
       >
         <Image
-          src="/images/tenspot-hero-laptop-mockup.png"
-          alt="TenSpot Platform Hero Mockup"
+          src="/images/tenspot-desk-purple-macbook-mockup.png"
+          alt="TenSpot Platform Desktop Mockup"
           fill
           className="object-contain p-8"
           sizes="(max-width: 1024px) 100vw, 100vw"
@@ -199,49 +199,42 @@ export default function TenSpotProject() {
           The core platform interface needed to balance functionality with engagement, making workplace wellness activities feel fun and social rather than corporate and mandatory. I focused on creating an intuitive, game-like experience that encouraged participation.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Desktop Platform */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20">
-              <Image
-                src="/images/tenspot-imac-desk.png"
-                alt="TenSpot Desktop Platform Interface"
-                fill
-                className="object-contain p-6"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              Desktop platform interface showcasing dashboard, challenges, and team engagement features
-            </p>
-          </motion.div>
+        {/* Main Platform Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.1 }}
+          className="mb-12 w-full relative aspect-[3/2] rounded-lg overflow-hidden bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20"
+        >
+          <Image
+            src="/images/tenspot-imac-desk.png"
+            alt="TenSpot Desktop Platform Interface"
+            fill
+            className="object-contain p-8"
+            sizes="(max-width: 1024px) 100vw, 100vw"
+          />
+        </motion.div>
 
-          {/* Platform Red Theme */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
-              <Image
-                src="/images/tenspot-platform-mock-red.png"
-                alt="TenSpot Platform Red Theme Mockup"
-                fill
-                className="object-contain p-6"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              Alternative platform design with energetic red theme for high-engagement campaigns
-            </p>
-          </motion.div>
-        </div>
+        {/* Platform Variations */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="flex flex-col mb-8"
+        >
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
+            <Image
+              src="/images/tenspot-platform-mock-red.png"
+              alt="TenSpot Platform Red Theme Mockup"
+              fill
+              className="object-contain p-6"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
+            Alternative platform design with energetic red theme for high-engagement campaigns
+          </p>
+        </motion.div>
       </motion.section>
 
       {/* Social Features & Challenges */}
@@ -256,7 +249,7 @@ export default function TenSpotProject() {
           The heart of TenSpot was its social challenge system, designed to make wellness activities competitive, collaborative, and fun. I created interfaces that encouraged both individual achievement and team participation.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="space-y-8 mb-12">
           {/* Individual Challenges */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,16 +257,16 @@ export default function TenSpotProject() {
             transition={{ duration: 0.8, delay: 1.3 }}
             className="flex flex-col"
           >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-3xl mx-auto">
               <Image
                 src="/images/tenspot-social-challenges.png"
                 alt="TenSpot Social Challenges Interface"
                 fill
-                className="object-contain p-4"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain p-6"
+                sizes="(max-width: 1024px) 100vw, 75vw"
               />
             </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
+            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
               Social challenges interface encouraging individual participation and achievement tracking
             </p>
           </motion.div>
@@ -285,16 +278,16 @@ export default function TenSpotProject() {
             transition={{ duration: 0.8, delay: 1.4 }}
             className="flex flex-col"
           >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-3xl mx-auto">
               <Image
                 src="/images/tenspot-social-challenges companies.png"
                 alt="TenSpot Company Challenges Interface"
                 fill
-                className="object-contain p-4"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain p-6"
+                sizes="(max-width: 1024px) 100vw, 75vw"
               />
             </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
+            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
               Company-wide challenges fostering team collaboration and healthy competition
             </p>
           </motion.div>
@@ -313,49 +306,42 @@ export default function TenSpotProject() {
           Recognizing that engagement happens throughout the day, I designed responsive interfaces that worked seamlessly across desktop, tablet, and mobile devices. The mobile experience was optimized for quick check-ins and on-the-go participation.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Tablet Experience */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20">
-              <Image
-                src="/images/Ten-Spot_Lifestyle-Tablet Mockup-1.jpg"
-                alt="TenSpot Tablet Lifestyle Mockup"
-                fill
-                className="object-contain p-6"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              Tablet experience designed for casual browsing and team engagement during breaks
-            </p>
-          </motion.div>
+        {/* Main Tablet Experience */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mb-12 w-full relative aspect-[3/2] rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20"
+        >
+          <Image
+            src="/images/Ten-Spot_Lifestyle-Tablet Mockup-1.jpg"
+            alt="TenSpot Tablet Lifestyle Mockup"
+            fill
+            className="object-contain p-8"
+            sizes="(max-width: 1024px) 100vw, 100vw"
+          />
+        </motion.div>
 
-          {/* iPad On-Demand */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
-              <Image
-                src="/images/tenspot-ipad-on-demand mockup.png"
-                alt="TenSpot iPad On-Demand Features"
-                fill
-                className="object-contain p-6"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              iPad interface featuring on-demand wellness content and interactive features
-            </p>
-          </motion.div>
-        </div>
+        {/* iPad On-Demand Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+          className="flex flex-col mb-8"
+        >
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
+            <Image
+              src="/images/tenspot-ipad-on-demand mockup.png"
+              alt="TenSpot iPad On-Demand Features"
+              fill
+              className="object-contain p-6"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
+            iPad interface featuring on-demand wellness content and interactive features
+          </p>
+        </motion.div>
       </motion.section>
 
       {/* Design System & Brand */}
