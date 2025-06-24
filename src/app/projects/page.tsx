@@ -65,7 +65,7 @@ const additionalProjects = [
   {
     title: 'AnyPerk Brand Design & Development',
     description: 'Comprehensive iconography system, brand identity, and full-stack website development for employee perks platform (now Fond).',
-    image: '/images/anyperk-icons.png',
+    image: '/images/ap_illustrations_perks.png',
     link: '/projects/anyperk',
     tags: ['Icon Design', 'Brand Identity', 'WordPress Development', 'Designer-Developer'],
     year: '2013-2015',
