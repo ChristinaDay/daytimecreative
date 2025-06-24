@@ -54,6 +54,15 @@ const featuredProjects = [
 
 const additionalProjects = [
   {
+    title: 'TenSpot Workforce Engagement Platform',
+    description: 'Complete platform design and development for workplace wellness, combining social challenges, team building, and insurance partnerships.',
+    image: '/images/tenspot-hero-laptop-mockup.png',
+    link: '/projects/tenspot',
+    tags: ['Platform Design', 'Workforce Wellness', 'Social Features', 'Insurance Tech'],
+    year: '2016-2018',
+    bgColor: "from-purple-500/15 via-3% via-transparent via-97% to-blue-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10"
+  },
+  {
     title: 'AnyPerk Brand Design & Development',
     description: 'Comprehensive iconography system, brand identity, and full-stack website development for employee perks platform (now Fond).',
     image: '/images/anyperk-icons.png',
