@@ -456,4 +456,3 @@ export default function TenSpotProject() {
     </article>
   );
 }
-</rewritten_file>
