@@ -72,7 +72,7 @@ export default function TenSpotProject() {
       >
         <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Platform Vision & Value Proposition</h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
             <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Ultimate Engagement Platform</h4>
             <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
@@ -94,6 +94,84 @@ export default function TenSpotProject() {
             </p>
           </div>
         </div>
+
+        {/* Marketing Positioning Materials */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mb-8"
+        >
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Marketing Positioning Materials</h4>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-8">
+            These vertical marketing materials were designed for sales presentations and client pitches, clearly communicating TenSpot's core value propositions in a format optimized for presentation slides and marketing collateral.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            {/* Core Platform Positioning */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="flex flex-col items-center max-w-xs"
+            >
+              <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                <Image
+                  src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
+                  alt="TenSpot Ultimate Workforce Engagement Platform Marketing"
+                  fill
+                  className="object-contain p-4"
+                  sizes="300px"
+                />
+              </div>
+              <p className="text-xs text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-3 max-w-xs">
+                Core platform positioning material for sales presentations
+              </p>
+            </motion.div>
+
+            {/* Team Management Positioning */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="flex flex-col items-center max-w-xs"
+            >
+              <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                <Image
+                  src="/images/Ten-Spot-Connect-Engage-and-Manage-your-team-all-in-one-platform-.png"
+                  alt="TenSpot Team Management Platform Marketing"
+                  fill
+                  className="object-contain p-4"
+                  sizes="300px"
+                />
+              </div>
+              <p className="text-xs text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-3 max-w-xs">
+                Team management messaging for HR decision-makers
+              </p>
+            </motion.div>
+
+            {/* Insurance Partnership Positioning */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
+              className="flex flex-col items-center max-w-xs"
+            >
+              <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 shadow-lg">
+                <Image
+                  src="/images/Ten-Spot-An-insurance-broker-partnership-focused-on-workplace-wellness.png"
+                  alt="TenSpot Insurance Broker Partnership Marketing"
+                  fill
+                  className="object-contain p-4"
+                  sizes="300px"
+                />
+              </div>
+              <p className="text-xs text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-3 max-w-xs">
+                Insurance partnership value proposition for broker presentations
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* Website Design & Development */}
