@@ -23,10 +23,10 @@ export default function TenSpotProject() {
           The ultimate workforce engagement platform connecting teams through wellness, challenges, and community building
         </ProjectSubtitle>
         <ProjectDetailTags
-          role="Lead Product Designer & Developer"
+          role="Marketing Website Designer & Developer"
           employer="TenSpot"
-          platforms="Web Platform, Mobile, Insurance Integration"
-          areas="Product Design, UX Research, Front-End Development, Brand Design"
+          platforms="Marketing Website, Landing Pages, Brand Collateral"
+          areas="Web Design, Front-End Development, Brand Design, Marketing Design"
           year="2016-2018"
         />
       </motion.div>
@@ -56,10 +56,10 @@ export default function TenSpotProject() {
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-          TenSpot was a pioneering workforce engagement platform that combined wellness programs, social challenges, and team building activities to create more connected and healthy workplace communities. As Lead Product Designer and Developer, I was responsible for the complete user experience, from initial concept through implementation.
+          TenSpot was a pioneering workforce engagement platform that combined wellness programs, social challenges, and team building activities to create more connected and healthy workplace communities. As Marketing Website Designer and Developer, I was responsible for creating the complete digital marketing presence that communicated the platform's value to potential clients.
         </p>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-          The platform served as a bridge between employees, employers, and insurance brokers, creating a comprehensive ecosystem for workplace wellness that drove engagement, reduced healthcare costs, and built stronger company cultures.
+          My role focused on translating the complex platform capabilities into compelling marketing narratives, designing conversion-focused landing pages, and developing the complete website experience that helped TenSpot acquire enterprise clients and insurance partnerships.
         </p>
       </motion.section>
 
@@ -145,19 +145,19 @@ export default function TenSpotProject() {
         </motion.div>
       </motion.section>
 
-      {/* Platform Design */}
+      {/* Marketing Assets & Platform Showcase */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.0 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Platform Interface Design</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Marketing Assets & Platform Showcase</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          The core platform interface needed to balance functionality with engagement, making workplace wellness activities feel fun and social rather than corporate and mandatory. I focused on creating an intuitive, game-like experience that encouraged participation.
+          To effectively market TenSpot's platform capabilities, I created compelling visual assets that showcased the product in realistic contexts. These marketing materials helped potential clients understand the platform's value and envision it in their own workplace environments.
         </p>
 
-        {/* Main Platform Showcase */}
+        {/* Main Platform Marketing Visual */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -166,14 +166,14 @@ export default function TenSpotProject() {
         >
           <Image
             src="/images/tenspot-imac-desk.png"
-            alt="TenSpot Desktop Platform Interface"
+            alt="TenSpot Platform Marketing Showcase"
             fill
             className="object-contain p-8"
             sizes="(max-width: 1024px) 100vw, 100vw"
           />
         </motion.div>
 
-        {/* Platform Variations */}
+        {/* Platform Variations for Marketing */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -183,32 +183,32 @@ export default function TenSpotProject() {
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
             <Image
               src="/images/tenspot-platform-mock-red.png"
-              alt="TenSpot Platform Red Theme Mockup"
+              alt="TenSpot Platform Marketing Mockup"
               fill
               className="object-contain p-6"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
-            Alternative platform design with energetic red theme for high-engagement campaigns
+            Marketing materials showcasing platform flexibility with different visual themes for various client presentations
           </p>
         </motion.div>
       </motion.section>
 
-      {/* Social Features & Challenges */}
+      {/* Marketing Challenge Presentations */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Social Challenges & Engagement</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Feature Marketing & Client Presentations</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          The heart of TenSpot was its social challenge system, designed to make wellness activities competitive, collaborative, and fun. I created interfaces that encouraged both individual achievement and team participation.
+          To help potential clients understand TenSpot's core value proposition, I created marketing materials that showcased the platform's social challenge features. These presentation assets demonstrated how the platform could drive engagement and build workplace community.
         </p>
 
         <div className="space-y-8 mb-12">
-          {/* Individual Challenges */}
+          {/* Individual Challenge Marketing */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -218,18 +218,18 @@ export default function TenSpotProject() {
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-3xl mx-auto">
               <Image
                 src="/images/tenspot-social-challenges.png"
-                alt="TenSpot Social Challenges Interface"
+                alt="TenSpot Individual Challenges Marketing Material"
                 fill
                 className="object-contain p-6"
                 sizes="(max-width: 1024px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
-              Social challenges interface encouraging individual participation and achievement tracking
+              Marketing materials showcasing individual challenge features for client presentations
             </p>
           </motion.div>
 
-          {/* Company Challenges */}
+          {/* Company Challenge Marketing */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -239,32 +239,32 @@ export default function TenSpotProject() {
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-3xl mx-auto">
               <Image
                 src="/images/tenspot-social-challenges companies.png"
-                alt="TenSpot Company Challenges Interface"
+                alt="TenSpot Company Challenges Marketing Material"
                 fill
                 className="object-contain p-6"
                 sizes="(max-width: 1024px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
-              Company-wide challenges fostering team collaboration and healthy competition
+              Company-wide challenge marketing materials for enterprise client presentations
             </p>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Mobile & Cross-Platform */}
+      {/* Marketing Lifestyle & Context */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.3 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Mobile & Cross-Platform Experience</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Lifestyle Marketing & Context</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          Recognizing that engagement happens throughout the day, I designed responsive interfaces that worked seamlessly across desktop, tablet, and mobile devices. The mobile experience was optimized for quick check-ins and on-the-go participation.
+          To help potential clients envision TenSpot in their workplace environments, I created lifestyle marketing materials that showed the platform being used in realistic contexts. These assets were crucial for sales presentations and marketing campaigns.
         </p>
 
-        {/* Main Tablet Experience */}
+        {/* Main Lifestyle Marketing */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -273,14 +273,14 @@ export default function TenSpotProject() {
         >
           <Image
             src="/images/Ten-Spot_Lifestyle-Tablet Mockup-1.jpg"
-            alt="TenSpot Tablet Lifestyle Mockup"
+            alt="TenSpot Lifestyle Marketing Photography"
             fill
             className="object-contain p-8"
             sizes="(max-width: 1024px) 100vw, 100vw"
           />
         </motion.div>
 
-        {/* iPad On-Demand Features */}
+        {/* Additional Marketing Assets */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -290,14 +290,14 @@ export default function TenSpotProject() {
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto">
             <Image
               src="/images/tenspot-ipad-on-demand mockup.png"
-              alt="TenSpot iPad On-Demand Features"
+              alt="TenSpot Marketing Asset for iPad"
               fill
               className="object-contain p-6"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-4">
-            iPad interface featuring on-demand wellness content and interactive features
+            Marketing materials showcasing platform accessibility across different devices and contexts
           </p>
         </motion.div>
       </motion.section>
@@ -309,39 +309,39 @@ export default function TenSpotProject() {
         transition={{ duration: 0.8, delay: 1.4 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design System & Brand Identity</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Marketing Design System & Brand Application</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          I developed a comprehensive design system that balanced professionalism with approachability, ensuring the platform felt trustworthy to HR departments while remaining engaging for everyday employees.
+          I developed a comprehensive marketing design system that balanced professionalism with approachability, ensuring the brand felt trustworthy to HR departments while remaining engaging and accessible. This system guided all marketing materials, website design, and client presentations.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Visual Design</h4>
+            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Marketing Visual Design</h4>
             <ul className="space-y-1 text-sm text-text-light/80 dark:text-text-dark/80">
-              <li>• Energetic color palette</li>
-              <li>• Friendly, approachable typography</li>
-              <li>• Game-like UI elements</li>
-              <li>• Motivational iconography</li>
+              <li>• Energetic, wellness-focused color palette</li>
+              <li>• Professional yet approachable typography</li>
+              <li>• Motivational imagery and iconography</li>
+              <li>• Consistent brand application</li>
             </ul>
           </div>
           
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">User Experience</h4>
+            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Website Experience</h4>
             <ul className="space-y-1 text-sm text-text-light/80 dark:text-text-dark/80">
-              <li>• Intuitive navigation</li>
-              <li>• Progressive disclosure</li>
-              <li>• Gamification elements</li>
-              <li>• Social interaction patterns</li>
+              <li>• Conversion-focused navigation</li>
+              <li>• Clear value proposition presentation</li>
+              <li>• Lead generation optimization</li>
+              <li>• Multi-audience messaging</li>
             </ul>
           </div>
           
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
             <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Technical Implementation</h4>
             <ul className="space-y-1 text-sm text-text-light/80 dark:text-text-dark/80">
-              <li>• Responsive design system</li>
-              <li>• Cross-browser compatibility</li>
+              <li>• Responsive marketing website</li>
+              <li>• SEO optimization</li>
               <li>• Performance optimization</li>
-              <li>• Accessibility standards</li>
+              <li>• Analytics integration</li>
             </ul>
           </div>
         </div>
@@ -388,13 +388,13 @@ export default function TenSpotProject() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.6 }}
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Key Learnings & Design Philosophy</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Key Learnings & Marketing Design Philosophy</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-          TenSpot taught me the importance of designing for multiple stakeholders while maintaining a cohesive user experience. The challenge of making wellness engaging without feeling forced shaped my approach to motivation design and social features.
+          TenSpot taught me the importance of translating complex platform capabilities into compelling marketing narratives that resonate with multiple stakeholders. The challenge was communicating the value of workplace wellness to both HR decision-makers and end users through cohesive marketing design.
         </p>
         
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-          This project demonstrated how thoughtful UX design can transform traditionally dry corporate programs into engaging, community-building experiences that deliver real business value while genuinely improving people's lives.
+          This project demonstrated how effective marketing design can bridge the gap between innovative technology and business adoption, helping companies understand how wellness platforms can transform their workplace culture and deliver measurable ROI.
         </p>
       </motion.section>
     </article>
