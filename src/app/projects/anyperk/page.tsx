@@ -31,7 +31,7 @@ export default function AnyPerkProject() {
         />
       </motion.div>
 
-      {/* Hero Image - Icon System */}
+      {/* Hero Image - Illustrations & Perks */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -39,8 +39,8 @@ export default function AnyPerkProject() {
         className="mb-16 w-full relative aspect-[16/9] rounded-lg overflow-hidden flex items-center justify-center bg-white"
       >
         <Image
-          src="/images/anyperk-icons.png"
-          alt="AnyPerk Comprehensive Icon System"
+          src="/images/ap_illustrations_perks.png"
+          alt="AnyPerk Illustrations and Perks Design System"
           fill
           className="object-contain p-8"
           sizes="(max-width: 1024px) 100vw, 100vw"
@@ -74,6 +74,27 @@ export default function AnyPerkProject() {
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           I designed and developed over 200+ custom icons that were used throughout the AnyPerk ecosystem. These icons needed to work across multiple contexts: the main web application, mobile apps, marketing materials, and partner integrations.
         </p>
+
+        {/* Icon System Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="w-full mb-12 flex flex-col"
+        >
+          <div className="relative aspect-[16/9] rounded-lg overflow-hidden flex items-center justify-center bg-white border border-gray-200 dark:border-gray-700">
+            <Image
+              src="/images/anyperk-icons.png"
+              alt="AnyPerk Comprehensive Icon System"
+              fill
+              className="object-contain p-8"
+              sizes="(max-width: 1024px) 100vw, 100vw"
+            />
+          </div>
+          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
+            Comprehensive icon system showing the breadth and consistency of the 200+ custom icons designed for AnyPerk
+          </p>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
