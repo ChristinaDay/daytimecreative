@@ -70,71 +70,29 @@ export default function TenSpotProject() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Platform Vision & Positioning</h3>
+        <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Platform Vision & Value Proposition</h3>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Core Platform */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
-              <Image
-                src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
-                alt="TenSpot Ultimate Workforce Engagement Platform"
-                fill
-                className="object-contain p-4"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              Core platform positioning as the ultimate workforce engagement solution
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Ultimate Engagement Platform</h4>
+            <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+              Comprehensive workforce engagement solution combining wellness programs, social challenges, and team building activities to create healthier, more connected workplace communities.
             </p>
-          </motion.div>
-
-          {/* Team Management */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
-              <Image
-                src="/images/Ten-Spot-Connect-Engage-and-Manage-your-team-all-in-one-platform-.png"
-                alt="TenSpot Team Management Platform"
-                fill
-                className="object-contain p-4"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              All-in-one platform for connecting, engaging, and managing teams
+          </div>
+          
+          <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">All-in-One Team Management</h4>
+            <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+              Single platform for connecting, engaging, and managing teams with intuitive tools for communication, challenge participation, and progress tracking across the organization.
             </p>
-          </motion.div>
-
-          {/* Insurance Partnership */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="flex flex-col"
-          >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-200 dark:border-gray-700">
-              <Image
-                src="/images/Ten-Spot-An-insurance-broker-partnership-focused-on-workplace-wellness.png"
-                alt="TenSpot Insurance Broker Partnership"
-                fill
-                className="object-contain p-4"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
-            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center leading-tight mt-2">
-              Strategic insurance broker partnerships focused on workplace wellness
+          </div>
+          
+          <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Insurance Partnership Value</h4>
+            <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+              Strategic partnerships with insurance brokers focused on workplace wellness, providing measurable ROI through reduced healthcare costs and improved employee health outcomes.
             </p>
-          </motion.div>
+          </div>
         </div>
       </motion.section>
 
