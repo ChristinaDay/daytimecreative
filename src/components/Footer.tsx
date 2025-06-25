@@ -41,7 +41,9 @@ export default function Footer() {
                 Contact
               </a>
               <Link 
-                href="/resume" 
+                href="/images/Resume-ChristinaDay2025.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
               >
                 Resume
