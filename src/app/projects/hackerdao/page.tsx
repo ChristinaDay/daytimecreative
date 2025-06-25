@@ -8,288 +8,295 @@ import { getImageUrl } from '@/utils/imageUtils';
 
 export default function HackerDaoProject() {
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-12 md:pb-24 lg:pb-40 text-text-light dark:text-text-dark min-h-screen">
+    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-32 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
         
-        {/* Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 pt-24"
-        >
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 text-text-light/70 dark:text-text-dark/70 hover:text-accent-light dark:hover:text-accent-dark transition-colors text-lg"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Home
-          </Link>
-        </motion.div>
-
         {/* Header Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-40"
+          className="mb-20"
         >
-          <div className="max-w-5xl">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-text-light dark:text-text-dark leading-tight mb-8">
+          <div className="max-w-4xl">
+            <h1 className="text-left text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-6">
               HackerDAO Brand Identity
             </h1>
-            <div className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-12 leading-relaxed max-w-4xl">
-              I created a complete brand identity for a Web3 education platform that needed to stand out in the blockchain space and actually connect with developers.
+            <div className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 leading-relaxed">
+              Creating a complete brand identity for a Web3 education platform that needed to stand out in the blockchain space and actually connect with developers.
             </div>
-            
-            {/* Project Tags */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Brand Strategy</span>
-              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Logo Design</span>
-              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Custom Illustration</span>
-              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Visual Systems</span>
-            </div>
-
             <ProjectDetailTags
               role="Brand Designer & Illustrator"
               employer="HackerDAO (Contract)"
+              year="2023"
               platforms="Web, Marketing, Social"
               areas="Brand Identity, Illustration, Visual Design"
-              year="2023"
             />
+          </div>
+        </motion.div>
+
+        {/* Executive Summary - Professional Style */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
+        >
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-rose-400 dark:text-rose-300 mb-3">Problem</h3>
+                <p className="text-text-light/80 dark:text-text-dark/80">
+                  HackerDAO needed a brand identity that would differentiate them from generic crypto aesthetics while building trust and educational authority in the crowded Web3 space.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-emerald-400 dark:text-emerald-300 mb-3">Solution</h3>
+                <p className="text-text-light/80 dark:text-text-dark/80">
+                  Designed a comprehensive brand system with custom illustrations, logo variations, and visual guidelines that balanced Web3 innovation with educational approachability.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-violet-400 dark:text-violet-300 mb-3">Impact</h3>
+                <p className="text-text-light/80 dark:text-text-dark/80">
+                  Delivered a distinctive brand identity that achieved 100% stakeholder approval and positioned HackerDAO as a trusted leader in Web3 education.
+                </p>
+              </div>
+            </div>
           </div>
         </motion.section>
 
         {/* Hero Image */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-40"
-        >
-          <div className="relative group">
-            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-              <img 
-                src={getImageUrl("hackerdao-illustration-hero.png")}
-                alt="HackerDAO Brand Identity Hero showing collaborative Web3 development illustration" 
-                className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-              />
-            </div>
-            {/* Subtle glow effect */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-          </div>
-        </motion.section>
-
-        {/* Quick Stats */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-40"
+          className="mb-20"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">3 weeks</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Project Timeline</div>
-            </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">5+</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Brand Assets</div>
-            </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">100%</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Stakeholder Approval</div>
-            </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">Web3</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Industry Focus</div>
-            </div>
+          <div className="w-full relative aspect-[16/10] bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <Image
+              src={getImageUrl("hackerdao-illustration-hero.png")}
+              alt="HackerDAO Brand Identity Hero showing collaborative Web3 development illustration"
+              fill
+              className="object-contain p-8"
+              sizes="100vw"
+            />
           </div>
+          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+            HackerDAO brand identity hero illustration showcasing collaborative Web3 development
+          </p>
         </motion.section>
 
-        {/* Problem & Solution */}
+        {/* The Challenge */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-          className="mb-40"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-20"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-6">
-              <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-8 text-text-light dark:text-text-dark">The Challenge</h2>
-              <p className="text-xl text-text-light/80 dark:text-text-dark/80 mb-8 leading-relaxed">
-                HackerDAO was launching as a blockchain education platform in a crowded Web3 space. They needed a brand that would:
-              </p>
-              <ul className="space-y-4 text-lg text-text-light/80 dark:text-text-dark/80">
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">•</span>
-                  Stand out from generic crypto aesthetics
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">•</span>
-                  Appeal to both experienced developers and newcomers
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">•</span>
-                  Build trust and educational authority
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">•</span>
-                  Work across digital and marketing materials
-                </li>
+          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">The Challenge: Standing Out in Web3 Education</h2>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+            HackerDAO was launching as a blockchain education platform in a crowded Web3 space filled with generic crypto aesthetics and technical jargon. They needed a brand that could bridge the gap between complex blockchain technology and accessible education.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Brand Positioning Challenges</h3>
+              <ul className="space-y-2 text-text-light/80 dark:text-text-dark/80">
+                <li>• Standing out from generic crypto aesthetics</li>
+                <li>• Building trust and educational authority</li>
+                <li>• Appealing to both experienced developers and newcomers</li>
+                <li>• Balancing innovation with approachability</li>
               </ul>
             </div>
-            <div className="lg:col-span-6">
-              <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-8 text-text-light dark:text-text-dark">My Approach</h2>
-              <p className="text-xl text-text-light/80 dark:text-text-dark/80 mb-8 leading-relaxed">
-                I built a brand identity that balanced Web3 innovation with the approachability needed for education:
-              </p>
-              <ul className="space-y-4 text-lg text-text-light/80 dark:text-text-dark/80">
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">✓</span>
-                  Created a logo system with multiple variations
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">✓</span>
-                  Designed custom illustrations with a consistent visual language
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">✓</span>
-                  Established brand guidelines for consistent application
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-accent-light dark:text-accent-dark font-bold text-xl">✓</span>
-                  Delivered assets optimized for digital platforms
-                </li>
+            <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
+              <h3 className="text-xl font-semibold mb-4 text-text-light/80 dark:text-text-dark/80">Technical Requirements</h3>
+              <ul className="space-y-2 text-text-light/80 dark:text-text-dark/80">
+                <li>• Scalable across digital and marketing materials</li>
+                <li>• Multiple logo variations for different contexts</li>
+                <li>• Consistent visual language system</li>
+                <li>• Brand guidelines for future applications</li>
               </ul>
             </div>
           </div>
-        </motion.section>
 
-        {/* Design Process */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-          className="mb-40"
-        >
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">Design Process</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🔍</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Research & Discovery</h3>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                I analyzed the Web3 education space, interviewed stakeholders, and identified key brand positioning opportunities.
-              </p>
-            </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">✏️</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Concept Development</h3>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                I created multiple logo concepts and illustration styles, testing different approaches to visual storytelling.
-              </p>
-            </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🎨</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Refinement & Delivery</h3>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                I refined the chosen concepts based on feedback and delivered a complete brand package with usage guidelines.
-              </p>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Visual Showcase */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-          className="mb-40"
-        >
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">Brand Assets</h2>
-          
-          <div className="space-y-16 mb-16">
-            {/* Logo variations - Full width */}
-            <div className="relative group">
-              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                <img 
-                  src={getImageUrl("hackerdao-logos.png")}
-                  alt="HackerDAO logo variations and brand marks" 
-                  className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                />
-              </div>
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-            </div>
-            
-            {/* B&W illustration - Full width */}
-            <div className="relative group">
-              <div className="rounded-3xl overflow-hidden bg-white dark:bg-white border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                <img 
-                  src={getImageUrl("hackerdao-illustration-bw.png")}
-                  alt="HackerDAO black and white illustration showing collaborative development" 
-                  className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                />
-              </div>
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-            </div>
-            
-            {/* Large illustration - Full width */}
-            <div className="relative group">
-              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                <img 
-                  src={getImageUrl("hackerdao-illustration-big.png")}
-                  alt="HackerDAO large illustration showing Web3 development collaboration" 
-                  className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                />
-              </div>
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Results & Impact */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-          className="mb-40"
-        >
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-8 text-text-light dark:text-text-dark">Results & Impact</h2>
-            <p className="text-xl text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto leading-relaxed">
-              The brand identity successfully positioned HackerDAO as a trusted leader in Web3 education, differentiating them from generic crypto aesthetics while building credibility with developers.
+          <div className="bg-gradient-to-r from-accent-light/10 to-accent-light/5 dark:from-accent-dark/10 dark:to-accent-dark/5 border border-accent-light/20 dark:border-accent-dark/20 rounded-xl p-8">
+            <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">The Strategic Approach</h3>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+              I focused on creating a brand identity that would position HackerDAO as both technically credible and educationally accessible. The visual system needed to communicate collaboration, innovation, and learning while avoiding the typical crypto clichés.
             </p>
           </div>
+        </motion.section>
+
+        {/* Design Process - Enhanced */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Building a Web3 Education Brand</h2>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+            With a tight 3-week timeline, I developed a streamlined design process that balanced thorough research with rapid iteration, ensuring stakeholder alignment at every step.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-text-light dark:text-text-dark">Strategic Design Process</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-rose-400 dark:bg-rose-300 text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                  <div>
+                    <h4 className="font-semibold text-text-light dark:text-text-dark">Research & Discovery</h4>
+                    <p className="text-text-light/80 dark:text-text-dark/80">Analyzed the Web3 education landscape, interviewed stakeholders, and identified key brand positioning opportunities.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-emerald-400 dark:bg-emerald-300 text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                  <div>
+                    <h4 className="font-semibold text-text-light dark:text-text-dark">Concept Development</h4>
+                    <p className="text-text-light/80 dark:text-text-dark/80">Created multiple logo concepts and illustration styles, testing different approaches to visual storytelling and technical communication.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 bg-violet-400 dark:bg-violet-300 text-white dark:text-gray-900 rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                  <div>
+                    <h4 className="font-semibold text-text-light dark:text-text-dark">Refinement & Delivery</h4>
+                    <p className="text-text-light/80 dark:text-text-dark/80">Refined chosen concepts based on feedback and delivered a complete brand package with usage guidelines and scalable assets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-6">
+              <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Project Metrics</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-text-light/80 dark:text-text-dark/80">Timeline</span>
+                  <span className="bg-rose-400/10 dark:bg-rose-300/10 text-rose-500 dark:text-rose-400 px-2 py-1 rounded text-sm">3 weeks</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-text-light/80 dark:text-text-dark/80">Brand Assets</span>
+                  <span className="bg-emerald-400/10 dark:bg-emerald-300/10 text-emerald-500 dark:text-emerald-400 px-2 py-1 rounded text-sm">5+ deliverables</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-text-light/80 dark:text-text-dark/80">Stakeholder Approval</span>
+                  <span className="bg-violet-400/10 dark:bg-violet-300/10 text-violet-500 dark:text-violet-400 px-2 py-1 rounded text-sm">100%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-text-light/80 dark:text-text-dark/80">Industry Focus</span>
+                  <span className="bg-amber-400/10 dark:bg-amber-300/10 text-amber-500 dark:text-amber-400 px-2 py-1 rounded text-sm">Web3 Education</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Brand Assets - Enhanced Visual Showcase */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Brand Identity System</h2>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
+            The final brand system included multiple logo variations, custom illustrations, and comprehensive guidelines that positioned HackerDAO as both technically credible and educationally accessible.
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+          <div className="space-y-16 mb-16">
+            {/* Logo variations */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-text-light dark:text-text-dark">Logo System & Brand Marks</h3>
+              <div className="w-full relative aspect-[16/10] bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+                <Image
+                  src={getImageUrl("hackerdao-logos.png")}
+                  alt="HackerDAO logo variations and brand marks"
+                  fill
+                  className="object-contain p-8"
+                  sizes="100vw"
+                />
+              </div>
+              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+                Complete logo system with primary mark, wordmark, and icon variations for different applications
+              </p>
+            </div>
+            
+            {/* B&W illustration */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-text-light dark:text-text-dark">Illustration Style Development</h3>
+              <div className="w-full relative aspect-[16/10] bg-white dark:bg-white border border-white/25 dark:border-white/15 rounded-2xl overflow-hidden">
+                <Image
+                  src={getImageUrl("hackerdao-illustration-bw.png")}
+                  alt="HackerDAO black and white illustration showing collaborative development"
+                  fill
+                  className="object-contain p-8"
+                  sizes="100vw"
+                />
+              </div>
+              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+                Monochromatic illustration exploring collaborative development themes and visual language
+              </p>
+            </div>
+            
+            {/* Large illustration */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-text-light dark:text-text-dark">Custom Brand Illustrations</h3>
+              <div className="w-full relative aspect-[16/10] bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+                <Image
+                  src={getImageUrl("hackerdao-illustration-big.png")}
+                  alt="HackerDAO large illustration showing Web3 development collaboration"
+                  fill
+                  className="object-contain p-8"
+                  sizes="100vw"
+                />
+              </div>
+              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+                Hero illustration showcasing Web3 collaboration, learning, and community building
+              </p>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Results & Business Impact */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Results & Business Impact</h2>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
+            The brand identity successfully positioned HackerDAO as a trusted leader in Web3 education, achieving complete stakeholder buy-in and providing a scalable foundation for all marketing and educational materials.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
               <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-lg">Brand Recognition</h4>
-              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">A visual identity that stands out in the crowded Web3 education space and builds immediate trust with developers</p>
+              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">A distinctive visual identity that stands out in the crowded Web3 education space and builds immediate trust with developers</p>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+            <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
               <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-lg">Scalable System</h4>
-              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">Complete brand guidelines and asset library that enables consistent application across all marketing and educational materials</p>
+              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">Complete brand guidelines and asset library enabling consistent application across all marketing and educational materials</p>
             </div>
+            <div className="p-6 bg-surface-light/30 dark:bg-surface-dark/30 border border-surface-light/50 dark:border-surface-dark/50 rounded-xl">
+              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-lg">Stakeholder Success</h4>
+              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">Achieved 100% stakeholder approval with a brand system that balanced innovation with educational accessibility</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-accent-light/10 to-accent-light/5 dark:from-accent-dark/10 dark:to-accent-dark/5 border border-accent-light/20 dark:border-accent-dark/20 rounded-xl p-8">
+            <h3 className="text-xl font-semibold mb-4 text-accent-light dark:text-accent-dark">Project Outcome</h3>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+              The HackerDAO brand identity successfully differentiated the platform from generic crypto aesthetics while establishing trust and educational authority. The comprehensive brand system provided a scalable foundation that supported their mission of making Web3 development accessible to developers at all levels.
+            </p>
           </div>
         </motion.section>
 
         {/* Navigation */}
         <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
