@@ -248,6 +248,58 @@ export default function StyleGuidePage() {
 </div>`}
           </pre>
         </div>
+
+        {/* Viewport Pattern for Design Artifacts */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4">Interactive Viewport (Design Artifacts)</h3>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-6">
+            Use this pattern for high-resolution design process artifacts like Sketch mockups, wireframes, or design system overviews. 
+            The drag-to-pan functionality works like embedded Google Maps, allowing users to explore expansive design work at full resolution.
+          </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div className="w-full">
+              <ScrollableImageContainer
+                src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
+                alt="Example Design Artifacts"
+                caption="Example: High-res design mockups with drag-to-pan"
+                frameType="viewport"
+                height="viewport"
+                backgroundColor="white"
+              />
+            </div>
+            <div className="lg:col-span-2">
+              <h4 className="text-lg font-semibold mb-3">Usage Guidelines</h4>
+              <ul className="space-y-2 text-text-light/80 dark:text-text-dark/80 mb-4">
+                <li>• <strong>Best for:</strong> High-res design spreads, Sketch/Figma mockups, wireframe collections</li>
+                <li>• <strong>Image Requirements:</strong> High resolution (min 2x container size) for optimal exploration</li>
+                <li>• <strong>Full-width container:</strong> Takes entire content area width for maximum impact</li>
+                <li>• <strong>Interactive:</strong> Click and drag to pan, just like Google Maps embeds</li>
+                <li>• <strong>Responsive height:</strong> 60vh provides generous viewing area while showing content below</li>
+              </ul>
+              
+              <h4 className="text-lg font-semibold mb-3">Code Example</h4>
+              <pre className="code-sublime text-sm overflow-x-auto">
+{`<ScrollableImageContainer
+  src="/images/design-mockups.png"
+  alt="Design Artifacts"
+  caption="Interactive design exploration"
+  frameType="viewport"
+  height="viewport"
+  backgroundColor="white"
+/>`}
+              </pre>
+              
+              <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
+                <h5 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">⚠️ Image Resolution Requirements</h5>
+                <p className="text-sm text-amber-700 dark:text-amber-300">
+                  Only use this pattern with high-resolution images. Low-res images will appear pixelated when users zoom/pan. 
+                  For lower resolution images, use the Hero Image Layout instead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
