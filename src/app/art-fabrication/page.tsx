@@ -270,7 +270,7 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
               <div className={`lg:col-span-6 ${isEven ? 'lg:col-start-7' : 'lg:col-start-1'}`}>
                 <ProjectImageGrid 
                   images={projectImages} 
-                  projectName={project.displayName}
+                  projectName={project.folderName}
                   projectIndex={actualIndex}
                   setLightbox={setLightbox}
                 />
