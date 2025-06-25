@@ -4,7 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { getFabProjectImages, getImagePath } from '../../utils/fabImages';
+import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import Footer from '../../components/Footer';
+import { ThemeToggle } from '../../components/layout/ThemeToggle';
+import Masonry from 'react-masonry-css';
 
 // Project data interface
 interface FabProject {
@@ -270,7 +274,7 @@ function renderProjectSection(projects: FabProject[], sectionTitle: string, star
               <div className={`lg:col-span-6 ${isEven ? 'lg:col-start-7' : 'lg:col-start-1'}`}>
                 <ProjectImageGrid 
                   images={projectImages} 
-                  projectName={project.folderName}
+                  projectName={project.displayName}
                   projectIndex={actualIndex}
                   setLightbox={setLightbox}
                 />
