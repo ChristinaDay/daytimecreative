@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import { Blockquote } from '@/components/typography/DropQuote';
+import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
+import Image from 'next/image';
 
 const colors = [
   { name: 'Background Light', class: 'bg-background-light', hex: '#ffffff' },
@@ -98,7 +100,7 @@ export default function StyleGuidePage() {
         </div>
       </section>
       {/* Buttons Section */}
-      <section>
+      <section className="mb-16">
         <h2 className="text-3xl font-bold mb-6">Buttons</h2>
         <div className="flex flex-wrap gap-6 items-center">
           {/* Primary Button */}
@@ -117,6 +119,134 @@ export default function StyleGuidePage() {
           <button className="px-6 py-2 rounded bg-accent-light dark:bg-accent-dark text-white font-semibold opacity-50 cursor-not-allowed" disabled>
             Disabled Button
           </button>
+        </div>
+      </section>
+
+      {/* Layout Patterns Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-bold mb-6">Layout Patterns</h2>
+        
+        {/* Scrollable Vertical Content Pattern */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4">Scrollable Vertical Content</h3>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-6">
+            Use this pattern for tall vertical content like marketing materials, infographics, or long-form designs. 
+            The scrollable browser window provides context and allows users to explore content at their own pace.
+          </p>
+          
+          {/* Example Implementation */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div className="w-full">
+              <ScrollableImageContainer
+                src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
+                alt="Example Vertical Content"
+                caption="Example: Marketing positioning material"
+                frameType="browser"
+                height="large"
+                backgroundColor="white"
+                url="example.com/content"
+              />
+            </div>
+            <div className="lg:col-span-2">
+              <h4 className="text-lg font-semibold mb-3">Usage Guidelines</h4>
+              <ul className="space-y-2 text-text-light/80 dark:text-text-dark/80 mb-4">
+                <li>• <strong>Best for:</strong> Tall vertical content, marketing materials, infographics</li>
+                <li>• <strong>Grid Layout:</strong> Use 1-3 columns depending on content and screen size</li>
+                <li>• <strong>Browser Frame:</strong> Adds professional context and realistic presentation</li>
+                <li>• <strong>Scrollable:</strong> Allows exploration without overwhelming the layout</li>
+                <li>• <strong>Captions:</strong> Provide context for each piece of content</li>
+              </ul>
+              
+              <h4 className="text-lg font-semibold mb-3">Code Example</h4>
+              <pre className="code-sublime text-sm overflow-x-auto">
+{`<ScrollableImageContainer
+  src="/images/vertical-content.png"
+  alt="Description"
+  caption="Context for the content"
+  frameType="browser"
+  height="large"
+  backgroundColor="white"
+  url="relevant-url.com"
+/>`}
+              </pre>
+            </div>
+          </div>
+        </div>
+
+        {/* Card Layout Pattern */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4">Information Cards</h3>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-6">
+            Use this pattern for presenting structured information, features, or benefits in an organized, scannable format.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+              <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Card Title</h4>
+              <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+                Card content with clear hierarchy and readable typography. Perfect for features, benefits, or structured information.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+              <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Another Card</h4>
+              <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+                Consistent styling across all cards creates a cohesive, professional appearance that works in both light and dark modes.
+              </p>
+            </div>
+            <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+              <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">Third Card</h4>
+              <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+                The backdrop blur and gradient effects add depth while maintaining readability and accessibility standards.
+              </p>
+            </div>
+          </div>
+
+          <pre className="code-sublime text-sm overflow-x-auto">
+{`<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div className="p-6 bg-gradient-to-br from-white/90 to-gray-50/90 
+                  dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl 
+                  border border-white/20 dark:border-white/10 rounded-xl">
+    <h4 className="text-lg font-semibold mb-3 text-accent-light dark:text-accent-dark">
+      Card Title
+    </h4>
+    <p className="text-text-light/80 dark:text-text-dark/80 text-sm">
+      Card content...
+    </p>
+  </div>
+</div>`}
+          </pre>
+        </div>
+
+        {/* Hero Image Pattern */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4">Hero Image Layout</h3>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-6">
+            Use this pattern for showcasing main project visuals with proper aspect ratios and responsive behavior.
+          </p>
+          
+          <div className="mb-6 w-full relative aspect-[3/2] rounded-lg overflow-hidden bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20">
+            <Image
+              src="/images/tenspot-desk-purple-macbook-mockup.png"
+              alt="Example Hero Image"
+              fill
+              className="object-contain p-8"
+              sizes="(max-width: 1024px) 100vw, 100vw"
+            />
+          </div>
+
+          <pre className="code-sublime text-sm overflow-x-auto">
+{`<div className="w-full relative aspect-[3/2] rounded-lg overflow-hidden 
+                bg-gradient-to-br from-purple-50 to-blue-50 
+                dark:from-purple-900/20 dark:to-blue-900/20">
+  <Image
+    src="/images/hero-image.png"
+    alt="Description"
+    fill
+    className="object-contain p-8"
+    sizes="(max-width: 1024px) 100vw, 100vw"
+  />
+</div>`}
+          </pre>
         </div>
       </section>
     </main>
