@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { getFabProjectImages, getImagePath } from '../../utils/fabImages';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
@@ -198,352 +200,313 @@ const collaborativeProjects: FabProject[] = [
     skills: ['Wood Staining', 'Sealing'],
     role: 'Contributing Fabricator - Responsible for staining and sealing all wooden screen components.'
   },
-  { 
-    displayName: 'Circular Wall Decor', 
-    folderName: 'Circular Wall Decor',
-    description: 'These geometric wall installations feature circular motifs and patterns that create dynamic visual interest through careful repetition and variation. Each piece explores how modular elements can work together to transform architectural spaces while maintaining individual character.',
-    skills: ['Assembly', 'Installation', 'Mounting'],
-    client: 'Hotel Business Center',
-    role: 'Contributing Fabricator - Assisted with fabrication and installation under senior fabricator guidance.'
-  }
 ];
 
-// Merge all projects into a single array, preserving order
-const allProjects: FabProject[] = [
-  ...featuredProjects.map(({ role, ...rest }) => rest),
-  ...collaborativeProjects.map(({ role, ...rest }) => rest),
-];
-
-// Process Gallery Projects - Technical/Process Images
-const processProjects: FabProject[] = [
-];
-
-// Other Projects (role to be determined)
-const otherProjects: FabProject[] = [
-];
-
-// Helper function to render project sections
 function renderProjectSection(projects: FabProject[], sectionTitle: string, startIndex: number = 0, setLightbox?: (img: {src: string, alt: string}) => void) {
-  // Create section anchor from title
-  const sectionAnchor = sectionTitle.toLowerCase().replace(/\s+/g, '-');
-  
   return (
-    <>
-      {sectionTitle !== "Featured Projects" && (
-        <div className="mb-16" id={sectionAnchor}>
-          <h2 className="text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4">
-            {sectionTitle}
-          </h2>
-        </div>
-      )}
-      
-      {projects.map((project, projectIndex) => {
-        const images = getFabProjectImages(project.folderName);
-        if (images.length === 0) return null;
-
-        // Create project anchor from display name
-        const projectAnchor = project.displayName.toLowerCase()
-          .replace(/['"]/g, '')
-          .replace(/[^a-z0-9]+/g, '-')
-          .replace(/^-+|-+$/g, '');
-
-        return (
-          <div key={project.folderName} className="mb-24" id={projectAnchor}>
-            {/* Project Title and Info */}
-            <div className="mb-12 p-8 bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl">
-              <h3 className="text-3xl font-bold text-text-light dark:text-text-dark mb-4">
-                {project.displayName}
-              </h3>
-              
-              {project.client && (
-                <div className="text-lg text-text-light/70 dark:text-text-dark/70 mb-4">
-                  Client: {project.client}
-                </div>
-              )}
-              
-              {project.description && (
-                <div className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6 max-w-5xl leading-relaxed">
+    <motion.section 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.8 }}
+      className="mb-32"
+    >
+      <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">
+        {sectionTitle}
+      </h2>
+      <div className="space-y-24">
+        {projects.map((project, index) => {
+          const projectImages = getFabProjectImages(project.folderName);
+          const actualIndex = startIndex + index;
+          const isEven = actualIndex % 2 === 0;
+          
+          return (
+            <div key={project.folderName} className={`grid grid-cols-1 lg:grid-cols-12 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-dense'}`}>
+              {/* Content */}
+              <div className={`lg:col-span-6 ${isEven ? '' : 'lg:col-start-7'}`}>
+                <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-6 text-text-light dark:text-text-dark">
+                  {project.displayName}
+                </h3>
+                
+                {project.client && (
+                  <div className="mb-4">
+                    <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">
+                      {project.client}
+                    </span>
+                  </div>
+                )}
+                
+                <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6 leading-relaxed">
                   {project.description}
-                </div>
-              )}
+                </p>
+                
+                {project.skills && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-text-light/70 dark:text-text-dark/70 mb-3 uppercase tracking-wider">
+                      Skills & Techniques
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 bg-surface-light/10 dark:bg-surface-dark/10 text-text-light/80 dark:text-text-dark/80 rounded-full text-xs border border-surface-light/20 dark:border-surface-dark/20"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {project.role && (
+                  <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-xl p-4">
+                    <h4 className="text-sm font-semibold text-text-light/70 dark:text-text-dark/70 mb-2 uppercase tracking-wider">
+                      My Role
+                    </h4>
+                    <p className="text-sm text-text-light/80 dark:text-text-dark/80 leading-relaxed">
+                      {project.role}
+                    </p>
+                  </div>
+                )}
+              </div>
               
-              {project.skills && project.skills.length > 0 && (
-                <div className="mb-4">
-                  <div className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-2">
-                    Skills & Techniques:
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.skills.map((skill, skillIndex) => (
-                      <span 
-                        key={skillIndex}
-                        className="px-3 py-1 text-xs bg-white/40 dark:bg-white/10 text-text-light dark:text-text-dark rounded-full border border-white/30 dark:border-white/20 backdrop-blur-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+              {/* Images */}
+              <div className={`lg:col-span-6 ${isEven ? 'lg:col-start-7' : 'lg:col-start-1'}`}>
+                <ProjectImageGrid 
+                  images={projectImages} 
+                  projectName={project.displayName}
+                  projectIndex={actualIndex}
+                  setLightbox={setLightbox}
+                />
+              </div>
             </div>
-
-            {/* Project Images */}
-            <ProjectImageGrid 
-              images={images} 
-              projectName={project.folderName}
-              projectIndex={startIndex + projectIndex}
-              setLightbox={setLightbox}
-            />
-          </div>
-        );
-      })}
-    </>
+          );
+        })}
+      </div>
+    </motion.section>
   );
 }
 
 export default function ArtFabrication2Page() {
-  const { resolvedTheme } = useTheme();
+  const [lightbox, setLightbox] = useState<{src: string, alt: string} | null>(null);
   const [mounted, setMounted] = useState(false);
-  // Lightbox modal state
-  const [lightbox, setLightbox] = useState<{
-    src: string;
-    alt: string;
-  } | null>(null);
 
-  useEffect(() => setMounted(true), []);
-
-  // Close modal on Escape key
   useEffect(() => {
-    if (!lightbox) return;
+    setMounted(true);
+    
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') setLightbox(null);
+      if (e.key === 'Escape') {
+        setLightbox(null);
+      }
     }
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    
+    if (lightbox) {
+      document.addEventListener('keydown', onKeyDown);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = 'unset';
+    };
   }, [lightbox]);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
-      {/* Light mode daytime sky background */}
-      <div 
-        className="absolute inset-0 dark:hidden"
-        style={{
-          background: 'linear-gradient(to bottom, #b6d6f9 0%, #eaf6ff 100%)',
-          opacity: 1,
-        }}
-      />
-      {/* Sun glow (light mode only) */}
-      <div
-        className="absolute top-[-10vw] left-[-10vw] w-[40vw] h-[40vw] rounded-full dark:hidden"
-        style={{
-          background: 'radial-gradient(circle at 60% 40%, #fffbe6 0%, #ffe9a7 40%, transparent 80%)',
-          opacity: 0.45,
-          filter: 'blur(30px)',
-        }}
-      />
-      {/* Clouds (light mode only) */}
-      <div
-        className="absolute top-[20%] left-[10%] w-[30vw] h-[10vw] rounded-full dark:hidden"
-        style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #eaf6ff 100%)',
-          opacity: 0.7,
-          filter: 'blur(24px)',
-        }}
-      />
-      <div
-        className="absolute top-[35%] left-[50%] w-[40vw] h-[12vw] rounded-full dark:hidden"
-        style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #b6d6f9 100%)',
-          opacity: 0.5,
-          filter: 'blur(32px)',
-        }}
-      />
-      <div
-        className="absolute bottom-[15%] left-[30%] w-[35vw] h-[10vw] rounded-full dark:hidden"
-        style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, #fff 60%, #eaf6ff 100%)',
-          opacity: 0.6,
-          filter: 'blur(28px)',
-        }}
-      />
-      
-      {/* Base gradient layer */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.3), rgba(173, 216, 230, 0.3), rgba(221, 160, 221, 0.3))',
-          opacity: 1,
-          filter: 'blur(6px)'
-        }}
-      />
-      
-      {/* Pink light leak from top right */}
-      <div 
-        className="absolute top-0 right-0 w-[20vw] h-[20vw]"
-        style={{
-          background: 'radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.3), transparent 70%)',
-          transform: 'translate(10%, -10%)',
-          opacity: 1,
-          filter: 'blur(6px)'
-        }}
-      />
-      
-      {/* Blue light leak from bottom left */}
-      <div 
-        className="absolute bottom-0 left-0 w-[20vw] h-[20vw]"
-        style={{
-          background: 'radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.3), transparent 70%)',
-          transform: 'translate(-10%, 10%)',
-          opacity: 1,
-          filter: 'blur(6px)'
-        }}
-      />
-      
-      {/* Purple light leak from center */}
-      <div 
-        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw]"
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(221, 160, 221, 0.22), transparent 70%)',
-          transform: 'translate(-50%, -50%)',
-          opacity: 1,
-          filter: 'blur(6px)'
-        }}
-      />
+    <main className="min-h-screen w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16">
+        
+        {/* Navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12"
+        >
+          <Link 
+            href="/" 
+            className="inline-flex items-center gap-2 text-text-light/70 dark:text-text-dark/70 hover:text-accent-light dark:hover:text-accent-dark transition-colors text-lg"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Home
+          </Link>
+        </motion.div>
 
-      {/* Floating Theme Toggle */}
-      <div className="fixed top-3 right-3 sm:top-4 sm:right-4 z-50">
-        <ThemeToggle className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50" />
-      </div>
-
-      {/* Main Content */}
-      <main className="relative z-20 flex-1">
         {/* Header Section */}
-        <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-12 md:pb-16">
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <span className="text-sm sm:text-base text-text-light dark:text-text-dark mb-2 block">Portfolio</span>
-            <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4 sm:mb-6 md:mb-8">
-              Fab Lab
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <div className="max-w-5xl">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-text-light dark:text-text-dark leading-tight mb-8">
+              Art Fabrication Portfolio
             </h1>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-              In addition to crafting bespoke digital experiences, I also work as an art fabricator 
-              for various studios in the Bay Area. This collection showcases my hands-on work at 
-              Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
-              custom installations and artistic pieces.
-            </p>
-          </div>
-        </div>
-
-        {/* Gallery Layout */}
-        <div className="max-w-[100rem] mx-auto px-3 sm:px-6 md:px-12 lg:px-20">
-          {/* Unified Projects Section - no heading, just list all projects */}
-          {renderProjectSection(allProjects, "", 0, setLightbox)}
-          {/* Other Projects Section */}
-          {otherProjects.length > 0 && (
-            <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24">
-              {renderProjectSection(otherProjects, "Additional Projects", allProjects.length + processProjects.length)}
+            <div className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-12 leading-relaxed max-w-4xl">
+              A collection of physical artworks created during my time in art fabrication, showcasing expertise in metalworking, woodworking, surface finishing, and installation across luxury hospitality and residential projects.
             </div>
-          )}
-        </div>
-
-        {/* Process Gallery Section */}
-        <div className="mt-16 sm:mt-24 md:mt-32 border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/20 dark:bg-surface-dark/10 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="process-gallery-images">
-          <div className="max-w-[100rem] mx-auto">
-            <div className="mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-                Process Gallery
-              </h2>
-              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-                A documentation of various fabrication processes, techniques, and studio work from my time at Local Language. This section primarily features work created by other fabricators in the studio, showcasing the diverse range of techniques and projects I was exposed to during my time there. While a few images may include my own contributions, the majority represent the skilled work of my colleagues and the broader fabrication environment I learned within.
-              </p>
+            
+            {/* Project Tags */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Metalworking</span>
+              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Woodworking</span>
+              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Surface Finishing</span>
+              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Installation</span>
+              <span className="px-4 py-2 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-sm font-medium border border-accent-light/20 dark:border-accent-dark/20">Luxury Hospitality</span>
             </div>
-
-            {/* Process Images Grid */}
-            <ProcessImageGrid setLightbox={setLightbox} />
-            <div className="pb-12 sm:pb-18 md:pb-24"></div>
           </div>
-        </div>
+        </motion.section>
+
+        {/* Quick Stats */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-32"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">25+</div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Projects Completed</div>
+            </div>
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">15+</div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Materials Mastered</div>
+            </div>
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">$25/hr</div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Professional Rate</div>
+            </div>
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">2 years</div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Experience</div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Featured Projects Section */}
+        {renderProjectSection(featuredProjects, "Featured Projects — Sole Fabricator", 0, setLightbox)}
+
+        {/* Collaborative Projects Section */}
+        {renderProjectSection(collaborativeProjects, "Collaborative Projects — Contributing Fabricator", featuredProjects.length, setLightbox)}
+
+        {/* Process Overview Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">
+            Fabrication Process
+          </h2>
+          <ProcessImageGrid setLightbox={setLightbox} />
+        </motion.section>
 
         {/* Shop and Studio Section */}
-        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/30 dark:bg-surface-dark/15 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="shop-and-studio">
-          <div className="max-w-[100rem] mx-auto">
-            <div className="mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-                Shop and Studio
-              </h2>
-              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-                Behind-the-scenes documentation of fabrication processes and workspace organization within the art production environment, revealing the methodology behind creative work.
-              </p>
-            </div>
-
-            {/* Shop and Studio Images Grid */}
-            <ShopAndStudioGrid setLightbox={setLightbox} />
-            <div className="pb-12 sm:pb-18 md:pb-24"></div>
-          </div>
-        </div>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">
+            Shop & Studio
+          </h2>
+          <ShopAndStudioGrid setLightbox={setLightbox} />
+        </motion.section>
 
         {/* Crating and Shipping Section */}
-        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-0 bg-surface-light/25 dark:bg-surface-dark/12 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="crating-and-shipping">
-          <div className="max-w-[100rem] mx-auto">
-            <div className="mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-                Crating and Shipping
-              </h2>
-              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-                Professional art handling services including custom crating design and secure shipping preparation, ensuring the safe transport of valuable artworks and installations.
-              </p>
-            </div>
-
-            {/* Crating and Shipping Images Grid */}
-            <CratingAndShippingGrid setLightbox={setLightbox} />
-            <div className="pb-12 sm:pb-18 md:pb-24"></div>
-          </div>
-        </div>
-
-        {/* Neighborhood Section - moved to bottom */}
-        <div className="border-t border-text-light/20 dark:border-text-dark/20 pt-12 sm:pt-18 md:pt-24 pb-16 sm:pb-20 md:pb-24 bg-surface-light/35 dark:bg-surface-dark/18 -mx-3 sm:-mx-6 md:-mx-12 lg:-mx-20 px-3 sm:px-6 md:px-12 lg:px-20" id="neighborhood">
-          <div className="max-w-[100rem] mx-auto">
-            <div className="mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark mb-4 sm:mb-6 md:mb-8">
-                Neighborhood
-              </h2>
-              <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-                Community-themed artwork exploring urban landscapes and architectural forms that define residential environments, investigating how built spaces shape community identity.
-              </p>
-            </div>
-
-            {/* Neighborhood Images Grid */}
-            <NeighborhoodGrid setLightbox={setLightbox} />
-          </div>
-        </div>
-      </main>
-      
-      {/* Lightbox Modal */}
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fade-in"
-          onClick={() => setLightbox(null)}
-          aria-modal="true"
-          role="dialog"
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
         >
-          <button
-            className="absolute top-6 right-8 text-white text-3xl font-bold bg-black/40 rounded-full w-12 h-12 flex items-center justify-center hover:bg-black/70 transition"
-            onClick={e => { e.stopPropagation(); setLightbox(null); }}
-            aria-label="Close image preview"
-            tabIndex={0}
-          >
-            ×
-          </button>
-          <div className="relative max-w-3xl w-full max-h-[90vh] flex items-center justify-center" onClick={e => e.stopPropagation()}>
-            <img
-              src={lightbox.src}
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">
+            Crating & Shipping
+          </h2>
+          <CratingAndShippingGrid setLightbox={setLightbox} />
+        </motion.section>
+
+        {/* Neighborhood Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-16 text-text-light dark:text-text-dark text-center">
+            Oakland Neighborhood
+          </h2>
+          <NeighborhoodGrid setLightbox={setLightbox} />
+        </motion.section>
+
+        {/* Navigation */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/projects" 
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              View All Projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white dark:hover:text-gray-900 transition-all duration-300"
+            >
+              Back to Home
+            </Link>
+          </div>
+        </motion.section>
+
+      </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <div className="relative max-w-full max-h-full">
+            <img 
+              src={lightbox.src} 
               alt={lightbox.alt}
-              className="w-auto h-auto max-h-[80vh] max-w-full rounded-lg shadow-2xl border-2 border-white"
-              style={{ background: '#222' }}
+              className="max-w-full max-h-full object-contain"
             />
+            <button 
+              onClick={() => setLightbox(null)}
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       )}
-      <Footer />
-    </div>
+    </main>
   );
 }
 
