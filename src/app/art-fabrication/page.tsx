@@ -314,7 +314,7 @@ export default function ArtFabrication2Page() {
   }
 
   return (
-    <main className="min-h-screen w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+    <main className="min-h-screen w-full text-text-light dark:text-text-dark">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16">
         
         {/* Navigation */}
