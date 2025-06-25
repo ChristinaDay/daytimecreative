@@ -4,11 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { getFabProjectImages, getImagePath } from '../../utils/fabImages';
-import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import Footer from '../../components/Footer';
-import { ThemeToggle } from '../../components/layout/ThemeToggle';
-import Masonry from 'react-masonry-css';
 
 // Project data interface
 interface FabProject {
