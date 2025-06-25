@@ -330,8 +330,8 @@ export default function Home() {
       </header>
 
             {/* Skills-Based Project Showcase */}
-      <section id="work" className="w-full py-32 px-2 relative z-10">
-        <div className="max-w-7xl mx-auto space-y-32">
+      <section id="work" className="w-full py-32 px-4 relative z-10">
+        <div className="max-w-7xl mx-auto space-y-40">
           
           {/* Skill 1: Brand Design & Illustration */}
           <motion.div
@@ -340,15 +340,18 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               {/* Content Column */}
-              <div className="lg:col-span-5 space-y-6">
-                <div className="space-y-4">
-                  <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                    I create brand identities that feel authentic and memorable
-                  </h2>
-                  <p className="text-lg text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    When HackerDAO needed a complete visual identity for their Web3 developer community, I designed everything from the logo and color system to custom illustrations that captured their collaborative spirit. This wasn't just about making things look good—it was about creating a visual language that would help developers feel like they belonged to something bigger.
+              <div className="lg:col-span-5 space-y-8">
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">01 — Brand & Illustration</span>
+                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
+                      I create brand identities that feel authentic and memorable
+                    </h2>
+                  </div>
+                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
+                    I created HackerDAO's complete visual identity—from logo to custom illustrations—building a brand that helps Web3 developers feel like they belong to something bigger.
                   </p>
                 </div>
                 
@@ -359,18 +362,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Visual Systems</span>
                 </div>
 
-                <div className="space-y-4 pt-4">
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">Visual Identity System</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Complete logo family, color palette, and typography guidelines that work across all touchpoints</p>
-                  </div>
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">Custom Illustrations</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Hand-crafted illustrations that capture the collaborative developer spirit and Web3 ethos</p>
-                  </div>
-                </div>
-
-                <Link href="/projects/hackerdao" className="inline-flex items-center gap-2 text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-colors group font-medium pt-2">
+                <Link href="/projects/hackerdao" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
                   View HackerDAO Case Study 
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -380,12 +372,16 @@ export default function Home() {
               
               {/* Image Column */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl overflow-hidden bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 p-8 shadow-xl">
-                  <img 
-                    src="/images/hackerdao-illustration-hero.png" 
-                    alt="HackerDAO brand illustration showing collaborative Web3 development" 
-                    className="w-full h-auto object-contain" 
-                  />
+                <div className="relative group">
+                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                    <img 
+                      src="/images/hackerdao-illustration-hero.png" 
+                      alt="HackerDAO brand illustration showing collaborative Web3 development" 
+                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                    />
+                  </div>
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                 </div>
               </div>
             </div>
@@ -398,26 +394,33 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               {/* Image Column */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <div className="rounded-2xl overflow-hidden bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 p-8 shadow-xl">
-                  <img 
-                    src="/images/zerocater-ZeroCater_design-system.png" 
-                    alt="ZeroCater design system showing component library and code implementation" 
-                    className="w-full h-auto object-contain" 
-                  />
+                <div className="relative group">
+                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                    <img 
+                      src="/images/zerocater-ZeroCater_design-system.png" 
+                      alt="ZeroCater design system showing component library and code implementation" 
+                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                    />
+                  </div>
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                 </div>
               </div>
               
               {/* Content Column */}
-              <div className="lg:col-span-5 order-1 lg:order-2 space-y-6">
-                <div className="space-y-4">
-                  <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                    I build design systems that scale—and I code them myself
-                  </h2>
-                  <p className="text-lg text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    At ZeroCater, I didn't just design the component library—I built it. With my own GitHub commits, I created reusable React components that reduced development time by 60% while maintaining design consistency across our entire platform. This hybrid approach means I understand both the design intent and the technical constraints, resulting in systems that actually work in production.
+              <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">02 — Design Systems & Code</span>
+                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
+                      I build design systems that scale—and I code them myself
+                    </h2>
+                  </div>
+                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
+                    I didn't just design ZeroCater's component library—I built it myself with React, reducing development time by 60%. This hybrid approach creates design systems that actually work in production.
                   </p>
                 </div>
                 
@@ -428,18 +431,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">GitHub Collaboration</span>
                 </div>
 
-                <div className="space-y-4 pt-4">
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">Production-Ready Components</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Built and maintained React component library used across multiple product teams with full documentation</p>
-                  </div>
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">60% Faster Development</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Reduced engineering time through consistent, reusable design patterns and automated workflows</p>
-                  </div>
-                </div>
-
-                <Link href="/projects/snacks-and-kitchens" className="inline-flex items-center gap-2 text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-colors group font-medium pt-2">
+                <Link href="/projects/snacks-and-kitchens" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
                   View ZeroCater Case Study 
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -456,15 +448,18 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               {/* Content Column */}
-              <div className="lg:col-span-5 space-y-6">
-                <div className="space-y-4">
-                  <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                    I make complex data feel intuitive and actionable
-                  </h2>
-                  <p className="text-lg text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    The Property Intelligence Platform challenged me to transform overwhelming property data and AI insights into clear, actionable interfaces for insurance professionals. Through extensive user research and iterative design, I created dashboards that reduced claim processing time by 40%—proving that good design isn't just about aesthetics, it's about making complex workflows actually work for real people under pressure.
+              <div className="lg:col-span-5 space-y-8">
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">03 — Data & AI Interfaces</span>
+                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
+                      I make complex data feel intuitive and actionable
+                    </h2>
+                  </div>
+                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
+                    I transformed overwhelming property data and AI insights into intuitive dashboards that reduced claim processing time by 40%. Good design makes complex workflows actually work for real people.
                   </p>
                 </div>
                 
@@ -475,18 +470,7 @@ export default function Home() {
                   <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Enterprise UX</span>
                 </div>
 
-                <div className="space-y-4 pt-4">
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">40% Faster Processing</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Reduced claim processing time through intuitive data visualization and streamlined workflow design</p>
-                  </div>
-                  <div className="bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-xl p-5">
-                    <h4 className="font-semibold text-text-light dark:text-text-dark mb-2">AI-Powered Insights</h4>
-                    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Designed interfaces that make machine learning predictions accessible and actionable for non-technical users</p>
-                  </div>
-                </div>
-
-                <Link href="/projects/propertyintelligence" className="inline-flex items-center gap-2 text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-colors group font-medium pt-2">
+                <Link href="/projects/propertyintelligence" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
                   View Property Intelligence Case Study 
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -496,12 +480,16 @@ export default function Home() {
               
               {/* Image Column */}
               <div className="lg:col-span-7">
-                <div className="rounded-2xl overflow-hidden bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 p-8 shadow-xl">
-                  <img 
-                    src="/images/betterview-propertyintelligence2.png" 
-                    alt="Property Intelligence Platform dashboard showing AI-powered property insights" 
-                    className="w-full h-auto object-contain" 
-                  />
+                <div className="relative group">
+                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                    <img 
+                      src="/images/betterview-propertyintelligence2.png" 
+                      alt="Property Intelligence Platform dashboard showing AI-powered property insights" 
+                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                    />
+                  </div>
+                  {/* Subtle glow effect */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                 </div>
               </div>
             </div>

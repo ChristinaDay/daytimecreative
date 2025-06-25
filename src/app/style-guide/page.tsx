@@ -217,6 +217,50 @@ export default function StyleGuidePage() {
           </pre>
         </div>
 
+        {/* Glass-Morphism Feature Cards Pattern */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4">Glass-Morphism Feature Cards</h3>
+          <p className="text-text-light/80 dark:text-text-dark/80 mb-6">
+            Enhanced feature cards with glass-morphism styling, perfect for highlighting key features, metrics, or achievements. 
+            Includes hover effects and works beautifully in both light and dark modes.
+          </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-base">Production-Ready Components</h4>
+              <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Built and maintained React component library used across multiple product teams with full documentation</p>
+            </div>
+            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-base">60% Faster Development</h4>
+              <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">Reduced engineering time through consistent, reusable design patterns and automated workflows</p>
+            </div>
+          </div>
+          
+          <h4 className="text-lg font-semibold mb-3">Usage Guidelines</h4>
+          <ul className="space-y-2 text-text-light/80 dark:text-text-dark/80 mb-4">
+            <li>• <strong>Best for:</strong> Key features, metrics, achievements, or important highlights</li>
+            <li>• <strong>Grid Layout:</strong> Works well in 2-column or 3-column layouts</li>
+            <li>• <strong>Hover Effects:</strong> Subtle background color changes on hover for interactivity</li>
+            <li>• <strong>Typography:</strong> Bold headings with lighter descriptive text</li>
+            <li>• <strong>Spacing:</strong> Generous padding and margin for readability</li>
+          </ul>
+          
+          <pre className="code-sublime text-sm overflow-x-auto">
+{`<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl 
+                  border border-white/20 dark:border-white/15 rounded-2xl p-6 
+                  hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
+    <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-base">
+      Feature Title
+    </h4>
+    <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed">
+      Feature description with clear, concise copy that explains the benefit or outcome.
+    </p>
+  </div>
+</div>`}
+          </pre>
+        </div>
+
         {/* Hero Image Pattern */}
         <div className="mb-12">
           <h3 className="text-2xl font-semibold mb-4">Hero Image Layout</h3>
