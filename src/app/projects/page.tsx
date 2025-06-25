@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const featuredProjects = [
+const allProjects = [
   {
-    title: "Design System & Component Library",
-    description: "Created a comprehensive design system with 50+ React components, design tokens, and engineering workflows that reduced development time by 60% and ensured consistency across 3 major product lines.",
-    link: "/projects/design-system",
-    image: "/images/zerocater-ZeroCater_design-system.png",
-    tags: ["Design Systems", "React Components", "Design Tokens", "Engineering Collaboration"],
-    year: "2023",
-    bgColor: "from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10"
+    title: 'HackerDAO',
+    description: 'Brand identity and platform design for Web3 developers to collaborate and build together.',
+    image: '/images/hackerdao-illustration-big.png',
+    link: '/projects/hackerdao',
+    tags: ['Brand Design', 'Product Design', 'Illustration'],
+    year: '2023',
+    bgColor: "from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10"
   },
   {
     title: "Property Intelligence Platform",
@@ -33,15 +33,6 @@ const featuredProjects = [
     bgColor: "from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10"
   },
   {
-    title: 'HackerDAO',
-    description: 'Brand identity and platform design for Web3 developers to collaborate and build together.',
-    image: '/images/hackerdao-illustration-big.png',
-    link: '/projects/hackerdao',
-    tags: ['Brand Design', 'Product Design', 'Illustration'],
-    year: '2023',
-    bgColor: "from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10"
-  },
-  {
     title: 'ZeroCater',
     description: 'Subscription-based office snack and kitchen service for modern workplaces.',
     image: '/images/zerocater-snacks1.png',
@@ -49,10 +40,25 @@ const featuredProjects = [
     tags: ['Service Design', 'Growth Design', 'Mobile'],
     year: '2014-2017',
     bgColor: "from-orange-500/15 via-3% via-transparent via-97% to-red-500/12 dark:from-orange-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-red-400/10"
-  }
-];
-
-const additionalProjects = [
+  },
+  {
+    title: "Design System & Component Library",
+    description: "Created a comprehensive design system with 50+ React components, design tokens, and engineering workflows that reduced development time by 60% and ensured consistency across 3 major product lines.",
+    link: "/projects/design-system",
+    image: "/images/zerocater-ZeroCater_design-system.png",
+    tags: ["Design Systems", "React Components", "Design Tokens", "Engineering Collaboration"],
+    year: "2023",
+    bgColor: "from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10"
+  },
+  {
+    title: 'Thrive Mental Health Platform',
+    description: 'AI-powered mental health chatbot and wellness platform providing accessible, personalized mental health support and resources.',
+    image: '/images/thrive-mobile-interface.png',
+    link: '/projects/thrive',
+    tags: ['Mental Health UX', 'Conversational UI', 'Product Design', 'Motion Graphics'],
+    year: '2019-2020',
+    bgColor: "from-blue-500/15 via-3% via-transparent via-97% to-purple-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-purple-500/10"
+  },
   {
     title: 'TenSpot Workforce Engagement Platform',
     description: 'Complete platform design and development for workplace wellness, combining social challenges, team building, and insurance partnerships.',
@@ -109,7 +115,7 @@ const additionalProjects = [
   }
 ];
 
-function ProjectCard({ project, featured = false }: { project: any, featured?: boolean }) {
+function ProjectCard({ project }: { project: any }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -120,78 +126,33 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
     >
       <Link href={project.link} className="block h-full">
         <div className="bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-          {featured ? (
-            /* Featured card - horizontal layout on larger screens */
-            <div className="flex flex-col lg:flex-row h-full">
-              <div className={`relative aspect-[16/9] lg:aspect-[3/2] lg:w-1/2 bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-transparent to-white/25 group-hover:from-white/20 group-hover:to-white/35 transition-all duration-300" />
-                <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
-              </div>
-              <div className="p-6 lg:p-8 flex-1 flex flex-col lg:w-1/2">
-                <div className="flex items-center justify-end mb-4">
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">
-                    Featured
-                  </span>
-                </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-text-light dark:text-text-dark mb-4 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-text-light/80 dark:text-text-dark/80 mb-6 flex-1 text-lg">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag: string, index: number) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-white/20 dark:bg-white/15 backdrop-blur-sm border border-white/30 dark:border-white/20 text-text-light/80 dark:text-text-dark/80 rounded text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+          <div className={`relative aspect-[4/3] bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="p-6 flex-1 flex flex-col">
+            <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-text-light/80 dark:text-text-dark/80 mb-4 flex-1">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {project.tags.map((tag: string, index: number) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 bg-white/20 dark:bg-white/15 backdrop-blur-sm border border-white/30 dark:border-white/20 text-text-light/80 dark:text-text-dark/80 rounded text-xs"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-          ) : (
-            /* Regular card - vertical layout */
-            <>
-              <div className={`relative aspect-[4/3] bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-transparent to-white/25 group-hover:from-white/20 group-hover:to-white/35 transition-all duration-300" />
-                <div className="absolute inset-0 bg-white/10 dark:bg-white/15 border border-white/20 dark:border-white/10 rounded-lg m-2" />
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-text-light dark:text-text-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-text-light/80 dark:text-text-dark/80 mb-4 flex-1">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag: string, index: number) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-white/20 dark:bg-white/15 backdrop-blur-sm border border-white/30 dark:border-white/20 text-text-light/80 dark:text-text-dark/80 rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </>
-          )}
+          </div>
         </div>
       </Link>
     </motion.div>
@@ -218,51 +179,10 @@ export default function ProjectsPage() {
           </p>
         </motion.div>
 
-        {/* Featured Projects */}
+        {/* All Projects */}
         <section className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-text-light dark:text-text-dark mb-4">Featured Work</h2>
-            <p className="text-text-light/80 dark:text-text-dark/80">
-              My most impactful projects that showcase the breadth of my design capabilities.
-            </p>
-          </motion.div>
-
-          {/* First featured project - full width */}
-          <div className="mb-8">
-            <ProjectCard project={featuredProjects[0]} featured={true} />
-          </div>
-          
-          {/* Remaining featured projects - regular grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {featuredProjects.slice(1).map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </section>
-
-        {/* Additional Projects */}
-        <section className="mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-text-light dark:text-text-dark mb-4">Additional Work</h2>
-            <p className="text-text-light/80 dark:text-text-dark/80">
-              Other significant projects that demonstrate specialized skills and creative problem-solving.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {additionalProjects.map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {allProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
