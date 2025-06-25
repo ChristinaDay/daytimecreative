@@ -334,8 +334,8 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
             className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-3xl p-12 md:p-16"
           >
@@ -422,9 +422,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto space-y-40">
           
           {/* Skill 1: Brand Design & Illustration */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
@@ -436,7 +436,7 @@ export default function Home() {
                     <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">01 — Brand & Illustration</span>
                     <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
                       I create brand identities that feel authentic and memorable
-                    </h2>
+              </h2>
                   </div>
                   <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
                     I created HackerDAO's complete visual identity—from logo to custom illustrations—building a brand that helps Web3 developers feel like they belong to something bigger.
@@ -460,42 +460,46 @@ export default function Home() {
               
               {/* Image Column */}
               <div className="lg:col-span-7">
-                <div className="relative group">
-                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                    <img 
-                      src="/images/hackerdao-illustration-hero.png" 
-                      alt="HackerDAO brand illustration showing collaborative Web3 development" 
-                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                    />
+                <Link href="/projects/hackerdao" className="block">
+                  <div className="relative group cursor-pointer">
+                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                      <img 
+                        src="/images/hackerdao-illustration-hero.png" 
+                        alt="HackerDAO brand illustration showing collaborative Web3 development" 
+                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      />
+                    </div>
+                    {/* Subtle glow effect */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                   </div>
-                  {/* Subtle glow effect */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                </div>
+                </Link>
               </div>
             </div>
-          </motion.div>
-
+            </motion.div>
+            
                     {/* Skill 2: Design Systems & Development */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               {/* Image Column */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <div className="relative group">
-                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                    <img 
-                      src="/images/zerocater-ZeroCater_design-system.png" 
-                      alt="ZeroCater design system showing component library and code implementation" 
-                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                    />
+                <Link href="/projects/zerocater" className="block">
+                  <div className="relative group cursor-pointer">
+                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                      <img 
+                        src="/images/zerocater-ZeroCater_design-system.png" 
+                        alt="ZeroCater design system showing component library and code implementation" 
+                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      />
+                    </div>
+                    {/* Subtle glow effect */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                   </div>
-                  {/* Subtle glow effect */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                </div>
+                </Link>
               </div>
               
               {/* Content Column */}
@@ -527,12 +531,12 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </motion.div>
-
+            </motion.div>
+            
                     {/* Skill 3: Complex Data & AI Product Design */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
@@ -568,26 +572,28 @@ export default function Home() {
               
               {/* Image Column */}
               <div className="lg:col-span-7">
-                <div className="relative group">
-                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                    <img 
-                      src="/images/betterview-propertyintelligence2.png" 
-                      alt="Property Intelligence Platform dashboard showing AI-powered property insights" 
-                      className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                    />
+                <Link href="/projects/propertyintelligence" className="block">
+                  <div className="relative group cursor-pointer">
+                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                      <img 
+                        src="/images/betterview-propertyintelligence2.png" 
+                        alt="Property Intelligence Platform dashboard showing AI-powered property insights" 
+                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
+                      />
+                    </div>
+                    {/* Subtle glow effect */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
                   </div>
-                  {/* Subtle glow effect */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                </div>
+                </Link>
               </div>
             </div>
-          </motion.div>
-
+            </motion.div>
+            
           {/* Call to Action */}
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
             className="text-center pt-16"
           >
@@ -617,7 +623,7 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-          </motion.div>
+            </motion.div>
         </div>
       </section>
       
