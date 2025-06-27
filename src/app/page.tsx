@@ -339,12 +339,29 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-3xl p-12 md:p-16"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
-              {/* Bio Text */}
-              <div className="lg:col-span-2 space-y-6">
-                <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                  A bit about me
-                </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              {/* Left Column: Portrait + Bio + Tools */}
+              <div className="space-y-8">
+                {/* Portrait & Header */}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                  <div className="flex justify-center sm:justify-start flex-shrink-0">
+                    <div className="relative">
+                      <img 
+                        src="/images/portrait.png" 
+                        alt="Christina Day - Designer & Developer" 
+                        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 dark:border-white/10 shadow-xl"
+                      />
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-light/20 to-accent-light/5 dark:from-accent-dark/20 dark:to-accent-dark/5"></div>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
+                      A bit about me
+                    </h2>
+                  </div>
+                </div>
+                
+                {/* Bio Text */}
                 <div className="space-y-4 text-lg text-text-light/80 dark:text-text-dark/80 leading-relaxed">
                   <p>
                     I'm Christina, a product designer and front-end developer based in Oakland. 
@@ -357,10 +374,12 @@ export default function Home() {
                     make things move faster and work better.
                   </p>
                 </div>
+                
+
               </div>
               
-              {/* Quick Stats */}
-              <div className="lg:col-span-1 space-y-6">
+              {/* Right Column: Quick Stats */}
+              <div className="space-y-6">
                 <div className="space-y-4">
                   <div>
                     <div className="text-3xl font-bold text-accent-light dark:text-accent-dark">10+</div>
@@ -377,17 +396,14 @@ export default function Home() {
                 </div>
                 
                 <div className="pt-4 border-t border-white/15 dark:border-white/10">
-                  <div className="text-sm text-text-light/70 dark:text-text-dark/70 mb-3">Open to new projects</div>
                   <div className="space-y-2">
                     <div className="text-sm font-medium text-text-light dark:text-text-dark">Product Design</div>
                     <div className="text-sm font-medium text-text-light dark:text-text-dark">Front-End Development</div>
                     <div className="text-sm font-medium text-text-light dark:text-text-dark">Design Systems</div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Tools & Skills */}
-              <div className="lg:col-span-1 space-y-6">
+                
+                {/* Tools & Skills */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-text-light dark:text-text-dark">Tools I use</h3>
                   <div className="space-y-3">
