@@ -22,7 +22,7 @@ interface FabProject {
 const featuredProjects: FabProject[] = [
   { 
     displayName: 'Hand-Shaped Steel Blooms', 
-    folderName: 'Hammered Metal Flowers',
+    folderName: 'Hammered-Metal-Flowers',
     description: 'In this project, commissioned by the Ritz Carlton in Lake Tahoe, I hand-formed cold-cut steel flowers before finishing them with a delicate air-brushed ombre effect that contrasts with brilliant gold laquer. Larger pieces were shaped with a pneumatic hammer, all smaller pieces were hand-shaped with a hammer and anvil before being scored and de-greased for painting. Several layers of paint ranging from a rich dark blue to an airy pale blue were applied with a commercial air-brush over primed metal and paired with bright gold automotive lacquer.',
     skills: ['Cold Steel Forming', 'Pneumatic Hammering', 'Hand Forging', 'Airbrushing', 'Surface Preparation', 'Fine Finishing', 'Packaging'],
     client: 'Ritz Carlton Tahoe',
@@ -30,7 +30,7 @@ const featuredProjects: FabProject[] = [
   },
   { 
     displayName: 'Sculpted Paper Rings', 
-    folderName: 'Framed Paper Sculpture',
+    folderName: 'Framed-Paper-Sculpture',
     description: 'These three-dimensional paper constructions were designed to be housed within custom frames, exploring the sculptural possibilities of paper as an artistic medium that can achieve both delicate and bold architectural forms.',
     skills: ['Paper Work', 'Precision Work', 'Custom Framing', 'Assembly'],
     role: 'Sole Fabricator - Responsible for all aspects of paper sculpture creation and custom framing.'
@@ -44,35 +44,35 @@ const featuredProjects: FabProject[] = [
   },
   { 
     displayName: 'Hanging Fiber Arts Installation', 
-    folderName: 'Hanging Wrapped Fibers',
+    folderName: 'Hanging-Wrapped-Fibers',
     description: 'This textile art installation was originally created by the Colombian artist(s) Pomplon, and shipped to our studio for installation preparation. My role involved creating custom wooden mounting rods and matching wooden hanging hardware, along with designing and fabricating a hidden metal support apparatus to prevent the rod from bowing under the weight of the fiber artwork. I also carefully unboxed and hand-steamed each piece of the installation until it achieved a crisp and uniform appearance.',
     skills: ['Custom Hardware Fabrication', 'Metalworking', 'Woodworking', 'Textile Steaming', 'Installation'],
     role: 'Sole Fabricator - Responsible for all mounting hardware fabrication, support systems, and installation preparation.'
   },
   { 
     displayName: 'Dyed and Torn Handmade Paper Collage', 
-    folderName: 'Dyed and Layered Paper Framed',
+    folderName: 'Dyed-and-Layered-Paper-Framed',
     description: 'These intricate paper artworks were designed to feature hand-dyed materials layered strategically to create depth and visual complexity within custom frames, exploring the translucent qualities of paper as a fine art medium.',
     skills: ['Paper Work', 'Dyeing', 'Layering', 'Custom Framing'],
     role: 'Sole Fabricator - Responsible for all aspects including paper dyeing, layering composition, and custom framing.'
   },
   { 
     displayName: 'Cactus Lantern Alcove Installation', 
-    folderName: 'Cactus Piece',
+    folderName: 'Cactus-Piece',
     description: 'Cold-cut steel cactus shapes were individually mounted on hardware with a hand-operated stud-welder, then meticulously finished with layers of oxidizing paint to create a distressed and rusted finish. A large arched wooden substrate was cut on the in-house CNC machine and covered with a veneer of distressed recycled wood. Holes were drilled into face of the wooden assembly that allowed light to shine through from the LED array installed in the back of the piece. Each metal cactus was mounted on the wooden substrate to cover the small light-portals, with the result being that the polished backs of the cactus gently bounce the lighting around the environment.',
     skills: ['Woodworking', 'Welding', 'Fine Finishing', 'Electrical Wiring', 'Assembly', 'Metalworking'],
     role: 'Sole Fabricator - Responsible for all aspects of fabrication including metalwork, welding, finishing, LED installation, and final assembly.'
   },
   { 
     displayName: 'Board Games New & Old Found-Object Installation', 
-    folderName: 'Board Games',
+    folderName: 'Board-Games',
     description: 'This installation combines custom fabricated MDF components with collected board games dating from 1950 to today, creating a sculptural timeline that shows the evolution of play through the decades. The piece explores how game design, materials, and cultural themes have shifted over time.',
     skills: ['Material Preparation', 'Surface Preparation', 'Assembly', 'Installation', 'Mounting'],
     role: 'Sole Fabricator - Responsible for all fabrication aspects including design, assembly, finishing, and installation. CNC operator handled substrate cutting.'
   },
   { 
     displayName: 'Terracotta Moons Installation', 
-    folderName: 'Terracotta glazed disks',
+    folderName: 'Terracotta-glazed-disks',
     description: 'These ceramic disk installations were commissioned artwork created by a ceramic artist, then installed at the Ritz Carlton in Half Moon Bay. My role involved mounting each individual piece to custom hardware and creating a detailed layout for installation that was translated into a printed template for the installation team.',
     skills: ['Custom Hardware Fabrication', 'Mounting', 'Layout Design', 'Installation Planning'],
     client: 'Ritz Carlton Half Moon Bay',
@@ -80,7 +80,7 @@ const featuredProjects: FabProject[] = [
   },
   { 
     displayName: "'Symphony of Shells' Hanging Curtain", 
-    folderName: 'Hanging Seashells',
+    folderName: 'Hanging-Seashells',
     description: 'These natural seashell arrangements were designed to be suspended strategically, creating organic, coastal-inspired installations that capture the gentle movement and varied textures found along the shoreline.',
     skills: ['Material Preparation', 'Mounting', 'Installation', 'Assembly'],
     role: 'Sole Fabricator - Responsible for all aspects of design, arrangement, and installation of seashell displays.'
@@ -91,7 +91,7 @@ const featuredProjects: FabProject[] = [
 const collaborativeProjects: FabProject[] = [
   { 
     displayName: 'Teal and Stone Antique Mirrors', 
-    folderName: 'Teal and Stone Antique Mirrors',
+    folderName: 'Teal-and-Stone-Antique-Mirrors',
     description: 'These antique mirrors were carefully restored and customized for installation, blending historical preservation with contemporary luxury design through the addition of green marble accents.',
     skills: ['Surface Preparation', 'Sanding', 'Priming', 'Installation'],
     client: 'The Conrad NY Downtown - Leonessa Rooftop',
@@ -99,14 +99,14 @@ const collaborativeProjects: FabProject[] = [
   },
   { 
     displayName: 'Whales and Surf Boards', 
-    folderName: 'Whales and Surf Boards',
+    folderName: 'Whales-and-Surf-Boards',
     description: 'This ocean-themed artwork was designed to combine marine life imagery with surf culture, celebrating the deep connection between humans and the sea through visual storytelling. This was a large-scale project requiring multiple fabricators.',
     skills: ['Material Preparation', 'Assembly', 'Installation'],
     role: 'Contributing Fabricator - Assisted with material preparation, assembly, and installation on this large project that required many workers.'
   },
   { 
     displayName: 'Abalone shells in the sand - wall panels and installation', 
-    folderName: 'Abalone Wall Panels',
+    folderName: 'Abalone-Wall-Panels',
     description: 'This piece was a custom wall installation featuring natural abalone shells creating an iridescent surface that catches and reflects light. Hours of surface and material prep created the effect of discovering a trove of discarded shells washing up to shore in the sand',
     skills: ['Surface Preparation'],
     client: 'Gaylor Pacific in Chula Vista, CA',
@@ -114,14 +114,14 @@ const collaborativeProjects: FabProject[] = [
   },
   { 
     displayName: 'Wild West Custom Print', 
-    folderName: 'Black and White Cowboy Cowgirl',
+    folderName: 'Black-and-White-Cowboy-Cowgirl',
     description: 'This custom image collage was printed in vinyl ink on a hand-cut MDF substrate, combining digital imagery with traditional fabrication techniques to create a contemporary western-themed piece that explores themes of American frontier culture.',
     skills: ['Material Preparation', 'Surface Preparation', 'Fine Finishing', 'Hardware Installation', 'Packaging'],
     role: 'Contributing Fabricator - Handled surface and material preparation, final touch-ups, hardware installation, and packaging for shipment. Senior fabricator managed printing process.'
   },
   { 
     displayName: 'Austin Texas Blue Cow Wall Piece', 
-    folderName: 'Blue Cow',
+    folderName: 'Blue-Cow',
     description: 'This whimsical large-scale wall piece was created by carefully masking each paint layer by hand, using an in-house CNC machine and an ultra-fine bit to carve the playful details. Commercial-grade acrylic paint on hand-finished MDF substrate, hanging hardware installed on reverse.',
     skills: ['Paint Application', 'Masking Removal', 'Fine Finishing', 'Hardware Installation', 'Packaging'],
     role: 'Contributing Fabricator - Applied final pale blue paint coat, removed masking vinyl, completed touch-ups, installed hanging hardware, and packaged for shipment.'
@@ -135,14 +135,14 @@ const collaborativeProjects: FabProject[] = [
   },
   { 
     displayName: 'Lenticular Ocean Scenes Wall Panels', 
-    folderName: 'Linticular Pieces',
+    folderName: 'Linticular-Pieces',
     description: 'These interactive optical artworks were created using lenticular printing technology to produce images that change and transform with viewing angle, engaging viewers in a dynamic visual experience.',
     skills: ['Adhesive Application', 'Mounting', 'Precision Work'],
     role: 'Contributing Fabricator - Assisted with adhering aluminum strips that served as substrate for imagery strips and helped mount each strip to MDF substrate.'
   },
   { 
     displayName: 'Custom Lite Brite Panels for Austin Texas Gameroom', 
-    folderName: 'Lite Brite',
+    folderName: 'Lite-Brite',
     description: 'This illuminated artwork was inspired by the classic childhood toy, designed to create pixelated light compositions that bridge nostalgia with contemporary artistic interpretation through innovative use of light and color.',
     skills: ['Surface Preparation', 'Material Preparation', 'Assembly', 'Fine Finishing'],
     role: 'Contributing Fabricator - Responsible for surface preparation, material preparation, finishing, and assembly under senior fabricator guidance.'
@@ -157,14 +157,14 @@ const collaborativeProjects: FabProject[] = [
   },
   { 
     displayName: 'Plaster Drapery Panels', 
-    folderName: 'Plaster Drapery Panels',
+    folderName: 'Plaster-Drapery-Panels',
     description: 'These sculptural panels were designed to mimic fabric drapery in solid plaster, capturing movement and flow in permanent material while creating the illusion of soft textile forms.',
     skills: ['Material Preparation', 'Surface Preparation'],
     role: 'Contributing Fabricator - Responsible for material preparation and surface preparation under senior fabricator guidance.'
   },
   { 
     displayName: 'Record Holder Photos', 
-    folderName: 'Record Holder Photos',
+    folderName: 'Record-Holder-Photos',
     description: 'These custom vinyl record storage solutions were designed to double as photographic display elements for executive suites at an Autograph Collection hotel in Paso Robles, CA. The pieces merge music culture with visual presentation, creating functional art that enhances the luxury hospitality experience.',
     skills: ['Surface Preparation', 'Painting', 'Woodworking', 'Assembly'],
     client: 'Autograph Collection Hotel, Paso Robles CA',
@@ -179,28 +179,28 @@ const collaborativeProjects: FabProject[] = [
   },
   { 
     displayName: 'Surf Board Carvings', 
-    folderName: 'Surf Board Carvings',
+    folderName: 'Surf-Board-Carvings',
     description: 'These decorative surfboard pieces were originally sculpted by South African artist Jenna Barbe, then prepared for display with custom wooden mounting systems and protective acrylic facing, celebrating both California surf culture and international artistic collaboration.',
     skills: ['Custom Hardware Fabrication', 'Woodworking', 'Acrylic Work'],
     role: 'Contributing Fabricator - Created custom wooden display system with protective acrylic face. Original surfboard sculpture by Jenna Barbe.'
   },
   { 
     displayName: 'Wooden Drapery Sculpture', 
-    folderName: 'Wooden Drapery Sculpture',
+    folderName: 'Wooden-Drapery-Sculpture',
     description: 'These wooden sculptures were carved to mimic the flow and drape of fabric, demonstrating the versatility of wood as a medium for creating soft, flowing forms that seem to defy the material\'s natural rigidity.',
     skills: ['Material Preparation', 'Surface Preparation', 'Clear Coating', 'Hardware Installation'],
     role: 'Contributing Fabricator - Responsible for material and surface preparation, clear coating application, and hardware installation.'
   },
   { 
     displayName: 'Wooden Screens', 
-    folderName: 'Wooden Screens',
+    folderName: 'Wooden-Screens',
     description: 'These functional wooden privacy screens were designed with decorative elements that combine architectural function with artistic craftsmanship, creating beautiful room dividers that enhance interior spaces.',
     skills: ['Wood Staining', 'Sealing'],
     role: 'Contributing Fabricator - Responsible for staining and sealing all wooden screen components.'
   },
   { 
     displayName: 'Circular Wall Decor', 
-    folderName: 'Circular Wall Decor',
+    folderName: 'Circular-Wall-Decor',
     description: 'These geometric wall installations feature circular motifs and patterns that create dynamic visual interest through careful repetition and variation. Each piece explores how modular elements can work together to transform architectural spaces while maintaining individual character.',
     skills: ['Assembly', 'Installation', 'Mounting'],
     client: 'Hotel Business Center',

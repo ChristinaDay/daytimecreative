@@ -1,5 +1,5 @@
 // Auto-generated fab lab project images
-// Generated on 2025-06-11T00:43:54.013Z
+// Generated on 2025-06-27T06:30:03.353Z
 
 export interface FabProject {
   name: string;
@@ -7,20 +7,20 @@ export interface FabProject {
 }
 
 export const fabProjectImages: Record<string, string[]> = {
-  "Abalone Wall Panels": [
+  "Abalone-Wall-Panels": [
     "IMG_9444.jpeg"
   ],
-  "Abstract Relief Carving Panel": [
+  "Abstract-Relief-Carving-Panel": [
     "IMG_8076.jpeg",
     "IMG_8077.jpeg",
     "IMG_8078.jpeg"
   ],
-  "Black and White Cowboy Cowgirl": [
+  "Black-and-White-Cowboy-Cowgirl": [
     "IMG_8065.jpeg",
     "IMG_8066.jpeg",
     "IMG_8067.jpeg"
   ],
-  "Blue Cow": [
+  "Blue-Cow": [
     "IMG_9407.jpeg",
     "IMG_9408.jpeg",
     "IMG_9409.jpeg",
@@ -29,7 +29,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9442.jpeg",
     "IMG_9443.jpeg"
   ],
-  "Board Games": [
+  "Board-Games": [
     "IMG_9363.jpeg",
     "IMG_9364.jpeg",
     "IMG_9399.jpeg",
@@ -47,7 +47,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9556.jpeg",
     "IMG_9557.jpeg"
   ],
-  "Cactus Piece": [
+  "Cactus-Piece": [
     "IMG_8576.jpeg",
     "IMG_8577.jpeg",
     "IMG_8578.jpeg",
@@ -64,21 +64,16 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9174.jpeg",
     "IMG_9175.jpeg"
   ],
-  "Ceramic Metal Plates": [
+  "Ceramic-Metal-Plates": [
     "IMG_8902.jpeg",
     "IMG_8903.jpeg",
     "IMG_8907.jpeg",
     "IMG_8909.jpeg",
     "IMG_8910.jpeg"
   ],
-  "Circular Wall Decor": [
-    "IMG_8079.jpeg",
-    "IMG_8080.jpeg",
+  "Circular-Wall-Decor": [
     "IMG_8081.jpeg",
     "IMG_8082.jpeg",
-    "IMG_8187.jpeg",
-    "IMG_8191.jpeg",
-    "IMG_8192.jpeg",
     "IMG_8196.jpeg",
     "IMG_8197.jpeg",
     "IMG_8198.jpeg",
@@ -86,7 +81,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_8200.jpeg",
     "IMG_8240.jpeg"
   ],
-  "Crating and Shipping": [
+  "Crating-and-Shipping": [
     "IMG_0009.jpeg",
     "IMG_0010.jpeg",
     "IMG_0069.jpeg",
@@ -102,12 +97,12 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_8920.jpeg",
     "IMG_8921.jpeg"
   ],
-  "Custom Color Matching": [
+  "Custom-Color-Matching": [
     "IMG_0053.jpeg",
     "IMG_0054.jpeg",
     "IMG_0055.jpeg"
   ],
-  "Dyed and Layered Paper Framed": [
+  "Dyed-and-Layered-Paper-Framed": [
     "IMG_9640.jpeg",
     "IMG_9642.jpeg",
     "IMG_9643.jpeg",
@@ -115,7 +110,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9645.jpeg",
     "IMG_9646.jpeg"
   ],
-  "Enclave Decor Samples": [
+  "Enclave-Decor-Samples": [
     "IMG_9949.jpeg",
     "IMG_9950.jpeg",
     "IMG_9951.jpeg",
@@ -123,7 +118,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9953.jpeg",
     "IMG_9954.jpeg"
   ],
-  "Firehose Weaving": [
+  "Firehose-Weaving": [
     "IMG_8347.jpeg",
     "IMG_8348.jpeg",
     "IMG_8349.jpeg",
@@ -132,11 +127,11 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_8604.jpeg",
     "IMG_8605.jpeg"
   ],
-  "Floating Canvas Prints": [
+  "Floating-Canvas-Prints": [
     "IMG_8912.jpeg",
     "IMG_8913.jpeg"
   ],
-  "Framed Paper Sculpture": [
+  "Framed-Paper-Sculpture": [
     "IMG_9669.jpeg",
     "IMG_9670.jpeg",
     "IMG_9671.jpeg",
@@ -148,20 +143,20 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9677.jpeg",
     "IMG_9678.jpeg"
   ],
-  "Gold Ceiling Hanging": [
+  "Gold-Ceiling-Hanging": [
     "IMG_9143.jpeg",
     "IMG_9144.jpeg",
     "IMG_9145.jpeg",
     "IMG_9146.jpeg"
   ],
-  "Gold Leafing": [
+  "Gold-Leafing": [
     "IMG_9231.jpeg",
     "IMG_9232.jpeg",
     "IMG_9233.jpeg",
     "IMG_9234.jpeg",
     "IMG_9235.jpeg"
   ],
-  "Hammered Metal Flowers": [
+  "Hammered-Metal-Flowers": [
     "IMG_9881.jpeg",
     "IMG_9882.jpeg",
     "IMG_9900.jpeg",
@@ -188,13 +183,14 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9933.jpeg",
     "IMG_9934.jpeg",
     "IMG_9935.jpeg",
-    "IMG_9936.jpeg"
+    "IMG_9936.jpeg",
+    "IMG_9937.jpeg"
   ],
-  "Hanging Seashells": [
+  "Hanging-Seashells": [
     "IMG_9236.jpeg",
     "IMG_9242.jpeg"
   ],
-  "Hanging Wrapped Fibers": [
+  "Hanging-Wrapped-Fibers": [
     "IMG_7894.jpeg",
     "IMG_7895.jpeg",
     "IMG_7896.jpeg",
@@ -230,7 +226,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9147.jpeg",
     "IMG_9148.jpeg"
   ],
-  "Leather Harness Wall Hanging": [
+  "Leather-Harness-Wall-Hanging": [
     "IMG_9869.jpeg",
     "IMG_9870.jpeg",
     "IMG_9871.jpeg",
@@ -239,15 +235,15 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9874.jpeg",
     "IMG_9875.jpeg"
   ],
-  "Linticular Pieces": [
+  "Linticular-Pieces": [
     "IMG_9446.jpeg",
     "IMG_9447.jpeg",
     "IMG_9448.jpeg"
   ],
-  "Lite Brite": [
+  "Lite-Brite": [
     "IMG_9445.jpeg"
   ],
-  "Log Slice Print": [
+  "Log-Slice-Print": [
     "IMG_7851.jpeg",
     "IMG_7852.jpeg",
     "IMG_7853.jpeg",
@@ -295,6 +291,9 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_0014.jpeg",
     "IMG_0068.jpeg",
     "IMG_0144.jpeg",
+    "IMG_7588.jpeg",
+    "IMG_7589.jpeg",
+    "IMG_7590.jpeg",
     "IMG_7833.jpeg",
     "IMG_7834.jpeg",
     "IMG_7837.jpeg",
@@ -304,26 +303,36 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_7908.jpeg",
     "IMG_7909.jpeg",
     "IMG_7910.jpeg",
+    "IMG_8064.jpeg",
     "IMG_8073.jpeg",
     "IMG_8250.jpeg",
     "IMG_8263.jpeg",
+    "IMG_8314.jpeg",
     "IMG_8315.jpeg",
     "IMG_8316.jpeg",
     "IMG_8317.jpeg",
     "IMG_8318.jpeg",
+    "IMG_8319.jpeg",
+    "IMG_8320.jpeg",
     "IMG_8321.jpeg",
     "IMG_8322.jpeg",
     "IMG_8323.jpeg",
     "IMG_8324.jpeg",
     "IMG_8351.jpeg",
+    "IMG_8352.jpeg",
+    "IMG_8353.jpeg",
     "IMG_8358.jpeg",
     "IMG_8359.jpeg",
     "IMG_8562.jpeg",
+    "IMG_8563.jpeg",
     "IMG_8564.jpeg",
     "IMG_8583.jpeg",
     "IMG_8584.jpeg",
+    "IMG_8585.jpeg",
     "IMG_8588.jpeg",
+    "IMG_8589.jpeg",
     "IMG_8590.jpeg",
+    "IMG_8613.jpeg",
     "IMG_8614.jpeg",
     "IMG_8791.jpeg",
     "IMG_8795.jpeg",
@@ -389,7 +398,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9879.jpeg",
     "IMG_9880.jpeg"
   ],
-  "Ocean Collage and Painting": [
+  "Ocean-Collage-and-Painting": [
     "IMG_9568.jpeg",
     "IMG_9569.jpeg"
   ],
@@ -419,15 +428,19 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_8345.jpeg"
   ],
   "Pipes": [
+    "IMG_1382.jpeg",
+    "IMG_1383.jpeg",
+    "IMG_1384.jpeg",
+    "IMG_1712.jpeg",
     "IMG_8616.jpeg",
     "IMG_8783.jpeg",
     "IMG_8803.jpeg"
   ],
-  "Plaster Drapery Panels": [
+  "Plaster-Drapery-Panels": [
     "IMG_9141.jpeg",
     "IMG_9142.jpeg"
   ],
-  "Record Holder Photos": [
+  "Record-Holder-Photos": [
     "IMG_9779.jpeg",
     "IMG_9780.jpeg"
   ],
@@ -435,18 +448,23 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9454.jpeg",
     "IMG_9455.jpeg"
   ],
-  "Sevens Piece": [
+  "Sevens-Piece": [
     "IMG_8239.jpeg"
   ],
-  "Shop and Studio": [
+  "Shop-and-Studio": [
     "IMG_0011.jpeg",
+    "IMG_0012.jpeg",
     "IMG_0077.jpeg",
     "IMG_0078.jpeg",
+    "IMG_7925.jpeg",
     "IMG_7926.jpeg",
     "IMG_7929.jpeg",
     "IMG_7998.jpeg",
+    "IMG_7999.jpeg",
+    "IMG_8001.jpeg",
     "IMG_8010.jpeg",
     "IMG_8011.jpeg",
+    "IMG_8012.jpeg",
     "IMG_8013.jpeg",
     "IMG_8071.jpeg",
     "IMG_8195.jpeg",
@@ -465,16 +483,21 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9230.jpeg",
     "IMG_9239.jpeg",
     "IMG_9240.jpeg",
+    "IMG_9293.jpeg",
+    "IMG_9294.jpeg",
     "IMG_9295.jpeg",
+    "IMG_9296.jpeg",
+    "IMG_9297.jpeg",
     "IMG_9300.jpeg",
     "IMG_9336.jpeg",
+    "IMG_9439.jpeg",
     "IMG_9657.jpeg",
     "IMG_9680.jpeg",
     "IMG_9684.jpeg",
     "IMG_9781.jpeg",
     "IMG_9878.jpeg"
   ],
-  "Surf Board Carvings": [
+  "Surf-Board-Carvings": [
     "IMG_0001.jpeg",
     "IMG_0002.jpeg",
     "IMG_0003.jpeg",
@@ -509,7 +532,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9998.jpeg",
     "IMG_9999.jpeg"
   ],
-  "Teal and Stone Antique Mirrors": [
+  "Teal-and-Stone-Antique-Mirrors": [
     "IMG_9858.jpeg",
     "IMG_9859.jpeg",
     "IMG_9860.jpeg",
@@ -518,9 +541,11 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9863.jpeg",
     "IMG_9864.jpeg",
     "IMG_9876.jpeg",
-    "IMG_9877.jpeg"
+    "IMG_9877.jpeg",
+    "mirrors-installed.jpg",
+    "mirrors-installed2.jpg"
   ],
-  "Terracotta glazed disks": [
+  "Terracotta-glazed-disks": [
     "IMG_7844.jpeg",
     "IMG_7845.jpeg",
     "IMG_7846.jpeg",
@@ -532,7 +557,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_7924.jpeg",
     "IMG_8009.jpeg"
   ],
-  "Tropical Relief Panels and Glass Panels": [
+  "Tropical-Relief-Panels-and-Glass-Panels": [
     "IMG_8350.jpeg",
     "IMG_8567.jpeg",
     "IMG_8568.jpeg",
@@ -543,7 +568,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_7831.jpeg",
     "IMG_7832.jpeg"
   ],
-  "Whales and Surf Boards": [
+  "Whales-and-Surf-Boards": [
     "IMG_9140.jpeg",
     "IMG_9177.jpeg",
     "IMG_9181.jpeg",
@@ -567,7 +592,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9332.jpeg",
     "IMG_9333.jpeg"
   ],
-  "White Leafs": [
+  "White-Leafs": [
     "IMG_9600.jpeg",
     "IMG_9602.jpeg",
     "IMG_9603.jpeg",
@@ -577,19 +602,22 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9607.jpeg",
     "IMG_9608.jpeg"
   ],
-  "Wooden Drapery Sculpture": [
+  "Wooden-Drapery-Sculpture": [
     "IMG_9452.jpeg",
     "IMG_9565.jpeg",
     "IMG_9566.jpeg"
   ],
-  "Wooden Screens": [
+  "Wooden-Screens": [
     "IMG_7927.jpeg",
     "IMG_7928.jpeg"
   ],
-  "Z-Gel Finishing": [
+  "Z-Gel-Finishing": [
+    "IMG_8187.jpeg",
     "IMG_8188.jpeg",
     "IMG_8189.jpeg",
     "IMG_8190.jpeg",
+    "IMG_8191.jpeg",
+    "IMG_8192.jpeg",
     "IMG_8916.jpeg",
     "IMG_8917.jpeg",
     "IMG_8918.jpeg"
@@ -602,17 +630,9 @@ export const getFabProjectImages = (projectName: string): string[] => {
 
 // Format project name for URL paths
 export const formatProjectPath = (projectName: string): string => {
-  return projectName.replace(/\s+/g, '-'); // Replace spaces with hyphens
+  return projectName.replace(/\s+/g, '%20'); // URL encode spaces
 };
 
-// Re-export from the new universal image utilities
-export { getFabImageUrl as getImagePath, getFabImageUrl } from './imageUtils';
-
-// Legacy compatibility - these will now use the CDN
-import { getFabImageUrl } from './imageUtils';
-
-// Keep existing project structure exports but route through CDN
-export const fabImages = {
-  // Example: getImagePath will now return CDN URLs
-  getImagePath: getFabImageUrl
+export const getImagePath = (projectName: string, imageName: string): string => {
+  return `/images/fab-lab/${projectName}/${imageName}`;
 };
