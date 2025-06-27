@@ -423,12 +423,117 @@ export default function ArtFabrication2Page() {
             <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4 sm:mb-6 md:mb-8">
               Fab Lab
             </h1>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
+            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed mb-8">
               In addition to crafting bespoke digital experiences, I also work as an art fabricator 
               for various studios in the Bay Area. This collection showcases my hands-on work at 
               Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
               custom installations and artistic pieces.
             </p>
+
+            {/* Contact & Education Info */}
+            <div className="bg-white/50 dark:bg-gray-900/60 backdrop-blur-md border border-white/20 dark:border-gray-700/40 rounded-xl shadow-lg p-8 max-w-6xl">
+              <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8">
+                {/* Contact Info */}
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full"></div>
+                    <h3 className="text-xl font-semibold text-text-light dark:text-text-dark">
+                      Contact Information
+                    </h3>
+                  </div>
+                  <div className="space-y-3 pl-4">
+                    <div className="flex items-center gap-3">
+                      <svg className="w-4 h-4 text-text-light/60 dark:text-text-dark/60" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                      </svg>
+                      <a 
+                        href="mailto:christinamday@gmail.com" 
+                        className="text-text-light/80 dark:text-text-dark/80 hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium"
+                      >
+                        christinamday@gmail.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <svg className="w-4 h-4 text-text-light/60 dark:text-text-dark/60" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="text-text-light/80 dark:text-text-dark/80 font-medium">Oakland, CA</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Education */}
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full"></div>
+                    <h3 className="text-xl font-semibold text-text-light dark:text-text-dark">
+                      Educational Background
+                    </h3>
+                  </div>
+                  <div className="space-y-4 pl-4">
+                    <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
+                      <div className="font-medium text-text-light dark:text-text-dark">Bachelor of Fine Arts</div>
+                      <div className="text-text-light/70 dark:text-text-dark/70">Studio Art</div>
+                      <div className="text-sm text-text-light/60 dark:text-text-dark/60 mt-1">University of North Texas</div>
+                    </div>
+                    <div className="border-l-2 border-accent-light/30 dark:border-accent-dark/30 pl-4">
+                      <div className="font-medium text-text-light dark:text-text-dark">Bachelor of Fine Arts</div>
+                      <div className="text-text-light/70 dark:text-text-dark/70">New/Interactive Media</div>
+                      <div className="text-sm text-text-light/60 dark:text-text-dark/60 mt-1">University of North Texas</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Skills */}
+                <div className="xl:col-span-1 lg:col-span-2 space-y-4">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-2 h-2 bg-accent-light dark:bg-accent-dark rounded-full"></div>
+                    <h3 className="text-xl font-semibold text-text-light dark:text-text-dark">
+                      Fabrication Skills
+                    </h3>
+                  </div>
+                  <div className="pl-4 space-y-3">
+                    {/* Core Skills */}
+                    <div>
+                      <h4 className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-2">Core Fabrication</h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Metalworking</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Woodworking</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Welding</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Assembly</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Installation</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Custom Hardware</span>
+                      </div>
+                    </div>
+                    
+                    {/* Finishing */}
+                    <div>
+                      <h4 className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-2">Surface & Finishing</h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Airbrushing</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Paint Application</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Surface Prep</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Fine Finishing</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Clear Coating</span>
+                      </div>
+                    </div>
+
+                    {/* Specialized */}
+                    <div>
+                      <h4 className="text-sm font-medium text-text-light/70 dark:text-text-dark/70 mb-2">Specialized Techniques</h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Cold Steel Forming</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Hand Forging</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Paper Work</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Textile Steaming</span>
+                        <span className="px-2.5 py-1 bg-gradient-to-r from-accent-light/20 to-accent-light/10 dark:from-accent-dark/20 dark:to-accent-dark/10 text-accent-light dark:text-accent-dark border border-accent-light/30 dark:border-accent-dark/30 rounded-full text-xs font-medium">Electrical Wiring</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
