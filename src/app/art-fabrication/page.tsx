@@ -728,7 +728,7 @@ function ProcessImageGrid({ setLightbox }: { setLightbox?: (img: {src: string, a
 
 // Shop and Studio Gallery Component
 function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
-  const shopImages = getFabProjectImages('Shop and Studio');
+  const shopImages = getFabProjectImages('Shop-and-Studio');
 
   // Create a smooth pattern that avoids sawtooth effect
   const createSmoothPattern = (totalImages: number) => {
@@ -749,7 +749,7 @@ function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {shopImages.map((imageName, index) => {
-        const src = getImagePath('Shop and Studio', imageName);
+        const src = getImagePath('Shop-and-Studio', imageName);
         const alt = `Shop and Studio - ${imageName}`;
         return (
           <div 
@@ -777,7 +777,7 @@ function ShopAndStudioGrid({ setLightbox }: { setLightbox?: (img: {src: string, 
 
 // Crating and Shipping Gallery Component
 function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: string, alt: string}) => void }) {
-  const cratingImages = getFabProjectImages('Crating and Shipping');
+  const cratingImages = getFabProjectImages('Crating-and-Shipping');
 
   // Create a smooth pattern that avoids sawtooth effect
   const createSmoothPattern = (totalImages: number) => {
@@ -798,7 +798,7 @@ function CratingAndShippingGrid({ setLightbox }: { setLightbox?: (img: {src: str
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
       {cratingImages.map((imageName, index) => {
-        const src = getImagePath('Crating and Shipping', imageName);
+        const src = getImagePath('Crating-and-Shipping', imageName);
         const alt = `Crating and Shipping - ${imageName}`;
         return (
           <div 
