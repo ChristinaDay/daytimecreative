@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import { ThemeToggle } from '../../components/layout/ThemeToggle';
+import BackToTopButton from '../../components/ui/BackToTopButton';
 import Masonry from 'react-masonry-css';
 
 // Project data interface
@@ -423,11 +424,13 @@ export default function ArtFabrication2Page() {
             <h1 className="text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4 sm:mb-6 md:mb-8">
               Fab Lab
             </h1>
+            <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed mb-4">
+              I fabricate custom art installations, sculptures, and architectural elements for galleries, designers, and private clients. 
+              I deliver precise, high-quality work on deadline, handling everything from material sourcing and prototyping to final installation and shipping.
+            </p>
             <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed mb-8">
-              In addition to crafting bespoke digital experiences, I also work as an art fabricator 
-              for various studios in the Bay Area. This collection showcases my hands-on work at 
-              Local Language on 25th Street in Oakland, CA, where I've contributed to diverse 
-              custom installations and artistic pieces.
+              This collection showcases my hands-on work at Local Language in Oakland where I've contributed to custom 
+              installations for luxury hotels, private collections, and public spaces.
             </p>
 
             {/* Contact & Education Info */}
@@ -647,6 +650,10 @@ export default function ArtFabrication2Page() {
           </div>
         </div>
       )}
+      
+      {/* Back to Top Button */}
+      <BackToTopButton />
+      
       <Footer />
     </div>
   );
