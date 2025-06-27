@@ -429,7 +429,7 @@ export default function ArtFabrication2Page() {
               I deliver precise, high-quality work on deadline, handling everything from material sourcing and prototyping to final installation and shipping.
             </p>
             <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed mb-8">
-              This collection showcases my hands-on work at Local Language in Oakland where I've contributed to custom 
+              This collection showcases my hands-on work at <a href="https://locallanguageart.com" target="_blank" rel="noopener noreferrer" className="text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-colors underline decoration-accent-light/30 dark:decoration-accent-dark/30 hover:decoration-accent-light dark:hover:decoration-accent-dark">Local Language</a> in Oakland, California where I've contributed to custom 
               installations for luxury hotels, private collections, and public spaces.
             </p>
 
@@ -593,7 +593,7 @@ export default function ArtFabrication2Page() {
                 Process Gallery
               </h2>
               <p className="text-base sm:text-lg text-text-light/80 dark:text-text-dark/80 max-w-4xl leading-relaxed">
-                A documentation of various fabrication processes, techniques, and studio work from my time at Local Language. This section primarily features work created by other fabricators in the studio, showcasing the diverse range of techniques and projects I was exposed to during my time there. While a few images may include my own contributions, the majority represent the skilled work of my colleagues and the broader fabrication environment I learned within.
+                A documentation of various fabrication processes, techniques, and studio work from my time at <a href="https://locallanguageart.com" target="_blank" rel="noopener noreferrer" className="text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-colors underline decoration-accent-light/30 dark:decoration-accent-dark/30 hover:decoration-accent-light dark:hover:decoration-accent-dark">Local Language</a>. This section primarily features work created by other fabricators in the studio, showcasing the diverse range of techniques and projects I was exposed to during my time there. While a few images may include my own contributions, the majority represent the skilled work of my colleagues and the broader fabrication environment I learned within.
               </p>
             </div>
 
