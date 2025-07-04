@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Blockquote } from '@/components/typography/DropQuote';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { FlexibleHeroText, FlexibleBioText, FlexibleQuickStats } from '@/components/FlexibleAbout';
 import { useEffect, useRef } from 'react';
 
 const caseStudies = [
@@ -263,24 +264,7 @@ export default function Home() {
       <header className="relative z-10 w-full min-h-screen flex flex-col justify-center items-start">
         {/* Large headline */}
         <div className="flex flex-col items-start justify-center flex-1 pt-24 pb-16 md:pt-32 md:pb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-          >
-            <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-6 md:mb-8">
-              I am an Oakland-based designer building digital products and physical art that solve real problems.
-          </h1>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl"
-          >
-            I bridge the gap between design and engineering, creating products that are both beautiful and technically sound.
-          </motion.div>
+          <FlexibleHeroText />
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -362,67 +346,43 @@ export default function Home() {
                 </div>
                 
                 {/* Bio Text */}
-                <div className="space-y-4 text-lg text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                  <p>
-                    I'm Christina, a product designer and front-end developer based in Oakland. 
-                    I've spent the last decade working with teams to build digital products—everything 
-                    from early prototypes at startups to enterprise platforms used by thousands of people.
-                  </p>
-                  <p>
-                    I like to work at the intersection of design and code. I think about implementation 
-                    while I'm designing, and I care about user experience when I'm coding. It tends to 
-                    make things move faster and work better.
-                  </p>
-                </div>
+                <FlexibleBioText />
                 
 
               </div>
               
               {/* Right Column: Quick Stats */}
               <div className="space-y-6">
-                <div className="space-y-4">
-                  <div>
-                    <div className="text-3xl font-bold text-accent-light dark:text-accent-dark">10+</div>
-                    <div className="text-sm text-text-light/70 dark:text-text-dark/70">Years Experience</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-accent-light dark:text-accent-dark">$2M+</div>
-                    <div className="text-sm text-text-light/70 dark:text-text-dark/70">Business Impact</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-accent-light dark:text-accent-dark">60%</div>
-                    <div className="text-sm text-text-light/70 dark:text-text-dark/70">Faster Development</div>
-                  </div>
-                </div>
+                <FlexibleQuickStats />
                 
                 <div className="pt-4 border-t border-white/15 dark:border-white/10">
                   <div className="space-y-2">
-                    <div className="text-sm font-medium text-text-light dark:text-text-dark">Product Design</div>
-                    <div className="text-sm font-medium text-text-light dark:text-text-dark">Front-End Development</div>
+                    <div className="text-sm font-medium text-text-light dark:text-text-dark">React Development</div>
                     <div className="text-sm font-medium text-text-light dark:text-text-dark">Design Systems</div>
+                    <div className="text-sm font-medium text-text-light dark:text-text-dark">UI/UX Design</div>
                   </div>
                 </div>
                 
                 {/* Tools & Skills */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-text-light dark:text-text-dark">Tools I use</h3>
+                  <h3 className="text-lg font-semibold text-text-light dark:text-text-dark">Technical Stack</h3>
                   <div className="space-y-3">
                     <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Design</div>
-                      <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
-                        Figma, Adobe Creative Suite, Sketch, Principle, Framer
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Development</div>
+                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Frontend</div>
                       <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
                         React, Next.js, TypeScript, Tailwind CSS, Framer Motion
                       </div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Other</div>
+                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Design</div>
                       <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
-                        Git, Vercel, Linear, Notion, Miro
+                        Figma, Adobe Creative Suite, Design Systems, Prototyping
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Workflow</div>
+                      <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
+                        Git, Vercel, Linear, Component Libraries, API Integration
                       </div>
                     </div>
                   </div>
@@ -432,6 +392,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Featured Projects Section */}
+      <ProjectsSection />
 
             {/* Skills-Based Project Showcase */}
       <section id="work" className="w-full py-32 px-4 relative z-10">

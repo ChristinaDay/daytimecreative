@@ -1,58 +1,104 @@
 'use client';
 
-import Image from 'next/image';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Project } from '@/types/project';
+import Image from 'next/image';
 
-interface ProjectCardProps {
-  project: Project;
+export interface ProjectData {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  tags: string[];
+  year: string;
+  bgColor?: string;
+  // Role-specific content
+  designLeaderDescription?: string;
+  designLeaderTags?: string[];
+  designHighlights?: string[];
+  designerDeveloperDescription?: string;
+  designerDeveloperTags?: string[];
+  technicalHighlights?: string[];
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
-  return (
-    <Link href={`/projects/${project.slug}`}>
-      <div className="group relative overflow-hidden rounded-lg bg-background-light/10 dark:bg-[#323849]/10 backdrop-blur-sm border-2 border-surface-light/10 dark:border-surface-dark/10 hover:border-accent-light/30 dark:hover:border-accent-dark/30 transition-all duration-300 shadow-[0_8px_16px_-6px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_20px_-8px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_16px_-6px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_12px_20px_-8px_rgba(0,0,0,0.20)]">
-        {/* Card Header */}
-        <div className="p-3 border-b-2 border-surface-light/10 dark:border-surface-dark/10">
-          <h3 className="text-lg font-bold text-text-light dark:text-text-dark text-center">
-            {project.title}
-          </h3>
-        </div>
+interface ProjectCardProps {
+  project: ProjectData;
+  featured?: boolean;
+  className?: string;
+}
 
-        {/* Image Section with white background */}
-        <div className={`relative ${project.slug === 'customizableui' ? 'aspect-[4/4]' : 'aspect-[4/3]'} p-2`}>
-          <div className="absolute inset-2 bg-white rounded-md" /> {/* Solid white background */}
-          <div className="absolute inset-2 flex items-center justify-center">
-            <div className="relative w-[90%] h-[90%]">
-              <Image
-                src={project.thumbnail}
-                alt={project.title}
-                fill
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
-              />
+export function ProjectCard({ project, featured = false, className = '' }: ProjectCardProps) {
+  // Use designer-developer content when available
+  const description = project.designerDeveloperDescription || project.description;
+  const tags = project.designerDeveloperTags || project.tags;
+  const highlights = project.technicalHighlights;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6 }}
+      className={`group ${className}`}
+    >
+      <Link href={project.link} className="block h-full">
+        <div className={`bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
+          <div className={`relative ${featured ? 'lg:w-1/2' : ''} aspect-[4/3] bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`}>
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-contain p-6 group-hover:scale-105 transition-transform duration-300"
+              sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+            />
+          </div>
+          
+          <div className={`p-6 flex-1 flex flex-col ${featured ? 'lg:w-1/2' : ''}`}>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className={`font-bold text-text-light dark:text-text-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
+                {project.title}
+              </h3>
+              <span className="text-sm text-text-light/60 dark:text-text-dark/60">
+                {project.year}
+              </span>
+            </div>
+            
+            <p className={`text-text-light/80 dark:text-text-dark/80 mb-4 flex-1 ${featured ? 'text-lg' : ''}`}>
+              {description}
+            </p>
+            
+            {/* Technical highlights */}
+            {highlights && highlights.length > 0 && (
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-text-light/90 dark:text-text-dark/90 mb-2">
+                  Technical Implementation
+                </h4>
+                <ul className="space-y-1">
+                  {highlights.slice(0, 3).map((highlight, index) => (
+                    <li key={index} className="text-sm text-text-light/70 dark:text-text-dark/70 flex items-start">
+                      <span className="inline-block w-1 h-1 rounded-full mt-2 mr-2 bg-accent-light dark:bg-accent-dark" />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {tags.slice(0, featured ? 6 : 4).map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 backdrop-blur-sm border text-xs rounded transition-colors bg-accent-light/10 dark:bg-accent-dark/10 border-accent-light/20 dark:border-accent-dark/20 text-accent-light dark:text-accent-dark"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
-
-        {/* Description Section */}
-        <div className="p-3 border-t-2 border-surface-light/10 dark:border-surface-dark/10">
-          <p className="text-sm text-text-light/80 dark:text-text-dark/80 line-clamp-2 mb-3">
-            {project.description}
-          </p>
-          
-          {/* Tags Section */}
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-2 py-1 text-xs rounded-full bg-surface-light/10 dark:bg-surface-dark/10 text-text-light dark:text-text-dark border border-surface-light/20 dark:border-surface-dark/20"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 } 
