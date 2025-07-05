@@ -28,15 +28,6 @@ export function FlexibleHeroText() {
         />{' '}
         marketplace and beyond.
       </h1>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-        className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl"
-      >
-        I bridge the gap between design and engineering, creating products that are both beautiful and technically sound.
-      </motion.div>
     </motion.div>
   );
 }
