@@ -261,7 +261,7 @@ export default function Home() {
       </div>
       
       {/* Hero area */}
-      <header className="relative z-10 w-full min-h-screen flex flex-col justify-center items-start">
+      <header className="relative z-10 w-full min-h-screen flex flex-col justify-center items-start px-4 md:px-8">
         {/* Large headline */}
         <div className="flex flex-col items-start justify-center flex-1 pt-24 pb-16 md:pt-32 md:pb-24">
           <FlexibleHeroText />

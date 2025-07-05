@@ -19,12 +19,12 @@ export default function CyclingText({
   const [minWidth, setMinWidth] = useState(0);
   const measureRef = useRef<HTMLSpanElement>(null);
 
-  // Measure minimum width based on "B2B" without extra padding
+  // Measure minimum width based on "B2B" with responsive padding
   useEffect(() => {
     if (measureRef.current) {
       measureRef.current.textContent = 'B2B';
       const b2bWidth = measureRef.current.offsetWidth;
-      setMinWidth(b2bWidth + 16); // Account for px-2 padding
+      setMinWidth(b2bWidth + 12); // Account for px-1.5 mobile padding
     }
   }, []);
 
@@ -86,7 +86,7 @@ export default function CyclingText({
       {/* Hidden measurement element */}
       <span 
         ref={measureRef}
-        className={`absolute -top-full opacity-0 pointer-events-none px-2 py-1 rounded font-medium ${className}`}
+        className={`absolute -top-full opacity-0 pointer-events-none px-1.5 py-0.5 md:px-2 md:py-1 rounded font-medium ${className}`}
         style={{ whiteSpace: 'nowrap' }}
       >
         B2B
@@ -103,7 +103,7 @@ export default function CyclingText({
         <span 
           className={`
             inline-block text-center transition-opacity duration-500 ease-out
-            px-2 py-1 rounded border-0
+            px-1.5 py-0.5 md:px-2 md:py-1 rounded border-0
             ${currentColor} text-white font-medium tracking-normal
             ${displayText === '' ? 'opacity-0' : 'opacity-100'}
             ${isFancyWord ? 'font-serif italic bg-gradient-to-r from-purple-500 to-pink-500' : ''}
