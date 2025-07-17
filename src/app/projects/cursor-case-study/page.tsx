@@ -71,10 +71,10 @@ export default function CursorCaseStudyPage() {
         <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
           <h4 className="font-semibold mb-2">Why Squarespace Wasn’t Ideal for Me</h4>
           <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-            <li>Designed for non-developers—great for quick setup, but limited for custom code.</li>
-            <li>Templating options, while best-in-class for no-code, still result in a “templated” look and feel.</li>
-            <li>Customization at the code level is restricted, making it hard to create truly unique layouts or advanced interactions.</li>
-            <li>Not well-suited for building a living style guide or reusable component system.</li>
+            <li>Squarespace is fantastic if you want to get a site up fast and never touch code. For a lot of people, that’s exactly what they need. But if you’re the kind of person who wants to tinker, it’s a little like being handed a beautiful toolbox—with all the drawers politely locked.</li>
+            <li>The templates are genuinely some of the best in the no-code world, and for most folks, that’s a win. But you can always spot a Squarespace site. There’s a certain “yep, I’ve seen this before” vibe, no matter how much you tweak.</li>
+            <li>Want to break out of the box? It’s possible, but not really what the platform is built for. Custom code is there, but it’s more “workaround” than “workflow.”</li>
+            <li>If you want to build a living style guide or reusable component system, you’re probably looking for a different kind of tool. Squarespace just isn’t made for that level of editing—and honestly, that’s by design.</li>
           </ul>
         </div>
 
@@ -94,9 +94,9 @@ export default function CursorCaseStudyPage() {
           <div>
             <h4 className="font-semibold mb-2">Issues with Squarespace limitations</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>Homepage built with a popular Squarespace template</li>
-              <li>Limited ability to customize layout or add advanced interactions</li>
-              <li>Great for non-developers, but restrictive for code-driven workflows</li>
+              <li>This homepage? It’s clean, and honestly, it’s a solid framework for a lot of people. But it’s also the same homepage a thousand other people have. (I know, I checked.)</li>
+              <li>Every time I wanted to add something custom, I’d hit a wall. Or, more accurately, a “Sorry, that’s not supported” modal. That’s not a flaw, just a sign I was using the tool for something it wasn’t really built for.</li>
+              <li>Squarespace is great for non-developers, and that’s the point. If you like to get your hands dirty, it’s just a little too tidy for that kind of work.</li>
             </ul>
           </div>
         </div>
@@ -106,9 +106,9 @@ export default function CursorCaseStudyPage() {
           <div className="order-2 md:order-1">
             <h4 className="font-semibold mb-2">Case studies, but stuck in a template</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>Case studies section constrained by template structure</li>
-              <li>Hard to create custom layouts for unique project stories</li>
-              <li>Visual consistency, but at the expense of flexibility</li>
+              <li>Every project story started to sound the same, because the template only gave me so many ways to tell it. That’s not a knock on Squarespace—it’s just the tradeoff for consistency and ease.</li>
+              <li>Want to break the grid? Not really an option. Want to add a custom layout? See above re: “not supported.”</li>
+              <li>It looked consistent, but it never really felt like me. The polish was there, but the personality was a little muted.</li>
             </ul>
           </div>
           <div className="order-1 md:order-2">
@@ -140,9 +140,9 @@ export default function CursorCaseStudyPage() {
           <div>
             <h4 className="font-semibold mb-2">Project pages: stuck in the box</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>Project pages limited to pre-set content blocks</li>
-              <li>Challenging to highlight technical depth or custom visuals</li>
-              <li>Couldn’t build interactive or scrollable layouts</li>
+              <li>Every project page was a remix of the same blocks. Want to show something interactive? Not really an option, but that’s not what Squarespace is aiming for anyway.</li>
+              <li>Highlighting technical depth or custom visuals? Only if you’re okay with “custom” meaning “sort of like everyone else.”</li>
+              <li>Scrollability, interactivity, or anything remotely dynamic? Not so much. But for a lot of users, that’s a feature, not a bug.</li>
             </ul>
           </div>
         </div>
