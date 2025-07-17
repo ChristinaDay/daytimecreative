@@ -53,15 +53,17 @@ export default function CursorCaseStudyPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="mb-16"
+        className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Why Rebuild? (Motivation & Goals)</h3>
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          After years of relying on Squarespace for my portfolio, I realized it was time for a change. The old site was easy to maintain, but it didn’t reflect my current skills or the way I actually work. I wanted a portfolio that wasn’t just a gallery of past projects, but a living demonstration of my technical fluency, design process, and ability to build with today’s best tools. 
-        </p>
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          There was also a practical side: Squarespace’s monthly fees were adding up, and I needed a solution that gave me more control and flexibility. But the real driver was personal. After a break from tech—working in art fabrication, taking on design gigs, and navigating some big life changes—I needed to prove to myself (and future employers) that my skills weren’t just intact, but sharper than ever. This project is both a bridge across my career gap and a statement: I’m not just back, I’m ready for senior-level work, and I can actually deliver results with the latest stack.
-        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            After years of relying on Squarespace for my portfolio, I realized it was time for a change. The old site was easy to maintain, but it didn’t reflect my current skills or the way I actually work. I wanted a portfolio that wasn’t just a gallery of past projects, but a living demonstration of my technical fluency, design process, and ability to build with today’s best tools. There was also a practical side: Squarespace’s monthly fees were adding up, and I needed a solution that gave me more control and flexibility.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            But the real driver was personal. After a break from tech—working in art fabrication, taking on design gigs, and navigating some big life changes—I needed to prove to myself (and future employers) that my skills weren’t just intact, but sharper than ever. This project is both a bridge across my career gap and a statement: I’m not just back, I’m ready for senior-level work, and I can actually deliver results with the latest stack.
+          </p>
+        </div>
         {/* Callout Box */}
         <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
           <p className="text-lg font-serif italic text-blue-900 dark:text-blue-200">
@@ -154,57 +156,83 @@ export default function CursorCaseStudyPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="mb-12"
+        className="mb-12 mt-32"
       >
-        <h3 className="text-4xl font-bold mb-6 text-center text-text-light dark:text-text-dark tracking-tight">Tech Stack</h3>
-        <p className="text-lg text-center text-text-light/70 dark:text-text-dark/70 mb-8 max-w-2xl mx-auto">
-          A modern, production-grade stack chosen for speed, flexibility, and real-world results.
-        </p>
-        <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-background-dark dark:via-zinc-900 dark:to-background-dark rounded-3xl p-4 md:p-6 mb-8 shadow-lg">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Next.js */}
-            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <Image src="/images/nextjs-logo.png" alt="Next.js logo" width={56} height={56} className="mb-3" />
-              <h4 className="font-semibold text-xl mb-2">Next.js</h4>
-              <p className="text-base text-text-light/80 dark:text-text-dark/80">
-                The backbone of the site. Next.js let me mix static and server-rendered pages, keep routing simple, and ship fast. It’s the framework that makes React feel like a real website, not just a collection of components.
-              </p>
-            </div>
-            {/* React */}
-            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <Image src="/images/react-logo.png" alt="React logo" width={56} height={56} className="mb-3" />
-              <h4 className="font-semibold text-xl mb-2">React</h4>
-              <p className="text-base text-text-light/80 dark:text-text-dark/80">
-                The engine for every interactive bit. React’s component model let me build reusable layouts, custom UI, and keep everything maintainable—even as the site grew.
-              </p>
-            </div>
-            {/* Tailwind CSS */}
-            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <Image src="/images/tailwind-logo.png" alt="Tailwind CSS logo" width={56} height={56} className="mb-3" />
-              <h4 className="font-semibold text-xl mb-2">Tailwind CSS</h4>
-              <p className="text-base text-text-light/80 dark:text-text-dark/80">
-                Utility classes for days. Tailwind let me style quickly, stay consistent, and avoid the usual CSS headaches. The design system lives right in the markup.
-              </p>
-            </div>
-            {/* Framer Motion */}
-            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <Image src="/images/motion-logo.png" alt="Framer Motion logo" width={56} height={56} className="mb-3" />
-              <h4 className="font-semibold text-xl mb-2">Framer Motion</h4>
-              <p className="text-base text-text-light/80 dark:text-text-dark/80">
-                For the little touches that make a site feel alive. Framer Motion powers the smooth transitions and subtle animations—nothing over the top, just enough to make it feel modern.
-              </p>
-            </div>
-            {/* Vercel */}
-            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
-              <Image src="/images/vercel-triangle-black.svg" alt="Vercel logo" width={56} height={56} className="mb-3" />
-              <h4 className="font-semibold text-xl mb-2">Vercel</h4>
-              <p className="text-base text-text-light/80 dark:text-text-dark/80">
-                Deploys in seconds, previews for every branch, and zero config. Vercel makes it easy to treat the site as a living project, not a static portfolio.
-              </p>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design & Tech Stack Choices</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Choosing the right stack wasn’t just about using the latest tools. I needed a foundation that would let me move fast, experiment, and actually document my process as I went. This portfolio isn’t a static gallery—it’s a living demonstration of how I work, how I solve problems, and how I approach design systems in the real world.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Every decision here was made to support rapid iteration, honest documentation, and the kind of workflow I’d use on a real product team. The stack below is what enables that: tools that are proven, flexible, and built for real-world results—not just to look good on a portfolio site.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left: Intro Blurb */}
+          <div className="flex flex-col justify-center h-full max-w-md">
+            <h4 className="text-lg font-semibold mb-2 text-text-light dark:text-text-dark tracking-tight">Tech Stack</h4>
+            <p className="text-base text-text-light/80 dark:text-text-dark/80">
+              This isn’t just a list of trendy tools. Every choice here supports the way I actually work: rapid prototyping, real design system thinking, and documenting every pattern as I go. The stack below is what lets this portfolio be a living demonstration, not just a static gallery.
+            </p>
+          </div>
+          {/* Right: Tech Stack Grid */}
+          <div className="flex justify-center">
+            <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-background-dark dark:via-zinc-900 dark:to-background-dark rounded-3xl p-4 md:p-6 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Next.js */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <Image src="/images/nextjs-logo.png" alt="Next.js logo" width={40} height={40} className="mb-2" />
+                  <h4 className="font-semibold text-base mb-1">Next.js</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
+                  </p>
+                </div>
+                {/* React */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <Image src="/images/react-logo.png" alt="React logo" width={40} height={40} className="mb-2" />
+                  <h4 className="font-semibold text-base mb-1">React</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
+                  </p>
+                </div>
+                {/* Tailwind CSS */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <Image src="/images/tailwind-logo.png" alt="Tailwind CSS logo" width={40} height={40} className="mb-2" />
+                  <h4 className="font-semibold text-base mb-1">Tailwind CSS</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Utility-first, design in markup, iterate fast, and keep everything consistent.
+                  </p>
+                </div>
+                {/* Framer Motion */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <Image src="/images/motion-logo.png" alt="Framer Motion logo" width={40} height={40} className="mb-2" />
+                  <h4 className="font-semibold text-base mb-1">Framer Motion</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Modern, smooth animation for React—declarative, powerful, and easy to use.
+                  </p>
+                </div>
+                {/* Vercel */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <Image src="/images/vercel-triangle-black.svg" alt="Vercel logo" width={40} height={40} className="mb-2" />
+                  <h4 className="font-semibold text-base mb-1">Vercel</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         {/* Mini Style Guide Preview */}
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark mt-32">The Living Style Guide</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Most style guides are static documents or Figma files that quickly fall out of sync with the real product. I wanted something different—a living style guide, built directly into the site, that documents every pattern, component, and decision as it actually exists in production.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            This approach lets me move fast, experiment safely, and keep the design system honest. The style guide isn’t just a reference—it’s a toolkit I use every day, evolving alongside the project and making it easy to onboard, iterate, and maintain consistency as the site grows.
+          </p>
+        </div>
         <div className="mt-8 mb-8">
           <StyleGuideMiniPreview />
         </div>
