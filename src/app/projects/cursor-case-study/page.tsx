@@ -67,9 +67,20 @@ export default function CursorCaseStudyPage() {
             “I wanted a portfolio that’s a living demonstration, not just a gallery.”
           </p>
         </div>
-        {/* Before/After Comparison */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-          <div className="flex flex-col items-center w-full">
+        {/* Squarespace Limitations Callout */}
+        <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
+          <h4 className="font-semibold mb-2">Why Squarespace Wasn’t Ideal for Me</h4>
+          <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
+            <li>Designed for non-developers—great for quick setup, but limited for custom code.</li>
+            <li>Templating options, while best-in-class for no-code, still result in a “templated” look and feel.</li>
+            <li>Customization at the code level is restricted, making it hard to create truly unique layouts or advanced interactions.</li>
+            <li>Not well-suited for building a living style guide or reusable component system.</li>
+          </ul>
+        </div>
+
+        {/* Old Portfolio Example 1 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 items-center">
+          <div>
             <ScrollableImageContainer
               src="/images/daytime-creative-old.png"
               alt="Old Squarespace Portfolio Screenshot"
@@ -79,9 +90,28 @@ export default function CursorCaseStudyPage() {
               backgroundColor="white"
               url="christinamday.com (Squarespace)"
             />
-            <span className="text-sm text-gray-500 mt-2">Old Squarespace Portfolio</span>
           </div>
-          <div className="flex flex-col items-center w-full">
+          <div>
+            <h4 className="font-semibold mb-2">Issues with Squarespace limitations</h4>
+            <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
+              <li>Homepage built with a popular Squarespace template</li>
+              <li>Limited ability to customize layout or add advanced interactions</li>
+              <li>Great for non-developers, but restrictive for code-driven workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Old Portfolio Example 2 (alternate sides) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 items-center">
+          <div className="order-2 md:order-1">
+            <h4 className="font-semibold mb-2">Case studies, but stuck in a template</h4>
+            <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
+              <li>Case studies section constrained by template structure</li>
+              <li>Hard to create custom layouts for unique project stories</li>
+              <li>Visual consistency, but at the expense of flexibility</li>
+            </ul>
+          </div>
+          <div className="order-1 md:order-2">
             <ScrollableImageContainer
               src="/images/Case-Studies-daytime-creative.png"
               alt="Old Squarespace Portfolio Case Studies Screenshot"
@@ -91,9 +121,12 @@ export default function CursorCaseStudyPage() {
               backgroundColor="white"
               url="christinamday.com/case-studies (Squarespace)"
             />
-            <span className="text-sm text-gray-500 mt-2">Old Squarespace Portfolio – Case Studies</span>
           </div>
-          <div className="flex flex-col items-center w-full">
+        </div>
+
+        {/* Old Portfolio Example 3 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8 items-center">
+          <div>
             <ScrollableImageContainer
               src="/images/Betterview-Spotlights-Reporting-—-daytime-creative.png"
               alt="Old Squarespace Portfolio Spotlights Reporting Screenshot"
@@ -103,7 +136,14 @@ export default function CursorCaseStudyPage() {
               backgroundColor="white"
               url="christinamday.com/case-studies/spotlights-reporting (Squarespace)"
             />
-            <span className="text-sm text-gray-500 mt-2">Old Squarespace Portfolio – Spotlights Reporting</span>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-2">Project pages: stuck in the box</h4>
+            <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
+              <li>Project pages limited to pre-set content blocks</li>
+              <li>Challenging to highlight technical depth or custom visuals</li>
+              <li>Couldn’t build interactive or scrollable layouts</li>
+            </ul>
           </div>
         </div>
       </motion.section>
