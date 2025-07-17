@@ -5,6 +5,7 @@ import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import Image from 'next/image';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
+import StyleGuideMiniPreview from '@/components/ui/StyleGuideMiniPreview';
 
 export default function CursorCaseStudyPage() {
   return (
@@ -71,10 +72,10 @@ export default function CursorCaseStudyPage() {
         <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
           <h4 className="font-semibold mb-2">Why Squarespace Wasn’t Ideal for Me</h4>
           <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-            <li>Squarespace is fantastic if you want to get a site up fast and never touch code. For a lot of people, that’s exactly what they need. But if you’re the kind of person who wants to tinker, it’s a little like being handed a beautiful toolbox—with all the drawers politely locked.</li>
-            <li>The templates are genuinely some of the best in the no-code world, and for most folks, that’s a win. But you can always spot a Squarespace site. There’s a certain “yep, I’ve seen this before” vibe, no matter how much you tweak.</li>
-            <li>Want to break out of the box? It’s possible, but not really what the platform is built for. Custom code is there, but it’s more “workaround” than “workflow.”</li>
-            <li>If you want to build a living style guide or reusable component system, you’re probably looking for a different kind of tool. Squarespace just isn’t made for that level of editing—and honestly, that’s by design.</li>
+            <li>Squarespace is perfect for quick, no-code sites. If you want to tinker, it’s a beautiful toolbox—with the drawers politely locked.</li>
+            <li>The templates are top-notch, but you can always spot a Squarespace site. Familiarity is part of the deal.</li>
+            <li>Custom code is possible, but it’s more workaround than workflow.</li>
+            <li>Building a living style guide or reusable components? Not what Squarespace is made for—and that’s okay.</li>
           </ul>
         </div>
 
@@ -94,9 +95,9 @@ export default function CursorCaseStudyPage() {
           <div>
             <h4 className="font-semibold mb-2">Issues with Squarespace limitations</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>This homepage? It’s clean, and honestly, it’s a solid framework for a lot of people. But it’s also the same homepage a thousand other people have. (I know, I checked.)</li>
-              <li>Every time I wanted to add something custom, I’d hit a wall. Or, more accurately, a “Sorry, that’s not supported” modal. That’s not a flaw, just a sign I was using the tool for something it wasn’t really built for.</li>
-              <li>Squarespace is great for non-developers, and that’s the point. If you like to get your hands dirty, it’s just a little too tidy for that kind of work.</li>
+              <li>Clean, but the same homepage as a thousand others.</li>
+              <li>Custom ideas? Usually met with “not supported.”</li>
+              <li>Great for non-developers; too tidy for code-driven work.</li>
             </ul>
           </div>
         </div>
@@ -106,9 +107,9 @@ export default function CursorCaseStudyPage() {
           <div className="order-2 md:order-1">
             <h4 className="font-semibold mb-2">Case studies, but stuck in a template</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>Every project story started to sound the same, because the template only gave me so many ways to tell it. That’s not a knock on Squarespace—it’s just the tradeoff for consistency and ease.</li>
-              <li>Want to break the grid? Not really an option. Want to add a custom layout? See above re: “not supported.”</li>
-              <li>It looked consistent, but it never really felt like me. The polish was there, but the personality was a little muted.</li>
+              <li>Every project story started to sound the same. That’s the tradeoff for consistency.</li>
+              <li>Breaking the grid or adding custom layouts? Not really an option.</li>
+              <li>Consistent, but the personality was a little muted.</li>
             </ul>
           </div>
           <div className="order-1 md:order-2">
@@ -140,9 +141,9 @@ export default function CursorCaseStudyPage() {
           <div>
             <h4 className="font-semibold mb-2">Project pages: stuck in the box</h4>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-2">
-              <li>Every project page was a remix of the same blocks. Want to show something interactive? Not really an option, but that’s not what Squarespace is aiming for anyway.</li>
-              <li>Highlighting technical depth or custom visuals? Only if you’re okay with “custom” meaning “sort of like everyone else.”</li>
-              <li>Scrollability, interactivity, or anything remotely dynamic? Not so much. But for a lot of users, that’s a feature, not a bug.</li>
+              <li>Project pages were always a remix of the same blocks.</li>
+              <li>Technical depth or custom visuals? Only if “custom” means “sort of like everyone else.”</li>
+              <li>Scrollability or interactivity? Not really. For many, that’s a feature, not a bug.</li>
             </ul>
           </div>
         </div>
@@ -153,27 +154,93 @@ export default function CursorCaseStudyPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="mb-16"
+        className="mb-12"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design & Tech Stack Choices</h3>
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          I wanted this site to be a live demonstration of how I approach both design and engineering. I chose Next.js and React for their flexibility, performance, and the ability to use the latest web standards. Tailwind CSS let me move fast and keep the design system consistent, while Framer Motion added a layer of polish and interactivity that feels genuinely contemporary (without being over the top).
+        <h3 className="text-4xl font-bold mb-6 text-center text-text-light dark:text-text-dark tracking-tight">Tech Stack</h3>
+        <p className="text-lg text-center text-text-light/70 dark:text-text-dark/70 mb-8 max-w-2xl mx-auto">
+          A modern, production-grade stack chosen for speed, flexibility, and real-world results.
         </p>
-        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          The style guide isn’t just a reference—it’s a living part of the site. I built reusable layout components and documented every new pattern as I went, so I could deploy new content quickly (“get shit done mode”) or experiment with new ideas when the content called for it. The goal: make the site itself proof that I can design, build, and document a system that actually works in the real world, not just in Figma.
-        </p>
-        {/* Tech Stack Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 my-8 items-center">
-          <Image src="/images/nextjs-logo.svg" alt="Next.js" width={64} height={64} />
-          <Image src="/images/react-logo.svg" alt="React" width={64} height={64} />
-          <Image src="/images/tailwind-logo.svg" alt="Tailwind CSS" width={64} height={64} />
-          <Image src="/images/framer-motion-logo.svg" alt="Framer Motion" width={64} height={64} />
-          <Image src="/images/vercel-logo.svg" alt="Vercel" width={64} height={64} />
+        <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-background-dark dark:via-zinc-900 dark:to-background-dark rounded-3xl p-4 md:p-6 mb-8 shadow-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Next.js */}
+            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <Image src="/images/nextjs-logo.png" alt="Next.js logo" width={56} height={56} className="mb-3" />
+              <h4 className="font-semibold text-xl mb-2">Next.js</h4>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80">
+                The backbone of the site. Next.js let me mix static and server-rendered pages, keep routing simple, and ship fast. It’s the framework that makes React feel like a real website, not just a collection of components.
+              </p>
+            </div>
+            {/* React */}
+            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <Image src="/images/react-logo.png" alt="React logo" width={56} height={56} className="mb-3" />
+              <h4 className="font-semibold text-xl mb-2">React</h4>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80">
+                The engine for every interactive bit. React’s component model let me build reusable layouts, custom UI, and keep everything maintainable—even as the site grew.
+              </p>
+            </div>
+            {/* Tailwind CSS */}
+            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <Image src="/images/tailwind-logo.png" alt="Tailwind CSS logo" width={56} height={56} className="mb-3" />
+              <h4 className="font-semibold text-xl mb-2">Tailwind CSS</h4>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80">
+                Utility classes for days. Tailwind let me style quickly, stay consistent, and avoid the usual CSS headaches. The design system lives right in the markup.
+              </p>
+            </div>
+            {/* Framer Motion */}
+            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <Image src="/images/motion-logo.png" alt="Framer Motion logo" width={56} height={56} className="mb-3" />
+              <h4 className="font-semibold text-xl mb-2">Framer Motion</h4>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80">
+                For the little touches that make a site feel alive. Framer Motion powers the smooth transitions and subtle animations—nothing over the top, just enough to make it feel modern.
+              </p>
+            </div>
+            {/* Vercel */}
+            <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-2xl shadow-md p-5 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <Image src="/images/vercel-triangle-black.svg" alt="Vercel logo" width={56} height={56} className="mb-3" />
+              <h4 className="font-semibold text-xl mb-2">Vercel</h4>
+              <p className="text-base text-text-light/80 dark:text-text-dark/80">
+                Deploys in seconds, previews for every branch, and zero config. Vercel makes it easy to treat the site as a living project, not a static portfolio.
+              </p>
+            </div>
+          </div>
         </div>
-        {/* Style Guide Screenshot */}
-        <div className="w-full my-8">
-          <Image src="/images/style-guide-placeholder.jpg" alt="Style Guide Screenshot" width={800} height={400} className="rounded-lg border mx-auto" />
-          <p className="text-sm text-center text-gray-500 mt-2">Style guide as a living part of the site</p>
+        {/* Mini Style Guide Preview */}
+        <div className="mt-8 mb-8">
+          <StyleGuideMiniPreview />
+        </div>
+        {/* Living Style Guide Section */}
+        <div className="mt-12 p-0 md:p-0 flex flex-col md:flex-row gap-0 md:gap-8 items-stretch">
+          {/* Screenshot/visual */}
+          <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 rounded-t-xl md:rounded-l-xl md:rounded-tr-none p-8">
+            <Image src="/images/style-guide-placeholder.jpg" alt="Style Guide Screenshot" width={320} height={160} className="rounded-lg border shadow-lg" />
+          </div>
+          {/* Narrative */}
+          <div className="flex-1 flex flex-col justify-center bg-white dark:bg-background-dark border border-purple-200 dark:border-purple-700 rounded-b-xl md:rounded-r-xl md:rounded-bl-none p-8">
+            <h4 className="font-semibold text-xl mb-2">The Living Style Guide: My Real-World Design System</h4>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-2">
+              I didn’t want a style guide that just sits in Figma or Notion. I built a living style guide directly into the site, so every component and pattern is documented, tested, and actually used in production. This lets me:
+            </p>
+            <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-1 mb-2">
+              <li>Move fast in “get shit done” mode, reusing proven patterns.</li>
+              <li>Experiment safely, documenting new solutions as I go.</li>
+              <li>Keep the design system honest—if it’s in the guide, it works on the site.</li>
+            </ul>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+              It’s a workflow tool, a documentation hub, and a proof of my approach to design systems: practical, iterative, and always evolving.
+            </p>
+          </div>
+        </div>
+        {/* Style Guide + Project Rules Blurb */}
+        <div className="mt-6">
+          <h5 className="font-semibold mb-2">How I Actually Used the Style Guide (and Project Rules)</h5>
+          <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-2">
+            The style guide wasn’t just a reference—it was a living toolkit I used every day. But to really keep things consistent and make onboarding (even for myself, after a break) painless, I paired it with a set of project rules written in markdown. These rules covered everything from naming conventions to layout dos and don’ts, and lived right alongside the code. Whenever I solved a new problem or found a better way to do something, I’d update both the style guide and the rules. It’s a system that actually works: fast to use, easy to update, and honest about what’s really in production.
+          </p>
+          <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-1">
+            <li>Style guide = visual/design patterns, real code, live preview</li>
+            <li>Markdown rules = process, naming, edge cases, onboarding notes</li>
+            <li>Both evolve together as the project grows</li>
+          </ul>
         </div>
       </motion.section>
 
