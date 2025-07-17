@@ -49,26 +49,116 @@ export default function StyleGuideMiniPreview() {
         <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-2">Style Guide Preview</h2>
         <p className="text-lg text-text-light/70 dark:text-text-dark/70 font-normal mb-0">A living system for design, code, and workflow.</p>
       </div>
+      {/* Font Families Section */}
+      <section className="mb-10 px-8">
+        <h3 className="text-xl font-semibold mb-6 text-center tracking-wide uppercase text-accent-light dark:text-accent-dark">Font Families</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <span className="text-2xl font-serif">Heading Sample (Serif)</span>
+            <div className="text-xs mt-2 text-text-light/60 dark:text-text-dark/60">Prata (font-serif)</div>
+          </div>
+          <div>
+            <span className="text-2xl font-sans">Body Sample (Sans)</span>
+            <div className="text-xs mt-2 text-text-light/60 dark:text-text-dark/60">Inter (font-sans)</div>
+          </div>
+          <div>
+            <span className="text-2xl font-mono">Mono Sample (Mono)</span>
+            <div className="text-xs mt-2 text-text-light/60 dark:text-text-dark/60">Geist Mono (font-mono)</div>
+          </div>
+        </div>
+      </section>
       {/* Typography */}
       <div className="px-8 pt-4 pb-8">
         <section className="mb-10">
           <h3 className="text-xl font-semibold mb-6 text-center tracking-wide uppercase text-accent-light dark:text-accent-dark">Typography</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-1 text-left">
-              <h1 className="text-4xl font-serif font-normal">Heading 1</h1>
-              <h2 className="text-3xl font-serif font-normal">Heading 2</h2>
-              <h3 className="text-2xl font-serif font-normal">Heading 3</h3>
-              <h4 className="text-xl font-serif font-normal">Heading 4</h4>
-              <h5 className="text-lg font-serif font-normal">Heading 5</h5>
-              <h6 className="text-base font-serif font-normal">Heading 6</h6>
-              <p className="text-base font-sans">Body text / .text-base .font-sans</p>
-              <a href="#" className="text-accent-light dark:text-accent-dark underline font-bold">Link Example</a>
+          {/* Real-World Heading Samples */}
+          <div className="mb-8 space-y-8">
+            {/* Hero Heading (Serif) */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Hero Heading (Serif)</div>
+              <div className="text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-2">
+                A Contemporary Approach to Web Building
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8"
+              </div>
             </div>
-            <div className="flex flex-col gap-4 items-center md:items-start">
-              <Blockquote className="mb-0">Blockquote: "Design is intelligence made visible."</Blockquote>
-              <pre className="code-sublime w-fit max-w-full px-4 text-sm overflow-x-auto rounded-lg border shadow" style={{background: dark ? '#23241f' : '#f8f8f2', color: dark ? '#f8f8f2' : '#23241f'}}>
-                {`Code: <Button>Click me</Button>`}
-              </pre>
+            {/* Hero Heading (Sans) - if used */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Hero Heading (Sans)</div>
+              <div className="text-5xl md:text-5xl lg:text-6xl font-sans font-normal text-text-light dark:text-text-dark leading-hero mb-2">
+                A Contemporary Approach to Web Building
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-5xl md:text-5xl lg:text-6xl font-sans font-normal text-text-light dark:text-text-dark leading-hero mb-8"
+              </div>
+            </div>
+            {/* Section Heading (Serif) */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Section Heading (Serif)</div>
+              <div className="text-2xl font-bold mb-2 text-text-light dark:text-text-dark font-serif">
+                Design & Tech Stack Choices
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark font-serif"
+              </div>
+            </div>
+            {/* Section Heading (Sans) */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Section Heading (Sans)</div>
+              <div className="text-2xl font-bold mb-2 text-text-light dark:text-text-dark font-sans">
+                Design & Tech Stack Choices
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark font-sans"
+              </div>
+            </div>
+            {/* Subsection Heading (Sans) */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Subsection Heading (Sans)</div>
+              <div className="text-xl font-semibold mb-2 text-text-light dark:text-text-dark font-sans">
+                Why this stack?
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark font-sans"
+              </div>
+            </div>
+            {/* Subsection Heading (Serif) - if used */}
+            <div>
+              <div className="font-bold text-sm uppercase mb-1 text-accent-light dark:text-accent-dark">Subsection Heading (Serif)</div>
+              <div className="text-xl font-semibold mb-2 text-text-light dark:text-text-dark font-serif">
+                Why this stack?
+              </div>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-4">
+                className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark font-serif"
+              </div>
+            </div>
+          </div>
+          {/* h1–h6 Block: Actual Font Family for Each Level */}
+          <div className="mb-8 space-y-2">
+            <div>
+              <h1 className="font-serif font-normal text-5xl md:text-5xl lg:text-6xl text-text-light dark:text-text-dark leading-hero">Heading 1 (h1)</h1>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Prata (font-serif), className="font-serif font-normal text-5xl md:text-5xl lg:text-6xl text-text-light dark:text-text-dark leading-hero"</div>
+            </div>
+            <div>
+              <h2 className="font-sans text-2xl font-bold text-text-light dark:text-text-dark">Heading 2 (h2)</h2>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Inter (font-sans), className="font-sans text-2xl font-bold text-text-light dark:text-text-dark"</div>
+            </div>
+            <div>
+              <h3 className="font-sans text-xl font-bold text-text-light dark:text-text-dark">Heading 3 (h3)</h3>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Inter (font-sans), className="font-sans text-xl font-bold text-text-light dark:text-text-dark"</div>
+            </div>
+            <div>
+              <h4 className="font-sans text-lg font-semibold text-text-light dark:text-text-dark">Heading 4 (h4)</h4>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Inter (font-sans), className="font-sans text-lg font-semibold text-text-light dark:text-text-dark"</div>
+            </div>
+            <div>
+              <h5 className="font-sans text-base font-semibold text-text-light dark:text-text-dark">Heading 5 (h5)</h5>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Inter (font-sans), className="font-sans text-base font-semibold text-text-light dark:text-text-dark"</div>
+            </div>
+            <div>
+              <h6 className="font-sans text-sm font-semibold text-text-light dark:text-text-dark">Heading 6 (h6)</h6>
+              <div className="text-xs text-text-light/60 dark:text-text-dark/60 mb-2">Inter (font-sans), className="font-sans text-sm font-semibold text-text-light dark:text-text-dark"</div>
             </div>
           </div>
         </section>
