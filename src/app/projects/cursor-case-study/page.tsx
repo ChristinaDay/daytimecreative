@@ -11,6 +11,7 @@ import { StarfieldSVG } from '@/components/StarfieldSVG';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import LocalThemeDemo from '@/components/ui/LocalThemeDemo';
 import ProcessTimeline from '@/components/ui/ProcessTimeline';
+import ImageComparisonSlider from '@/components/ui/ImageComparisonSlider';
 
 export default function CursorCaseStudyPage() {
   return (
@@ -37,20 +38,29 @@ export default function CursorCaseStudyPage() {
         />
       </motion.div>
 
-      {/* Hero Image Placeholder */}
+      {/* Hero Image - Interactive Slider */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="mb-16 w-full relative aspect-[16/9] rounded-lg overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-100 to-purple-100 dark:from-slate-900 dark:to-purple-900"
+        className="mb-16 w-full"
       >
-        <Image
-          src="/images/portfolio2025-hero-placeholder.jpg"
-          alt="Portfolio 2025 Hero Preview"
-          fill
-          className="object-cover p-8"
+        <ImageComparisonSlider
+          beforeImage="/images/cursor-editing-screenshot.png"
+          afterImage="/images/Christina-Day-Design-Portfolio.png"
+          beforeAlt="Cursor editor showing portfolio development in progress"
+          afterAlt="Portfolio homepage hero result"
+          beforeLabel="Development"
+          afterLabel="Result"
+          className="w-full"
         />
-        <span className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-slate-400 dark:text-slate-600">Hero Image Placeholder</span>
+        
+        {/* Caption */}
+        <div className="mt-4 text-center">
+          <p className="text-lg text-text-light/70 dark:text-text-dark/70 font-medium">
+            Drag the slider to compare development environment and final result
+          </p>
+        </div>
       </motion.div>
 
       {/* Why Rebuild? (Motivation & Goals) */}
@@ -482,6 +492,20 @@ export default function CursorCaseStudyPage() {
           <p className="text-[1.125rem] text-green-900/80 dark:text-green-200/80 mb-4">
             The style guide wasn't just a visual reference—it was part of a larger documentation system. I paired it with markdown files that contained project rules, naming conventions, and workflow guidelines. This dual approach meant I had both visual patterns and written guidelines that evolved together.
           </p>
+          
+          {/* Markdown Workflow Image */}
+          <div className="mb-6">
+            <ScrollableImageContainer
+              src="/images/progress-workflow-markdown.png"
+              alt="Markdown project rules and workflow documentation"
+              caption="A screenshot showing the markdown files used for project rules, naming conventions, and workflow guidelines."
+              frameType="browser"
+              height="medium"
+              backgroundColor="white"
+              url="Project Rules & Documentation"
+            />
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h5 className="font-semibold mb-2 text-green-900 dark:text-green-200">Style Guide (Visual)</h5>
