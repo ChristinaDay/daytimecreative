@@ -1543,6 +1543,69 @@ export default function CursorCaseStudyPage() {
           </div>
         </div>
         
+        {/* MCPs & Development Tools */}
+        <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl my-8">
+          <h4 className="font-semibold text-lg mb-4 text-emerald-900 dark:text-emerald-200">Cutting-Edge Development Workflow</h4>
+          <p className="text-[1.125rem] text-emerald-900/80 dark:text-emerald-200/80 mb-4">
+            This portfolio was built using Model Context Protocol (MCP) tools that represent the future of AI-assisted development. These tools enabled rapid iteration, sophisticated problem-solving, and a development experience that feels like pair programming with an expert.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {/* MCP Tools */}
+            <div className="space-y-4">
+              <h5 className="font-semibold text-emerald-900 dark:text-emerald-200">MCP Tools Used</h5>
+              <ul className="space-y-2 text-[1.125rem] text-emerald-900/80 dark:text-emerald-200/80">
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Context7:</strong> Real-time documentation access for libraries and frameworks</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Puppeteer:</strong> Automated browser testing and visual validation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Sequential Thinking:</strong> Complex problem breakdown and solution planning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>File Operations:</strong> Intelligent code editing and refactoring</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Development Benefits */}
+            <div className="space-y-4">
+              <h5 className="font-semibold text-emerald-900 dark:text-emerald-200">Development Benefits</h5>
+              <ul className="space-y-2 text-[1.125rem] text-emerald-900/80 dark:text-emerald-200/80">
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Rapid Prototyping:</strong> Ideas to working code in minutes</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Intelligent Debugging:</strong> Complex issues solved systematically</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Documentation Integration:</strong> Always up-to-date with latest APIs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                  <span><strong>Visual Validation:</strong> Automated testing of complex animations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-white/50 dark:bg-gray-800/50 p-4 rounded-lg border border-emerald-200 dark:border-emerald-600">
+            <h6 className="font-semibold mb-2 text-emerald-900 dark:text-emerald-200">Why This Matters</h6>
+            <p className="text-[1.125rem] text-emerald-900/80 dark:text-emerald-200/80">
+              Using MCPs isn't just about faster development—it's about building better software. These tools enable a development workflow where complex problems are broken down systematically, solutions are validated visually, and documentation is always current. This represents the future of AI-assisted development, where human creativity is amplified by intelligent tools rather than replaced by them.
+            </p>
+          </div>
+        </div>
+        
         {/* What's Next */}
         <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
           <h4 className="font-semibold text-lg mb-4 text-blue-900 dark:text-blue-200">What's Next: Applying This Approach</h4>
