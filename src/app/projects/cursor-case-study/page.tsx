@@ -6,6 +6,10 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import Image from 'next/image';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
 import StyleGuideMiniPreview from '@/components/ui/StyleGuideMiniPreview';
+import CyclingText from '@/components/ui/CyclingText';
+import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
+import LocalThemeDemo from '@/components/ui/LocalThemeDemo';
 
 export default function CursorCaseStudyPage() {
   return (
@@ -455,19 +459,206 @@ export default function CursorCaseStudyPage() {
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           I focused on advanced interactions, responsive design, and accessibility from the start. Every new pattern or component was documented and made reusable, so the site could grow without losing its sense of cohesion. These solutions aren’t just technical tricks—they’re proof that I can design and build systems that actually work for real users, in real-world scenarios.
         </p>
-        {/* Featured Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div className="p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/20 dark:to-gray-800/20 border rounded-xl">
-            <Image src="/images/cyclingtext-demo.gif" alt="CyclingText Demo" width={320} height={120} className="mb-2 rounded" />
-            <h4 className="font-semibold mb-1">CyclingText Component</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Animated, accessible, and reusable for dynamic headlines.</p>
+        {/* Hero Title Demo */}
+        <div className="p-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/20 dark:to-gray-800/20 border rounded-xl my-8">
+          <div className="text-center mb-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Live Demo: Homepage Hero Title</p>
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-4">
+                Designer & Developer for{' '}
+                <CyclingText 
+                  words={['B2B', 'SaaS', 'Startup', 'Enterprise', 'Product']}
+                  interval={3000}
+                  className="text-4xl md:text-5xl lg:text-6xl"
+                />
+                {' '}Companies
+              </h1>
+              <p className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80">
+                Building digital products that actually work.
+              </p>
+            </div>
           </div>
-          <div className="p-6 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/20 dark:to-gray-800/20 border rounded-xl">
-            <Image src="/images/scrollable-layout-demo.jpg" alt="Scrollable Layout Demo" width={320} height={120} className="mb-2 rounded" />
-            <h4 className="font-semibold mb-1">Scrollable Layouts</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Solves for dense, vertical content and keeps the experience smooth on all devices.</p>
+          <div className="text-center">
+            <h4 className="font-semibold mb-2">CyclingText in Action</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              This custom component cycles through different company types, creating a dynamic hero title that adapts to different audiences. Built with accessibility, performance, and smooth animations in mind.
+            </p>
           </div>
         </div>
+
+        {/* Animated SVG Graphics Grid */}
+        <div className="p-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/20 dark:to-gray-800/20 border rounded-xl my-8">
+          <div className="text-center mb-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Live Demo: Animated SVG Graphics</p>
+            <h4 className="font-semibold mb-2">Interactive Starfield Animations</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+              Custom SVG animations that bring the homepage hero to life with the Scorpio constellation, shooting stars, and satellite movements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Constellation */}
+            <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <div className="text-center mb-4">
+                <h5 className="font-semibold mb-2">Constellation</h5>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">Pulsating connecting lines and glowing stars</p>
+              </div>
+              <div className="relative h-32 bg-black rounded overflow-hidden">
+                <svg width="100%" height="100%" viewBox="0 0 200 128" className="absolute inset-0">
+                  <defs>
+                    <filter id="scorpio-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  
+                  {/* Pulsating connecting lines (main curve) */}
+                  <line x1="30" y1="80" x2="50" y2="100" stroke="#fffbe6" strokeWidth="2" opacity="0.7" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.2s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="50" y1="100" x2="70" y2="110" stroke="#fffbe6" strokeWidth="2" opacity="0.7" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.3s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="70" y1="110" x2="90" y2="115" stroke="#fffbe6" strokeWidth="2" opacity="0.7" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.4s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="90" y1="115" x2="110" y2="118" stroke="#fffbe6" strokeWidth="2" opacity="0.7" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.5s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="110" y1="118" x2="130" y2="120" stroke="#fffbe6" strokeWidth="2" opacity="0.7" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.7;0.15;0.7" dur="3.6s" repeatCount="indefinite" />
+                  </line>
+                  
+                  {/* Pulsating connecting lines (upper arc) */}
+                  <line x1="30" y1="80" x2="50" y2="60" stroke="#5cc6ff" strokeWidth="1.5" opacity="0.5" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.8s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="50" y1="60" x2="70" y2="40" stroke="#5cc6ff" strokeWidth="1.5" opacity="0.5" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.9s" repeatCount="indefinite" />
+                  </line>
+                  <line x1="70" y1="40" x2="90" y2="20" stroke="#5cc6ff" strokeWidth="1.5" opacity="0.5" filter="url(#scorpio-glow)">
+                    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3.0s" repeatCount="indefinite" />
+                  </line>
+                  
+                  {/* Glowing stars */}
+                  <circle cx="30" cy="80" r="2.5" fill="#fffbe6" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="50" cy="100" r="2" fill="#5cc6ff" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="70" cy="110" r="1.8" fill="#fff" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="90" cy="115" r="1.6" fill="#ffd1dc" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="110" cy="118" r="1.4" fill="#fff" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="130" cy="120" r="1.2" fill="#fffbe6" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="50" cy="60" r="1.8" fill="#fff" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="70" cy="40" r="1.4" fill="#5cc6ff" opacity="0.95" filter="url(#scorpio-glow)" />
+                  <circle cx="90" cy="20" r="1.1" fill="#fff" opacity="0.95" filter="url(#scorpio-glow)" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Shooting Star */}
+            <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <div className="text-center mb-4">
+                <h5 className="font-semibold mb-2">Shooting Star</h5>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">Animated comet with gradient tail</p>
+              </div>
+              <div className="relative h-32 bg-black rounded overflow-hidden">
+                <svg width="100%" height="100%" viewBox="0 0 200 128" className="absolute inset-0">
+                  <defs>
+                    <linearGradient id="shooting-demo" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+                      <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                    </linearGradient>
+                    <filter id="comet-demo-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                    <path id="comet-demo-shape" d="M0,0 L-20,0 L0,1 L20,0 Z" />
+                  </defs>
+                  <use
+                    href="#comet-demo-shape"
+                    fill="url(#shooting-demo)"
+                    filter="url(#comet-demo-glow)"
+                    transform="scale(1.5)"
+                    opacity="0.8"
+                  >
+                    <animateMotion
+                      dur="8s"
+                      repeatCount="indefinite"
+                      path="M 20 20 L 180 108"
+                      rotate="auto"
+                      keyPoints="0;1;1"
+                      keyTimes="0;0.15;1"
+                      calcMode="linear"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0;0.8;0.8;0;0"
+                      keyTimes="0;0.07;0.07;0.1;1"
+                      dur="8s"
+                      repeatCount="indefinite"
+                    />
+                  </use>
+                </svg>
+              </div>
+            </div>
+
+            {/* Satellite */}
+            <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <div className="text-center mb-4">
+                <h5 className="font-semibold mb-2">Satellite</h5>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">Orbiting dot with fade animation</p>
+              </div>
+              <div className="relative h-32 bg-black rounded overflow-hidden">
+                <svg width="100%" height="100%" viewBox="0 0 200 128" className="absolute inset-0">
+                  <defs>
+                    <filter id="satellite-demo-glow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="1" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <circle r="1" fill="#fff" filter="url(#satellite-demo-glow)">
+                    <animateMotion
+                      dur="6s"
+                      repeatCount="indefinite"
+                      keyPoints="0;1"
+                      keyTimes="0;1"
+                      path="M 30 30 Q 100 10 170 30 Q 100 50 30 70 Q 100 90 170 70"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0;1;0;1;0"
+                      keyTimes="0;0.2;0.5;0.7;1"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Light/Dark Mode Demo */}
+        <div className="p-8 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900/20 dark:to-gray-800/20 border rounded-xl my-8">
+          <div className="text-center mb-6">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Live Demo: Theme Switching</p>
+            <h4 className="font-semibold mb-2">Light Mode / Dark Mode</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+              Interactive theme switching with automatic system preference detection and manual toggle controls.
+            </p>
+          </div>
+          
+          <LocalThemeDemo />
+        </div>
+
       </motion.section>
 
       {/* Challenges & Lessons Learned */}
