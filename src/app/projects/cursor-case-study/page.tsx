@@ -942,7 +942,7 @@ export default function CursorCaseStudyPage() {
             <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="text-center mb-4">
                 <h5 className="font-semibold mb-2">Satellite</h5>
-                <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">Orbiting satellite with pulsing signal</p>
+                <p className="text-xs text-gray-600 dark:text-gray-300 mb-3">Small orbiting dot with pulsing signal</p>
               </div>
               <div className="relative h-32 bg-black rounded overflow-hidden">
                 <svg width="100%" height="100%" viewBox="0 0 200 128" className="absolute inset-0">
@@ -956,39 +956,24 @@ export default function CursorCaseStudyPage() {
                     </filter>
                   </defs>
                   
-                  {/* Satellite body */}
-                  <rect x="85" y="54" width="30" height="20" rx="2" fill="#e0e0e0" filter="url(#satellite-demo-glow)" />
-                  
-                  {/* Solar panels */}
-                  <rect x="75" y="59" width="10" height="10" fill="#5cc6ff" filter="url(#satellite-demo-glow)" />
-                  <rect x="115" y="59" width="10" height="10" fill="#5cc6ff" filter="url(#satellite-demo-glow)" />
-                  
-                  {/* Pulsing signal rings */}
-                  <circle cx="100" cy="64" r="5" stroke="#5cc6ff" strokeWidth="1" fill="none" opacity="0.8">
-                    <animate attributeName="r" values="5;15;5" dur="2s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="100" cy="64" r="8" stroke="#5cc6ff" strokeWidth="1" fill="none" opacity="0.6">
-                    <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite" />
-                    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite" />
-                  </circle>
-                  
                   {/* Orbit path */}
                   <ellipse cx="100" cy="64" rx="60" ry="30" stroke="#333" strokeWidth="1" fill="none" opacity="0.3" />
                   
-                  {/* Orbital movement */}
-                  <g transform="rotate(0 100 64)">
-                    <animateTransform
-                      attributeName="transform"
-                      type="rotate"
-                      values="0 100 64;360 100 64"
-                      dur="20s"
+                  {/* Satellite dot */}
+                  <circle r="0.8" fill="#fff" filter="url(#satellite-demo-glow)">
+                    <animateMotion
+                      dur="12s"
+                      repeatCount="indefinite"
+                      path="M 40 64 A 60 30 0 1 1 160 64 A 60 30 0 1 1 40 64"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0;1;0;1;0"
+                      keyTimes="0;0.2;0.5;0.7;1"
+                      dur="4s"
                       repeatCount="indefinite"
                     />
-                    <rect x="85" y="54" width="30" height="20" rx="2" fill="#e0e0e0" filter="url(#satellite-demo-glow)" />
-                    <rect x="75" y="59" width="10" height="10" fill="#5cc6ff" filter="url(#satellite-demo-glow)" />
-                    <rect x="115" y="59" width="10" height="10" fill="#5cc6ff" filter="url(#satellite-demo-glow)" />
-                  </g>
+                  </circle>
                 </svg>
               </div>
             </div>
@@ -1006,6 +991,365 @@ export default function CursorCaseStudyPage() {
           </div>
           
           <LocalThemeDemo />
+        </div>
+
+        {/* Fun Background Elements */}
+        <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border rounded-xl my-8">
+          <div className="text-center mb-6">
+            <p className="text-sm text-purple-600 dark:text-purple-400 mb-4">Creative Technical Solutions</p>
+            <h4 className="font-semibold mb-2">Atmospheric Background Elements</h4>
+            <p className="text-sm text-purple-600/80 dark:text-purple-400/80 mb-6">
+              Custom gradient clouds, nebula effects, and parallax animations that create depth without overwhelming content.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Gradient Clouds */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Gradient Clouds</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Custom CSS gradients with blur effects and mix-blend-mode to create atmospheric depth. Each cloud uses radial gradients with carefully tuned opacity and positioning.
+              </p>
+              
+              {/* Live Demo */}
+              <div className="relative h-32 w-32 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+                {/* Light mode clouds */}
+                <div className="absolute left-[-2vw] top-[-2vw] w-[8vw] h-[8vw] rotate-[18deg] dark:hidden"
+                  style={{
+                    background: 'conic-gradient(from 200deg at 60% 40%, rgba(255, 209, 220, 0.3) 10%, rgba(212, 241, 249, 0.3) 30%, rgba(230, 230, 250, 0.3) 55%, rgba(255, 182, 193, 0.3) 80%, rgba(255, 209, 220, 0.3) 100%)',
+                    filter: 'blur(10px)',
+                    opacity: 1,
+                    mixBlendMode: 'soft-light',
+                  }}
+                />
+                {/* Dark mode nebula */}
+                <div className="absolute left-[-2vw] top-[-2vw] w-[6vw] h-[6vw] rotate-[12deg] hidden dark:block"
+                  style={{
+                    background: 'conic-gradient(from 180deg at 60% 40%, rgba(74, 30, 58, 0.32) 10%, rgba(26, 54, 93, 0.22) 30%, rgba(45, 27, 59, 0.22) 55%, rgba(255, 182, 193, 0.22) 80%, rgba(74, 30, 58, 0.32) 100%)',
+                    filter: 'blur(7px)',
+                    opacity: 1,
+                    mixBlendMode: 'screen',
+                  }}
+                />
+                {/* Dark nebula clouds */}
+                <div className="absolute top-[30%] left-[20%] w-[60%] h-[40%] rounded-full hidden dark:block"
+                  style={{
+                    background: 'radial-gradient(ellipse 80% 50% at 50% 50%, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.3) 40%, transparent 100%)',
+                    opacity: 0.4,
+                    filter: 'blur(80px)',
+                    mixBlendMode: 'multiply',
+                  }}
+                />
+                {/* Horsehead Nebula colorful glows */}
+                <div className="absolute top-[18%] left-[38%] w-[60%] h-[40%] hidden dark:block z-10"
+                  style={{
+                    background: 'radial-gradient(ellipse 60% 40% at 60% 40%, rgba(92,198,255,0.45) 0%, rgba(92,198,255,0.18) 40%, transparent 100%)',
+                    opacity: 0.18,
+                    filter: 'blur(60px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+                <div className="absolute top-[28%] left-[28%] w-[40%] h-[30%] hidden dark:block z-10"
+                  style={{
+                    background: 'radial-gradient(ellipse 50% 30% at 40% 60%, rgba(255, 200, 150, 0.38) 0%, rgba(255, 200, 150, 0.12) 40%, transparent 100%)',
+                    opacity: 0.18,
+                    filter: 'blur(50px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+              </div>
+              
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>Light Mode:</span>
+                  <span>Soft pastel swirls</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Dark Mode:</span>
+                  <span>Nebula-inspired clouds</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Animation:</span>
+                  <span>Parallax scrolling</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Nebula Effects */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Nebula Effects</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Inspired by the Horsehead Nebula, these effects use multiple layered gradients with different blend modes to create cosmic depth and movement.
+              </p>
+              
+              {/* Live Demo */}
+              <div className="relative h-32 w-32 mb-4 rounded-lg overflow-hidden bg-black">
+                {/* Deep space background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
+                
+                {/* Primary nebula cloud - more dramatic */}
+                <div className="absolute top-[10%] left-[20%] w-[80%] h-[60%] hidden dark:block"
+                  style={{
+                    background: 'radial-gradient(ellipse 80% 50% at 30% 40%, rgba(45, 27, 59, 1) 0%, rgba(45, 27, 59, 0.8) 20%, rgba(45, 27, 59, 0.4) 50%, transparent 80%)',
+                    opacity: 0.6,
+                    filter: 'blur(8px)',
+                    mixBlendMode: 'multiply',
+                    transform: 'rotate(-20deg)',
+                  }}
+                />
+                
+                {/* Secondary nebula cloud - different shape */}
+                <div className="absolute bottom-[15%] right-[10%] w-[70%] h-[50%] hidden dark:block"
+                  style={{
+                    background: 'radial-gradient(ellipse 60% 70% at 70% 60%, rgba(45, 27, 59, 0.9) 0%, rgba(45, 27, 59, 0.6) 30%, rgba(45, 27, 59, 0.2) 70%, transparent 90%)',
+                    opacity: 0.5,
+                    filter: 'blur(12px)',
+                    mixBlendMode: 'multiply',
+                    transform: 'rotate(15deg)',
+                  }}
+                />
+                
+                {/* Bright blue core glow */}
+                <div className="absolute top-[35%] left-[35%] w-[40%] h-[40%] hidden dark:block z-10"
+                  style={{
+                    background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(92,198,255,0.9) 0%, rgba(92,198,255,0.6) 40%, rgba(92,198,255,0.2) 80%, transparent 100%)',
+                    opacity: 0.7,
+                    filter: 'blur(6px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+                
+                {/* Warm orange/red glow - more vibrant */}
+                <div className="absolute bottom-[25%] right-[25%] w-[45%] h-[35%] hidden dark:block z-10"
+                  style={{
+                    background: 'radial-gradient(ellipse 60% 40% at 60% 50%, rgba(255, 150, 100, 0.8) 0%, rgba(255, 150, 100, 0.5) 50%, rgba(255, 150, 100, 0.1) 90%, transparent 100%)',
+                    opacity: 0.6,
+                    filter: 'blur(10px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+                
+                {/* Purple accent glow */}
+                <div className="absolute top-[20%] right-[15%] w-[25%] h-[25%] hidden dark:block z-15"
+                  style={{
+                    background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(150, 100, 255, 0.6) 0%, rgba(150, 100, 255, 0.3) 60%, transparent 100%)',
+                    opacity: 0.4,
+                    filter: 'blur(8px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+                
+                {/* Bright white core highlight */}
+                <div className="absolute top-[42%] left-[42%] w-[16%] h-[16%] hidden dark:block z-20"
+                  style={{
+                    background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 60%, transparent 100%)',
+                    opacity: 0.9,
+                    filter: 'blur(3px)',
+                    mixBlendMode: 'screen',
+                  }}
+                />
+              </div>
+              
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>Layers:</span>
+                  <span>Color glows + dark clouds</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Blend Modes:</span>
+                  <span>Screen + Multiply</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Performance:</span>
+                  <span>GPU-accelerated</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Starfield Animation */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Starfield Animation</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Dynamic SVG starfield with twinkling stars, shooting stars, and the Scorpio constellation. Each star has unique animation timing and opacity patterns.
+              </p>
+              
+              {/* Live Demo */}
+              <div className="relative h-32 w-32 mb-4 rounded-lg overflow-hidden bg-black">
+                <svg width="100%" height="100%" viewBox="0 0 128 128" className="absolute inset-0">
+                  <defs>
+                    <filter id="star-glow-demo" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                    <filter id="star-glow-bright" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  
+                  {/* Central bright star */}
+                  <circle cx="64" cy="64" r="1.5" fill="#fff" opacity="0.95" filter="url(#star-glow-bright)">
+                    <animate attributeName="opacity" values="0.95;0.4;0.95" dur="3.2s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Primary cluster stars */}
+                  <circle cx="58" cy="58" r="1.1" fill="#5cc6ff" opacity="0.8" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.8;0.25;0.8" dur="2.8s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="70" cy="58" r="1" fill="#fff" opacity="0.85" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.85;0.3;0.85" dur="2.5s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="58" cy="70" r="0.9" fill="#ffd1dc" opacity="0.7" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.1s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="70" cy="70" r="1.2" fill="#fff" opacity="0.9" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.9;0.35;0.9" dur="2.9s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Secondary cluster stars */}
+                  <circle cx="66" cy="52" r="0.8" fill="#5cc6ff" opacity="0.6" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="52" cy="66" r="0.9" fill="#fff" opacity="0.75" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.75;0.25;0.75" dur="2.7s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="76" cy="66" r="0.7" fill="#ffd1dc" opacity="0.65" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.65;0.2;0.65" dur="2.0s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="66" cy="76" r="1" fill="#fff" opacity="0.8" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.4s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Distant background stars - more subtle */}
+                  <circle cx="20" cy="25" r="0.6" fill="#fff" opacity="0.4" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="45" cy="15" r="0.5" fill="#5cc6ff" opacity="0.35" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.35;0.08;0.35" dur="3.1s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="95" cy="20" r="0.7" fill="#ffd1dc" opacity="0.45" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.45;0.12;0.45" dur="3.3s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="25" cy="95" r="0.8" fill="#fff" opacity="0.5" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="3.8s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="105" cy="70" r="0.6" fill="#ffd1dc" opacity="0.4" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.0s" repeatCount="indefinite" />
+                  </circle>
+                  
+                  {/* Very distant faint stars */}
+                  <circle cx="15" cy="35" r="0.4" fill="#fff" opacity="0.25" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.25;0.05;0.25" dur="4.2s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="110" cy="45" r="0.3" fill="#5cc6ff" opacity="0.2" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.2;0.04;0.2" dur="4.5s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="35" cy="105" r="0.5" fill="#ffd1dc" opacity="0.3" filter="url(#star-glow-demo)">
+                    <animate attributeName="opacity" values="0.3;0.06;0.3" dur="4.0s" repeatCount="indefinite" />
+                  </circle>
+                  
+                </svg>
+              </div>
+              
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>Stars:</span>
+                  <span>Twinkling animation</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Shooting Star:</span>
+                  <span>Trailing effect</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Colors:</span>
+                  <span>White, blue, pink</span>
+                </div>
+              </div>
+            </div>
+            
+
+            
+            {/* Parallax System */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Parallax System</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Custom scroll-based animation system using requestAnimationFrame for smooth 60fps performance. Each element moves at different speeds to create depth.
+              </p>
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>Starfield:</span>
+                  <span>0.15x scroll speed</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Pink clouds:</span>
+                  <span>0.25x scroll speed</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Blue clouds:</span>
+                  <span>0.35x scroll speed</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Parallax Layers */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Parallax Layers</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Multiple gradient layers moving at different scroll speeds to create depth. Each layer uses transform3d for hardware acceleration.
+              </p>
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>Background:</span>
+                  <span>0.15x speed</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Middle:</span>
+                  <span>0.25x speed</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Foreground:</span>
+                  <span>0.35x speed</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Performance Optimizations */}
+            <div className="p-6 bg-white/80 dark:bg-gray-800/80 rounded-lg">
+              <h5 className="font-semibold mb-3 text-gray-900 dark:text-white">Performance Optimizations</h5>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                Every background element is optimized for performance with will-change properties, passive event listeners, and efficient CSS transforms.
+              </p>
+              <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex justify-between">
+                  <span>GPU Usage:</span>
+                  <span>Transform3d triggers</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Event Handling:</span>
+                  <span>Passive listeners</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Memory:</span>
+                  <span>Efficient cleanup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Technical Details */}
+          <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <h6 className="font-semibold mb-2 text-gray-900 dark:text-white">Technical Implementation</h6>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              The background system uses a combination of CSS gradients, SVG filters, and JavaScript scroll handling. Each element is positioned absolutely with different z-index layers, 
+              and the parallax effect is achieved through transform3d for hardware acceleration. The system automatically adapts to light/dark mode with different gradient sets.
+            </p>
+          </div>
         </div>
 
       </motion.section>
