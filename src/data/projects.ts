@@ -5,7 +5,7 @@ export const projectsData: ProjectData[] = [
     title: 'Portfolio 2025 - Cursor Case Study',
     description: 'Modern portfolio website showcasing cutting-edge web development techniques with atmospheric background animations, interactive components, and sophisticated design systems.',
     designerDeveloperDescription: 'Designed and developed a modern portfolio website using Next.js, React, and advanced CSS techniques. Created atmospheric background animations with parallax scrolling, interactive starfield animations, and sophisticated gradient effects. Implemented responsive design with dark/light mode support and performance optimizations.',
-    image: '/images/cursor-case-study-preview.png',
+    image: '/images/cursor-portfolio-hero.png',
     link: '/projects/cursor-case-study',
     tags: ['Next.js', 'React', 'CSS Animations', 'Parallax Effects', 'Design Systems'],
     designerDeveloperTags: ['Next.js', 'React', 'CSS Animations', 'SVG Animations', 'Performance Optimization', 'Responsive Design'],
