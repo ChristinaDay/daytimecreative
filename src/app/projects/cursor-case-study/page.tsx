@@ -10,6 +10,7 @@ import CyclingText from '@/components/ui/CyclingText';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import LocalThemeDemo from '@/components/ui/LocalThemeDemo';
+import LearningTimeline from '@/components/ui/LearningTimeline';
 
 export default function CursorCaseStudyPage() {
   return (
@@ -681,33 +682,33 @@ export default function CursorCaseStudyPage() {
             “Confidence comes from doing the work, not just planning it.”
           </p>
         </div>
-        {/* Timeline/Checklist Placeholder */}
-        <div className="w-full my-8">
-          <Image src="/images/learning-timeline-placeholder.jpg" alt="Learning Timeline" width={800} height={200} className="rounded-lg border mx-auto" />
-          <p className="text-sm text-center text-gray-500 mt-2">Timeline of key learning moments and hurdles</p>
+        {/* Learning Timeline */}
+        <div className="w-full my-8 p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
+          <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Learning Journey Timeline</h4>
+          <LearningTimeline />
         </div>
       </motion.section>
 
-      {/* Reflections & What’s Next */}
+      {/* Reflections & What's Next */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Reflections & What’s Next</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Reflections & What's Next</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          This project isn’t just a portfolio—it’s a living proof of what I can do right now. It shows that I’m not just keeping up, but actively pushing myself to learn, adapt, and build with the best tools available. I’m ready for senior-level work, whether that means joining a new team, building more ambitious products, or mentoring others who are on their own learning curve.
+          This project demonstrates what's possible when you combine proven approaches with modern tooling. It's not about proving I can code—it's about showing how I think about problems, how I approach design systems, and how I build things that actually work. The stack choices here reflect real-world constraints and opportunities, not just what looks good on a resume.
         </p>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-          The biggest takeaway? Continuous learning is the real skill. I’m excited for what’s next—new challenges, new collaborations, and new opportunities to put this mindset (and this toolkit) to work.
+          The most interesting part? Seeing how much the ecosystem has evolved, and how much better the developer experience has gotten. These tools make it possible to ship faster, iterate more confidently, and focus on the actual problems instead of fighting the framework. That's the kind of environment where real innovation happens.
         </p>
         {/* What's Next Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
           <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl flex flex-col items-center">
             <span className="text-3xl mb-2">🤝</span>
-            <h4 className="font-semibold mb-1">Join a New Team</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Ready to collaborate and contribute at a senior level.</p>
+            <h4 className="font-semibold mb-1">Collaborate & Contribute</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Excited to work with talented teams and ship meaningful products.</p>
           </div>
           <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl flex flex-col items-center">
             <span className="text-3xl mb-2">🚀</span>
@@ -720,11 +721,7 @@ export default function CursorCaseStudyPage() {
             <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Looking forward to helping others grow and succeed.</p>
           </div>
         </div>
-        {/* Progress Bar/Arrow Placeholder */}
-        <div className="w-full my-8 flex flex-col items-center">
-          <Image src="/images/continuous-learning-arrow.png" alt="Continuous Learning Arrow" width={400} height={60} className="mb-2" />
-          <span className="text-sm text-gray-500">Continuous learning is the real skill.</span>
-        </div>
+
       </motion.section>
     </article>
   );
