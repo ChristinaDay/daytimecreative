@@ -2,6 +2,28 @@ import { ProjectData } from '@/components/projects/ProjectCard';
 
 export const projectsData: ProjectData[] = [
   {
+    title: 'Portfolio 2025 - Cursor Case Study',
+    description: 'Modern portfolio website showcasing cutting-edge web development techniques with atmospheric background animations, interactive components, and sophisticated design systems.',
+    designerDeveloperDescription: 'Designed and developed a modern portfolio website using Next.js, React, and advanced CSS techniques. Created atmospheric background animations with parallax scrolling, interactive starfield animations, and sophisticated gradient effects. Implemented responsive design with dark/light mode support and performance optimizations.',
+    image: '/images/cursor-case-study-preview.png',
+    link: '/projects/cursor-case-study',
+    tags: ['Next.js', 'React', 'CSS Animations', 'Parallax Effects', 'Design Systems'],
+    designerDeveloperTags: ['Next.js', 'React', 'CSS Animations', 'SVG Animations', 'Performance Optimization', 'Responsive Design'],
+    year: '2024',
+    bgColor: 'from-violet-500/15 via-3% via-transparent via-97% to-purple-600/12 dark:from-violet-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-purple-500/10',
+    designHighlights: [
+      'Created atmospheric background system with gradient clouds and nebula effects',
+      'Designed interactive starfield animations with realistic twinkling effects',
+      'Implemented sophisticated parallax scrolling for depth and immersion'
+    ],
+    technicalHighlights: [
+      'Built custom SVG animation system with dynamic keyframe injection',
+      'Implemented GPU-accelerated parallax scrolling with requestAnimationFrame',
+      'Created responsive design system with dark/light mode support',
+      'Optimized performance with will-change properties and passive event listeners'
+    ]
+  },
+  {
     title: 'Design System & Component Library',
     description: 'Built a complete design system with 50+ React components, automated design token generation, and engineering workflows that reduced development time by 60% while ensuring design consistency.',
     designerDeveloperDescription: 'Built a complete design system with 50+ React components, automated design token generation, and engineering workflows that reduced development time by 60% while ensuring design consistency.',
@@ -10,7 +32,7 @@ export const projectsData: ProjectData[] = [
     tags: ['React Components', 'Design Tokens', 'CSS Architecture', 'TypeScript', 'Design Systems'],
     designerDeveloperTags: ['React Components', 'Design Tokens', 'CSS Architecture', 'TypeScript', 'Design Systems'],
     year: '2023',
-    bgColor: 'from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10',
+    bgColor: 'from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10',
     technicalHighlights: [
       'Built 50+ React components with TypeScript and Storybook',
       'Automated design token generation with Style Dictionary',
