@@ -237,25 +237,25 @@ export default function CursorCaseStudyPage() {
           <StyleGuideMiniPreview />
         </div>
         {/* Living Style Guide Section */}
-        <div className="mt-12 p-0 md:p-0 flex flex-col md:flex-row gap-0 md:gap-8 items-stretch">
-          {/* Screenshot/visual */}
-          <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 border border-purple-200 dark:border-purple-700 rounded-t-xl md:rounded-l-xl md:rounded-tr-none p-8">
-            <Image src="/images/style-guide-placeholder.jpg" alt="Style Guide Screenshot" width={320} height={160} className="rounded-lg border shadow-lg" />
-          </div>
+        <div className="mt-12 flex flex-col md:flex-row gap-8 items-stretch">
           {/* Narrative */}
-          <div className="flex-1 flex flex-col justify-center bg-white dark:bg-background-dark border border-purple-200 dark:border-purple-700 rounded-b-xl md:rounded-r-xl md:rounded-bl-none p-8">
+          <div className="flex-1 flex flex-col justify-center">
             <h4 className="font-semibold text-xl mb-2">The Living Style Guide: My Real-World Design System</h4>
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-2">
-              I didn’t want a style guide that just sits in Figma or Notion. I built a living style guide directly into the site, so every component and pattern is documented, tested, and actually used in production. This lets me:
+              I didn't want a style guide that just sits in Figma or Notion. I built a living style guide directly into the site, so every component and pattern is documented, tested, and actually used in production. This lets me:
             </p>
             <ul className="list-disc pl-5 text-[1.125rem] text-text-light/80 dark:text-text-dark/80 space-y-1 mb-2">
-              <li>Move fast in “get shit done” mode, reusing proven patterns.</li>
+              <li>Move fast in "get shit done" mode, reusing proven patterns.</li>
               <li>Experiment safely, documenting new solutions as I go.</li>
-              <li>Keep the design system honest—if it’s in the guide, it works on the site.</li>
+              <li>Keep the design system honest—if it's in the guide, it works on the site.</li>
             </ul>
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-              It’s a workflow tool, a documentation hub, and a proof of my approach to design systems: practical, iterative, and always evolving.
+              It's a workflow tool, a documentation hub, and a proof of my approach to design systems: practical, iterative, and always evolving.
             </p>
+          </div>
+          {/* Screenshot/visual */}
+          <div className="flex-1 flex items-center justify-center">
+            <Image src="/images/styleguide-code.png" alt="Style Guide Screenshot" width={700} height={350} className="rounded-lg border shadow-lg w-full max-w-full" />
           </div>
         </div>
         {/* Style Guide + Project Rules Blurb */}
@@ -287,23 +287,128 @@ export default function CursorCaseStudyPage() {
           This approach let me move fast without sacrificing polish. Every new solution that made it into the site was tested in a real context, not just in isolation. The result is a portfolio that’s not just a showcase of finished work, but a living record of my process, decision-making, and ability to adapt as I go.
         </p>
         {/* Mode Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-8">
           <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl flex flex-col items-center">
             <span className="text-3xl mb-2">⚡️</span>
-            <h4 className="font-semibold mb-1">Get Shit Done Mode</h4>
+            <h4 className="font-semibold mb-1">Get Sh*t Done Mode</h4>
             <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Rapid deployment using pre-approved components.</p>
           </div>
+          <div className="text-3xl text-gray-400 dark:text-gray-600">↔️</div>
           <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl flex flex-col items-center">
             <span className="text-3xl mb-2">🧪</span>
             <h4 className="font-semibold mb-1">Experimentation Mode</h4>
             <p className="text-sm text-gray-600 dark:text-gray-300 text-center">Try new patterns, document what works, evolve the style guide.</p>
           </div>
         </div>
-        {/* Workflow Diagram Placeholder */}
-        <div className="w-full my-8">
-          <Image src="/images/workflow-diagram-placeholder.jpg" alt="Workflow Diagram" width={800} height={300} className="rounded-lg border mx-auto" />
-          <p className="text-sm text-center text-gray-500 mt-2">How I move between workflow modes</p>
+      </motion.section>
+
+      {/* Image Workflow */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.45 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Image Workflow & Asset Management</h3>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+          A key part of building this portfolio was establishing a solid image workflow that would scale with the project. I needed a system that was fast to use during development, optimized for production, and maintainable as the site grew. The result was a workflow that balances speed with quality.
+        </p>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+          This wasn't just about storing images—it was about creating a system that supported rapid iteration, maintained performance, and kept the codebase clean. Every decision was made to support the way I actually work: moving fast, experimenting safely, and shipping quality results.
+        </p>
+        
+        {/* Image Workflow Visual */}
+        <div className="flex flex-col md:flex-row gap-8 items-stretch mb-8">
+          <div className="flex-1 flex flex-col justify-center">
+            <h4 className="font-semibold text-xl mb-2">Image Workflow in Practice</h4>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-2">
+              The workflow wasn't just theoretical—it was built into the codebase itself. Every image followed the same patterns: organized storage, consistent implementation, and performance optimization built right into the components.
+            </p>
+            <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+              This systematic approach meant I could focus on building features rather than managing assets, while still maintaining professional quality and performance standards.
+            </p>
+          </div>
+          <div className="flex-1 flex items-center justify-center">
+            <Image src="/images/imageworkflow-code.png" alt="Image Workflow Code Example" width={700} height={350} className="rounded-lg border shadow-lg w-full max-w-full" />
+          </div>
         </div>
+        
+        {/* Workflow Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl">
+            <h4 className="font-semibold mb-3 text-accent-light dark:text-accent-dark">Storage & Organization</h4>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>• Centralized in <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">/public/images/</code></li>
+              <li>• Logical subdirectories by project type</li>
+              <li>• Descriptive naming: <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">styleguide-code.png</code></li>
+              <li>• Version controlled alongside code</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl">
+            <h4 className="font-semibold mb-3 text-accent-light dark:text-accent-dark">Implementation Standards</h4>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>• Next.js Image component for optimization</li>
+              <li>• Responsive sizing with proper aspect ratios</li>
+              <li>• Consistent styling: borders, shadows, radius</li>
+              <li>• Alt text for accessibility</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl">
+            <h4 className="font-semibold mb-3 text-accent-light dark:text-accent-dark">Smart CDN Integration</h4>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>• Small images (&lt; 1MB): served from Vercel</li>
+              <li>• Large images (&gt; 1MB): uploaded to hosting.com CDN</li>
+              <li>• Automated routing via <code className="bg-gray-100 dark:bg-gray-800 px-1 rounded">cdnUtils.ts</code></li>
+              <li>• Seamless fallback system</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-900 border rounded-xl">
+            <h4 className="font-semibold mb-3 text-accent-light dark:text-accent-dark">Performance & Optimization</h4>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li>• Automatic compression and format conversion</li>
+              <li>• Lazy loading built into Next.js Image</li>
+              <li>• Responsive images for all screen sizes</li>
+              <li>• Optimized for Core Web Vitals</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CDN Workflow Callout */}
+        <div className="p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl my-8">
+          <h4 className="font-semibold text-lg mb-3 text-green-900 dark:text-green-200">Smart Image Routing</h4>
+          <p className="text-[1.125rem] text-green-900/80 dark:text-green-200/80 mb-3">
+            The system automatically routes images based on size: small images stay on Vercel for speed, while larger images get uploaded to my hosting.com CDN to keep deployment sizes manageable. The <code className="bg-green-100 dark:bg-green-800 px-1 rounded">getImageUrl()</code> function handles all the routing logic seamlessly.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong>Small Images (&lt; 1MB):</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>Stored in <code className="bg-green-100 dark:bg-green-800 px-1 rounded">/public/images/</code></li>
+                <li>Served directly from Vercel</li>
+                <li>Fast local development</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Large Images (&gt; 1MB):</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>Uploaded to hosting.com CDN</li>
+                <li>Added to <code className="bg-green-100 dark:bg-green-800 px-1 rounded">LARGE_IMAGES</code> array</li>
+                <li>Removed from local storage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Callout Box */}
+        <div className="p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
+          <p className="text-lg font-serif italic text-blue-900 dark:text-blue-200">
+            "A good image workflow isn't just about storing files—it's about creating a system that supports how you actually work."
+          </p>
+        </div>
+
+        <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+          This workflow ensured that images were properly organized, optimized, and maintainable throughout the project lifecycle. It supported both development speed and production quality, making it easy to iterate quickly while maintaining professional standards. The result was a system that scaled with the project and kept the codebase clean and performant.
+        </p>
       </motion.section>
 
       {/* Innovations & Solutions */}

@@ -175,20 +175,6 @@ export default function StyleGuideMiniPreview() {
                     </p>
                   </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <h3 className="text-lg font-semibold mb-2 text-center tracking-wide uppercase text-accent-light">Layout Pattern</h3>
-                  <div className="max-w-xs w-full">
-                    <ScrollableImageContainer
-                      src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
-                      alt="Mini Scrollable Demo"
-                      caption="Mini scrollable image demo"
-                      frameType="browser"
-                      height="small"
-                      backgroundColor="white"
-                      url="example.com/demo"
-                    />
-                  </div>
-                </div>
               </section>
               {/* Code Snippet */}
               <section className="mb-2">
@@ -347,20 +333,6 @@ export default function StyleGuideMiniPreview() {
                     <p className="text-text-dark/80 text-xs">
                       This is a sample card pattern. Use for features, highlights, or structured info.
                     </p>
-                  </div>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center">
-                  <h3 className="text-lg font-semibold mb-2 text-center tracking-wide uppercase text-accent-dark">Layout Pattern</h3>
-                  <div className="max-w-xs w-full">
-                    <ScrollableImageContainer
-                      src="/images/Ten-Spot-The-ultimate-workforce-engagement-platform-.png"
-                      alt="Mini Scrollable Demo"
-                      caption="Mini scrollable image demo"
-                      frameType="browser"
-                      height="small"
-                      backgroundColor="white"
-                      url="example.com/demo"
-                    />
                   </div>
                 </div>
               </section>
