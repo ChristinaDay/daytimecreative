@@ -386,6 +386,7 @@ export default function CursorCaseStudyPage() {
                 <li>Stored in <code className="bg-green-100 dark:bg-green-800 px-1 rounded">/public/images/</code></li>
                 <li>Served directly from Vercel</li>
                 <li>Fast local development</li>
+                <li>Cursor manages uploads via Vercel</li>
               </ul>
             </div>
             <div>
@@ -394,6 +395,35 @@ export default function CursorCaseStudyPage() {
                 <li>Uploaded to hosting.com CDN</li>
                 <li>Added to <code className="bg-green-100 dark:bg-green-800 px-1 rounded">LARGE_IMAGES</code> array</li>
                 <li>Removed from local storage</li>
+                <li>Cursor manages uploads via FTP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Cursor Integration Callout */}
+        <div className="p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl my-8">
+          <h4 className="font-semibold text-lg mb-3 text-blue-900 dark:text-blue-200">Cursor's Role in the Workflow</h4>
+          <p className="text-[1.125rem] text-blue-900/80 dark:text-blue-200/80 mb-3">
+            Cursor isn't just my code editor—it's an active participant in this image workflow. It automatically manages uploads based on image size, using Vercel's deployment pipeline for smaller assets and FTP for larger files that need to be sent to external servers.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong>Vercel Integration:</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>Small images deployed with code</li>
+                <li>Automatic optimization</li>
+                <li>Instant previews</li>
+                <li>Zero configuration</li>
+              </ul>
+            </div>
+            <div>
+              <strong>FTP Automation:</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>Large images sent to external CDN</li>
+                <li>Automated upload scripts</li>
+                <li>Keeps deployment sizes small</li>
+                <li>Maintains performance</li>
               </ul>
             </div>
           </div>
