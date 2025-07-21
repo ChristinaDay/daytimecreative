@@ -6,6 +6,7 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import Image from 'next/image';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
 import Link from 'next/link';
+import UpdriftHeroPreview from '@/components/UpdriftHeroPreview';
 
 export default function UpdriftCaseStudyPage() {
   return (
@@ -39,32 +40,28 @@ export default function UpdriftCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mb-16 w-full"
       >
-        <div className="relative w-full h-96 md:h-[500px] rounded-xl border-2 border-gray-300 dark:border-gray-600 overflow-hidden bg-gray-50 dark:bg-gray-900 shadow-lg">
-          <Image
-            src="/images/updrift-logged-in-desktop.png"
-            alt="Updrift.me logged-in dashboard screenshot"
-            fill
-            className="object-contain"
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-          <div className="absolute bottom-6 left-6 text-white">
+        <div className="relative w-full h-[600px] md:h-[700px] rounded-xl border-2 border-gray-300 dark:border-gray-600 overflow-hidden shadow-lg">
+          <UpdriftHeroPreview />
+          <div className="absolute bottom-6 left-6 text-white z-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 drop-shadow-lg">
               Updrift.me
             </h2>
             <p className="text-sm md:text-base opacity-90 drop-shadow-lg">
-              Modern web application built with AI assistance
+              Modern web application with dynamic hero effects
             </p>
           </div>
         </div>
       </motion.div>
 
+
+
+
+
       {/* Project Overview */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.15 }}
         className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Project Overview</h3>
@@ -224,6 +221,8 @@ export default function UpdriftCaseStudyPage() {
           </div>
         </div>
       </motion.section>
+
+
 
       {/* Development Process */}
       <motion.section
