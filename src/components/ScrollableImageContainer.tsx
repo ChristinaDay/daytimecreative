@@ -8,7 +8,7 @@ interface ScrollableImageContainerProps {
   alt: string;
   caption?: string;
   frameType?: 'browser' | 'laptop' | 'phone' | 'viewport' | 'none';
-  height?: 'small' | 'medium' | 'large' | 'phone' | 'viewport';
+  height?: 'small' | 'medium' | 'large' | 'phone' | 'viewport' | 'full';
   backgroundColor?: 'white' | 'transparent';
   className?: string;
   url?: string;
@@ -29,7 +29,8 @@ export function ScrollableImageContainer({
     medium: 'h-96',
     large: 'h-[32rem]',
     phone: 'h-[44rem]',
-    viewport: 'h-[60vh]'
+    viewport: 'h-[60vh]',
+    full: 'h-[100vh]', // NEW: full viewport height
   };
 
   const backgroundClasses = backgroundColor === 'white' ? 'bg-white' : 'bg-transparent';
@@ -111,8 +112,8 @@ export function ScrollableImageContainer({
         <img 
           src={src} 
           alt={alt} 
-          className="w-full h-auto" 
-          style={{ minHeight: '120%', width: '100%', height: 'auto' }}
+          className="mx-auto block h-auto"
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         
         {/* Scroll indicator overlay - appears on hover and disappears on scroll */}

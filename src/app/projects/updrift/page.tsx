@@ -7,10 +7,11 @@ import Image from 'next/image';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
 import Link from 'next/link';
 import UpdriftHeroPreview from '@/components/UpdriftHeroPreview';
+import ImageComparisonSlider from '@/components/ui/ImageComparisonSlider';
 
 export default function UpdriftCaseStudyPage() {
   return (
-    <div className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
+    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -69,14 +70,15 @@ export default function UpdriftCaseStudyPage() {
           The saved jobs functionality allows users to bookmark and organize job opportunities they're interested in. This feature demonstrates the application's user-centric design and practical utility.
         </p>
         
-        <div className="relative w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 overflow-hidden shadow-lg">
-          <Image
+        <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
+          <ScrollableImageContainer
             src="/images/UpDrift -saved-jobs.png"
             alt="Updrift saved jobs interface"
-            width={1200}
-            height={800}
-            className="w-full h-auto"
-            priority
+            caption="Saved jobs functionality with clean, intuitive interface"
+            frameType="browser"
+            height="full"
+            url="updrift.me/saved-jobs"
+            className="w-full"
           />
         </div>
         
@@ -94,6 +96,30 @@ export default function UpdriftCaseStudyPage() {
               <li>Seamless user experience</li>
             </ul>
           </div>
+        </div>
+      </motion.section>
+
+      {/* Search Jobs Page */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.18 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Search Jobs Page</h3>
+        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
+          The job search page provides a streamlined interface for discovering and filtering open positions. Users can search, filter, and explore job listings with ease.
+        </p>
+        <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
+          <ScrollableImageContainer
+            src="/images/updrift-jobsearch-page.png"
+            alt="Updrift job search interface"
+            caption="Job search interface with advanced filtering and clean results layout"
+            frameType="browser"
+            height="full"
+            url="updrift.me/jobs"
+            className="w-full"
+          />
         </div>
       </motion.section>
 
@@ -126,29 +152,34 @@ export default function UpdriftCaseStudyPage() {
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Platform Showcase</h3>
         
-        {/* Public vs Logged-in Experience */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Public Landing Page</h4>
+        {/* Public Landing Page */}
+        <div className="mb-16">
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Public Landing Page</h4>
+          <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
               src="/images/updrift-full-page.png"
               alt="Updrift.me public homepage - full page view"
               caption="Clean, modern homepage designed to convert visitors into users"
               frameType="browser"
-              height="large"
+              height="full"
               url="updrift.me"
+              className="w-full"
             />
           </div>
-          
-          <div>
-            <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Authenticated Dashboard</h4>
+        </div>
+
+        {/* Authenticated Dashboard */}
+        <div className="mb-16">
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Authenticated Dashboard</h4>
+          <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
               src="/images/updrift-logged-in-desktop.png"
               alt="Updrift.me logged-in dashboard - full page view"
               caption="Feature-rich dashboard with personalized user experience"
               frameType="browser"
-              height="large"
+              height="full"
               url="updrift.me/dashboard"
+              className="w-full"
             />
           </div>
         </div>
@@ -181,36 +212,6 @@ export default function UpdriftCaseStudyPage() {
                 caption="Mobile-first responsive design"
                 frameType="phone"
                 height="phone"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Detailed Platform Views */}
-        <div className="mb-12">
-          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Detailed Platform Views</h4>
-          <div className="space-y-8">
-            <div>
-              <h5 className="font-medium mb-4 text-text-light dark:text-text-dark">Complete Public Site Experience</h5>
-              <ScrollableImageContainer
-                src="/images/updrift-full-page.png"
-                alt="Updrift.me complete public site - scrollable full page view"
-                caption="Full public site with comprehensive landing page content"
-                frameType="browser"
-                height="large"
-                url="updrift.me"
-              />
-            </div>
-            
-            <div>
-              <h5 className="font-medium mb-4 text-text-light dark:text-text-dark">Complete Dashboard Experience</h5>
-              <ScrollableImageContainer
-                src="/images/updrift-logged-in-desktop.png"
-                alt="Updrift.me complete dashboard - scrollable full page view"
-                caption="Full authenticated dashboard with all features and navigation"
-                frameType="browser"
-                height="large"
-                url="updrift.me/dashboard"
               />
             </div>
           </div>
@@ -303,6 +304,17 @@ export default function UpdriftCaseStudyPage() {
               Leveraged Cursor's AI capabilities to accelerate development. Used MCP tools for real-time 
               documentation access, automated testing, and intelligent code generation.
             </p>
+            <div className="my-6">
+              <ScrollableImageContainer
+                src="/images/updrift-cursor-searchpage-code.png"
+                alt="Cursor IDE - Updrift search page code"
+                caption="Building the Updrift job search UI in Cursor IDE, with live code and preview."
+                frameType="none"
+                height="full"
+                url="updrift.me/jobs (dev view)"
+                className="w-full"
+              />
+            </div>
             <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 space-y-2">
               <li>Built responsive UI components with React and Tailwind</li>
               <li>Implemented TypeScript for type safety and better DX</li>
@@ -448,6 +460,40 @@ export default function UpdriftCaseStudyPage() {
             </div>
           </div>
         </div>
+      </motion.section>
+
+      {/* Style Guide Development */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.55 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Style Guide Development</h3>
+        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
+          The Updrift style guide was built as a living document—code and documentation evolving together. Here’s how the workflow looks in practice:
+        </p>
+        <ScrollableImageContainer
+          src="/images/updrift-styleguide-cursorcode.png"
+          alt="Updrift style guide code in Cursor IDE"
+          caption="Editing the Updrift style guide code in Cursor IDE."
+          frameType="none"
+          height="full"
+          url="updrift.me/style-guide (dev view)"
+          className="w-full mb-8"
+        />
+        <p className="text-lg text-text-light/70 dark:text-text-dark/70 mb-8 text-center">
+          This code is rendered live as the style guide page below.
+        </p>
+        <ScrollableImageContainer
+          src="/images/updrift-styleguide-page.png"
+          alt="Updrift style guide page screenshot"
+          caption="The resulting live style guide page."
+          frameType="none"
+          height="full"
+          url="updrift.me/style-guide"
+          className="w-full"
+        />
       </motion.section>
 
       {/* Key Learnings */}
@@ -614,6 +660,6 @@ export default function UpdriftCaseStudyPage() {
           </div>
         </div>
       </motion.section>
-    </div>
+    </article>
   );
 } 
