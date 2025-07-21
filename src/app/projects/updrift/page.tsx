@@ -57,11 +57,51 @@ export default function UpdriftCaseStudyPage() {
 
 
 
-      {/* Project Overview */}
+      {/* Saved Jobs Feature */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Saved Jobs Feature</h3>
+        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
+          The saved jobs functionality allows users to bookmark and organize job opportunities they're interested in. This feature demonstrates the application's user-centric design and practical utility.
+        </p>
+        
+        <div className="relative w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 overflow-hidden shadow-lg">
+          <Image
+            src="/images/UpDrift -saved-jobs.png"
+            alt="Updrift saved jobs interface"
+            width={1200}
+            height={800}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+        
+        <div className="mt-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
+          <h4 className="text-lg font-semibold mb-4 text-blue-900 dark:text-blue-200">Key Features</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900/80 dark:text-blue-200/80">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Easy job bookmarking</li>
+              <li>Organized job management</li>
+              <li>Clean, intuitive interface</li>
+            </ul>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Quick access to saved positions</li>
+              <li>Responsive design</li>
+              <li>Seamless user experience</li>
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Project Overview */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Project Overview</h3>
