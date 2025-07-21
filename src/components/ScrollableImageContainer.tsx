@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 
 interface ScrollableImageContainerProps {
   src: string;
@@ -35,32 +35,107 @@ export function ScrollableImageContainer({
   const backgroundClasses = backgroundColor === 'white' ? 'bg-white' : 'bg-transparent';
   const outerBackgroundClasses = backgroundColor === 'white' ? 'bg-gray-100 dark:bg-gray-800' : 'bg-transparent';
 
-  const containerContent = (
-    <div className={`${backgroundClasses} ${heightClasses[height]} overflow-y-auto border-x border-b border-gray-300 dark:border-gray-600 rounded-b-lg relative group`}>
-      <img 
-        src={src} 
-        alt={alt} 
-        className="w-full h-auto" 
-      />
-      
-      {/* Scroll indicator overlay - appears on hover */}
-      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
-          <div className="animate-bounce">
-            <svg 
-              className="w-4 h-4 text-gray-700 dark:text-gray-300" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
+  const ScrollableContainer = () => {
+    const [showOverlay, setShowOverlay] = useState(true);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const handleScroll = () => {
+        setShowOverlay(false);
+      };
+
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+      <div 
+        ref={containerRef}
+        className={`${backgroundClasses} ${heightClasses[height]} overflow-y-auto border-x border-b border-gray-300 dark:border-gray-600 rounded-b-lg relative group`}
+      >
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-auto" 
+          style={{ minHeight: '120%', width: '100%', height: 'auto' }}
+        />
+        
+        {/* Scroll indicator overlay - appears on hover and disappears on scroll */}
+        <div className={`absolute inset-0 bg-black/50 transition-opacity duration-300 flex items-center justify-center pointer-events-none ${
+          showOverlay ? 'opacity-0 group-hover:opacity-100' : 'opacity-0'
+        }`}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
+            <div className="animate-bounce">
+              <svg 
+                className="w-4 h-4 text-gray-700 dark:text-gray-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
+
+  const containerContent = <ScrollableContainer />;
+
+  const NoFrameScrollableContainer = () => {
+    const [showOverlay, setShowOverlay] = useState(true);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const handleScroll = () => {
+        setShowOverlay(false);
+      };
+
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+      <div 
+        ref={containerRef}
+        className={`border border-gray-300 dark:border-gray-600 rounded-lg ${heightClasses[height]} overflow-y-auto relative group`}
+      >
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-auto" 
+          style={{ minHeight: '120%', width: '100%', height: 'auto' }}
+        />
+        
+        {/* Scroll indicator overlay - appears on hover and disappears on scroll */}
+        <div className={`absolute inset-0 bg-black/50 transition-opacity duration-300 flex items-center justify-center pointer-events-none ${
+          showOverlay ? 'opacity-0 group-hover:opacity-100' : 'opacity-0'
+        }`}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
+            <div className="animate-bounce">
+              <svg 
+                className="w-4 h-4 text-gray-700 dark:text-gray-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   const browserFrame = (
     <>
@@ -79,6 +154,53 @@ export function ScrollableImageContainer({
     </>
   );
 
+  const PhoneScrollableContainer = () => {
+    const [showOverlay, setShowOverlay] = useState(true);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const handleScroll = () => {
+        setShowOverlay(false);
+      };
+
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+      <div className={`${backgroundClasses} overflow-y-auto relative group`} style={{ height: '38rem' }}>
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-auto" 
+          style={{ minHeight: '120%', width: '100%', height: 'auto' }}
+        />
+        
+        {/* Scroll indicator overlay - appears on hover and disappears on scroll */}
+        <div className={`absolute inset-0 bg-black/50 transition-opacity duration-300 flex items-center justify-center pointer-events-none ${
+          showOverlay ? 'opacity-0 group-hover:opacity-100' : 'opacity-0'
+        }`}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
+            <div className="animate-bounce">
+              <svg 
+                className="w-4 h-4 text-gray-700 dark:text-gray-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const phoneFrame = (
     <div className="relative mx-auto w-80 max-w-sm">
       {/* Phone outer frame */}
@@ -91,30 +213,7 @@ export function ScrollableImageContainer({
           </div>
           
           {/* Scrollable content area */}
-          <div className={`${backgroundClasses} overflow-y-auto relative group`} style={{ height: '38rem' }}>
-            <img 
-              src={src} 
-              alt={alt} 
-              className="w-full h-auto object-cover object-top" 
-            />
-            
-            {/* Scroll indicator overlay */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
-                <div className="animate-bounce">
-                  <svg 
-                    className="w-4 h-4 text-gray-700 dark:text-gray-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PhoneScrollableContainer />
           
           {/* Home indicator */}
           <div className="bg-black h-6 flex items-center justify-center">
@@ -266,30 +365,7 @@ export function ScrollableImageContainer({
         </div>
       ) : (
         <div className="relative">
-          <div className={`border border-gray-300 dark:border-gray-600 rounded-lg ${heightClasses[height]} overflow-y-auto relative group`}>
-            <img 
-              src={src} 
-              alt={alt} 
-              className="w-full h-auto" 
-            />
-            
-            {/* Scroll indicator overlay - appears on hover */}
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div className="bg-white dark:bg-gray-800 rounded-lg px-4 py-3 shadow-lg flex items-center space-x-2">
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Scroll to explore</span>
-                <div className="animate-bounce">
-                  <svg 
-                    className="w-4 h-4 text-gray-700 dark:text-gray-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+          <NoFrameScrollableContainer />
           {caption && (
             <p className="text-center mt-4 text-sm text-text-light/60 dark:text-text-dark/60">
               {caption}

@@ -23,6 +23,9 @@ Welcome to the documentation hub for your portfolio site! This directory contain
 - **[Scripts Reference](scripts.md)** - All available npm scripts and their usage
 - **[Environment Setup](environment.md)** - Local development setup
 
+### 📸 **Screenshots & Automation**
+- **[Screenshot Tools](screenshots.md)** - Taking screenshots of websites for case studies
+
 ## 🔧 Quick Commands
 
 ```bash
@@ -37,6 +40,9 @@ npm run check-size
 
 # Find large images
 npm run check-large-images
+
+# Take screenshots of websites
+npm run screenshot-updrift
 
 # View this documentation
 npm run docs

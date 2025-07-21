@@ -2,6 +2,28 @@ import { ProjectData } from '@/components/projects/ProjectCard';
 
 export const projectsData: ProjectData[] = [
   {
+    title: 'Updrift.me - AI-Assisted Development',
+    description: 'Modern web application built entirely using Cursor IDE with AI assistance, demonstrating the future of software development with accelerated workflows and high-quality results.',
+    designerDeveloperDescription: 'Built a complete web application using Next.js, TypeScript, and Tailwind CSS with AI-assisted development through Cursor IDE. Leveraged MCP tools for real-time documentation access, automated testing, and intelligent code generation. Implemented modern CI/CD practices and performance optimization.',
+    image: '/images/updrift-me-preview.png',
+    link: '/projects/updrift',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE'],
+    designerDeveloperTags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE', 'MCP Tools', 'CI/CD'],
+    year: '2025',
+    bgColor: 'from-cyan-500/15 via-3% via-transparent via-97% to-blue-600/12 dark:from-cyan-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10',
+    designHighlights: [
+      'Built complete web application with AI-assisted development workflow',
+      'Demonstrated 3x faster development speed with Cursor IDE',
+      'Implemented modern UI/UX with responsive design patterns'
+    ],
+    technicalHighlights: [
+      'Used Cursor IDE with MCP tools for accelerated development',
+      'Implemented TypeScript for type safety and better developer experience',
+      'Set up automated CI/CD pipeline with modern deployment practices',
+      'Optimized performance and accessibility for production deployment'
+    ]
+  },
+  {
     title: 'Portfolio 2025 - Cursor Case Study',
     description: 'Modern portfolio website showcasing cutting-edge web development techniques with atmospheric background animations, interactive components, and sophisticated design systems.',
     designerDeveloperDescription: 'Designed and developed a modern portfolio website using Next.js, React, and advanced CSS techniques. Created atmospheric background animations with parallax scrolling, interactive starfield animations, and sophisticated gradient effects. Implemented responsive design with dark/light mode support and performance optimizations.',
