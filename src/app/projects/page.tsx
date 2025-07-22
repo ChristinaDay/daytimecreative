@@ -67,7 +67,7 @@ export default function ProjectsPage() {
               I'm excited to take on new challenges and collaborate with teams who value user-centered design.
             </p>
             <Link 
-              href="mailto:christina@christinamday.com" 
+              href="mailto:christinamday@gmail.com" 
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-sm"
             >
               Start a Conversation
