@@ -118,75 +118,148 @@ export default function UpdriftCaseStudyPage() {
           </p>
         </div>
 
-        {/* Tech Stack Grid */}
-        <div className="mt-8">
-          <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
-          <div className="flex justify-center">
-            <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Next.js */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🟦</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Next.js</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
-                  </p>
+        {/* Tech Stack Grid + AI-Assisted Development Tools Side by Side */}
+        <div className="mt-8 flex flex-col md:flex-row gap-8 items-stretch h-full">
+          {/* Tech Stack Grid (Left) */}
+          <div className="md:w-1/2 w-full h-full">
+            <div className="w-full h-full min-h-[520px] max-h-[600px] bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
+              <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
+              <div className="flex justify-center">
+                <div className="w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+                    {/* Next.js */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/nextjs-logo.png" alt="Next.js" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Next.js</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
+                      </p>
+                    </div>
+                    {/* React */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/react-logo.png" alt="React" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">React</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
+                      </p>
+                    </div>
+                    {/* TypeScript */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/typescript-logo.svg" alt="TypeScript" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">TypeScript</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Type safety, better DX, and catching errors before they reach production.
+                      </p>
+                    </div>
+                    {/* Tailwind CSS */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/tailwind-logo.png" alt="Tailwind CSS" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Tailwind CSS</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Utility-first, design in markup, iterate fast, and keep everything consistent.
+                      </p>
+                    </div>
+                    {/* Framer Motion */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/motion-logo.png" alt="Framer Motion" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Framer Motion</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Modern, smooth animation for React—declarative, powerful, and easy to use.
+                      </p>
+                    </div>
+                    {/* Vercel */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/vercel-triangle-black.svg" alt="Vercel" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Vercel</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                {/* React */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">⚛️</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">React</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
-                  </p>
-                </div>
-                {/* TypeScript */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🟦</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">TypeScript</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    Type safety, better DX, and catching errors before they reach production.
-                  </p>
-                </div>
-                {/* Tailwind CSS */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🌬️</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Tailwind CSS</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    Utility-first, design in markup, iterate fast, and keep everything consistent.
-                  </p>
-                </div>
-                {/* Framer Motion */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🎞️</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Framer Motion</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    Modern, smooth animation for React—declarative, powerful, and easy to use.
-                  </p>
-                </div>
-                {/* Vercel */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">▲</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Vercel</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
-                  </p>
-                </div>
-                {/* MCP Tools */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🤖</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">MCP Tools</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    AI-assisted development with real-time documentation access and intelligent problem-solving.
-                  </p>
-                </div>
-                {/* Cursor IDE */}
-                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-                  <span className="text-3xl mb-2">🖱️</span>
-                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Cursor IDE</h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-300">
-                    AI-powered code editor that accelerates development and enables rapid iteration.
-                  </p>
+              </div>
+            </div>
+          </div>
+          {/* AI & Productivity Extensions (Right) - duplicate of Tech Stack for now */}
+          <div className="md:w-1/2 w-full h-full">
+            <div className="w-full h-full min-h-[520px] max-h-[600px] bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
+              <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">AI & Productivity Extensions</h4>
+              <div className="flex justify-center">
+                <div className="w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+                    {/* Puppeteer */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/puppeteer-logo.png" alt="Puppeteer" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Puppeteer</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Automates browser testing and screenshots for UI validation.
+                      </p>
+                    </div>
+                    {/* Prettier */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/prettier-logo.png" alt="Prettier" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Prettier</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Formats code automatically on save for consistency.
+                      </p>
+                    </div>
+                    {/* ESLint */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/ESLint-logo.png" alt="ESLint" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">ESLint</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Real-time linting and error checking for code quality.
+                      </p>
+                    </div>
+                    {/* GitLens */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/gitlens-logo.png" alt="GitLens" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">GitLens</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Shows code authorship and history for collaboration.
+                      </p>
+                    </div>
+                    {/* Context7 */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/context7-logo.png" alt="Context7" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Context7</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Instantly fetches docs for any library or framework.
+                      </p>
+                    </div>
+                    {/* Sequential Thinking */}
+                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
+                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
+                        <img src="/images/sequentialthinking-logo.png" alt="Sequential Thinking" className="w-6 h-6 object-contain" />
+                      </div>
+                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Sequential Thinking</h4>
+                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Breaks down complex problems into clear steps.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
