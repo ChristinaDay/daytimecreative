@@ -59,3 +59,12 @@
 - Add more interactive elements
 - Implement project filtering/sorting
 - Add loading states and transitions 
+
+## June 2024 - Homepage & Layout Refinement
+
+- Major homepage redesign: "projects-first" layout with projects grid featured after a compact hero section
+- Hero section: cycling text, fixed spacing, and stable layout regardless of text length
+- Ensured hero buttons move with the headline, but all content below remains anchored
+- Footer: fixed double-footer bug, now always appears at the bottom and is never constrained by content containers
+- Improved mobile spacing and responsiveness for hero and section transitions
+- Deployment: streamlined both FTP and Vercel deploys, with clear workflow for pushing to production and preview 
