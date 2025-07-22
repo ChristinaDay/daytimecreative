@@ -8,28 +8,8 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 import { FlexibleHeroText, FlexibleBioText, FlexibleQuickStats } from '@/components/FlexibleAbout';
 import { useEffect, useRef } from 'react';
-
-const caseStudies = [
-  {
-    title: 'HackerDAO',
-    description:
-      'A decentralized autonomous organization platform for developers and hackers to collaborate on Web3 projects.',
-    link: '/projects/hackerdao',
-  },
-  {
-    title: 'Property Intelligence Platform',
-    description:
-      'A sophisticated system leveraging AI and predictive analytics to transform property data into actionable insights for insurance underwriting.',
-    link: '/projects/propertyintelligence',
-  },
-  {
-    title: 'Customizable UI',
-    description:
-      'Designing a modular, customizable dashboard system for Betterview\'s PartnerHub integration, empowering users to personalize their data visualization experience.',
-    link: '/projects/customizableui',
-  },
-  // Add more case studies as needed
-];
+import { allProjects } from '@/data/projects';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   // Parallax refs
@@ -259,459 +239,189 @@ export default function Home() {
           }}
         />
       </div>
-      
-      {/* Hero area */}
-      <header className="relative z-10 w-full min-h-screen flex flex-col justify-center items-start px-4 md:px-8">
-        {/* Large headline */}
-        <div className="flex flex-col items-start justify-center flex-1 pt-24 pb-16 md:pt-32 md:pb-24">
-          <FlexibleHeroText />
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-            className="flex flex-col sm:flex-row gap-4 mt-4"
-          >
-            <Link 
-              href="#work" 
-              className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl"
-            >
-              View My Work
-            </Link>
-            <Link 
-              href="#about" 
-              className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center hover:bg-accent-light/5 dark:hover:bg-accent-dark/5"
-            >
-              About Me
-            </Link>
-          </motion.div>
-          
 
-        </div>
-        
-        {/* Subtle scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block"
-        >
-          <div className="flex flex-col items-center text-text-light/40 dark:text-text-dark/40">
-            <span className="text-sm font-medium mb-2">Scroll to explore</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-6 h-10 border-2 border-current rounded-full flex justify-center"
-            >
+      {/* Main content and footer layout */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Hero Area - isolated container */}
+        <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 md:px-8 bg-transparent">
+          <div className="flex flex-col items-start justify-center flex-1 pt-40 pb-8 md:pt-56 md:pb-12">
+            <FlexibleHeroText>
               <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="w-1 h-3 bg-current rounded-full mt-2"
-              />
-            </motion.div>
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+                className="flex flex-col sm:flex-row gap-4 mt-6"
+              >
+                <Link 
+                  href="#projects" 
+                  className="px-6 py-3 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl"
+                >
+                  View Projects
+                </Link>
+                <Link 
+                  href="#about" 
+                  className="px-6 py-3 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center hover:bg-accent-light/5 dark:hover:bg-accent-dark/5"
+                >
+                  About Me
+                </Link>
+              </motion.div>
+            </FlexibleHeroText>
           </div>
-        </motion.div>
-      </header>
+        </div>
 
-      {/* Bio Section */}
-      <section id="about" className="w-full py-20 px-4 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8 }}
-            className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-3xl p-12 md:p-16"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              {/* Left Column: Portrait + Bio + Tools */}
-              <div className="space-y-8">
-                {/* Portrait & Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-                  <div className="flex justify-center sm:justify-start flex-shrink-0">
+        {/* Rest of homepage content - does not move with hero */}
+        <main className="flex-1 flex flex-col">
+          {/* Projects-First Section */}
+          <section id="projects" className="w-full py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8 }}
+                className="text-center mt-16 md:mt-24 mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4">
+                  Selected Work
+                </h2>
+                <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto">
+                  Design and development projects showcasing technical implementation and systematic thinking
+                </p>
+              </motion.div>
+
+              {/* Projects Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {allProjects.slice(0, 6).map((project, index) => (
+                  <motion.div
+                    key={project.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                  >
+                    <Link href={project.link} className="block group">
+                      <div className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-2xl p-6 h-full hover:bg-white/30 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-xl">
+                        <div className="aspect-video mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5">
+                          <img 
+                            src={project.image} 
+                            alt={project.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <h3 className="font-semibold text-lg text-text-light dark:text-text-dark mb-2 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm text-text-light/70 dark:text-text-dark/70 leading-relaxed mb-3">
+                          {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-1">
+                          {project.tags.slice(0, 3).map((tag) => (
+                            <span key={tag} className="px-2 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded text-xs font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* View All Projects Link */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8 }}
+                className="text-center"
+              >
+                <Link 
+                  href="/projects" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg font-semibold hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  View All Projects
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Compact About Section */}
+          <section id="about" className="w-full py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8 }}
+                className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-3xl p-8 md:p-12"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                  {/* Portrait */}
+                  <div className="flex justify-center md:justify-start">
                     <div className="relative">
                       <img 
                         src="/images/portrait.png" 
                         alt="Christina Day - Designer & Developer" 
-                        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white/20 dark:border-white/10 shadow-xl"
+                        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/20 dark:border-white/10 shadow-xl"
                       />
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-light/20 to-accent-light/5 dark:from-accent-dark/20 dark:to-accent-dark/5"></div>
                     </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                      A bit about me
+                  {/* Bio */}
+                  <div className="md:col-span-2 space-y-4">
+                    <h2 className="font-serif text-2xl md:text-3xl font-semibold text-text-light dark:text-text-dark">
+                      About Me
                     </h2>
-                  </div>
-                </div>
-                
-                {/* Bio Text */}
-                <FlexibleBioText />
-                
-
-              </div>
-              
-              {/* Right Column: Quick Stats */}
-              <div className="space-y-6">
-                <FlexibleQuickStats />
-                
-                <div className="pt-4 border-t border-white/15 dark:border-white/10">
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium text-text-light dark:text-text-dark">React Development</div>
-                    <div className="text-sm font-medium text-text-light dark:text-text-dark">Design Systems</div>
-                    <div className="text-sm font-medium text-text-light dark:text-text-dark">UI/UX Design</div>
-                  </div>
-                </div>
-                
-                {/* Tools & Skills */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-text-light dark:text-text-dark">Technical Stack</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Frontend</div>
-                      <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
-                        React, Next.js, TypeScript, Tailwind CSS, Framer Motion
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Design</div>
-                      <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
-                        Figma, Adobe Creative Suite, Design Systems, Prototyping
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-sm font-medium text-text-light/90 dark:text-text-dark/90 mb-1">Workflow</div>
-                      <div className="text-xs text-text-light/70 dark:text-text-dark/70 leading-relaxed">
-                        Git, Vercel, Linear, Component Libraries, API Integration
-                      </div>
+                    <FlexibleBioText />
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">React Development</span>
+                      <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">Design Systems</span>
+                      <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium">UI/UX Design</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </section>
 
-      {/* Integrated Work & Skills Section */}
-      <section id="work" className="w-full py-32 px-4 relative z-10">
-        <div className="max-w-7xl mx-auto space-y-40">
-          
-          {/* Skill 1: Brand Design & Illustration */}
-            <motion.div
+          {/* Contact CTA */}
+          <motion.section
             initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-              {/* Content Column */}
-              <div className="lg:col-span-5 space-y-8">
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">01 — Brand & Illustration</span>
-                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                      I create brand identities that feel authentic and memorable
-              </h2>
-                  </div>
-                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    I created HackerDAO's complete visual identity—from logo to custom illustrations—building a brand that helps Web3 developers feel like they belong to something bigger.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Brand Strategy</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Logo Design</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Custom Illustration</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Visual Systems</span>
-                </div>
-
-                <Link href="/projects/hackerdao" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
-                  View HackerDAO Case Study 
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-              
-              {/* Image Column */}
-              <div className="lg:col-span-7">
-                <Link href="/projects/hackerdao" className="block">
-                  <div className="relative group cursor-pointer">
-                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                      <img 
-                        src="/images/hackerdao-illustration-hero.png" 
-                        alt="HackerDAO brand illustration showing collaborative Web3 development" 
-                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                      />
-                    </div>
-                    {/* Subtle glow effect */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            </motion.div>
-            
-                    {/* Skill 2: Design Systems & Development */}
-            <motion.div
-            initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-              {/* Image Column */}
-              <div className="lg:col-span-7 order-2 lg:order-1">
-                <Link href="/projects/zerocater" className="block">
-                  <div className="relative group cursor-pointer">
-                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                      <img 
-                        src="/images/zerocater-ZeroCater_design-system.png" 
-                        alt="ZeroCater design system showing component library and code implementation" 
-                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                      />
-                    </div>
-                    {/* Subtle glow effect */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                  </div>
-                </Link>
-              </div>
-              
-              {/* Content Column */}
-              <div className="lg:col-span-5 order-1 lg:order-2 space-y-8">
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">02 — Design Systems & Code</span>
-                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                      I build design systems that scale—and I code them myself
-                    </h2>
-                  </div>
-                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    I didn't just design ZeroCater's component library—I built it myself with React, reducing development time by 60%. This hybrid approach creates design systems that actually work in production.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">React Development</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Design Systems</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Component Libraries</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">GitHub Collaboration</span>
-                </div>
-
-                <Link href="/projects/snacks-and-kitchens" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
-                  View ZeroCater Case Study 
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-            </motion.div>
-            
-                    {/* Skill 3: Complex Data & AI Product Design */}
-            <motion.div
-            initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-              {/* Content Column */}
-              <div className="lg:col-span-5 space-y-8">
-                <div className="space-y-6">
-                  <div className="space-y-2">
-                    <span className="text-sm uppercase tracking-wider text-accent-light/70 dark:text-accent-dark/70 font-medium">03 — Data & AI Interfaces</span>
-                    <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark leading-tight">
-                      I make complex data feel intuitive and actionable
-                    </h2>
-                  </div>
-                  <p className="text-xl text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                    I transformed overwhelming property data and AI insights into intuitive dashboards that reduced claim processing time by 40%. Good design makes complex workflows actually work for real people.
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Data Visualization</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">AI/ML Interfaces</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">User Research</span>
-                  <span className="px-3 py-1 bg-accent-light/10 dark:bg-accent-dark/10 text-accent-light dark:text-accent-dark rounded-full text-xs font-medium border border-accent-light/20 dark:border-accent-dark/20">Enterprise UX</span>
-                </div>
-
-                <Link href="/projects/propertyintelligence" className="inline-flex items-center gap-3 text-lg font-medium text-accent-light dark:text-accent-dark hover:text-accent-light/80 dark:hover:text-accent-dark/80 transition-all duration-300 group">
-                  View Property Intelligence Case Study 
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-              
-              {/* Image Column */}
-              <div className="lg:col-span-7">
-                <Link href="/projects/propertyintelligence" className="block">
-                  <div className="relative group cursor-pointer">
-                    <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5 backdrop-blur-xl border border-white/25 dark:border-white/15 p-12 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
-                      <img 
-                        src="/images/betterview-propertyintelligence2.png" 
-                        alt="Property Intelligence Platform dashboard showing AI-powered property insights" 
-                        className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-500" 
-                      />
-                    </div>
-                    {/* Subtle glow effect */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-light/20 to-accent-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            </motion.div>
-            
-          {/* Impact Metrics */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-            className="pt-16"
+            transition={{ duration: 0.8 }}
+            className="w-full pt-16 pb-24 text-center"
           >
-            <div className="text-center mb-16">
-              <h3 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark mb-4">
-                Measurable Impact
-              </h3>
-              <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto">
-                These approaches have driven real business results across different industries and company stages.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {/* Key Metrics */}
-              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3">
-                  60%
-                </div>
-                <h4 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
-                  Faster Development
-                </h4>
-                <p className="text-text-light/60 dark:text-text-dark/60 text-sm">
-                  Through design systems and component libraries
-                </p>
-              </div>
-
-              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3">
-                  +40%
-                </div>
-                <h4 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
-                  User Engagement
-                </h4>
-                <p className="text-text-light/60 dark:text-text-dark/60 text-sm">
-                  Through strategic UX improvements and research
-                </p>
-              </div>
-
-              <div className="p-6 bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/15 dark:border-white/10 rounded-2xl">
-                <div className="text-2xl md:text-3xl font-semibold text-accent-light dark:text-accent-dark mb-3">
-                  1000+
-                </div>
-                <h4 className="text-base font-medium text-text-light dark:text-text-dark mb-2">
-                  Companies Served
-                </h4>
-                <p className="text-text-light/60 dark:text-text-dark/60 text-sm">
-                  From startups to Fortune 500s
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8 max-w-2xl mx-auto">
-                Ready to see how this approach can work for your product?
+            <div className="px-4 md:px-12 lg:px-20">
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark mb-6">
+                Let's create something amazing together
+              </h2>
+              <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
+                Whether you need a complete product redesign, user research insights, or creative direction for your next big idea, I'd love to hear about your project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/projects" 
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  href="mailto:christina@christinamday.com" 
+                  className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
                 >
-                  View All Projects
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  Get In Touch
                 </Link>
                 <Link 
-                  href="mailto:christina@christinamday.com" 
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white dark:hover:text-gray-900 transition-all duration-300"
+                  href="/images/Resume-ChristinaDay2025.pdf" 
+                  target="_blank"
+                  className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
                 >
-                  Let's Work Together
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  Download Resume
                 </Link>
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-      
-
-
-
-      {/* Creative Process/Fab Lab Teaser */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-        className="w-full py-24 relative z-10 bg-surface-light/30 dark:bg-surface-dark/20"
-      >
-        <div className="text-center mb-16 px-4 md:px-12 lg:px-20">
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-4">
-            Beyond Digital
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
-            My hands-on approach to problem-solving extends beyond screens. I also work as an art fabricator, creating custom installations and bringing digital concepts into physical reality.
-          </p>
-          <Link 
-            href="/art-fabrication" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
-          >
-            Explore Fabrication Work
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-          </div>
-      </motion.section>
-
-      {/* Contact CTA */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-        className="w-full pt-24 pb-32 relative z-10 text-center"
-      >
-        <div className="px-4 md:px-12 lg:px-20">
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-text-light dark:text-text-dark mb-6">
-            Let's create something amazing together
-          </h2>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-8">
-            Whether you need a complete product redesign, user research insights, or creative direction for your next big idea, I'd love to hear about your project.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="mailto:christina@christinamday.com" 
-              className="px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300"
-            >
-              Get In Touch
-            </Link>
-            <Link 
-              href="/images/Resume-ChristinaDay2025.pdf" 
-              target="_blank"
-              className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
-            >
-              Download Resume
-            </Link>
-          </div>
-        </div>
-      </motion.section>
+          </motion.section>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
