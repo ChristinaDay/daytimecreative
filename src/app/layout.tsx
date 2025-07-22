@@ -22,7 +22,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${prata.variable} ${GeistMono.variable}`}>
       <body className="bg-transparent">
         <ThemeProvider attribute="class" defaultTheme="light">
-          <ConditionalNavbar />
           <ConditionalMainLayout>
             {children}
           </ConditionalMainLayout>
