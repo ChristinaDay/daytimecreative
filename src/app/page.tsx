@@ -420,7 +420,6 @@ export default function Home() {
             </div>
           </motion.section>
         </main>
-        <Footer />
       </div>
     </>
   );
