@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CyclingText from './ui/CyclingText';
 
-export function FlexibleHeroText() {
+export function FlexibleHeroText({ children }: { children?: React.ReactNode }) {
   const reliableWords = ['reliable', 'creative', 'gorgeous', 'innovative', 'scalable', 'beautiful'];
   const industryWords = ['B2B', 'computer vision', 'real estate tech', 'food tech', 'proptech', 'fintech'];
 
@@ -14,20 +14,23 @@ export function FlexibleHeroText() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
     >
-      <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-relaxed mb-6 md:mb-8">
-        I am an Oakland-based designer and developer building{' '}
-        <CyclingText 
-          words={reliableWords}
-          interval={8000}
-          fancyWords={['gorgeous']}
-        />{' '}
-        products for the modern{' '}
-        <CyclingText 
-          words={industryWords}
-          interval={9500}
-        />{' '}
-        marketplace and beyond.
-      </h1>
+      <div className="flex flex-col h-40 md:h-52 lg:h-60 justify-start">
+        <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-relaxed mb-6 md:mb-8">
+          I am an Oakland-based designer and developer building{' '}
+          <CyclingText 
+            words={reliableWords}
+            interval={8000}
+            fancyWords={['gorgeous']}
+          />{' '}
+          products for the modern{' '}
+          <CyclingText 
+            words={industryWords}
+            interval={9500}
+          />{' '}
+          marketplace and beyond.
+        </h1>
+        <div className="mb-8 md:mb-12">{children}</div>
+      </div>
     </motion.div>
   );
 }
