@@ -122,69 +122,69 @@ export default function UpdriftCaseStudyPage() {
         <div className="mt-8">
           <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
           <div className="flex justify-center">
-            <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-background-dark dark:via-zinc-900 dark:to-background-dark rounded-3xl p-4 md:p-6 shadow-lg">
+            <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Next.js */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🟦</span>
-                  <h4 className="font-semibold text-base mb-1">Next.js</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Next.js</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
                   </p>
                 </div>
                 {/* React */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">⚛️</span>
-                  <h4 className="font-semibold text-base mb-1">React</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">React</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
                   </p>
                 </div>
                 {/* TypeScript */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🟦</span>
-                  <h4 className="font-semibold text-base mb-1">TypeScript</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">TypeScript</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     Type safety, better DX, and catching errors before they reach production.
                   </p>
                 </div>
                 {/* Tailwind CSS */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🌬️</span>
-                  <h4 className="font-semibold text-base mb-1">Tailwind CSS</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Tailwind CSS</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     Utility-first, design in markup, iterate fast, and keep everything consistent.
                   </p>
                 </div>
                 {/* Framer Motion */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🎞️</span>
-                  <h4 className="font-semibold text-base mb-1">Framer Motion</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Framer Motion</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     Modern, smooth animation for React—declarative, powerful, and easy to use.
                   </p>
                 </div>
                 {/* Vercel */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">▲</span>
-                  <h4 className="font-semibold text-base mb-1">Vercel</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Vercel</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
                   </p>
                 </div>
                 {/* MCP Tools */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🤖</span>
-                  <h4 className="font-semibold text-base mb-1">MCP Tools</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">MCP Tools</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     AI-assisted development with real-time documentation access and intelligent problem-solving.
                   </p>
                 </div>
                 {/* Cursor IDE */}
-                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600">
                   <span className="text-3xl mb-2">🖱️</span>
-                  <h4 className="font-semibold text-base mb-1">Cursor IDE</h4>
-                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                  <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Cursor IDE</h4>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
                     AI-powered code editor that accelerates development and enables rapid iteration.
                   </p>
                 </div>
@@ -798,22 +798,22 @@ export default function UpdriftCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="text-center"
       >
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-8 rounded-xl border border-indigo-200 dark:border-indigo-700">
-          <h3 className="text-2xl font-bold mb-4 text-indigo-900 dark:text-indigo-200">Ready to Build Something That Matters?</h3>
-          <p className="text-lg text-indigo-900/80 dark:text-indigo-200/80 mb-6">
+        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-zinc-800 dark:via-purple-900/40 dark:to-indigo-900/40 p-8 rounded-xl border-2 border-indigo-200 dark:border-purple-600 shadow-xl">
+          <h3 className="text-2xl font-bold mb-4 text-indigo-900 dark:text-white">Ready to Build Something That Matters?</h3>
+          <p className="text-lg text-indigo-900/80 dark:text-gray-200 mb-6">
             This project demonstrates my ability to identify real problems and build solutions that actually help people. 
             I'm excited to bring this same user-focused, problem-solving approach to your next project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/projects" 
-              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors"
+              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors shadow-lg"
             >
               View All Projects
             </Link>
             <Link 
               href="/" 
-              className="px-6 py-3 border border-indigo-600 text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 rounded-lg font-semibold transition-colors"
+              className="px-6 py-3 border-2 border-indigo-600 text-indigo-600 dark:text-white dark:border-purple-400 hover:bg-indigo-50 dark:hover:bg-purple-900/30 rounded-lg font-semibold transition-colors"
             >
               Back to Home
             </Link>
