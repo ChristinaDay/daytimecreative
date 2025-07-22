@@ -5,7 +5,7 @@ export const projectsData: ProjectData[] = [
     title: 'Updrift.me - AI-Assisted Development',
     description: 'Modern web application built entirely using Cursor IDE with AI assistance, demonstrating the future of software development with accelerated workflows and high-quality results.',
     designerDeveloperDescription: 'Built a complete web application using Next.js, TypeScript, and Tailwind CSS with AI-assisted development through Cursor IDE. Leveraged MCP tools for real-time documentation access, automated testing, and intelligent code generation. Implemented modern CI/CD practices and performance optimization.',
-    image: '/images/updrift-me-preview.png',
+    image: '/images/updrift-full-page.png',
     link: '/projects/updrift',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE'],
     designerDeveloperTags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE', 'MCP Tools', 'CI/CD'],
