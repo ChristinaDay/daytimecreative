@@ -244,7 +244,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Area - isolated container */}
         <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 md:px-8 bg-transparent">
-          <div className="flex flex-col items-start justify-center flex-1 pt-40 pb-8 md:pt-56 md:pb-12">
+          <div className="flex flex-col items-start justify-center flex-1 pt-20 pb-8 md:pt-56 md:pb-12">
             <FlexibleHeroText>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -279,7 +279,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mt-16 md:mt-24 mb-16"
+                className="text-center mt-40 sm:mt-32 md:mt-28 mb-16"
               >
                 <h2 className="text-3xl md:text-4xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-4">
                   Selected Work
