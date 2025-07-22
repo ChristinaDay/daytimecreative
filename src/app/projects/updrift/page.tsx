@@ -20,10 +20,10 @@ export default function UpdriftCaseStudyPage() {
         className="mb-16 pt-24"
       >
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
-          Building Updrift.me with AI-Assisted Development
+          Building Updrift.me: Exploring Cursor While Solving a Real Problem
         </h1>
         <ProjectSubtitle>
-          A case study on leveraging Cursor IDE and MCP tools to accelerate modern web development, from concept to deployment.
+          Using Cursor IDE to build a job search tool.
         </ProjectSubtitle>
         <ProjectDetailTags
           role="Developer, Designer"
@@ -32,6 +32,8 @@ export default function UpdriftCaseStudyPage() {
           areas="AI-Assisted Development, Front-End Development, Modern Web Stack"
           year="2025"
         />
+
+
       </motion.div>
 
       {/* Hero Image */}
@@ -48,33 +50,139 @@ export default function UpdriftCaseStudyPage() {
               Updrift.me
             </h2>
             <p className="text-sm md:text-base opacity-90 drop-shadow-lg">
-              Modern web application with dynamic hero effects
+              Job search that works for everyone
             </p>
           </div>
         </div>
       </motion.div>
 
-
-
-
-
-      {/* Saved Jobs Feature */}
+      {/* The Problem */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Saved Jobs Feature</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">The Problem: Job Search in 2025 Is Kind of a Mess</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            I started building Updrift.me because job searching in 2025 is frustrating. Most of us live paycheck to paycheck, depend on our jobs for healthcare, and can't afford premium memberships to platforms that gatekeep opportunities behind paywalls. The current tools seem designed to keep you searching forever rather than actually helping you get hired.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            I was tired of bouncing between LinkedIn, Indeed, Glassdoor, and countless other platforms, each with their own interface, each requiring me to track applications separately. It's 2025—finding a life-sustaining job shouldn't require a premium subscription or endless platform hopping.
+          </p>
+        </div>
+        
+        <div className="p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-6 rounded-xl border border-red-200 dark:border-red-700">
+          <h4 className="text-lg font-semibold mb-4 text-red-900 dark:text-red-200">The Real Pain Points</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-red-900/80 dark:text-red-200/80">
+            <div>
+              <h5 className="font-medium mb-2 text-red-900 dark:text-red-200">Accessibility Issues</h5>
+              <ul className="space-y-1 text-sm">
+                <li>• Premium features locked behind paywalls</li>
+                <li>• Complex interfaces that overwhelm users</li>
+                <li>• No focus on actually getting people hired</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-medium mb-2 text-red-900 dark:text-red-200">Workflow Problems</h5>
+              <ul className="space-y-1 text-sm">
+                <li>• Scattered across multiple platforms</li>
+                <li>• No centralized application tracking</li>
+                <li>• Endless scrolling without clear progress</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* The Solution */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.18 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">The Solution: Let's Try Building Something Better</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Updrift.me is my attempt to build a job search tool that actually helps people get hired, not keep them searching forever. It's free, accessible, and designed to reduce the friction between finding an opportunity and getting hired.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The platform consolidates job search into one streamlined experience. No more bouncing between platforms. No more premium paywalls. Just a clean, efficient tool that helps you track applications, manage your job hunt, and actually get hired.
+          </p>
+        </div>
+        <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
+          <p className="text-sm text-blue-900 dark:text-blue-200 font-medium">
+            Note: This is very much a work in progress. I'm building this as I go, learning from the process, and seeing what actually works for real job seekers.
+          </p>
+        </div>
+
+        {/* Tech Stack Grid */}
+        <div className="mt-8">
+          <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {/* Next.js */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🟦</span>
+              <span className="text-sm font-medium">Next.js</span>
+            </div>
+            {/* React */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">⚛️</span>
+              <span className="text-sm font-medium">React</span>
+            </div>
+            {/* TypeScript */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🟦</span>
+              <span className="text-sm font-medium">TypeScript</span>
+            </div>
+            {/* Tailwind CSS */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🌬️</span>
+              <span className="text-sm font-medium">Tailwind CSS</span>
+            </div>
+            {/* Framer Motion */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🎞️</span>
+              <span className="text-sm font-medium">Framer Motion</span>
+            </div>
+            {/* Vercel */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">▲</span>
+              <span className="text-sm font-medium">Vercel</span>
+            </div>
+            {/* MCP Tools */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🤖</span>
+              <span className="text-sm font-medium">MCP Tools</span>
+            </div>
+            {/* Cursor IDE */}
+            <div className="flex flex-col items-center">
+              <span className="text-4xl mb-2">🖱️</span>
+              <span className="text-sm font-medium">Cursor IDE</span>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Saved Jobs Feature */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Centralized Job Management</h3>
         <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          The saved jobs functionality allows users to bookmark and organize job opportunities they're interested in. This feature demonstrates the application's user-centric design and practical utility.
+          One of the biggest frustrations with job searching is keeping track of everything across multiple platforms. I'm trying to solve this with a centralized saved jobs system that lets you organize opportunities, track application status, and maintain a clear overview of your job hunt.
         </p>
         
         <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
           <ScrollableImageContainer
             src="/images/UpDrift -saved-jobs.png"
             alt="Updrift saved jobs interface"
-            caption="Saved jobs functionality with clean, intuitive interface"
+            caption="A clean, organized way to track your job applications and opportunities"
             frameType="browser"
             height="full"
             url="updrift.me/saved-jobs"
@@ -83,17 +191,17 @@ export default function UpdriftCaseStudyPage() {
         </div>
         
         <div className="mt-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
-          <h4 className="text-lg font-semibold mb-4 text-blue-900 dark:text-blue-200">Key Features</h4>
+          <h4 className="text-lg font-semibold mb-4 text-blue-900 dark:text-blue-200">Why This Matters</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900/80 dark:text-blue-200/80">
             <ul className="list-disc pl-5 space-y-1">
-              <li>Easy job bookmarking</li>
-              <li>Organized job management</li>
-              <li>Clean, intuitive interface</li>
+              <li>No more scattered bookmarks across platforms</li>
+              <li>Track application status in one place</li>
+              <li>Organize opportunities by priority</li>
             </ul>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Quick access to saved positions</li>
-              <li>Responsive design</li>
-              <li>Seamless user experience</li>
+              <li>Set reminders for follow-ups</li>
+              <li>Export your job hunt data</li>
+              <li>Focus on quality over quantity</li>
             </ul>
           </div>
         </div>
@@ -103,44 +211,24 @@ export default function UpdriftCaseStudyPage() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.18 }}
+        transition={{ duration: 0.8, delay: 0.25 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Search Jobs Page</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Streamlined Job Discovery</h3>
         <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          The job search page provides a streamlined interface for discovering and filtering open positions. Users can search, filter, and explore job listings with ease.
+          The job search interface is designed to cut through the noise. Instead of endless scrolling through irrelevant listings, you get focused results with clear filtering options. The goal is to help you find opportunities that actually match your skills and needs.
         </p>
         <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
           <ScrollableImageContainer
             src="/images/updrift-jobsearch-page.png"
             alt="Updrift job search interface"
-            caption="Job search interface with advanced filtering and clean results layout"
+            caption="Focused job search with smart filtering and clear results"
             frameType="browser"
             height="full"
             url="updrift.me/jobs"
             className="w-full"
           />
         </div>
-      </motion.section>
-
-      {/* Project Overview */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="mb-28"
-      >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Project Overview</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            Updrift.me is a modern web application that demonstrates the power of AI-assisted development. Built entirely using Cursor IDE with MCP tools, this project showcases how AI can accelerate development while maintaining high code quality and user experience standards.
-          </p>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            The goal was to create a production-ready application that would serve as both a functional tool and a demonstration of modern development practices. Using AI assistance throughout the process allowed for rapid iteration and high-quality results.
-          </p>
-        </div>
-        
-
       </motion.section>
 
       {/* Platform Showcase */}
@@ -150,16 +238,19 @@ export default function UpdriftCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Platform Showcase</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">What I've Built So Far</h3>
         
         {/* Public Landing Page */}
         <div className="mb-16">
-          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Public Landing Page</h4>
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Welcoming Everyone</h4>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
+            The homepage is designed to be immediately useful. No paywalls, no complex onboarding—just a clean interface that helps you start your job search right away.
+          </p>
           <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
               src="/images/updrift-full-page.png"
               alt="Updrift.me public homepage - full page view"
-              caption="Clean, modern homepage designed to convert visitors into users"
+              caption="A welcoming, accessible homepage that gets you started immediately"
               frameType="browser"
               height="full"
               url="updrift.me"
@@ -170,17 +261,62 @@ export default function UpdriftCaseStudyPage() {
 
         {/* Authenticated Dashboard */}
         <div className="mb-16">
-          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Authenticated Dashboard</h4>
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Your Job Hunt Command Center</h4>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
+            Once you create an account, you get a personalized dashboard that becomes your job hunt headquarters. Everything you need to track applications, manage opportunities, and stay organized is in one place.
+          </p>
           <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
               src="/images/updrift-logged-in-desktop.png"
               alt="Updrift.me logged-in dashboard - full page view"
-              caption="Feature-rich dashboard with personalized user experience"
+              caption="Your personalized job hunt command center"
               frameType="browser"
               height="full"
               url="updrift.me/dashboard"
               className="w-full"
             />
+          </div>
+          <div className="mt-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-xl border border-indigo-200 dark:border-indigo-700">
+            <h5 className="text-lg font-semibold mb-4 text-indigo-900 dark:text-indigo-200">What Makes This Dashboard Work</h5>
+            <p className="text-sm text-indigo-900/70 dark:text-indigo-200/70 mb-4">
+              The dashboard isn't just a pretty interface—it's designed around how people actually use job search tools. Here's what users get:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-indigo-900/80 dark:text-indigo-200/80">
+              <div>
+                <h6 className="font-medium text-indigo-900 dark:text-indigo-200 mb-2">Navigation & Discovery</h6>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>Smart sidebar</strong> that adapts to screen size and user preferences</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>Personalized recommendations</strong> based on search history and saved jobs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>One-click access</strong> to recently viewed and saved positions</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h6 className="font-medium text-indigo-900 dark:text-indigo-200 mb-2">User Experience</h6>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>Real-time alerts</strong> for new jobs matching your criteria</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>Application tracking</strong> to keep tabs on your job hunt progress</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-indigo-500 mr-2">→</span>
+                    <span><strong>Customizable settings</strong> for notifications and search preferences</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -189,16 +325,16 @@ export default function UpdriftCaseStudyPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="flex items-center h-full">
               <div className="space-y-3">
-                <h5 className="text-lg font-semibold text-text-light dark:text-text-dark">Mobile-First Approach</h5>
+                <h5 className="text-lg font-semibold text-text-light dark:text-text-dark">Accessible on Every Device</h5>
                 <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                  I built Updrift.me mobile-first, which meant starting with the mobile experience and scaling up rather than the other way around. This approach forced me to think about what really mattered - the core functionality had to work perfectly on a small screen before I added desktop enhancements.
+                  Job searching happens everywhere—on phones during commutes, on tablets at coffee shops, on laptops at libraries. Updrift.me works seamlessly across all devices because everyone deserves access to good job opportunities, regardless of their device or situation.
                 </p>
                 <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                  The responsive implementation uses Tailwind's grid system and breakpoint utilities. Touch targets are sized for fingers, not mice. The navigation collapses to a hamburger menu on mobile and expands horizontally on desktop. Images load optimized versions based on screen size. It's not rocket science, but it's the kind of attention to detail that makes a product feel polished across devices.
+                  The mobile experience is just as powerful as the desktop version. Touch targets are sized for real fingers, navigation makes sense on small screens, and the interface adapts to whatever device you're using.
                 </p>
                 <div className="mt-6 p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
                   <p className="text-sm text-blue-900 dark:text-blue-200 font-medium">
-                    What actually works: fluid typography that scales properly, touch targets that don't frustrate users, and navigation that makes sense on each device.
+                    What actually works: a job search tool that's as effective on a phone as it is on a desktop, because opportunities don't wait for you to get home.
                   </p>
                 </div>
               </div>
@@ -209,7 +345,7 @@ export default function UpdriftCaseStudyPage() {
               <ScrollableImageContainer
                 src="/images/updrift-logged-in-mobile.png"
                 alt="Updrift.me mobile view"
-                caption="Mobile-first responsive design"
+                caption="Full-featured job search on mobile"
                 frameType="phone"
                 height="phone"
               />
@@ -220,50 +356,48 @@ export default function UpdriftCaseStudyPage() {
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
-            <h5 className="font-semibold mb-3 text-green-900 dark:text-green-200">User Authentication</h5>
+            <h5 className="font-semibold mb-3 text-green-900 dark:text-green-200">No Barriers to Entry</h5>
             <p className="text-sm text-green-900/80 dark:text-green-200/80 mb-4">
-              Secure login system with modern authentication patterns. Users can access personalized features and maintain session state across devices.
+              Free access to all features. No premium tiers, no paywalls, no artificial limitations. Everyone deserves access to good job opportunities.
             </p>
             <div className="space-y-2 text-xs text-green-900/70 dark:text-green-200/70">
               <div className="flex justify-between">
-                <span>Login Method:</span>
-                <span>Email/Password</span>
+                <span>Cost:</span>
+                <span>Completely Free</span>
               </div>
               <div className="flex justify-between">
-                <span>Session Management:</span>
-                <span>Persistent</span>
+                <span>Features:</span>
+                <span>All Available</span>
               </div>
               <div className="flex justify-between">
-                <span>Security:</span>
-                <span>HTTPS + CSRF</span>
+                <span>Limitations:</span>
+                <span>None</span>
               </div>
             </div>
           </div>
           
           <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
-            <h5 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Dashboard Interface</h5>
+            <h5 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Focused on Results</h5>
             <p className="text-sm text-blue-900/80 dark:text-blue-200/80 mb-4">
-              Clean, intuitive dashboard with modern UI patterns. Features responsive navigation and personalized content areas.
+              Designed to help you get hired, not keep you searching forever. Clear progress tracking, application management, and tools that actually move you forward.
             </p>
             <div className="space-y-2 text-xs text-blue-900/70 dark:text-blue-200/70">
               <div className="flex justify-between">
-                <span>Layout:</span>
-                <span>Responsive Grid</span>
+                <span>Goal:</span>
+                <span>Get Hired</span>
               </div>
               <div className="flex justify-between">
-                <span>Navigation:</span>
-                <span>Sidebar + Header</span>
+                <span>Focus:</span>
+                <span>Progress</span>
               </div>
               <div className="flex justify-between">
-                <span>Theme:</span>
-                <span>Light/Dark</span>
+                <span>Outcome:</span>
+                <span>Success</span>
               </div>
             </div>
           </div>
         </div>
       </motion.section>
-
-
 
       {/* Development Process */}
       <motion.section
@@ -272,25 +406,23 @@ export default function UpdriftCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Development Process</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">How I'm Building This</h3>
         
         <div className="space-y-8">
           {/* Phase 1: Planning & Setup */}
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border border-green-200 dark:border-green-700">
             <div className="flex items-center mb-4">
               <span className="text-2xl mr-3">🎯</span>
-              <h4 className="text-xl font-semibold text-green-900 dark:text-green-200">Phase 1: Planning & Setup</h4>
+              <h4 className="text-xl font-semibold text-green-900 dark:text-green-200">Phase 1: Understanding the Problem</h4>
             </div>
             <p className="text-green-900/80 dark:text-green-200/80 mb-4">
-              Started with a clear vision for updrift.me - a modern, responsive web application that would 
-              showcase the capabilities of AI-assisted development. Used Cursor's planning tools to break 
-              down the project into manageable components.
+              Started by talking to friends who were struggling with job search. Identified the real pain points: scattered applications, premium paywalls, platforms designed to keep you searching forever. Used these insights to design a solution that actually helps people get hired.
             </p>
             <ul className="list-disc pl-5 text-green-900/80 dark:text-green-200/80 space-y-2">
-              <li>Defined project scope and requirements</li>
-              <li>Set up Next.js with TypeScript and Tailwind CSS</li>
-              <li>Configured development environment with Cursor IDE</li>
-              <li>Established coding standards and project structure</li>
+              <li>Researched existing job search platforms and their limitations</li>
+              <li>Identified key pain points from real users</li>
+              <li>Designed a solution focused on getting people hired</li>
+              <li>Set up development environment with modern tools</li>
             </ul>
           </div>
 
@@ -298,7 +430,7 @@ export default function UpdriftCaseStudyPage() {
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
             <div className="flex items-center mb-4">
               <span className="text-2xl mr-3">⚡</span>
-              <h4 className="text-xl font-semibold text-blue-900 dark:text-blue-200">Phase 2: Core Development</h4>
+              <h4 className="text-xl font-semibold text-blue-900 dark:text-blue-200">Phase 2: Building the Solution</h4>
             </div>
             <p className="text-blue-900/80 dark:text-blue-200/80 mb-4">
               Leveraged Cursor's AI capabilities to accelerate development. Used MCP tools for real-time 
@@ -327,7 +459,7 @@ export default function UpdriftCaseStudyPage() {
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border border-purple-200 dark:border-purple-700">
             <div className="flex items-center mb-4">
               <span className="text-2xl mr-3">🔧</span>
-              <h4 className="text-xl font-semibold text-purple-900 dark:text-purple-200">Phase 3: Testing & Optimization</h4>
+              <h4 className="text-xl font-semibold text-purple-900 dark:text-purple-200">Phase 3: Ensuring Quality</h4>
             </div>
             <p className="text-purple-900/80 dark:text-purple-200/80 mb-4">
               Used AI-assisted testing and optimization to ensure high performance and reliability. 
@@ -345,7 +477,7 @@ export default function UpdriftCaseStudyPage() {
           <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-700">
             <div className="flex items-center mb-4">
               <span className="text-2xl mr-3">🚀</span>
-              <h4 className="text-xl font-semibold text-orange-900 dark:text-orange-200">Phase 4: Deployment</h4>
+              <h4 className="text-xl font-semibold text-orange-900 dark:text-orange-200">Phase 4: Making It Available</h4>
             </div>
             <p className="text-orange-900/80 dark:text-orange-200/80 mb-4">
               Deployed to production using modern CI/CD practices. Used AI assistance to automate 
@@ -471,7 +603,7 @@ export default function UpdriftCaseStudyPage() {
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Style Guide Development</h3>
         <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          The Updrift style guide was built as a living document—code and documentation evolving together. Here’s how the workflow looks in practice:
+          The Updrift style guide was built as a living document—code and documentation evolving together. Here's how the workflow looks in practice:
         </p>
         <ScrollableImageContainer
           src="/images/updrift-styleguide-cursorcode.png"
@@ -503,7 +635,7 @@ export default function UpdriftCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Key Learnings</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">What I'm Learning</h3>
         
         <div className="space-y-6">
           {/* Learning 1 */}
@@ -639,10 +771,10 @@ export default function UpdriftCaseStudyPage() {
         className="text-center"
       >
         <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-8 rounded-xl border border-indigo-200 dark:border-indigo-700">
-          <h3 className="text-2xl font-bold mb-4 text-indigo-900 dark:text-indigo-200">Ready to Build Something Amazing?</h3>
+          <h3 className="text-2xl font-bold mb-4 text-indigo-900 dark:text-indigo-200">Ready to Build Something That Matters?</h3>
           <p className="text-lg text-indigo-900/80 dark:text-indigo-200/80 mb-6">
-            This project demonstrates my ability to leverage cutting-edge tools and deliver high-quality 
-            results quickly. I'm excited to bring this same approach to your next project.
+            This project demonstrates my ability to identify real problems and build solutions that actually help people. 
+            I'm excited to bring this same user-focused, problem-solving approach to your next project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

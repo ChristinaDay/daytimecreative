@@ -1,6 +1,6 @@
 'use client';
 
-import { Navbar } from './Navbar';
+import { ConditionalNavbar } from './ConditionalNavbar';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Footer from '../Footer';
@@ -100,7 +100,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
         }}
       />
 
-      <Navbar />
+      <ConditionalNavbar />
       <main className="flex-1 mt-4 px-4 md:px-12 lg:px-20 relative z-20 mb-24">
         {children}
       </main>
