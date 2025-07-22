@@ -121,46 +121,74 @@ export default function UpdriftCaseStudyPage() {
         {/* Tech Stack Grid */}
         <div className="mt-8">
           <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {/* Next.js */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🟦</span>
-              <span className="text-sm font-medium">Next.js</span>
-            </div>
-            {/* React */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">⚛️</span>
-              <span className="text-sm font-medium">React</span>
-            </div>
-            {/* TypeScript */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🟦</span>
-              <span className="text-sm font-medium">TypeScript</span>
-            </div>
-            {/* Tailwind CSS */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🌬️</span>
-              <span className="text-sm font-medium">Tailwind CSS</span>
-            </div>
-            {/* Framer Motion */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🎞️</span>
-              <span className="text-sm font-medium">Framer Motion</span>
-            </div>
-            {/* Vercel */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">▲</span>
-              <span className="text-sm font-medium">Vercel</span>
-            </div>
-            {/* MCP Tools */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🤖</span>
-              <span className="text-sm font-medium">MCP Tools</span>
-            </div>
-            {/* Cursor IDE */}
-            <div className="flex flex-col items-center">
-              <span className="text-4xl mb-2">🖱️</span>
-              <span className="text-sm font-medium">Cursor IDE</span>
+          <div className="flex justify-center">
+            <div className="w-full bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-background-dark dark:via-zinc-900 dark:to-background-dark rounded-3xl p-4 md:p-6 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Next.js */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🟦</span>
+                  <h4 className="font-semibold text-base mb-1">Next.js</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
+                  </p>
+                </div>
+                {/* React */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">⚛️</span>
+                  <h4 className="font-semibold text-base mb-1">React</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
+                  </p>
+                </div>
+                {/* TypeScript */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🟦</span>
+                  <h4 className="font-semibold text-base mb-1">TypeScript</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Type safety, better DX, and catching errors before they reach production.
+                  </p>
+                </div>
+                {/* Tailwind CSS */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🌬️</span>
+                  <h4 className="font-semibold text-base mb-1">Tailwind CSS</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Utility-first, design in markup, iterate fast, and keep everything consistent.
+                  </p>
+                </div>
+                {/* Framer Motion */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🎞️</span>
+                  <h4 className="font-semibold text-base mb-1">Framer Motion</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Modern, smooth animation for React—declarative, powerful, and easy to use.
+                  </p>
+                </div>
+                {/* Vercel */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">▲</span>
+                  <h4 className="font-semibold text-base mb-1">Vercel</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
+                  </p>
+                </div>
+                {/* MCP Tools */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🤖</span>
+                  <h4 className="font-semibold text-base mb-1">MCP Tools</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    AI-assisted development with real-time documentation access and intelligent problem-solving.
+                  </p>
+                </div>
+                {/* Cursor IDE */}
+                <div className="flex flex-col items-center text-center bg-white/80 dark:bg-zinc-900/80 rounded-xl shadow p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl">
+                  <span className="text-3xl mb-2">🖱️</span>
+                  <h4 className="font-semibold text-base mb-1">Cursor IDE</h4>
+                  <p className="text-xs text-text-light/70 dark:text-text-dark/70">
+                    AI-powered code editor that accelerates development and enables rapid iteration.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
