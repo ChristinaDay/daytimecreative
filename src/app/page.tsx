@@ -363,7 +363,7 @@ export default function Home() {
                   <div className="flex justify-center md:justify-start">
                     <div className="relative">
                       <img 
-                        src="/images/portrait.png" 
+                        src="/images/christina-day-sm.png" 
                         alt="Christina Day - Designer & Developer" 
                         className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/20 dark:border-white/10 shadow-xl"
                       />
