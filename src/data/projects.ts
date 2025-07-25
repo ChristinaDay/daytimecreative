@@ -85,6 +85,28 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
+    title: 'TenSpot Workforce Engagement Platform',
+    description: 'Comprehensive workforce engagement platform connecting teams through wellness, challenges, and community building.',
+    designerDeveloperDescription: 'Designed and developed the complete marketing website and digital presence for TenSpot, creating conversion-focused landing pages and brand collateral that helped acquire enterprise clients and insurance partnerships.',
+    image: '/images/tenspot-desk-purple-macbook-mockup.png',
+    link: '/projects/tenspot',
+    tags: ['Marketing Website', 'Brand Design', 'Landing Pages', 'Conversion Design'],
+    designerDeveloperTags: ['WordPress', 'CSS/HTML', 'Marketing Design', 'Brand Implementation', 'Conversion Optimization'],
+    year: '2016-2018',
+    bgColor: 'from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10',
+    designHighlights: [
+      'Created compelling marketing narratives for complex platform capabilities',
+      'Designed conversion-focused landing pages for enterprise clients',
+      'Developed brand collateral that supported insurance partnerships'
+    ],
+    technicalHighlights: [
+      'Built responsive marketing website with WordPress and custom CSS',
+      'Implemented conversion optimization strategies for lead generation',
+      'Created scalable design system for marketing materials'
+    ]
+  },
+
+  {
     title: 'AnyPerk Brand Design & Development',
     description: 'Comprehensive iconography system, brand identity, and full-stack website development.',
     designLeaderDescription: 'Led the complete brand identity redesign for AnyPerk (now Fond), creating a cohesive visual system with 200+ custom icons that established the company\'s friendly, approachable personality across all touchpoints.',
@@ -105,6 +127,27 @@ export const projectsData: ProjectData[] = [
       'Hand-coded entire WordPress marketing website from scratch',
       'Created scalable SVG icon system with multiple format exports',
       'Implemented responsive design with custom CSS grid system'
+    ]
+  },
+  {
+    title: 'MakerSquare Logo Design & Branding',
+    description: 'Comprehensive branding overhaul for a premier coding bootcamp, including logo design, marketing materials, and interior installations.',
+    designerDeveloperDescription: 'Designed MakerSquare\'s complete brand identity including logo, style guide, marketing materials, and interior wall installations for multiple campus locations.',
+    image: '/images/makeersquare-logo.png',
+    link: '/projects/makersquare',
+    tags: ['Logo Design', 'Brand Identity', 'Marketing Design', 'Interior Design'],
+    designerDeveloperTags: ['Logo Design', 'Brand Guidelines', 'Print Design', 'Interior Installation', 'Marketing Collateral'],
+    year: '2013-2014',
+    bgColor: 'from-green-500/15 via-3% via-transparent via-97% to-emerald-600/12 dark:from-green-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-emerald-500/10',
+    designHighlights: [
+      'Created logo and brand identity for premier coding bootcamp',
+      'Designed marketing materials for multiple campus locations',
+      'Developed interior installations that reinforced brand identity'
+    ],
+    technicalHighlights: [
+      'Designed scalable logo system for multiple applications',
+      'Created comprehensive brand guidelines and style guide',
+      'Implemented interior design elements across campus locations'
     ]
   },
   {
