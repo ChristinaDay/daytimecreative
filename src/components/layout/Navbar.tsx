@@ -25,7 +25,7 @@ export function Navbar() {
   }, [resolvedTheme, setTheme]);
 
   return (
-    <nav key={`navbar-${resolvedTheme}-${mounted}`} className="fixed top-0 left-0 right-0 z-50 bg-background-light/20 dark:bg-[#323849]/20 backdrop-blur-sm border-b border-surface-light/20 dark:border-transparent px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <nav key={`navbar-${resolvedTheme}-${mounted}`} className="fixed top-0 left-0 right-0 z-[100] bg-background-light/20 dark:bg-[#323849]/20 backdrop-blur-sm border-b border-surface-light/20 dark:border-transparent px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 shadow-md">
       <div className="max-w-none mx-auto">
         <div className="flex justify-between h-24">
           <div className="flex items-center">
