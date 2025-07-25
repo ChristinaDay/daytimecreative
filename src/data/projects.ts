@@ -71,7 +71,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Product Design', 'Data Visualization', 'AI/ML', 'Insurance Tech'],
     designLeaderTags: ['Product Strategy', 'User Research', 'Data Visualization', 'AI/ML Design', 'Stakeholder Collaboration'],
     designerDeveloperTags: ['React', 'D3.js', 'Data Visualization', 'API Integration', 'Interactive Maps'],
-    year: '2022-2023',
+    year: '2021',
     bgColor: 'from-emerald-500/15 via-3% via-transparent via-97% to-teal-600/12 dark:from-emerald-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-teal-500/10',
     designHighlights: [
       'Reduced claim processing time by 40% through intuitive design',
@@ -92,7 +92,7 @@ export const projectsData: ProjectData[] = [
     link: '/projects/tenspot',
     tags: ['Marketing Website', 'Brand Design', 'Landing Pages', 'Conversion Design'],
     designerDeveloperTags: ['WordPress', 'CSS/HTML', 'Marketing Design', 'Brand Implementation', 'Conversion Optimization'],
-    year: '2016-2018',
+    year: '2020-2021',
     bgColor: 'from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10',
     designHighlights: [
       'Created compelling marketing narratives for complex platform capabilities',
@@ -116,7 +116,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Brand Design', 'Icon Design', 'Website Development'],
     designLeaderTags: ['Brand Strategy', 'Visual Identity', 'Icon Design', 'Design Leadership', 'Creative Direction'],
     designerDeveloperTags: ['WordPress Development', 'Custom Icons', 'SVG Optimization', 'CSS/HTML', 'Brand Implementation'],
-    year: '2013-2015',
+    year: '2014-2015',
     bgColor: 'from-indigo-500/15 via-3% via-transparent via-97% to-purple-600/12 dark:from-indigo-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-purple-500/10',
     designHighlights: [
       'Created unified brand identity used across web, mobile, and marketing',
@@ -160,7 +160,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Marketplace Design', 'UX Research', 'Order Management'],
     designLeaderTags: ['Product Strategy', 'User Research', 'Two-sided Marketplace', 'Stakeholder Management', 'Growth Design'],
     designerDeveloperTags: ['React', 'API Design', 'Database Schema', 'Real-time Updates', 'Responsive Design'],
-    year: '2015-2017',
+    year: '2016-2018',
     bgColor: 'from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10',
     designHighlights: [
       'Designed user flows for complex two-sided marketplace',
@@ -183,7 +183,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Brand Design', 'Web3', 'Platform Design'],
     designLeaderTags: ['Brand Strategy', 'Web3 Design', 'Community Building', 'Visual Identity', 'Illustration'],
     designerDeveloperTags: ['Web3 Integration', 'Wallet Connect', 'React', 'Blockchain APIs', 'DeFi Protocols'],
-    year: '2023',
+    year: '2021-2022',
     bgColor: 'from-purple-500/15 via-3% via-transparent via-97% to-violet-600/12 dark:from-purple-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-violet-500/10',
     designHighlights: [
       'Created brand identity that resonates with technical Web3 community',
@@ -206,7 +206,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Design Systems', 'User Personalization', 'Dashboard Design'],
     designLeaderTags: ['User Research', 'Personalization Strategy', 'Component Systems', 'User Experience', 'Design Flexibility'],
     designerDeveloperTags: ['React', 'Drag and Drop', 'Component Architecture', 'State Management', 'Responsive Design'],
-    year: '2023',
+    year: '2021',
     bgColor: 'from-pink-500/15 via-3% via-transparent via-97% to-rose-600/12 dark:from-pink-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-rose-500/10',
     designHighlights: [
       'Designed flexible component system that adapts to user workflows',
