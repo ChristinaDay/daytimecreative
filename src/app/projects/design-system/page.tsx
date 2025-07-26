@@ -20,7 +20,7 @@ export default function DesignSystemPage() {
           ZeroCater Design System & Component Library
         </h1>
         <ProjectSubtitle>
-          Building a comprehensive design system that unified user experience across web and mobile platforms, supporting rapid growth from startup to enterprise-scale food service platform.
+          Comprehensive design system that unified user experience across web and mobile platforms.
         </ProjectSubtitle>
         <ProjectDetailTags
           role="Lead Product Designer & Front-End Engineer"
