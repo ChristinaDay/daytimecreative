@@ -55,8 +55,8 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
           </div>
           
           <div className={`p-6 flex-1 flex flex-col ${featured ? 'lg:w-1/2' : ''}`}>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className={`font-bold text-text-light dark:text-text-dark mb-3 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
+            <div className="mb-2">
+              <h3 className={`font-bold text-text-light dark:text-text-dark mb-2 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
                 {project.title}
               </h3>
               <span className="text-sm text-text-light/60 dark:text-text-dark/60">
