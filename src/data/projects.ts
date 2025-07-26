@@ -53,7 +53,7 @@ export const projectsData: ProjectData[] = [
     link: '/projects/design-system',
     tags: ['React Components', 'Design Tokens', 'CSS Architecture', 'TypeScript', 'Design Systems'],
     designerDeveloperTags: ['React Components', 'Design Tokens', 'CSS Architecture', 'TypeScript', 'Design Systems'],
-    year: '2023',
+    year: '2016-2018',
     bgColor: 'from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10',
     technicalHighlights: [
       'Built 50+ React components with TypeScript and Storybook',
