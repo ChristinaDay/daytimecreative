@@ -8,30 +8,60 @@ import { ScrollableImageContainer } from '@/components/ScrollableImageContainer'
 
 export default function DesignSystemPage() {
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-32 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
+    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="mb-20"
+        className="mb-16 pt-24"
       >
-        <div className="max-w-4xl">
-          <h1 className="text-left text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-6">
-            ZeroCater Design System & Component Library
-          </h1>
-          <div className="text-xl md:text-2xl text-text-light/80 dark:text-text-dark/80 mb-8 leading-relaxed">
-            Building a comprehensive design system that unified user experience across web and mobile platforms, supporting rapid growth from startup to enterprise-scale food service platform.
-          </div>
-          <ProjectDetailTags
-            role="Lead Product Designer & Front-End Engineer"
-            employer="ZeroCater"
-            year="2014-2017"
-            platforms="React, Sketch, InVision, Sass, GitHub, Style Guide"
-            areas="Design Systems, Component Architecture, Front-End Development, Brand Guidelines"
-          />
-        </div>
+        <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
+          ZeroCater Design System & Component Library
+        </h1>
+        <ProjectSubtitle>
+          Building a comprehensive design system that unified user experience across web and mobile platforms, supporting rapid growth from startup to enterprise-scale food service platform.
+        </ProjectSubtitle>
+        <ProjectDetailTags
+          role="Lead Product Designer & Front-End Engineer"
+          employer="ZeroCater"
+          platforms="React, Sketch, InVision, Sass, GitHub, Style Guide"
+          areas="Design Systems, Component Architecture, Front-End Development, Brand Guidelines"
+          year="2016-2018"
+        />
       </motion.div>
+
+      {/* Hero Image */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="mb-16 w-full relative aspect-[3/2] rounded-lg overflow-hidden flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20"
+      >
+        <Image
+          src="/images/zerocater-ZeroCater_design-system.png"
+          alt="ZeroCater Design System Overview"
+          fill
+          className="object-contain p-8"
+          sizes="(max-width: 1024px) 100vw, 100vw"
+        />
+      </motion.div>
+
+      {/* Overview Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
+          As ZeroCater rapidly expanded from a simple catering service to a comprehensive workplace food platform with mobile apps, web dashboards, and admin tools, we faced the classic startup challenge: maintaining design quality while moving fast and scaling quickly.
+        </p>
+        <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+          I built ZeroCater's first comprehensive design system with reusable components, brand guidelines, and cross-platform design standards that unified experience across all touchpoints and enabled 50% faster feature development.
+        </p>
+      </motion.section>
 
       {/* Executive Summary - TinyCrowbar Style */}
       <motion.section
@@ -64,35 +94,16 @@ export default function DesignSystemPage() {
         </div>
       </motion.section>
 
-      {/* Hero Visual */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="mb-20"
-      >
-        <div className="w-full relative aspect-[16/10] bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
-          <Image
-            src="/images/zerocater-ZeroCater_design-system.png"
-            alt="ZeroCater Design System Overview"
-            fill
-            className="object-contain p-8"
-            sizes="100vw"
-          />
-        </div>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
-          ZeroCater design system showing component library, style guide, and cross-platform standards
-        </p>
-      </motion.section>
+
 
       {/* The Challenge */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="mb-20"
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="mb-16"
       >
-        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">The Challenge: Startup Growth Without Design Chaos</h2>
+        <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">The Challenge: Startup Growth Without Design Chaos</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           As ZeroCater rapidly expanded from a simple catering service to a comprehensive workplace food platform with mobile apps, web dashboards, and admin tools, we faced the classic startup challenge: maintaining design quality while moving fast and scaling quickly.
         </p>
