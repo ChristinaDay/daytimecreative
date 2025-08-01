@@ -4,8 +4,8 @@ export const SITE_CONFIG = {
   author: 'Your Name',
   url: 'https://your-portfolio-url.com',
   links: {
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
+    github: 'https://github.com/ChristinaDay',
+    linkedin: 'https://www.linkedin.com/in/christinaday/',
     twitter: 'https://twitter.com/yourusername',
   },
 } as const; 
