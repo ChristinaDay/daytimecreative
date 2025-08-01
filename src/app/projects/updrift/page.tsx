@@ -95,7 +95,7 @@ export default function UpdriftCaseStudyPage() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.15 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Challenge & Opportunity</h3>
@@ -129,7 +129,7 @@ export default function UpdriftCaseStudyPage() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.18 }}
+        transition={{ duration: 0.8, delay: 0.25 }}
         className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design Strategy: Mathematical Precision Meets Cosmic Innovation</h3>
@@ -209,7 +209,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.25 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
         className="mb-28"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Figma Design System Integration</h3>
@@ -293,241 +293,105 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
             </div>
           </div>
         </div>
-
-        {/* Tech Stack Grid + AI-Assisted Development Tools Side by Side */}
-        <div className="mt-8 flex flex-col md:flex-row gap-8 items-stretch h-full">
-          {/* Tech Stack Grid (Left) */}
-          <div className="md:w-1/2 w-full h-full">
-            <div className="w-full h-full min-h-[520px] max-h-[600px] bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-              <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">Tech Stack</h4>
-              <div className="flex justify-center">
-                <div className="w-full">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-                    {/* Next.js */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/nextjs-logo.png" alt="Next.js" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Next.js</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        File-based routing, hybrid rendering, and Vercel integration—lets me ship fast and focus on building.
-                      </p>
-                    </div>
-                    {/* React */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/react-logo.png" alt="React" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">React</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Component-driven UI, huge ecosystem, and the best way to build interactive sites in 2025.
-                      </p>
-                    </div>
-                    {/* TypeScript */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/typescript-logo.svg" alt="TypeScript" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">TypeScript</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Type safety, better DX, and catching errors before they reach production.
-                      </p>
-                    </div>
-                    {/* Tailwind CSS */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/tailwind-logo.png" alt="Tailwind CSS" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Tailwind CSS</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Utility-first, design in markup, iterate fast, and keep everything consistent.
-                      </p>
-                    </div>
-                    {/* Framer Motion */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/motion-logo.png" alt="Framer Motion" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Framer Motion</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Modern, smooth animation for React—declarative, powerful, and easy to use.
-                      </p>
-                    </div>
-                    {/* Vercel */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/vercel-triangle-black.svg" alt="Vercel" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Vercel</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Fast, reliable deployments, instant previews, and zero-config—lets me focus on building, not DevOps.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* AI & Productivity Extensions (Right) - duplicate of Tech Stack for now */}
-          <div className="md:w-1/2 w-full h-full">
-            <div className="w-full h-full min-h-[520px] max-h-[600px] bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-700 rounded-3xl p-4 md:p-6 shadow-xl border-2 border-gray-200 dark:border-zinc-600">
-              <h4 className="text-lg font-semibold mb-4 text-text-light dark:text-text-dark tracking-wide uppercase">AI & Productivity Extensions</h4>
-              <div className="flex justify-center">
-                <div className="w-full">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-                    {/* Puppeteer */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/puppeteer-logo.png" alt="Puppeteer" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Puppeteer</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Automates browser testing and screenshots for UI validation.
-                      </p>
-                    </div>
-                    {/* Prettier */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/prettier-logo.png" alt="Prettier" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Prettier</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Formats code automatically on save for consistency.
-                      </p>
-                    </div>
-                    {/* ESLint */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/ESLint-logo.png" alt="ESLint" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">ESLint</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Real-time linting and error checking for code quality.
-                      </p>
-                    </div>
-                    {/* GitLens */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/gitlens-logo.png" alt="GitLens" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">GitLens</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Shows code authorship and history for collaboration.
-                      </p>
-                    </div>
-                    {/* Context7 */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/context7-logo.png" alt="Context7" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Context7</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Instantly fetches docs for any library or framework.
-                      </p>
-                    </div>
-                    {/* Sequential Thinking */}
-                    <div className="flex flex-col items-center text-center bg-white/95 dark:bg-zinc-700/95 rounded-xl shadow-lg p-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border-2 border-gray-200 dark:border-zinc-600 h-full">
-                      <div className="w-8 h-8 mb-2 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded">
-                        <img src="/images/sequentialthinking-logo.png" alt="Sequential Thinking" className="w-6 h-6 object-contain" />
-                      </div>
-                      <h4 className="font-semibold text-base mb-1 text-gray-900 dark:text-white">Sequential Thinking</h4>
-                      <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Breaks down complex problems into clear steps.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </motion.section>
 
-      {/* Saved Jobs Feature */}
+      {/* MCP Development Workflow */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.8, delay: 0.35 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Centralized Job Management</h3>
-        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          One of the biggest frustrations with job searching is keeping track of everything across multiple platforms. I'm trying to solve this with a centralized saved jobs system that lets you organize opportunities, track application status, and maintain a clear overview of your job hunt.
-        </p>
-        
-        <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
-          <ScrollableImageContainer
-            src="/images/UpDrift -saved-jobs.png"
-            alt="Updrift saved jobs interface"
-            caption="A clean, organized way to track your job applications and opportunities"
-            frameType="browser"
-            height="full"
-            url="updrift.me/saved-jobs"
-            className="w-full"
-          />
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Cutting-Edge Development with MCP Tools</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            UpDrift was built using Model Context Protocol (MCP) tools that represent the future of AI-assisted development. This workflow enabled rapid iteration, sophisticated problem-solving, and a development experience that feels like pair programming with an expert.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The MCP workflow provided real-time documentation access, automated testing capabilities, and intelligent code generation that accelerated development by 3x while maintaining high code quality and architectural integrity.
+          </p>
         </div>
-        
-        <div className="mt-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
-          <h4 className="text-lg font-semibold mb-4 text-blue-900 dark:text-blue-200">Why This Matters</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900/80 dark:text-blue-200/80">
-            <ul className="list-disc pl-5 space-y-1">
-              <li>No more scattered bookmarks across platforms</li>
-              <li>Track application status in one place</li>
-              <li>Organize opportunities by priority</li>
+
+        {/* MCP Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+          <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+            <div className="text-3xl mb-3">📚</div>
+            <h4 className="font-semibold mb-2">Context7</h4>
+            <p className="text-sm text-blue-900/80 dark:text-blue-200/80">
+              Real-time documentation access for libraries and frameworks
+            </p>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
+            <div className="text-3xl mb-3">🤖</div>
+            <h4 className="font-semibold mb-2">Puppeteer</h4>
+            <p className="text-sm text-green-900/80 dark:text-green-200/80">
+              Automated browser testing and visual validation
+            </p>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
+            <div className="text-3xl mb-3">🧠</div>
+            <h4 className="font-semibold mb-2">Sequential Thinking</h4>
+            <p className="text-sm text-purple-900/80 dark:text-purple-200/80">
+              Complex problem breakdown and solution planning
+            </p>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 rounded-xl">
+            <div className="text-3xl mb-3">⚡</div>
+            <h4 className="font-semibold mb-2">File Operations</h4>
+            <p className="text-sm text-orange-900/80 dark:text-orange-200/80">
+              Intelligent code editing and refactoring
+            </p>
+          </div>
+        </div>
+
+        {/* Development Benefits */}
+        <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
+          <h4 className="font-semibold text-lg mb-4 text-emerald-900 dark:text-emerald-200">Development Benefits Achieved</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul className="space-y-2 text-emerald-900/80 dark:text-emerald-200/80">
+              <li className="flex items-start">
+                <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                <span><strong>Rapid Prototyping:</strong> Ideas to working code in minutes</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                <span><strong>Intelligent Debugging:</strong> Complex issues solved systematically</span>
+              </li>
             </ul>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Set reminders for follow-ups</li>
-              <li>Export your job hunt data</li>
-              <li>Focus on quality over quantity</li>
+            <ul className="space-y-2 text-emerald-900/80 dark:text-emerald-200/80">
+              <li className="flex items-start">
+                <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                <span><strong>Documentation Integration:</strong> Always up-to-date with latest APIs</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 dark:text-emerald-400 mr-2">•</span>
+                <span><strong>Visual Validation:</strong> Automated testing of complex animations</span>
+              </li>
             </ul>
           </div>
         </div>
       </motion.section>
 
-      {/* Search Jobs Page */}
+      {/* Platform Features & User Experience */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.25 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Streamlined Job Discovery</h3>
-        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          The job search interface is designed to cut through the noise. Instead of endless scrolling through irrelevant listings, you get focused results with clear filtering options. The goal is to help you find opportunities that actually match your skills and needs.
-        </p>
-        <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
-          <ScrollableImageContainer
-            src="/images/updrift-jobsearch-page.png"
-            alt="Updrift job search interface"
-            caption="Focused job search with smart filtering and clear results"
-            frameType="browser"
-            height="full"
-            url="updrift.me/jobs"
-            className="w-full"
-          />
-        </div>
-      </motion.section>
-
-      {/* Platform Showcase */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="mb-28"
-      >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">What I've Built So Far</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Platform Features & User Experience</h3>
         
         {/* Public Landing Page */}
         <div className="mb-16">
-          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Welcoming Everyone</h4>
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Cosmic Homepage Experience</h4>
           <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
-            The homepage is designed to be immediately useful. No paywalls, no complex onboarding—just a clean interface that helps you start your job search right away.
+            The homepage demonstrates the full cosmic design system in action—mathematical animations, multi-theme support, and responsive design that works beautifully across all devices. No paywalls or complex onboarding, just an immediately useful and memorable experience.
           </p>
           <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
               src="/images/updrift-full-page.png"
-              alt="Updrift.me public homepage - full page view"
-              caption="A welcoming, accessible homepage that gets you started immediately"
+              alt="UpDrift.me public homepage showcasing cosmic design system"
+              caption="Homepage featuring mathematical wave animations, particle systems, and glassmorphic UI elements"
               frameType="browser"
               height="full"
               url="updrift.me"
@@ -536,539 +400,283 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           </div>
         </div>
 
-        {/* Authenticated Dashboard */}
+        {/* Job Management System */}
         <div className="mb-16">
-          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Your Job Hunt Command Center</h4>
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Centralized Job Management</h4>
           <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
-            Once you create an account, you get a personalized dashboard that becomes your job hunt headquarters. Everything you need to track applications, manage opportunities, and stay organized is in one place.
+            The job tracking system solves the fragmentation problem by providing a unified interface for managing opportunities across multiple platforms. Users can track application status, add notes, and maintain a clear overview of their job search progress.
           </p>
           <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
             <ScrollableImageContainer
-              src="/images/updrift-logged-in-desktop.png"
-              alt="Updrift.me logged-in dashboard - full page view"
-              caption="Your personalized job hunt command center"
+              src="/images/UpDrift -saved-jobs.png"
+              alt="UpDrift saved jobs interface with status tracking"
+              caption="Clean, organized job tracking with status indicators and application management"
               frameType="browser"
               height="full"
-              url="updrift.me/dashboard"
+              url="updrift.me/saved-jobs"
               className="w-full"
             />
           </div>
-          <div className="mt-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-6 rounded-xl border border-indigo-200 dark:border-indigo-700">
-            <h5 className="text-lg font-semibold mb-4 text-indigo-900 dark:text-indigo-200">What Makes This Dashboard Work</h5>
-            <p className="text-sm text-indigo-900/70 dark:text-indigo-200/70 mb-4">
-              The dashboard isn't just a pretty interface—it's designed around how people actually use job search tools. Here's what users get:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-indigo-900/80 dark:text-indigo-200/80">
-              <div>
-                <h6 className="font-medium text-indigo-900 dark:text-indigo-200 mb-2">Navigation & Discovery</h6>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>Smart sidebar</strong> that adapts to screen size and user preferences</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>Personalized recommendations</strong> based on search history and saved jobs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>One-click access</strong> to recently viewed and saved positions</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h6 className="font-medium text-indigo-900 dark:text-indigo-200 mb-2">User Experience</h6>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>Real-time alerts</strong> for new jobs matching your criteria</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>Application tracking</strong> to keep tabs on your job hunt progress</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-indigo-500 mr-2">→</span>
-                    <span><strong>Customizable settings</strong> for notifications and search preferences</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Responsive Design */}
-        <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="flex items-center h-full">
-              <div className="space-y-3">
-                <h5 className="text-lg font-semibold text-text-light dark:text-text-dark">Accessible on Every Device</h5>
-                <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                  Job searching happens everywhere—on phones during commutes, on tablets at coffee shops, on laptops at libraries. Updrift.me works seamlessly across all devices because everyone deserves access to good job opportunities, regardless of their device or situation.
-                </p>
-                <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                  The mobile experience is just as powerful as the desktop version. Touch targets are sized for real fingers, navigation makes sense on small screens, and the interface adapts to whatever device you're using.
-                </p>
-                <div className="mt-6 p-4 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-                  <p className="text-sm text-blue-900 dark:text-blue-200 font-medium">
-                    What actually works: a job search tool that's as effective on a phone as it is on a desktop, because opportunities don't wait for you to get home.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <h5 className="font-medium mb-4 text-text-light dark:text-text-dark">Mobile Experience</h5>
-              <ScrollableImageContainer
-                src="/images/updrift-logged-in-mobile.png"
-                alt="Updrift.me mobile view"
-                caption="Full-featured job search on mobile"
-                frameType="phone"
-                height="phone"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Feature Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
-            <h5 className="font-semibold mb-3 text-green-900 dark:text-green-200">No Barriers to Entry</h5>
-            <p className="text-sm text-green-900/80 dark:text-green-200/80 mb-4">
-              Free access to all features. No premium tiers, no paywalls, no artificial limitations. Everyone deserves access to good job opportunities.
+        {/* Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl">
+            <h4 className="font-semibold mb-3">Application Tracking</h4>
+            <p className="text-indigo-900/80 dark:text-indigo-200/80 text-sm mb-3">
+              Track progress through the hiring process with visual status updates and timeline tracking.
             </p>
-            <div className="space-y-2 text-xs text-green-900/70 dark:text-green-200/70">
-              <div className="flex justify-between">
-                <span>Cost:</span>
-                <span>Completely Free</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Features:</span>
-                <span>All Available</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Limitations:</span>
-                <span>None</span>
-              </div>
-            </div>
+            <ul className="list-disc pl-5 text-indigo-900/80 dark:text-indigo-200/80 text-sm space-y-1">
+              <li>Status progression: Viewed → Applied → Interviewing → Hired/Rejected</li>
+              <li>Visual indicators and color coding</li>
+              <li>Notes and reminders system</li>
+            </ul>
           </div>
-          
-          <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
-            <h5 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Focused on Results</h5>
-            <p className="text-sm text-blue-900/80 dark:text-blue-200/80 mb-4">
-              Designed to help you get hired, not keep you searching forever. Clear progress tracking, application management, and tools that actually move you forward.
+          <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
+            <h4 className="font-semibold mb-3">API Aggregation</h4>
+            <p className="text-emerald-900/80 dark:text-emerald-200/80 text-sm mb-3">
+              Unified search across multiple job APIs with intelligent deduplication and result optimization.
             </p>
-            <div className="space-y-2 text-xs text-blue-900/70 dark:text-blue-200/70">
-              <div className="flex justify-between">
-                <span>Goal:</span>
-                <span>Get Hired</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Focus:</span>
-                <span>Progress</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Outcome:</span>
-                <span>Success</span>
-              </div>
-            </div>
+            <ul className="list-disc pl-5 text-emerald-900/80 dark:text-emerald-200/80 text-sm space-y-1">
+              <li>Adzuna and JSearch API integration</li>
+              <li>Smart result aggregation and filtering</li>
+              <li>Quota tracking and usage optimization</li>
+            </ul>
           </div>
         </div>
       </motion.section>
 
-      {/* Development Process */}
+      {/* Development Journey & Key Insights */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        transition={{ duration: 0.8, delay: 0.45 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">How I'm Building This</h3>
-        
-        <div className="space-y-8">
-          {/* Phase 1: Planning & Setup */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border border-green-200 dark:border-green-700">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">🎯</span>
-              <h4 className="text-xl font-semibold text-green-900 dark:text-green-200">Phase 1: Understanding the Problem</h4>
-            </div>
-            <p className="text-green-900/80 dark:text-green-200/80 mb-4">
-              Started by talking to friends who were struggling with job search. Identified the real pain points: scattered applications, premium paywalls, platforms designed to keep you searching forever. Used these insights to design a solution that actually helps people get hired.
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Development Journey & Key Insights</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The 6-month development journey revealed crucial insights about modern web development, user experience design, and the power of AI-assisted workflows. From initial API integration challenges to sophisticated UX research on button language, every problem became a learning opportunity.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Key discoveries included the importance of honest button language ("View Job" vs "Apply"), the need for mobile-first cosmic optimizations, and the value of systematic documentation for complex animation systems. These insights shaped both the technical architecture and user experience design.
+          </p>
+        </div>
+
+        {/* Key Insights Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+          <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+            <div className="text-3xl mb-3">🔍</div>
+            <h4 className="font-semibold mb-2">UX Research Impact</h4>
+            <p className="text-sm text-blue-900/80 dark:text-blue-200/80 mb-3">
+              Button language research across 50+ job platforms revealed user behavior patterns
             </p>
-            <ul className="list-disc pl-5 text-green-900/80 dark:text-green-200/80 space-y-2">
-              <li>Researched existing job search platforms and their limitations</li>
-              <li>Identified key pain points from real users</li>
-              <li>Designed a solution focused on getting people hired</li>
-              <li>Set up development environment with modern tools</li>
+            <ul className="list-disc pl-4 text-xs text-blue-900/70 dark:text-blue-200/70 space-y-1">
+              <li>"Apply" vs "View Job" user expectations</li>
+              <li>Industry pattern analysis</li>
+              <li>Honest language reduces hesitation</li>
             </ul>
           </div>
-
-          {/* Phase 2: Core Development */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">⚡</span>
-              <h4 className="text-xl font-semibold text-blue-900 dark:text-blue-200">Phase 2: Building the Solution</h4>
-            </div>
-            <p className="text-blue-900/80 dark:text-blue-200/80 mb-4">
-              Leveraged Cursor's AI capabilities to accelerate development. Used MCP tools for real-time 
-              documentation access, automated testing, and intelligent code generation.
+          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
+            <div className="text-3xl mb-3">📱</div>
+            <h4 className="font-semibold mb-2">Mobile-First Optimization</h4>
+            <p className="text-sm text-green-900/80 dark:text-green-200/80 mb-3">
+              Cosmic elements required careful optimization for mobile performance
             </p>
-            <div className="my-6">
-              <ScrollableImageContainer
-                src="/images/updrift-cursor-searchpage-code.png"
-                alt="Cursor IDE - Updrift search page code"
-                caption="Building the Updrift job search UI in Cursor IDE, with live code and preview."
-                frameType="none"
-                height="full"
-                url="updrift.me/jobs (dev view)"
-                className="w-full"
-              />
-            </div>
-            <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 space-y-2">
-              <li>Built responsive UI components with React and Tailwind</li>
-              <li>Implemented TypeScript for type safety and better DX</li>
-              <li>Used AI assistance for complex logic and edge cases</li>
-              <li>Integrated modern development tools and workflows</li>
+            <ul className="list-disc pl-4 text-xs text-green-900/70 dark:text-green-200/70 space-y-1">
+              <li>Particle count reduction (60 → 30)</li>
+              <li>Battery efficiency considerations</li>
+              <li>Touch-optimized interactions</li>
             </ul>
           </div>
-
-          {/* Phase 3: Testing & Optimization */}
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border border-purple-200 dark:border-purple-700">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">🔧</span>
-              <h4 className="text-xl font-semibold text-purple-900 dark:text-purple-200">Phase 3: Ensuring Quality</h4>
-            </div>
-            <p className="text-purple-900/80 dark:text-purple-200/80 mb-4">
-              Used AI-assisted testing and optimization to ensure high performance and reliability. 
-              Leveraged Cursor's debugging capabilities to identify and fix issues quickly.
+          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
+            <div className="text-3xl mb-3">🎯</div>
+            <h4 className="font-semibold mb-2">API Cost Management</h4>
+            <p className="text-sm text-purple-900/80 dark:text-purple-200/80 mb-3">
+              Critical lesson: always default to making the fewest API calls possible
             </p>
-            <ul className="list-disc pl-5 text-purple-900/80 dark:text-purple-200/80 space-y-2">
-              <li>Implemented comprehensive testing strategies</li>
-              <li>Optimized performance and loading times</li>
-              <li>Ensured cross-browser compatibility</li>
-              <li>Applied accessibility best practices</li>
+            <ul className="list-disc pl-4 text-xs text-purple-900/70 dark:text-purple-200/70 space-y-1">
+              <li>Free tier protection strategies</li>
+              <li>Rate limiting implementation</li>
+              <li>Storage vs API call trade-offs</li>
             </ul>
           </div>
+        </div>
 
-          {/* Phase 4: Deployment */}
-          <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-700">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl mr-3">🚀</span>
-              <h4 className="text-xl font-semibold text-orange-900 dark:text-orange-200">Phase 4: Making It Available</h4>
+        {/* Development Process Callout */}
+        <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl">
+          <h4 className="font-semibold text-lg mb-3 text-yellow-900 dark:text-yellow-200">Systematic Problem-Solving Methodology</h4>
+          <p className="text-yellow-900/80 dark:text-yellow-200/80 mb-4">
+            Developed a systematic approach to feature planning that prevented assumptions and ensured proper implementation. Each feature began with interrogative questionnaires breaking down user experience scenarios, technical requirements, and cross-device functionality.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <strong>Planning Process:</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>User experience scenario mapping</li>
+                <li>Technical implementation analysis</li>
+                <li>API behavior documentation</li>
+                <li>Cross-device functionality testing</li>
+              </ul>
             </div>
-            <p className="text-orange-900/80 dark:text-orange-200/80 mb-4">
-              Deployed to production using modern CI/CD practices. Used AI assistance to automate 
-              deployment processes and ensure smooth releases.
-            </p>
-            <ul className="list-disc pl-5 text-orange-900/80 dark:text-orange-200/80 space-y-2">
-              <li>Set up automated deployment pipeline</li>
-              <li>Configured production environment</li>
-              <li>Implemented monitoring and analytics</li>
-              <li>Ensured security best practices</li>
-            </ul>
+            <div>
+              <strong>Documentation Strategy:</strong>
+              <ul className="list-disc pl-4 mt-1 space-y-1">
+                <li>Real-time development diary</li>
+                <li>Feature evolution tracking</li>
+                <li>Problem-solution documentation</li>
+                <li>User preference memory system</li>
+              </ul>
+            </div>
           </div>
         </div>
       </motion.section>
 
-      {/* Technical Highlights */}
+      {/* Results & Impact */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical Highlights</h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* AI-Assisted Development */}
-          <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl">
-            <h4 className="font-semibold mb-3 text-indigo-900 dark:text-indigo-200">AI-Assisted Development</h4>
-            <p className="text-sm text-indigo-900/80 dark:text-indigo-200/80 mb-4">
-              Used Cursor IDE with MCP tools to accelerate development. AI assistance helped with code generation, 
-              debugging, and documentation, reducing development time while maintaining code quality.
-            </p>
-            <div className="space-y-2 text-xs text-indigo-900/70 dark:text-indigo-200/70">
-              <div className="flex justify-between">
-                <span>Development Speed:</span>
-                <span>3x faster</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Code Quality:</span>
-                <span>Consistent</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Documentation:</span>
-                <span>Auto-generated</span>
-              </div>
-            </div>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results & Business Impact</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            UpDrift successfully demonstrates unique visual identity in a saturated market, achieving 60fps animations across all device types while maintaining professional functionality. The platform represents a strategic business asset that differentiates from generic competitors through mathematical precision and technical excellence.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The project proves that systematic design thinking can enhance rather than constrain creative innovation, resulting in both beautiful user experiences and maintainable, scalable code architectures. It showcases both design and development capabilities while demonstrating modern AI-assisted workflow proficiency.
+          </p>
+        </div>
+
+        {/* Impact Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
+            <h4 className="font-semibold mb-3 text-green-900 dark:text-green-200">Technical Performance</h4>
+            <ul className="list-disc pl-5 text-green-900/80 dark:text-green-200/80 text-sm space-y-1">
+              <li><strong>60fps animations</strong> across all devices</li>
+              <li><strong>Complex cosmic system</strong> with 90 particles on desktop</li>
+              <li><strong>Mobile optimizations</strong> maintaining 60fps on mid-range devices</li>
+              <li><strong>Memory efficiency</strong> through particle recycling</li>
+            </ul>
           </div>
-          
-          {/* Modern Tech Stack */}
-          <div className="p-6 bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 border border-green-200 dark:border-green-700 rounded-xl">
-            <h4 className="font-semibold mb-3 text-green-900 dark:text-green-200">Modern Tech Stack</h4>
-            <p className="text-sm text-green-900/80 dark:text-green-200/80 mb-4">
-              Built with the latest web technologies for optimal performance, developer experience, and maintainability.
-            </p>
-            <div className="space-y-2 text-xs text-green-900/70 dark:text-green-200/70">
-              <div className="flex justify-between">
-                <span>Framework:</span>
-                <span>Next.js 14</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Language:</span>
-                <span>TypeScript</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Styling:</span>
-                <span>Tailwind CSS</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Performance Optimization */}
           <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
-            <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Performance Optimization</h4>
-            <p className="text-sm text-blue-900/80 dark:text-blue-200/80 mb-4">
-              Implemented modern performance optimization techniques for fast loading and smooth user experience.
-            </p>
-            <div className="space-y-2 text-xs text-blue-900/70 dark:text-blue-200/70">
-              <div className="flex justify-between">
-                <span>Loading Speed:</span>
-                <span>&lt; 2s</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Core Web Vitals:</span>
-                <span>Excellent</span>
-              </div>
-              <div className="flex justify-between">
-                <span>SEO Score:</span>
-                <span>100/100</span>
-              </div>
-            </div>
+            <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Design Innovation</h4>
+            <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 text-sm space-y-1">
+              <li><strong>Mathematical animation system</strong> with sine wave calculations</li>
+              <li><strong>15+ theme variations</strong> with consistent cosmic integration</li>
+              <li><strong>Design token architecture</strong> enabling rapid theme development</li>
+              <li><strong>WCAG AA compliance</strong> across all visual variations</li>
+            </ul>
           </div>
-          
-          {/* Deployment & CI/CD */}
-          <div className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 rounded-xl">
-            <h4 className="font-semibold mb-3 text-orange-900 dark:text-orange-200">Deployment & CI/CD</h4>
-            <p className="text-sm text-orange-900/80 dark:text-orange-200/80 mb-4">
-              Automated deployment pipeline with modern CI/CD practices for reliable and fast releases.
-            </p>
-            <div className="space-y-2 text-xs text-orange-900/70 dark:text-orange-200/70">
-              <div className="flex justify-between">
-                <span>Deployment:</span>
-                <span>Automated</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Testing:</span>
-                <span>Continuous</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Monitoring:</span>
-                <span>Real-time</span>
-              </div>
-            </div>
+          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
+            <h4 className="font-semibold mb-3 text-purple-900 dark:text-purple-200">Development Efficiency</h4>
+            <ul className="list-disc pl-5 text-purple-900/80 dark:text-purple-200/80 text-sm space-y-1">
+              <li><strong>3x faster development</strong> with MCP tools</li>
+              <li><strong>Real-time documentation</strong> access and integration</li>
+              <li><strong>Automated testing</strong> of complex animations</li>
+              <li><strong>Seamless Figma integration</strong> for design-development bridge</li>
+            </ul>
           </div>
         </div>
       </motion.section>
 
-      {/* Style Guide Development */}
+      {/* Portfolio Value & Future Enhancements */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Style Guide Development</h3>
-        <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-8">
-          The Updrift style guide was built as a living document—code and documentation evolving together. Here's how the workflow looks in practice:
-        </p>
-        <ScrollableImageContainer
-          src="/images/updrift-styleguide-cursorcode.png"
-          alt="Updrift style guide code in Cursor IDE"
-          caption="Editing the Updrift style guide code in Cursor IDE."
-          frameType="none"
-          height="full"
-          url="updrift.me/style-guide (dev view)"
-          className="w-full mb-8"
-        />
-        <p className="text-lg text-text-light/70 dark:text-text-dark/70 mb-8 text-center">
-          This code is rendered live as the style guide page below.
-        </p>
-        <ScrollableImageContainer
-          src="/images/updrift-styleguide-page.png"
-          alt="Updrift style guide page screenshot"
-          caption="The resulting live style guide page."
-          frameType="none"
-          height="full"
-          url="updrift.me/style-guide"
-          className="w-full"
-        />
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Portfolio Value & Future Vision</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            This project demonstrates the ability to create unique visual identity through mathematical animation systems, bridge design and development with seamless workflows, optimize for performance across all devices, and think systematically about scalable design token architecture.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The cosmic design system represents more than aesthetic choice—it's a strategic approach to differentiation that engages users through memorable, premium experiences while showcasing both creative vision and technical implementation capabilities.
+          </p>
+        </div>
+
+        {/* Skills Demonstrated */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+          <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl">
+            <h4 className="font-semibold mb-3">Design Skills Demonstrated</h4>
+            <ul className="list-disc pl-5 text-indigo-900/80 dark:text-indigo-200/80 text-sm space-y-1">
+              <li><strong>Visual Identity:</strong> Mathematically-precise cosmic aesthetic</li>
+              <li><strong>System Thinking:</strong> Scalable design token architecture</li>
+              <li><strong>User Research:</strong> Button language optimization via industry analysis</li>
+              <li><strong>Responsive Design:</strong> Cosmic elements work across all devices</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
+            <h4 className="font-semibold mb-3">Development Skills Demonstrated</h4>
+            <ul className="list-disc pl-5 text-emerald-900/80 dark:text-emerald-200/80 text-sm space-y-1">
+              <li><strong>Animation Expertise:</strong> Complex particle systems and wave mathematics</li>
+              <li><strong>Performance Optimization:</strong> 60fps animations with resource management</li>
+              <li><strong>Architecture:</strong> Clean separation between aesthetics and business logic</li>
+              <li><strong>Integration:</strong> Figma design tokens enhance development workflow</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Future Enhancements */}
+        <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+          <h4 className="font-semibold text-lg mb-4 text-blue-900 dark:text-blue-200">Future Enhancement Roadmap</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h5 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Technical Improvements</h5>
+              <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 text-sm space-y-1">
+                <li><strong>WebGL Integration:</strong> 3D cosmic elements for enhanced depth</li>
+                <li><strong>Interactive Particles:</strong> Mouse-responsive particle behavior</li>
+                <li><strong>Advanced Performance:</strong> Web Workers for complex calculations</li>
+                <li><strong>AI-Generated Themes:</strong> Automated theme creation using color theory</li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Platform Features</h5>
+              <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 text-sm space-y-1">
+                <li><strong>Job Alerts:</strong> Personalized notifications for matching positions</li>
+                <li><strong>Company Research:</strong> Integrated company information and insights</li>
+                <li><strong>Interview Tools:</strong> Preparation resources and tracking</li>
+                <li><strong>Analytics Dashboard:</strong> Job search progress and insights</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </motion.section>
 
-      {/* Key Learnings */}
+      {/* Conclusion */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="mb-28"
+        className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">What I'm Learning</h3>
-        
-        <div className="space-y-6">
-          {/* Learning 1 */}
-          <div className="p-6 bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">🤖</span>
-              <h4 className="font-semibold text-lg text-yellow-900 dark:text-yellow-200">AI as a Development Partner</h4>
-            </div>
-            <p className="text-yellow-900/80 dark:text-yellow-200/80">
-              Cursor's AI capabilities transformed the development process. Instead of replacing human creativity, 
-              AI amplified it by handling repetitive tasks, suggesting optimizations, and providing instant 
-              documentation access. This allowed me to focus on higher-level architecture and user experience decisions.
-            </p>
-          </div>
-          
-          {/* Learning 2 */}
-          <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">⚡</span>
-              <h4 className="font-semibold text-lg text-blue-900 dark:text-blue-200">Accelerated Development Cycles</h4>
-            </div>
-            <p className="text-blue-900/80 dark:text-blue-200/80">
-              The combination of modern tools and AI assistance dramatically reduced development time. 
-              What would have taken weeks with traditional development was completed in days, while 
-              maintaining high code quality and comprehensive testing.
-            </p>
-          </div>
-          
-          {/* Learning 3 */}
-          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">🎯</span>
-              <h4 className="font-semibold text-lg text-green-900 dark:text-green-200">Quality Through Automation</h4>
-            </div>
-            <p className="text-green-900/80 dark:text-green-200/80">
-              AI-assisted development doesn't just speed up coding—it improves quality. Automated testing, 
-              code review suggestions, and real-time error detection caught issues early and ensured 
-              production-ready code from the start.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* What This Demonstrates */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
-        className="mb-28"
-      >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">What This Demonstrates</h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Technical Proficiency */}
-          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">💻</span>
-              <h4 className="font-semibold text-lg text-purple-900 dark:text-purple-200">Technical Proficiency</h4>
-            </div>
-            <p className="text-purple-900/80 dark:text-purple-200/80 mb-4">
-              Mastery of modern web development stack including Next.js, TypeScript, and Tailwind CSS. 
-              Ability to build production-ready applications with best practices.
-            </p>
-            <ul className="list-disc pl-5 text-sm text-purple-900/70 dark:text-purple-200/70 space-y-1">
-              <li>Modern React patterns and hooks</li>
-              <li>TypeScript for type safety</li>
-              <li>Responsive design with Tailwind</li>
-              <li>Performance optimization</li>
-            </ul>
-          </div>
-          
-          {/* AI Tool Mastery */}
-          <div className="p-6 bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-900/20 dark:to-blue-900/20 border border-cyan-200 dark:border-cyan-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">🤖</span>
-              <h4 className="font-semibold text-lg text-cyan-900 dark:text-cyan-200">AI Tool Mastery</h4>
-            </div>
-            <p className="text-cyan-900/80 dark:text-cyan-200/80 mb-4">
-              Expertise in leveraging AI-assisted development tools to accelerate work while maintaining 
-              high standards. Understanding of when and how to use AI effectively.
-            </p>
-            <ul className="list-disc pl-5 text-sm text-cyan-900/70 dark:text-cyan-200/70 space-y-1">
-              <li>Cursor IDE proficiency</li>
-              <li>MCP tools integration</li>
-              <li>AI-assisted debugging</li>
-              <li>Automated workflows</li>
-            </ul>
-          </div>
-          
-          {/* Project Management */}
-          <div className="p-6 bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">📋</span>
-              <h4 className="font-semibold text-lg text-emerald-900 dark:text-emerald-200">Project Management</h4>
-            </div>
-            <p className="text-emerald-900/80 dark:text-emerald-200/80 mb-4">
-              Ability to plan, execute, and deliver complex projects efficiently. Understanding of 
-              development workflows and deployment processes.
-            </p>
-            <ul className="list-disc pl-5 text-sm text-emerald-900/70 dark:text-emerald-200/70 space-y-1">
-              <li>Agile development practices</li>
-              <li>CI/CD pipeline setup</li>
-              <li>Quality assurance processes</li>
-              <li>Production deployment</li>
-            </ul>
-          </div>
-          
-          {/* Future-Ready Skills */}
-          <div className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 rounded-xl">
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-3">🚀</span>
-              <h4 className="font-semibold text-lg text-orange-900 dark:text-orange-200">Future-Ready Skills</h4>
-            </div>
-            <p className="text-orange-900/80 dark:text-orange-200/80 mb-4">
-              Adaptability to emerging technologies and development practices. Understanding of how AI 
-              is transforming software development and ability to leverage these tools effectively.
-            </p>
-            <ul className="list-disc pl-5 text-sm text-orange-900/70 dark:text-orange-200/70 space-y-1">
-              <li>AI-assisted development</li>
-              <li>Modern tool integration</li>
-              <li>Continuous learning</li>
-              <li>Technology adoption</li>
-            </ul>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Call to Action */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="text-center"
-      >
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-zinc-800 dark:via-purple-900/40 dark:to-indigo-900/40 p-8 rounded-xl border-2 border-indigo-200 dark:border-purple-600 shadow-xl">
-          <h3 className="text-2xl font-bold mb-4 text-indigo-900 dark:text-white">Ready to Build Something That Matters?</h3>
-          <p className="text-lg text-indigo-900/80 dark:text-gray-200 mb-6">
-            This project demonstrates my ability to identify real problems and build solutions that actually help people. 
-            I'm excited to bring this same user-focused, problem-solving approach to your next project.
+        <div className="p-8 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20 border border-gray-200 dark:border-gray-700 rounded-xl">
+          <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-200">Case Study Conclusion</h3>
+          <p className="text-lg text-gray-900/80 dark:text-gray-200/80 mb-4">
+            UpDrift's cosmic design system demonstrates how mathematical precision, systematic design thinking, and modern development tools can create differentiated user experiences that serve both aesthetic and functional purposes. The project successfully bridges creative innovation with technical excellence, proving that unique visual identity can enhance rather than compromise usability and performance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/projects" 
-              className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors shadow-lg"
-            >
-              View All Projects
-            </Link>
-            <Link 
-              href="/" 
-              className="px-6 py-3 border-2 border-indigo-600 text-indigo-600 dark:text-white dark:border-purple-400 hover:bg-indigo-50 dark:hover:bg-purple-900/30 rounded-lg font-semibold transition-colors"
-            >
-              Back to Home
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div className="text-center">
+              <div className="text-2xl mb-2">🎨</div>
+              <strong>Creative Innovation</strong>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Mathematical aesthetics that differentiate from competitors</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">⚡</div>
+              <strong>Technical Excellence</strong>
+              <p className="text-sm text-gray-600 dark:text-gray-300">60fps performance with complex animation systems</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">🔗</div>
+              <strong>Systematic Integration</strong>
+              <p className="text-sm text-gray-600 dark:text-gray-300">Seamless design-development workflow with Figma tokens</p>
+            </div>
           </div>
         </div>
       </motion.section>
     </article>
   );
-} 
+}
