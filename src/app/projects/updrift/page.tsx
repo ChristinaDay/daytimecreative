@@ -75,15 +75,15 @@ export default function UpdriftCaseStudyPage() {
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">55+</div>
             <div className="text-sm text-blue-900/80 dark:text-blue-200/80">Git Commits</div>
-          </div>
+            </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">15+</div>
             <div className="text-sm text-purple-900/80 dark:text-purple-200/80">Theme Variations</div>
-          </div>
+            </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-green-600 dark:text-green-400">60fps</div>
             <div className="text-sm text-green-900/80 dark:text-green-200/80">Animation Performance</div>
-          </div>
+            </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">6</div>
             <div className="text-sm text-orange-900/80 dark:text-orange-200/80">Months Development</div>
@@ -155,7 +155,7 @@ export default function UpdriftCaseStudyPage() {
               <li>Continuous horizontal scroll</li>
               <li>Infinite space illusion</li>
             </ul>
-          </div>
+                      </div>
           <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
             <div className="text-3xl mb-3">🌊</div>
             <h4 className="font-semibold mb-2">Cosmic Rivers</h4>
@@ -167,7 +167,7 @@ export default function UpdriftCaseStudyPage() {
               <li>Mathematical precision</li>
               <li>Background depth layers</li>
             </ul>
-          </div>
+                    </div>
           <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
             <div className="text-3xl mb-3">⚡</div>
             <h4 className="font-semibold mb-2">Interactive Particles</h4>
@@ -179,8 +179,8 @@ export default function UpdriftCaseStudyPage() {
               <li>River boundary constraints</li>
               <li>Twinkling opacity effects</li>
             </ul>
-          </div>
-        </div>
+                    </div>
+                      </div>
 
         {/* Mathematical Implementation */}
         <div className="p-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20 border border-gray-200 dark:border-gray-700 rounded-xl my-8">
@@ -201,8 +201,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
   return points
 }`}
             </pre>
-          </div>
-        </div>
+                    </div>
+                      </div>
       </motion.section>
 
       {/* Figma Design System Integration */}
@@ -219,8 +219,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
             The Figma integration includes 4+ major theme variations (Dawn, Cyber, Forest, Electric) with complete token sets, cosmic element documentation, and technical specifications that developers can implement directly from the design system.
-          </p>
-        </div>
+                      </p>
+                    </div>
 
         {/* Figma Embed */}
         <div className="w-full mb-8">
@@ -233,11 +233,11 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               allowFullScreen
               className="w-full"
             ></iframe>
-          </div>
+                      </div>
           <p className="text-sm text-center text-gray-500 dark:text-gray-400 mt-4">
             Interactive Figma design system showing theme variations, cosmic elements, and component specifications
-          </p>
-        </div>
+                      </p>
+                    </div>
 
         {/* Design Token Architecture */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
@@ -252,7 +252,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li><strong>Forest Theme:</strong> Natural woodland greens</li>
               <li><strong>Electric Theme:</strong> High-energy yellow and purple</li>
             </ul>
-          </div>
+                      </div>
           <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
             <h4 className="font-semibold mb-3">Cosmic Element Documentation</h4>
             <p className="text-emerald-900/80 dark:text-emerald-200/80 text-sm mb-3">
@@ -264,8 +264,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li><strong>Implementation Notes:</strong> Code references</li>
               <li><strong>Theme Variations:</strong> Cross-theme compatibility</li>
             </ul>
-          </div>
-        </div>
+                    </div>
+                  </div>
 
         {/* Workflow Integration */}
         <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl">
@@ -275,12 +275,12 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <div className="text-2xl mb-2">🎨</div>
               <strong>Figma Design</strong>
               <p className="text-yellow-900/80 dark:text-yellow-200/80">Create components with design tokens</p>
-            </div>
+                </div>
             <div className="text-center">
               <div className="text-2xl mb-2">📤</div>
               <strong>Token Export</strong>
               <p className="text-yellow-900/80 dark:text-yellow-200/80">Automated JSON export from Figma</p>
-            </div>
+              </div>
             <div className="text-center">
               <div className="text-2xl mb-2">🔗</div>
               <strong>CSS Integration</strong>
@@ -290,7 +290,71 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <div className="text-2xl mb-2">✅</div>
               <strong>Validation</strong>
               <p className="text-yellow-900/80 dark:text-yellow-200/80">Ensure cosmic elements remain functional</p>
+          </div>
+                      </div>
+                    </div>
+      </motion.section>
+
+      {/* Tech Stack & Architecture */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Technical Foundation</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Built on a modern, performance-first stack that enables both the mathematical precision of the cosmic design system and the real-time responsiveness required for job search workflows.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Each technology was chosen to support specific project requirements: Next.js for server-side rendering, TypeScript for mathematical calculations, and Tailwind for systematic design token implementation.
+                      </p>
+                    </div>
+        
+        {/* Core Tech Stack */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/nextjs-logo.png" alt="Next.js" className="w-full h-full object-contain" />
+                      </div>
+            <h4 className="font-semibold text-sm mb-1">Next.js</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">React Framework</p>
+                    </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/react-logo.png" alt="React" className="w-full h-full object-contain" />
+                      </div>
+            <h4 className="font-semibold text-sm mb-1">React</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">UI Library</p>
+                    </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/typescript-logo.svg" alt="TypeScript" className="w-full h-full object-contain" />
+                      </div>
+            <h4 className="font-semibold text-sm mb-1">TypeScript</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Type Safety</p>
+                    </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/tailwind-logo.png" alt="Tailwind CSS" className="w-full h-full object-contain" />
+                  </div>
+            <h4 className="font-semibold text-sm mb-1">Tailwind</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">CSS Framework</p>
+                </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/motion-logo.png" alt="Framer Motion" className="w-full h-full object-contain" />
+              </div>
+            <h4 className="font-semibold text-sm mb-1">Framer Motion</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Animation</p>
             </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/vercel-triangle-black.svg" alt="Vercel" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-1">Vercel</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Deployment</p>
           </div>
         </div>
       </motion.section>
@@ -313,34 +377,67 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
         </div>
 
         {/* MCP Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
-          <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
-            <div className="text-3xl mb-3">📚</div>
-            <h4 className="font-semibold mb-2">Context7</h4>
-            <p className="text-sm text-blue-900/80 dark:text-blue-200/80">
-              Real-time documentation access for libraries and frameworks
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/context7-logo.png" alt="Context7" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-2">Context7</h4>
+            <p className="text-xs text-blue-900/80 dark:text-blue-200/80">
+              Real-time docs access
             </p>
           </div>
-          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
-            <div className="text-3xl mb-3">🤖</div>
-            <h4 className="font-semibold mb-2">Puppeteer</h4>
-            <p className="text-sm text-green-900/80 dark:text-green-200/80">
-              Automated browser testing and visual validation
+          <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/puppeteer-logo.png" alt="Puppeteer" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-2">Puppeteer</h4>
+            <p className="text-xs text-green-900/80 dark:text-green-200/80">
+              Browser automation
             </p>
           </div>
-          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
-            <div className="text-3xl mb-3">🧠</div>
-            <h4 className="font-semibold mb-2">Sequential Thinking</h4>
-            <p className="text-sm text-purple-900/80 dark:text-purple-200/80">
-              Complex problem breakdown and solution planning
+          <div className="p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/sequentialthinking-logo.png" alt="Sequential Thinking" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-2">Sequential Thinking</h4>
+            <p className="text-xs text-purple-900/80 dark:text-purple-200/80">
+              Problem breakdown
             </p>
           </div>
-          <div className="p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 rounded-xl">
-            <div className="text-3xl mb-3">⚡</div>
-            <h4 className="font-semibold mb-2">File Operations</h4>
-            <p className="text-sm text-orange-900/80 dark:text-orange-200/80">
-              Intelligent code editing and refactoring
+          <div className="p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/gitlens-logo.png" alt="GitLens" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-2">GitLens</h4>
+            <p className="text-xs text-orange-900/80 dark:text-orange-200/80">
+              Git visualization
             </p>
+          </div>
+        </div>
+        
+        {/* Additional Development Tools */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-10 h-10 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/prettier-logo.png" alt="Prettier" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-1">Prettier</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Code formatting</p>
+          </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-10 h-10 mx-auto mb-3 flex items-center justify-center">
+              <img src="/images/ESLint-logo.png" alt="ESLint" className="w-full h-full object-contain" />
+            </div>
+            <h4 className="font-semibold text-sm mb-1">ESLint</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Code linting</p>
+          </div>
+          <div className="p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-center hover:shadow-lg transition-shadow">
+            <div className="w-10 h-10 mx-auto mb-3 flex items-center justify-center">
+              <div className="text-2xl">⚡</div>
+            </div>
+            <h4 className="font-semibold text-sm mb-1">File Operations</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Intelligent editing</p>
           </div>
         </div>
 
@@ -386,15 +483,53 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Cosmic Homepage Experience</h4>
           <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
             The homepage demonstrates the full cosmic design system in action—mathematical animations, multi-theme support, and responsive design that works beautifully across all devices. No paywalls or complex onboarding, just an immediately useful and memorable experience.
-          </p>
-          <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
-            <ScrollableImageContainer
+        </p>
+        <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
+          <ScrollableImageContainer
               src="/images/updrift-full-page.png"
               alt="UpDrift.me public homepage showcasing cosmic design system"
               caption="Homepage featuring mathematical wave animations, particle systems, and glassmorphic UI elements"
+            frameType="browser"
+            height="full"
+              url="updrift.me"
+            className="w-full"
+          />
+        </div>
+        </div>
+
+        {/* Job Search Interface */}
+        <div className="mb-16">
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Intelligent Job Search</h4>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
+            The search interface combines multiple job APIs into a unified experience with advanced filtering, location-based search, and real-time results. The cosmic design system maintains visual consistency while ensuring optimal readability and interaction patterns.
+          </p>
+          <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
+            <ScrollableImageContainer
+              src="/images/updrift-jobsearch-page.png"
+              alt="UpDrift job search interface with filtering and results"
+              caption="Job search page with API aggregation, filtering options, and cosmic-themed result cards"
               frameType="browser"
               height="full"
-              url="updrift.me"
+              url="updrift.me/search"
+              className="w-full"
+            />
+          </div>
+        </div>
+
+        {/* Authenticated User Experience */}
+        <div className="mb-16">
+          <h4 className="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">Personalized Dashboard</h4>
+          <p className="text-lg text-text-light/80 dark:text-text-dark/80 mb-6">
+            Once logged in, users access a personalized dashboard that adapts the cosmic design system to their preferences. The interface provides quick access to saved jobs, application tracking, and personalized job recommendations based on their search history and preferences.
+          </p>
+          <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
+            <ScrollableImageContainer
+              src="/images/updrift-logged-in-desktop.png"
+              alt="UpDrift personalized dashboard for logged-in users"
+              caption="Authenticated user dashboard with personalized navigation and cosmic theme customization"
+              frameType="browser"
+              height="full"
+              url="updrift.me/dashboard"
               className="w-full"
             />
           </div>
@@ -407,17 +542,17 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
             The job tracking system solves the fragmentation problem by providing a unified interface for managing opportunities across multiple platforms. Users can track application status, add notes, and maintain a clear overview of their job search progress.
           </p>
           <div className="w-full [&_.mx-auto]:mx-0 [&_.max-w-4xl]:max-w-none">
-            <ScrollableImageContainer
+              <ScrollableImageContainer
               src="/images/UpDrift -saved-jobs.png"
               alt="UpDrift saved jobs interface with status tracking"
               caption="Clean, organized job tracking with status indicators and application management"
               frameType="browser"
-              height="full"
+                height="full"
               url="updrift.me/saved-jobs"
-              className="w-full"
-            />
+                className="w-full"
+              />
+            </div>
           </div>
-        </div>
 
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -461,8 +596,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
             Key discoveries included the importance of honest button language ("View Job" vs "Apply"), the need for mobile-first cosmic optimizations, and the value of systematic documentation for complex animation systems. These insights shaped both the technical architecture and user experience design.
           </p>
-        </div>
-
+          </div>
+          
         {/* Key Insights Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
           <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
@@ -476,7 +611,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li>Industry pattern analysis</li>
               <li>Honest language reduces hesitation</li>
             </ul>
-          </div>
+              </div>
           <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
             <div className="text-3xl mb-3">📱</div>
             <h4 className="font-semibold mb-2">Mobile-First Optimization</h4>
@@ -488,7 +623,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li>Battery efficiency considerations</li>
               <li>Touch-optimized interactions</li>
             </ul>
-          </div>
+              </div>
           <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
             <div className="text-3xl mb-3">🎯</div>
             <h4 className="font-semibold mb-2">API Cost Management</h4>
@@ -500,9 +635,9 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li>Rate limiting implementation</li>
               <li>Storage vs API call trade-offs</li>
             </ul>
+            </div>
           </div>
-        </div>
-
+          
         {/* Development Process Callout */}
         <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl">
           <h4 className="font-semibold text-lg mb-3 text-yellow-900 dark:text-yellow-200">Systematic Problem-Solving Methodology</h4>
@@ -518,7 +653,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
                 <li>API behavior documentation</li>
                 <li>Cross-device functionality testing</li>
               </ul>
-            </div>
+              </div>
             <div>
               <strong>Documentation Strategy:</strong>
               <ul className="list-disc pl-4 mt-1 space-y-1">
@@ -526,7 +661,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
                 <li>Feature evolution tracking</li>
                 <li>Problem-solution documentation</li>
                 <li>User preference memory system</li>
-              </ul>
+            </ul>
             </div>
           </div>
         </div>
@@ -546,9 +681,9 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
             The project proves that systematic design thinking can enhance rather than constrain creative innovation, resulting in both beautiful user experiences and maintainable, scalable code architectures. It showcases both design and development capabilities while demonstrating modern AI-assisted workflow proficiency.
-          </p>
-        </div>
-
+            </p>
+          </div>
+          
         {/* Impact Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
           <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
@@ -559,7 +694,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li><strong>Mobile optimizations</strong> maintaining 60fps on mid-range devices</li>
               <li><strong>Memory efficiency</strong> through particle recycling</li>
             </ul>
-          </div>
+            </div>
           <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
             <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">Design Innovation</h4>
             <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 text-sm space-y-1">
@@ -595,9 +730,9 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
             The cosmic design system represents more than aesthetic choice—it's a strategic approach to differentiation that engages users through memorable, premium experiences while showcasing both creative vision and technical implementation capabilities.
-          </p>
-        </div>
-
+            </p>
+          </div>
+          
         {/* Skills Demonstrated */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
           <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl">
@@ -608,7 +743,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li><strong>User Research:</strong> Button language optimization via industry analysis</li>
               <li><strong>Responsive Design:</strong> Cosmic elements work across all devices</li>
             </ul>
-          </div>
+            </div>
           <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
             <h4 className="font-semibold mb-3">Development Skills Demonstrated</h4>
             <ul className="list-disc pl-5 text-emerald-900/80 dark:text-emerald-200/80 text-sm space-y-1">
@@ -618,8 +753,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
               <li><strong>Integration:</strong> Figma design tokens enhance development workflow</li>
             </ul>
           </div>
-        </div>
-
+            </div>
+          
         {/* Future Enhancements */}
         <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
           <h4 className="font-semibold text-lg mb-4 text-blue-900 dark:text-blue-200">Future Enhancement Roadmap</h4>
@@ -631,8 +766,8 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
                 <li><strong>Interactive Particles:</strong> Mouse-responsive particle behavior</li>
                 <li><strong>Advanced Performance:</strong> Web Workers for complex calculations</li>
                 <li><strong>AI-Generated Themes:</strong> Automated theme creation using color theory</li>
-              </ul>
-            </div>
+            </ul>
+          </div>
             <div>
               <h5 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Platform Features</h5>
               <ul className="list-disc pl-5 text-blue-900/80 dark:text-blue-200/80 text-sm space-y-1">
@@ -640,7 +775,7 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
                 <li><strong>Company Research:</strong> Integrated company information and insights</li>
                 <li><strong>Interview Tools:</strong> Preparation resources and tracking</li>
                 <li><strong>Analytics Dashboard:</strong> Job search progress and insights</li>
-              </ul>
+            </ul>
             </div>
           </div>
         </div>
@@ -679,4 +814,4 @@ const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
       </motion.section>
     </article>
   );
-}
+} 
