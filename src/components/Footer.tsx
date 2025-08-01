@@ -59,7 +59,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center">
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/christinaday/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -67,7 +67,7 @@ export default function Footer() {
                 LinkedIn ⎆
               </a>
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/ChristinaDay" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -75,7 +75,7 @@ export default function Footer() {
                 GitHub ⎆
               </a>
               <a 
-                href="https://instagram.com/yourusername" 
+                href="https://www.instagram.com/xtinamakes/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
@@ -83,7 +83,7 @@ export default function Footer() {
                 Instagram ⎆
               </a>
               <a 
-                href="https://dribbble.com/yourusername" 
+                href="https://dribbble.com/christinaday" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={`${footerTextColor} hover:text-accent-light dark:hover:text-accent-dark transition-colors font-medium text-sm`}
