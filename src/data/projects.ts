@@ -2,25 +2,26 @@ import { ProjectData } from '@/components/projects/ProjectCard';
 
 export const projectsData: ProjectData[] = [
   {
-    title: 'Updrift.me - AI-Assisted Development',
-    description: 'Modern web application built entirely using Cursor IDE with AI assistance, demonstrating the future of software development with accelerated workflows and high-quality results.',
-    designerDeveloperDescription: 'Built a complete web application using Next.js, TypeScript, and Tailwind CSS with AI-assisted development through Cursor IDE. Leveraged MCP tools for real-time documentation access, automated testing, and intelligent code generation. Implemented modern CI/CD practices and performance optimization.',
+    title: 'UpDrift: Cosmic Design System Case Study',
+    description: 'Next-generation job search platform featuring mathematical animation systems, comprehensive Figma design token integration, and cutting-edge MCP development workflow. Demonstrates unique visual identity through 60fps cosmic elements and systematic design thinking.',
+    designerDeveloperDescription: 'Built a comprehensive job search platform with mathematical precision cosmic design system, integrated Figma design tokens, and MCP-assisted development workflow. Features 15+ theme variations, real-time sine wave animations, particle systems, and systematic documentation of complex visual elements.',
     image: '/images/updrift-hero-preview.png',
     link: '/projects/updrift',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE'],
-    designerDeveloperTags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'AI-Assisted Development', 'Cursor IDE', 'MCP Tools', 'CI/CD'],
-    year: '2025',
+    tags: ['Design Systems', 'Mathematical Animation', 'Figma Integration', 'MCP Tools', 'Cosmic UI'],
+    designerDeveloperTags: ['Next.js', 'TypeScript', 'Figma Tokens', 'Mathematical Animation', 'Cursor IDE', 'MCP Tools', 'Design Systems'],
+    year: '2024-2025',
     bgColor: 'from-cyan-500/15 via-3% via-transparent via-97% to-blue-600/12 dark:from-cyan-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-blue-500/10',
     designHighlights: [
-      'Built complete web application with AI-assisted development workflow',
-      'Demonstrated 3x faster development speed with Cursor IDE',
-      'Implemented modern UI/UX with responsive design patterns'
+      'Created unique cosmic design system with mathematical precision animations',
+      'Integrated Figma design tokens with 15+ theme variations',
+      'Achieved 60fps performance across all devices with complex particle systems',
+      'Documented systematic approach to bridging design and development workflows'
     ],
     technicalHighlights: [
-      'Used Cursor IDE with MCP tools for accelerated development',
-      'Implemented TypeScript for type safety and better developer experience',
-      'Set up automated CI/CD pipeline with modern deployment practices',
-      'Optimized performance and accessibility for production deployment'
+      'Mathematical sine wave calculations for organic cosmic animations',
+      'MCP tools for 3x faster development with real-time documentation access',
+      'Performance optimization: 60fps animations with GPU acceleration',
+      'Comprehensive Figma integration with automated token export workflow'
     ]
   },
   {
