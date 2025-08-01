@@ -20,20 +20,18 @@ export default function UpdriftCaseStudyPage() {
         className="mb-16 pt-24"
       >
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
-          Building Updrift.me: Exploring Cursor While Solving a Real Problem
+          UpDrift: A Cosmic Design System Case Study
         </h1>
         <ProjectSubtitle>
-          Using Cursor IDE to build a job search tool.
+          Building a next-generation job search platform with mathematical precision, Figma integration, and cutting-edge MCP development workflow.
         </ProjectSubtitle>
         <ProjectDetailTags
-          role="Developer, Designer"
+          role="Lead Designer & Full-Stack Developer"
           employer="Personal Project"
-          platforms="Next.js, React, TypeScript, Tailwind CSS, Cursor IDE"
-          areas="AI-Assisted Development, Front-End Development, Modern Web Stack"
-          year="2025"
+          platforms="Next.js, TypeScript, Figma, Cursor IDE, MCP Tools"
+          areas="Design Systems, Mathematical Animation, AI-Assisted Development"
+          year="2024-2025"
         />
-
-
       </motion.div>
 
       {/* Hero Image */}
@@ -47,75 +45,253 @@ export default function UpdriftCaseStudyPage() {
           <UpdriftHeroPreview />
           <div className="absolute bottom-6 left-6 text-white z-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 drop-shadow-lg">
-              Updrift.me
+              UpDrift.me
             </h2>
             <p className="text-sm md:text-base opacity-90 drop-shadow-lg">
-              Job search that works for everyone
+              Next-generation job search with cosmic design system
             </p>
           </div>
         </div>
       </motion.div>
 
-      {/* The Problem */}
+      {/* Project Overview */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">The Problem: Job Search in 2025 Is Kind of a Mess</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            I started building Updrift.me because job searching in 2025 is frustrating. Most of us live paycheck to paycheck, depend on our jobs for healthcare, and can't afford premium memberships to platforms that gatekeep opportunities behind paywalls. The current tools seem designed to keep you searching forever rather than actually helping you get hired.
+            UpDrift represents a complete reimagining of the job search experience, combining mathematical precision in design with cutting-edge development tools. Over 6 months, I built a platform that demonstrates how modern design systems, AI-assisted development, and innovative visual aesthetics can create truly differentiated user experiences.
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            I was tired of bouncing between LinkedIn, Indeed, Glassdoor, and countless other platforms, each with their own interface, each requiring me to track applications separately. It's 2025—finding a life-sustaining job shouldn't require a premium subscription or endless platform hopping.
+            This project showcases the integration of Figma design tokens with a mathematical animation system, all built using Cursor IDE with MCP tools for an accelerated development workflow. The result is a job platform that stands out in a crowded market through both technical innovation and memorable user experience.
           </p>
         </div>
         
-        <div className="p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-6 rounded-xl border border-red-200 dark:border-red-700">
-          <h4 className="text-lg font-semibold mb-4 text-red-900 dark:text-red-200">The Real Pain Points</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-red-900/80 dark:text-red-200/80">
-            <div>
-              <h5 className="font-medium mb-2 text-red-900 dark:text-red-200">Accessibility Issues</h5>
-              <ul className="space-y-1 text-sm">
-                <li>• Premium features locked behind paywalls</li>
-                <li>• Complex interfaces that overwhelm users</li>
-                <li>• No focus on actually getting people hired</li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-medium mb-2 text-red-900 dark:text-red-200">Workflow Problems</h5>
-              <ul className="space-y-1 text-sm">
-                <li>• Scattered across multiple platforms</li>
-                <li>• No centralized application tracking</li>
-                <li>• Endless scrolling without clear progress</li>
-              </ul>
-            </div>
+        {/* Key Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">55+</div>
+            <div className="text-sm text-blue-900/80 dark:text-blue-200/80">Git Commits</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">15+</div>
+            <div className="text-sm text-purple-900/80 dark:text-purple-200/80">Theme Variations</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">60fps</div>
+            <div className="text-sm text-green-900/80 dark:text-green-200/80">Animation Performance</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">6</div>
+            <div className="text-sm text-orange-900/80 dark:text-orange-200/80">Months Development</div>
           </div>
         </div>
       </motion.section>
 
-      {/* The Solution */}
+      {/* Challenge & Opportunity */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.15 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Challenge & Opportunity</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The job search market is oversaturated with generic, utilitarian platforms that lack personality and memorable experiences. All platforms look identical with boring, corporate aesthetics that don't inspire users or encourage exploration.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The opportunity was to create a job search platform that stands out through unique visual identity, premium user experience, and technical innovation—something that makes job searching feel aspirational rather than tedious.
+          </p>
+        </div>
+        
+        <div className="p-6 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-700 rounded-xl my-8">
+          <h4 className="font-semibold text-lg mb-3 text-red-900 dark:text-red-200">Key Problems Identified</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ul className="list-disc pl-5 text-red-900/80 dark:text-red-200/80 space-y-2">
+              <li><strong>Visual Monotony:</strong> All platforms look identical with corporate aesthetics</li>
+              <li><strong>Poor Engagement:</strong> Generic interfaces don't inspire exploration</li>
+              <li><strong>Limited Differentiation:</strong> No competitive advantages in crowded market</li>
+            </ul>
+            <ul className="list-disc pl-5 text-red-900/80 dark:text-red-200/80 space-y-2">
+              <li><strong>Mobile Experience:</strong> Most platforms prioritize desktop</li>
+              <li><strong>Platform Fragmentation:</strong> Users need multiple sites</li>
+              <li><strong>Poor Organization:</strong> No unified tracking system</li>
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Design Strategy & Cosmic System */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.18 }}
         className="mb-28"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">The Solution: Let's Try Building Something Better</h3>
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Design Strategy: Mathematical Precision Meets Cosmic Innovation</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            Updrift.me is my attempt to build a job search tool that actually helps people get hired, not keep them searching forever. It's free, accessible, and designed to reduce the friction between finding an opportunity and getting hired.
+            Instead of following generic design patterns, I developed a unique cosmic aesthetic based on mathematical precision. The visual system uses sine wave calculations for organic animations, space-inspired elements that create emotional connection, and technical excellence that signals platform quality.
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            The platform consolidates job search into one streamlined experience. No more bouncing between platforms. No more premium paywalls. Just a clean, efficient tool that helps you track applications, manage your job hunt, and actually get hired.
+            The design system architecture supports 15+ theme variations while maintaining brand consistency, with a component system that scales from mobile to desktop and 60fps animations across all devices through performance-first implementation.
           </p>
         </div>
-        <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-          <p className="text-sm text-blue-900 dark:text-blue-200 font-medium">
-            Note: This is very much a work in progress. I'm building this as I go, learning from the process, and seeing what actually works for real job seekers.
+
+        {/* Cosmic Elements Breakdown */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+          <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+            <div className="text-3xl mb-3">✨</div>
+            <h4 className="font-semibold mb-2">Starfield Background</h4>
+            <p className="text-sm text-blue-900/80 dark:text-blue-200/80 mb-3">
+              3 parallax layers moving at different speeds (60s, 90s, 120s) with 90 total particles
+            </p>
+            <ul className="list-disc pl-4 text-xs text-blue-900/70 dark:text-blue-200/70 space-y-1">
+              <li>Size/opacity variations for depth</li>
+              <li>Continuous horizontal scroll</li>
+              <li>Infinite space illusion</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 border border-purple-200 dark:border-purple-700 rounded-xl">
+            <div className="text-3xl mb-3">🌊</div>
+            <h4 className="font-semibold mb-2">Cosmic Rivers</h4>
+            <p className="text-sm text-purple-900/80 dark:text-purple-200/80 mb-3">
+              Real-time sine wave calculations for organic water-like flow
+            </p>
+            <ul className="list-disc pl-4 text-xs text-purple-900/70 dark:text-purple-200/70 space-y-1">
+              <li>Dual wave system (10px + 7px amplitude)</li>
+              <li>Mathematical precision</li>
+              <li>Background depth layers</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-xl">
+            <div className="text-3xl mb-3">⚡</div>
+            <h4 className="font-semibold mb-2">Interactive Particles</h4>
+            <p className="text-sm text-green-900/80 dark:text-green-200/80 mb-3">
+              60 particles (30 on mobile) with physics-based movement
+            </p>
+            <ul className="list-disc pl-4 text-xs text-green-900/70 dark:text-green-200/70 space-y-1">
+              <li>Collision detection</li>
+              <li>River boundary constraints</li>
+              <li>Twinkling opacity effects</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Mathematical Implementation */}
+        <div className="p-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20 border border-gray-200 dark:border-gray-700 rounded-xl my-8">
+          <h4 className="font-semibold text-lg mb-4 text-gray-900 dark:text-gray-200">Technical Innovation: Wave Animation System</h4>
+          <p className="text-gray-900/80 dark:text-gray-200/80 mb-4">
+            The cosmic rivers use real-time mathematical calculations to create infinitely variable, organic motion that never repeats.
           </p>
+          <div className="bg-gray-900 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto">
+            <pre className="text-green-400 text-sm">
+{`// Wave generation with mathematical precision
+const generateWavePoints = (amplitude, frequency, offset, phase, yBase) => {
+  const points = []
+  for (let x = 0; x <= width; x += width / 200) {
+    const normalizedX = x / width
+    const y = yBase + amplitude * Math.sin(frequency * normalizedX * Math.PI * 2 + time * phase + offset)
+    points.push([x, y])
+  }
+  return points
+}`}
+            </pre>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Figma Design System Integration */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.25 }}
+        className="mb-28"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Figma Design System Integration</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            To bridge design and development workflows while preserving the unique cosmic elements, I created a comprehensive Figma design system with design tokens that enhance the existing CSS system. This hybrid approach maintains the mathematical precision of the animations while enabling rapid design iteration.
+          </p>
+          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The Figma integration includes 4+ major theme variations (Dawn, Cyber, Forest, Electric) with complete token sets, cosmic element documentation, and technical specifications that developers can implement directly from the design system.
+          </p>
+        </div>
+
+        {/* Figma Embed */}
+        <div className="w-full mb-8">
+          <div className="relative w-full rounded-xl border-2 border-gray-300 dark:border-gray-600 overflow-hidden shadow-lg">
+            <iframe 
+              style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} 
+              width="100%" 
+              height="450" 
+              src="https://embed.figma.com/design/Y26bgihZLo7yteiqqYk9em/UpDrift-Design-System?node-id=27-3923&embed-host=share" 
+              allowFullScreen
+              className="w-full"
+            ></iframe>
+          </div>
+          <p className="text-sm text-center text-gray-500 dark:text-gray-400 mt-4">
+            Interactive Figma design system showing theme variations, cosmic elements, and component specifications
+          </p>
+        </div>
+
+        {/* Design Token Architecture */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+          <div className="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 border border-indigo-200 dark:border-indigo-700 rounded-xl">
+            <h4 className="font-semibold mb-3">Multi-Theme Token System</h4>
+            <p className="text-indigo-900/80 dark:text-indigo-200/80 text-sm mb-3">
+              HSL-based color system enables mathematical color manipulation across 15+ theme variations.
+            </p>
+            <ul className="list-disc pl-5 text-indigo-900/80 dark:text-indigo-200/80 text-sm space-y-1">
+              <li><strong>Dawn Theme:</strong> Warm sunrise with coral tones</li>
+              <li><strong>Cyber Theme:</strong> Dark cyberpunk with electric pink</li>
+              <li><strong>Forest Theme:</strong> Natural woodland greens</li>
+              <li><strong>Electric Theme:</strong> High-energy yellow and purple</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-700 rounded-xl">
+            <h4 className="font-semibold mb-3">Cosmic Element Documentation</h4>
+            <p className="text-emerald-900/80 dark:text-emerald-200/80 text-sm mb-3">
+              Complex animations documented with technical specifications and implementation notes.
+            </p>
+            <ul className="list-disc pl-5 text-emerald-900/80 dark:text-emerald-200/80 text-sm space-y-1">
+              <li><strong>Static Representation:</strong> Key animation frames</li>
+              <li><strong>Technical Specs:</strong> Mathematical parameters</li>
+              <li><strong>Implementation Notes:</strong> Code references</li>
+              <li><strong>Theme Variations:</strong> Cross-theme compatibility</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Workflow Integration */}
+        <div className="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 rounded-xl">
+          <h4 className="font-semibold text-lg mb-3 text-yellow-900 dark:text-yellow-200">Design-Development Workflow</h4>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+            <div className="text-center">
+              <div className="text-2xl mb-2">🎨</div>
+              <strong>Figma Design</strong>
+              <p className="text-yellow-900/80 dark:text-yellow-200/80">Create components with design tokens</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">📤</div>
+              <strong>Token Export</strong>
+              <p className="text-yellow-900/80 dark:text-yellow-200/80">Automated JSON export from Figma</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">🔗</div>
+              <strong>CSS Integration</strong>
+              <p className="text-yellow-900/80 dark:text-yellow-200/80">Tokens map to existing HSL system</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">✅</div>
+              <strong>Validation</strong>
+              <p className="text-yellow-900/80 dark:text-yellow-200/80">Ensure cosmic elements remain functional</p>
+            </div>
+          </div>
         </div>
 
         {/* Tech Stack Grid + AI-Assisted Development Tools Side by Side */}
