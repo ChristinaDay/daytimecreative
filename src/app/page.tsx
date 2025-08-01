@@ -252,18 +252,28 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
                 className="flex flex-col sm:flex-row gap-4 mt-6"
               >
-                <Link 
-                  href="#projects" 
+                <button 
+                  onClick={() => {
+                    const projectsSection = document.getElementById('projects');
+                    if (projectsSection) {
+                      projectsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="px-6 py-3 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl"
                 >
                   View Projects
-                </Link>
-                <Link 
-                  href="#about" 
+                </button>
+                <button 
+                  onClick={() => {
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                      aboutSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="px-6 py-3 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center hover:bg-accent-light/5 dark:hover:bg-accent-dark/5"
                 >
                   About Me
-                </Link>
+                </button>
               </motion.div>
             </FlexibleHeroText>
           </div>
