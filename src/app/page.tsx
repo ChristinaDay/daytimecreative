@@ -250,27 +250,59 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
-                className="flex flex-col sm:flex-row gap-4 mt-6"
+                className="flex flex-col sm:flex-row gap-4 mt-6 relative z-30"
               >
                 <button 
                   onClick={() => {
-                    const projectsSection = document.getElementById('projects');
-                    if (projectsSection) {
-                      projectsSection.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    console.log('View Projects button clicked!');
+                    // More robust scroll implementation
+                    setTimeout(() => {
+                      const projectsSection = document.getElementById('projects');
+                      if (projectsSection) {
+                        // Try modern smooth scroll first
+                        if ('scrollBehavior' in document.documentElement.style) {
+                          projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                          // Fallback for older browsers
+                          const targetPosition = projectsSection.offsetTop - 100; // Offset for header
+                          window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                          });
+                        }
+                      } else {
+                        console.warn('Projects section not found');
+                      }
+                    }, 100);
                   }}
-                  className="px-6 py-3 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl"
+                  className="px-6 py-3 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl relative z-40 cursor-pointer"
                 >
                   View Projects
                 </button>
                 <button 
                   onClick={() => {
-                    const aboutSection = document.getElementById('about');
-                    if (aboutSection) {
-                      aboutSection.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    console.log('About Me button clicked!');
+                    // More robust scroll implementation  
+                    setTimeout(() => {
+                      const aboutSection = document.getElementById('about');
+                      if (aboutSection) {
+                        // Try modern smooth scroll first
+                        if ('scrollBehavior' in document.documentElement.style) {
+                          aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                          // Fallback for older browsers
+                          const targetPosition = aboutSection.offsetTop - 100; // Offset for header
+                          window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                          });
+                        }
+                      } else {
+                        console.warn('About section not found');
+                      }
+                    }, 100);
                   }}
-                  className="px-6 py-3 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center hover:bg-accent-light/5 dark:hover:bg-accent-dark/5"
+                  className="px-6 py-3 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300 text-center hover:bg-accent-light/5 dark:hover:bg-accent-dark/5 relative z-40 cursor-pointer"
                 >
                   About Me
                 </button>

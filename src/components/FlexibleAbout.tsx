@@ -14,7 +14,7 @@ export function FlexibleHeroText({ children }: { children?: React.ReactNode }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
     >
-      <div className="flex flex-col h-32 md:h-52 lg:h-60 justify-start">
+      <div className="flex flex-col min-h-32 md:min-h-52 lg:min-h-60 justify-start">
         <h1 className="text-left text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-text-light dark:text-text-dark leading-relaxed mb-6 md:mb-8">
           I am an Oakland-based designer and developer building{' '}
           <CyclingText 
@@ -29,7 +29,7 @@ export function FlexibleHeroText({ children }: { children?: React.ReactNode }) {
           />{' '}
           marketplace and beyond.
         </h1>
-        <div className="mb-8 md:mb-12">{children}</div>
+        <div className="mb-8 md:mb-12 relative z-20">{children}</div>
       </div>
     </motion.div>
   );
