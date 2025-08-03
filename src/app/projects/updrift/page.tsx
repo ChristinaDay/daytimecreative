@@ -70,6 +70,31 @@ export default function UpdriftCaseStudyPage() {
           </p>
         </div>
         
+        {/* Live Site CTA */}
+        <div className="mb-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 className="font-semibold text-lg mb-1 text-blue-900 dark:text-blue-200">
+                Experience the Live Platform
+              </h4>
+              <p className="text-blue-900/80 dark:text-blue-200/80 text-sm">
+                See the cosmic design system and mathematical animations in action
+              </p>
+            </div>
+            <Link 
+              href="https://updrift.me" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center gap-2 whitespace-nowrap"
+            >
+              Visit UpDrift.me
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+        
         {/* Key Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
           <div className="text-center">
