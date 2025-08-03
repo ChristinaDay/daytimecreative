@@ -412,91 +412,26 @@ export default function ResumePage() {
         <section className="mb-16">
           <h3 className="text-3xl font-serif font-normal mb-12 text-center">Education</h3>
           
-          <div className="max-w-4xl mx-auto">
-            {/* Timeline Container */}
-            <div className="relative">
-              {/* Education timeline constellation line */}
-              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-5">
-                <defs>
-                  <filter id="education-glow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge> 
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                {/* Education timeline dots positions - space-y-8 = 64px spacing */}
-                <line
-                  x1={33}
-                  y1={100}
-                  x2={33}
-                  y2={164}
-                  stroke="#5cc6ff"
-                  strokeWidth="1.5"
-                  opacity={0.6}
-                  style={{
-                    animation: 'timelineLineBlue 3.5s ease-in-out 0.5s infinite',
-                  }}
-                />
-              </svg>
-              <div className="space-y-8">
-                {/* BFA New Media Art */}
-                <div className="relative flex items-center group">
-
-                  <svg 
-                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[6].r * 4} 
-                    height={scorpioNodeStyles[6].r * 4}
-                  >
-                    <circle
-                      cx={scorpioNodeStyles[6].r * 2}
-                      cy={scorpioNodeStyles[6].r * 2}
-                      r={scorpioNodeStyles[6].r}
-                      fill={scorpioNodeStyles[6].fill}
-                      opacity={0.95}
-                      filter="url(#glow)"
-                    />
-                  </svg>
-                  {/* Content Card */}
-                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, New Media Art</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2007-2010</span>
-                    </div>
-                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
-                  </div>
-
-
+          <div className="max-w-6xl mx-auto">
+            {/* Education Cards - Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* BFA New Media Art */}
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, New Media Art</h4>
+                  <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2007-2010</span>
                 </div>
+                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
+              </div>
 
-                {/* BFA Drawing and Painting */}
-                <div className="relative flex items-center group">
-
-                  <svg 
-                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[7].r * 4} 
-                    height={scorpioNodeStyles[7].r * 4}
-                  >
-                    <circle
-                      cx={scorpioNodeStyles[7].r * 2}
-                      cy={scorpioNodeStyles[7].r * 2}
-                      r={scorpioNodeStyles[7].r}
-                      fill={scorpioNodeStyles[7].fill}
-                      opacity={0.95}
-                      filter="url(#glow)"
-                    />
-                  </svg>
-                  {/* Content Card */}
-                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, Drawing and Painting</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2007-2010</span>
-                    </div>
-                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
-                  </div>
+              {/* BFA Drawing and Painting */}
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, Drawing and Painting</h4>
+                  <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2002-2007</span>
                 </div>
-            </div>
+                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of New Texas</h5>
+              </div>
             </div>
           </div>
         </section>
