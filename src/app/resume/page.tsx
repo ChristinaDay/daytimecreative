@@ -127,7 +127,7 @@ export default function ResumePage() {
           <StarfieldSVG />
       </div>
 
-      <article className="max-w-[100rem] mx-auto pt-6 md:pt-12 pb-12 md:pb-24 px-4 md:px-6 lg:px-8 relative z-40">
+      <article className="max-w-[100rem] mx-auto pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-24 px-4 md:px-6 lg:px-8 relative z-40">
         {/* Header */}
         <header className="text-center mb-8 md:mb-16">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-normal text-gray-900 dark:text-white leading-tight mb-4 md:mb-6">
@@ -166,6 +166,16 @@ export default function ResumePage() {
               Portfolio 
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <a 
+              href="/images/Resume-ChristinaDay2025.pdf"
+              download="Christina_Day_Resume_2025.pdf"
+              className="flex items-center gap-2 text-accent-light dark:text-accent-dark hover:underline font-medium"
+            >
+              Download Resume 
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </a>
           </div>
@@ -654,7 +664,7 @@ export default function ResumePage() {
           </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {/* Email CTA */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
               <div className="w-12 h-12 bg-accent-light/20 dark:bg-accent-dark/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -701,6 +711,31 @@ export default function ResumePage() {
               View Portfolio 
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            </div>
+
+            {/* Download Resume CTA */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
+              <div className="w-12 h-12 bg-accent-light/20 dark:bg-accent-dark/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-4 h-4 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-3">
+                Download Resume
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 text-xs md:text-sm">
+                Get a PDF copy of my complete resume with all experience details.
+              </p>
+            <a 
+              href="/images/Resume-ChristinaDay2025.pdf"
+              download="Christina_Day_Resume_2025.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg font-semibold hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 transition-all duration-300 text-sm"
+            >
+              Download PDF
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </a>
             </div>
