@@ -20,6 +20,24 @@ const timelineAnimationsCSS = `
   0%, 100% { opacity: 0.5; }
   50% { opacity: 0.1; }
 }
+
+/* Timeline dot color transitions */
+@keyframes timelineDotColorTransition {
+  0%, 100% { fill: #5cc6ff; }
+  50% { fill: #fff; }
+}
+
+/* Timeline line color transitions */
+@keyframes timelineLineColorTransition {
+  0%, 100% { 
+    background-color: #5cc6ff; 
+    filter: drop-shadow(0 0 3px #5cc6ff);
+  }
+  50% { 
+    background-color: #fffbe6; 
+    filter: drop-shadow(0 0 3px #fffbe6);
+  }
+}
 `;
 
 export default function ResumePage() {
@@ -156,8 +174,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - first to second dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
-                       style={{ filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
+                       style={{ animation: 'timelineLineColorTransition 7.2s ease-in-out 0.4s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -168,9 +186,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[0].r * 2}
                       cy={scorpioNodeStyles[0].r * 2}
                       r={scorpioNodeStyles[0].r}
-                      fill={scorpioNodeStyles[0].fill}
+                      fill="#5cc6ff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 6.3s ease-in-out 0.2s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
@@ -193,8 +212,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - second to third dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
-                       style={{ height: '270px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 0.3s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
+                       style={{ height: '270px', animation: 'timelineLineColorTransition 6.5s ease-in-out 2.1s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -205,9 +224,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[1].r * 2}
                       cy={scorpioNodeStyles[1].r * 2}
                       r={scorpioNodeStyles[1].r}
-                      fill={scorpioNodeStyles[1].fill}
+                      fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 5.8s ease-in-out 1.3s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
@@ -230,8 +250,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - third to fourth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
-                       style={{ height: '270px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 0.6s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
+                       style={{ height: '270px', animation: 'timelineLineColorTransition 7.8s ease-in-out 3.3s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -242,9 +262,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[2].r * 2}
                       cy={scorpioNodeStyles[2].r * 2}
                       r={scorpioNodeStyles[2].r}
-                      fill={scorpioNodeStyles[2].fill}
+                      fill="#5cc6ff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 6.7s ease-in-out 2.6s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
@@ -267,8 +288,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - fourth to fifth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
-                       style={{ height: '255px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 0.9s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
+                       style={{ height: '255px', animation: 'timelineLineColorTransition 6.1s ease-in-out 1.6s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -279,9 +300,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[3].r * 2}
                       cy={scorpioNodeStyles[3].r * 2}
                       r={scorpioNodeStyles[3].r}
-                      fill={scorpioNodeStyles[3].fill}
+                      fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 5.4s ease-in-out 0.9s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
@@ -303,8 +325,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - fifth to sixth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
-                       style={{ height: '255px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 1.2s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
+                       style={{ height: '255px', animation: 'timelineLineColorTransition 7.4s ease-in-out 0.8s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -315,9 +337,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[4].r * 2}
                       cy={scorpioNodeStyles[4].r * 2}
                       r={scorpioNodeStyles[4].r}
-                      fill={scorpioNodeStyles[4].fill}
+                      fill="#5cc6ff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 6.9s ease-in-out 3.1s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
@@ -348,9 +371,10 @@ export default function ResumePage() {
                       cx={scorpioNodeStyles[5].r * 2}
                       cy={scorpioNodeStyles[5].r * 2}
                       r={scorpioNodeStyles[5].r}
-                      fill={scorpioNodeStyles[5].fill}
+                      fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 5.6s ease-in-out 1.7s infinite' }}
                     />
                   </svg>
                   {/* Content Card */}
