@@ -27,7 +27,7 @@ const timelineAnimationsCSS = `
   50% { fill: #fff; }
 }
 
-/* Timeline line color transitions */
+/* Timeline line color transitions - smooth solid colors */
 @keyframes timelineLineColorTransition {
   0%, 100% { 
     background-color: #5cc6ff; 
@@ -37,6 +37,34 @@ const timelineAnimationsCSS = `
     background-color: #fffbe6; 
     filter: drop-shadow(0 0 3px #fffbe6);
   }
+}
+
+/* Light mode subtle sheen animation - smooth solid colors */
+@keyframes timelineRainbowSheen {
+  0%, 100% { 
+    background-color: #5cc6ff; 
+    filter: drop-shadow(0 0 3px #5cc6ff);
+  }
+  25% { 
+    background-color: #7c3aed; 
+    filter: drop-shadow(0 0 3px #7c3aed);
+  }
+  50% { 
+    background-color: #8b5cf6; 
+    filter: drop-shadow(0 0 3px #8b5cf6);
+  }
+  75% { 
+    background-color: #6366f1; 
+    filter: drop-shadow(0 0 3px #6366f1);
+  }
+}
+
+/* Theme-aware timeline animations */
+:root {
+  --timeline-animation: timelineRainbowSheen;
+}
+.dark {
+  --timeline-animation: timelineLineColorTransition;
 }
 `;
 
@@ -174,8 +202,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - first to second dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
-                       style={{ animation: 'timelineLineColorTransition 7.2s ease-in-out 0.4s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ animation: 'var(--timeline-animation, timelineRainbowSheen) 12s ease-in-out 0.4s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -212,8 +240,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - second to third dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
-                       style={{ height: '270px', animation: 'timelineLineColorTransition 6.5s ease-in-out 2.1s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '270px', animation: 'var(--timeline-animation, timelineRainbowSheen) 14s ease-in-out 2.1s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -250,8 +278,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - third to fourth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
-                       style={{ height: '270px', animation: 'timelineLineColorTransition 7.8s ease-in-out 3.3s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '270px', animation: 'var(--timeline-animation, timelineRainbowSheen) 16s ease-in-out 3.3s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -288,8 +316,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - fourth to fifth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
-                       style={{ height: '255px', animation: 'timelineLineColorTransition 6.1s ease-in-out 1.6s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '255px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -325,8 +353,8 @@ export default function ResumePage() {
                 <div className="relative flex items-center group">
                   
                   {/* Connecting line - fifth to sixth dot */}
-                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5"
-                       style={{ height: '255px', animation: 'timelineLineColorTransition 7.4s ease-in-out 0.8s infinite' }}></div>
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '255px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"

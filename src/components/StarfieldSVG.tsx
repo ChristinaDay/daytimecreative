@@ -25,9 +25,11 @@ const twinkleStyle = `
 
 export function StarfieldSVG() {
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === 'dark';
+  const [mounted, setMounted] = useState(false);
   const [stars, setStars] = useState<Star[]>([]);
   const [satellitePath, setSatellitePath] = useState('');
+  
+  const isDark = mounted ? resolvedTheme === 'dark' : false;
 
   // Generate stars immediately for testing
   const generateStars = () => {
@@ -54,6 +56,7 @@ export function StarfieldSVG() {
 
   // Generate stars only on client-side
   useEffect(() => {
+    setMounted(true);
 
     // Generate satellite path
     const startX = Math.random() * 100 + 20;
@@ -101,8 +104,8 @@ export function StarfieldSVG() {
         }}
         className="block"
       >
-      {/* Scorpio constellation */}
-      {stars.length > 0 && (() => {
+      {/* Scorpio constellation - only in dark mode */}
+      {isDark && stars.length > 0 && (() => {
         const scorpioStars = [
           { cx: 1100, cy: 700 }, // Antares
           { cx: 1120, cy: 740 },
