@@ -414,23 +414,26 @@ export default function ResumePage() {
           
           <div className="max-w-6xl mx-auto">
             {/* Education Cards - Side by Side */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* BFA New Media Art */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Studio Art and Music */}
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, New Media Art</h4>
-                  <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2007-2010</span>
-                </div>
-                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
+                <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-3 inline-block">2005-2006</span>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Studio Art, Music</h4>
+                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of Oklahoma</h5>
               </div>
 
               {/* BFA Drawing and Painting */}
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white">BFA, Drawing and Painting</h4>
-                  <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2002-2007</span>
-                </div>
-                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of New Texas</h5>
+                <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-3 inline-block">Graduated 2010</span>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">BFA, Drawing and Painting</h4>
+                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
+              </div>
+
+              {/* BFA New Media Art */}
+              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-3 inline-block">Graduated 2010</span>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">BFA, New Media Art</h4>
+                <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
               </div>
             </div>
           </div>
