@@ -29,55 +29,31 @@ export function StarfieldSVG() {
   const [stars, setStars] = useState<Star[]>([]);
   const [satellitePath, setSatellitePath] = useState('');
 
+  // Generate stars immediately for testing
+  const generateStars = () => {
+    const stars = [];
+    // Add some random stars throughout the space
+    for (let i = 0; i < 40; i++) {
+      const cx = Math.random() * 1440;
+      const cy = Math.random() * 900;
+      const r = Math.random() * 1.2 + 0.6;
+      const opacity = Math.random() * 0.3 + 0.2;
+      const colors = ['#fff', '#5cc6ff', '#ffd1dc'];
+      const fill = colors[Math.floor(Math.random() * colors.length)];
+      
+      stars.push({ cx, cy, r, fill, opacity });
+    }
+    return stars;
+  };
+
+  // Initialize stars immediately if empty
+  if (stars.length === 0) {
+    const newStars = generateStars();
+    setStars(newStars);
+  }
+
   // Generate stars only on client-side
   useEffect(() => {
-    const generateStars = () => {
-      const stars = [];
-      const clusters = [
-        // Cluster 1 - Top right
-        { x: 900, y: 120, radius: 50, count: 8 },
-        // Cluster 2 - Center
-        { x: 720, y: 450, radius: 60, count: 10 },
-        // Cluster 3 - Bottom left
-        { x: 300, y: 700, radius: 45, count: 7 },
-        // Cluster 4 - Top left
-        { x: 200, y: 200, radius: 40, count: 6 },
-        // Cluster 5 - Bottom right
-        { x: 1000, y: 600, radius: 55, count: 9 },
-      ];
-
-      // Generate clustered stars
-      clusters.forEach(cluster => {
-        for (let i = 0; i < cluster.count; i++) {
-          const angle = Math.random() * Math.PI * 2;
-          const distance = Math.random() * cluster.radius;
-          const cx = cluster.x + Math.cos(angle) * distance;
-          const cy = cluster.y + Math.sin(angle) * distance;
-          const r = Math.random() * 1.5 + 0.8;
-          const opacity = Math.random() * 0.5 + 0.5;
-          const colors = ['#fff', '#5cc6ff', '#ffd1dc', '#ff6b6b', '#fffbe6'];
-          const fill = colors[Math.floor(Math.random() * colors.length)];
-          
-          stars.push({ cx, cy, r, fill, opacity });
-        }
-      });
-
-      // Add some random stars throughout the space
-      for (let i = 0; i < 40; i++) {
-        const cx = Math.random() * 1440;
-        const cy = Math.random() * 900;
-        const r = Math.random() * 1.2 + 0.6;
-        const opacity = Math.random() * 0.3 + 0.2;
-        const colors = ['#fff', '#5cc6ff', '#ffd1dc'];
-        const fill = colors[Math.floor(Math.random() * colors.length)];
-        
-        stars.push({ cx, cy, r, fill, opacity });
-      }
-
-      return stars;
-    };
-
-    setStars(generateStars());
 
     // Generate satellite path
     const startX = Math.random() * 100 + 20;
@@ -108,24 +84,25 @@ export function StarfieldSVG() {
   }));
 
   return (
-    <svg
-      width="100vw"
-      height="100vh"
-      viewBox="0 0 1440 900"
-      style={{
-        position: 'absolute',
-        inset: 0,
-        width: '100vw',
-        height: '100vh',
-        pointerEvents: 'none',
-        zIndex: 10,
-        opacity: 0.9,
-        mixBlendMode: 'screen',
-      }}
-      className="dark:block"
-    >
-      {/* Only render Scorpio constellation in dark mode */}
-      {isDark && stars.length > 0 && (() => {
+    <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
+      <svg
+        width="100vw"
+        height="100vh"
+        viewBox="0 0 1440 900"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'none',
+          zIndex: -1,
+          opacity: 1,
+          mixBlendMode: 'normal',
+        }}
+        className="block"
+      >
+      {/* Scorpio constellation */}
+      {stars.length > 0 && (() => {
         const scorpioStars = [
           { cx: 1100, cy: 700 }, // Antares
           { cx: 1120, cy: 740 },
@@ -251,7 +228,7 @@ export function StarfieldSVG() {
         </filter>
       </defs>
       {/* Random and clustered stars */}
-      {(isDark ? stars : faintStars).map((star, i) => {
+      {stars.map((star, i) => {
         // Randomize duration and delay for each star
         const duration = (Math.random() * 2 + 1).toFixed(2) + 's';
         const delay = (Math.random() * 2).toFixed(2) + 's';
@@ -347,5 +324,6 @@ export function StarfieldSVG() {
         )}
       </g>
     </svg>
+    </div>
   );
 } 

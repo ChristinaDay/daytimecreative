@@ -3,299 +3,22 @@
 import React, { useEffect } from 'react';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 
-// Timeline node animations CSS - mimicking starfield constellation with color cycling and twinkling
+// Timeline styling CSS - constellation-inspired with connecting lines between nodes
 const timelineAnimationsCSS = `
-@keyframes timelineNodeTwinkle {
-  0% { 
-    background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
-    opacity: 0.7;
-    transform: translateX(-50%) scale(1) rotate(0deg);
-    filter: blur(0.5px);
-  }
-  12% {
-    opacity: 0.95;
-    transform: translateX(-50%) scale(1.1) rotate(45deg);
-    filter: blur(0.2px);
-  }
-  18% {
-    opacity: 0.6;
-    transform: translateX(-50%) scale(0.9) rotate(90deg);
-    filter: blur(0.7px);
-  }
-  25% {
-    opacity: 0.85;
-    transform: translateX(-50%) scale(1.05) rotate(135deg);
-    filter: blur(0.3px);
-  }
-  32% {
-    opacity: 0.75;
-    transform: translateX(-50%) scale(0.95) rotate(180deg);
-    filter: blur(0.6px);
-  }
-  40% {
-    opacity: 0.9;
-    transform: translateX(-50%) scale(1.08) rotate(225deg);
-    filter: blur(0.2px);
-  }
-  48% {
-    opacity: 0.65;
-    transform: translateX(-50%) scale(0.92) rotate(270deg);
-    filter: blur(0.8px);
-  }
-  55% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(1.02) rotate(315deg);
-    filter: blur(0.4px);
-  }
-  58% { 
-    background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
-    opacity: 0.9;
-    transform: translateX(-50%) scale(1) rotate(360deg);
-    filter: blur(0.5px);
-  }
-  64% { 
-    background-color: rgb(147, 51, 234);
-    box-shadow: 0 0 8px 1px rgba(147, 51, 234, 0.12), 0 0 24px 4px rgba(168, 85, 247, 0.06);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.15) rotate(405deg);
-    filter: blur(0.1px);
-  }
-  65% { 
-    background-color: rgb(252, 165, 165);
-    box-shadow: 0 0 8px 1px rgba(252, 165, 165, 0.12), 0 0 24px 4px rgba(254, 202, 202, 0.06);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.2) rotate(420deg);
-    filter: blur(0px);
-  }
-  66% { 
-    background-color: rgb(249, 115, 22);
-    box-shadow: 0 0 8px 1px rgba(249, 115, 22, 0.12), 0 0 24px 4px rgba(251, 146, 60, 0.06);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.18) rotate(435deg);
-    filter: blur(0px);
-  }
-  67% { 
-    background-color: rgb(234, 179, 8);
-    box-shadow: 0 0 8px 1px rgba(234, 179, 8, 0.12), 0 0 24px 4px rgba(250, 204, 21, 0.06);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.22) rotate(450deg);
-    filter: blur(0px);
-  }
-  68% { 
-    background-color: rgb(244, 217, 131);
-    box-shadow: 0 0 8px 1px rgba(244, 217, 131, 0.13), 0 0 24px 4px rgba(252, 236, 178, 0.07);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.25) rotate(465deg);
-    filter: blur(0px);
-  }
-  70% { 
-    background-color: rgb(248, 250, 255);
-    box-shadow: 0 0 8px 1px rgba(248, 250, 255, 0.25), 0 0 16px 2px rgba(240, 245, 255, 0.15);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.1) rotate(480deg);
-    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.15));
-  }
-  74% { 
-    background-color: rgb(240, 245, 255);
-    box-shadow: 0 0 8px 1px rgba(240, 245, 255, 0.3), 0 0 12px 2px rgba(230, 240, 255, 0.18);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.15) rotate(495deg);
-    filter: blur(0px) drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
-  }
-  78% { 
-    background-color: rgb(235, 245, 255);
-    box-shadow: 0 0 8px 1px rgba(235, 245, 255, 0.25), 0 0 16px 2px rgba(220, 235, 255, 0.15);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.05) rotate(510deg);
-    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.15));
-  }
-  85% { 
-    background-color: rgb(177, 210, 253);
-    box-shadow: 0 0 10px 2px rgba(177, 210, 253, 0.14), 0 0 12px 2px rgba(205, 228, 254, 0.07);
-    opacity: 0.95;
-    transform: translateX(-50%) scale(1.1) rotate(525deg);
-    filter: blur(0.2px);
-  }
-  88% { 
-    background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.10), 0 0 12px 2px rgba(96, 165, 250, 0.05);
-    opacity: 0.95;
-    transform: translateX(-50%) scale(1.05) rotate(540deg);
-    filter: blur(0.3px);
-  }
-  92% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(0.98) rotate(555deg);
-    filter: blur(0.4px);
-  }
-  96% {
-    opacity: 0.85;
-    transform: translateX(-50%) scale(1.02) rotate(570deg);
-    filter: blur(0.3px);
-  }
-  100% { 
-    background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
-    opacity: 0.7;
-    transform: translateX(-50%) scale(1) rotate(720deg);
-    filter: blur(0.5px);
-  }
+/* Timeline line glow and pulse animations - matching Scorpio constellation */
+@keyframes timelineLinePulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.2; }
 }
 
-@keyframes timelineNodeTwinkleDark {
-  0% { 
-    background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
-    opacity: 0.75;
-    transform: translateX(-50%) scale(1) rotate(0deg);
-    filter: blur(0.5px);
-  }
-  12% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1.12) rotate(45deg);
-    filter: blur(0.1px);
-  }
-  18% {
-    opacity: 0.65;
-    transform: translateX(-50%) scale(0.88) rotate(90deg);
-    filter: blur(0.8px);
-  }
-  25% {
-    opacity: 0.9;
-    transform: translateX(-50%) scale(1.06) rotate(135deg);
-    filter: blur(0.2px);
-  }
-  32% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(0.94) rotate(180deg);
-    filter: blur(0.7px);
-  }
-  40% {
-    opacity: 0.95;
-    transform: translateX(-50%) scale(1.1) rotate(225deg);
-    filter: blur(0.1px);
-  }
-  48% {
-    opacity: 0.7;
-    transform: translateX(-50%) scale(0.9) rotate(270deg);
-    filter: blur(0.9px);
-  }
-  55% {
-    opacity: 0.85;
-    transform: translateX(-50%) scale(1.04) rotate(315deg);
-    filter: blur(0.3px);
-  }
-  58% { 
-    background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
-    opacity: 0.85;
-    transform: translateX(-50%) scale(1) rotate(360deg);
-    filter: blur(0.5px);
-  }
-  64% { 
-    background-color: rgb(168, 85, 247);
-    box-shadow: 0 0 8px 1px rgba(168, 85, 247, 0.18), 0 0 24px 4px rgba(196, 125, 251, 0.08);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.18) rotate(405deg);
-    filter: blur(0px);
-  }
-  65% { 
-    background-color: rgb(252, 165, 165);
-    box-shadow: 0 0 8px 1px rgba(252, 165, 165, 0.18), 0 0 24px 4px rgba(254, 202, 202, 0.08);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.25) rotate(420deg);
-    filter: blur(0px);
-  }
-  66% { 
-    background-color: rgb(251, 146, 60);
-    box-shadow: 0 0 8px 1px rgba(251, 146, 60, 0.18), 0 0 24px 4px rgba(253, 186, 116, 0.08);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.22) rotate(435deg);
-    filter: blur(0px);
-  }
-  67% { 
-    background-color: rgb(250, 204, 21);
-    box-shadow: 0 0 8px 1px rgba(250, 204, 21, 0.18), 0 0 24px 4px rgba(254, 240, 138, 0.08);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.28) rotate(450deg);
-    filter: blur(0px);
-  }
-  68% { 
-    background-color: rgb(252, 229, 138);
-    box-shadow: 0 0 8px 1px rgba(252, 229, 138, 0.19), 0 0 24px 4px rgba(254, 243, 199, 0.09);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.32) rotate(465deg);
-    filter: blur(0px);
-  }
-  70% { 
-    background-color: rgb(248, 250, 255);
-    box-shadow: 0 0 8px 1px rgba(248, 250, 255, 0.3), 0 0 16px 2px rgba(240, 245, 255, 0.18);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.12) rotate(480deg);
-    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.18));
-  }
-  74% { 
-    background-color: rgb(240, 245, 255);
-    box-shadow: 0 0 8px 1px rgba(240, 245, 255, 0.35), 0 0 12px 2px rgba(230, 240, 255, 0.22);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.18) rotate(495deg);
-    filter: blur(0px) drop-shadow(0 0 3px rgba(255, 255, 255, 0.22));
-  }
-  78% { 
-    background-color: rgb(235, 245, 255);
-    box-shadow: 0 0 8px 1px rgba(235, 245, 255, 0.3), 0 0 16px 2px rgba(220, 235, 255, 0.18);
-    opacity: 1;
-    transform: translateX(-50%) scale(1.08) rotate(510deg);
-    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.18));
-  }
-  85% { 
-    background-color: rgb(191, 219, 254);
-    box-shadow: 0 0 10px 2px rgba(191, 219, 254, 0.19), 0 0 12px 2px rgba(219, 234, 254, 0.09);
-    opacity: 0.95;
-    transform: translateX(-50%) scale(1.15) rotate(525deg);
-    filter: blur(0.1px);
-  }
-  88% { 
-    background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 10px 2px rgba(96, 165, 250, 0.15), 0 0 12px 2px rgba(147, 197, 253, 0.07);
-    opacity: 0.9;
-    transform: translateX(-50%) scale(1.08) rotate(540deg);
-    filter: blur(0.2px);
-  }
-  92% {
-    opacity: 0.82;
-    transform: translateX(-50%) scale(0.96) rotate(555deg);
-    filter: blur(0.4px);
-  }
-  96% {
-    opacity: 0.88;
-    transform: translateX(-50%) scale(1.03) rotate(570deg);
-    filter: blur(0.3px);
-  }
-  100% { 
-    background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
-    opacity: 0.75;
-    transform: translateX(-50%) scale(1) rotate(720deg);
-    filter: blur(0.5px);
-  }
+@keyframes timelineLinePulseDark {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.15; }
 }
 
-.timeline-node {
-  animation: timelineNodeTwinkle 6s ease-in-out infinite;
-  transform-origin: center;
-  transition: filter 0.3s ease;
-}
-
-.dark .timeline-node {
-  animation: timelineNodeTwinkleDark 6s ease-in-out infinite;
-}
-
-.timeline-node:hover {
-  animation-duration: 3s;
-  filter: blur(0.1px) brightness(1.2);
+@keyframes timelineLineBlue {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.1; }
 }
 `;
 
@@ -310,10 +33,49 @@ export default function ResumePage() {
     }
   }, []);
 
+  // Exact Scorpio constellation star properties
+  const scorpioNodeStyles = [
+    { r: 5, fill: '#fffbe6' }, // Antares (largest, cream)
+    { r: 3.2, fill: '#5cc6ff' }, // Blue 
+    { r: 2.8, fill: '#fff' }, // White
+    { r: 2.5, fill: '#ffd1dc' }, // Pink
+    { r: 2.2, fill: '#fff' }, // White
+    { r: 2, fill: '#fffbe6' }, // Cream
+    { r: 2.7, fill: '#fff' }, // White
+    { r: 2.3, fill: '#5cc6ff' }, // Blue
+  ];
+
   return (
     <>
-      {/* Starfield Background - Only in Dark Mode */}
-      <div className="absolute z-0 inset-0 pointer-events-none">
+      {/* SVG Filter Definitions - Exact match to Scorpio constellation */}
+      <svg width="0" height="0" className="absolute">
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="line-glow-cream" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <filter id="line-glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+            <feMerge>
+              <feMergeNode in="coloredBlur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+
+      {/* Starfield Background */}
+      <div className="fixed inset-0 pointer-events-none z-30">
           <StarfieldSVG />
       </div>
 
@@ -389,14 +151,48 @@ export default function ResumePage() {
           <div className="max-w-4xl mx-auto">
             {/* Timeline Container */}
             <div className="relative">
-              {/* Vertical Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent from-[2px] to-accent-light to-[8px] dark:bg-gradient-to-b dark:from-transparent dark:from-[2px] dark:to-accent-dark dark:to-[8px]"></div>
-              
+              {/* Star-to-Star Connecting Lines - Like Scorpio constellation */}
+              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
+                <defs>
+                  <filter id="experience-line-glow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                {/* Experience connecting lines - vertical line connecting all dots */}
+                <line 
+                  x1="33" y1="50" 
+                  x2="33" y2="1500" 
+                  stroke="#fffbe6" 
+                  strokeWidth="3" 
+                  opacity="1"
+                  style={{ 
+                    animation: 'timelineLinePulse 4s ease-in-out infinite',
+                    filter: 'drop-shadow(0 0 6px #fffbe6)'
+                  }}
+                />
+              </svg>
               <div className="space-y-12">
             {/* Rotary Pictures */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.7s', animationDuration: '5.8s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[0].r * 4} 
+                    height={scorpioNodeStyles[0].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[0].r * 2}
+                      cy={scorpioNodeStyles[0].r * 2}
+                      r={scorpioNodeStyles[0].r}
+                      fill={scorpioNodeStyles[0].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -409,12 +205,27 @@ export default function ResumePage() {
                 Delivered identity systems, marketing assets, and digital touchpoints to support brand growth and industry partnerships.
               </p>
                   </div>
+
+
             </div>
 
             {/* Local Language */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.1s', animationDuration: '6.4s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[1].r * 4} 
+                    height={scorpioNodeStyles[1].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[1].r * 2}
+                      cy={scorpioNodeStyles[1].r * 2}
+                      r={scorpioNodeStyles[1].r}
+                      fill={scorpioNodeStyles[1].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -428,12 +239,26 @@ export default function ResumePage() {
                 creative vision into physical reality.
               </p>
                   </div>
+
             </div>
 
             {/* Betterview */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '4.3s', animationDuration: '7.1s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[2].r * 4} 
+                    height={scorpioNodeStyles[2].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[2].r * 2}
+                      cy={scorpioNodeStyles[2].r * 2}
+                      r={scorpioNodeStyles[2].r}
+                      fill={scorpioNodeStyles[2].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -447,12 +272,26 @@ export default function ResumePage() {
                 visualizations. Developed flexible, component-based systems to support customizable insurer workflows.
               </p>
                   </div>
+
             </div>
 
                 {/* ZeroCater Product Designer */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '1.2s', animationDuration: '5.3s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[3].r * 4} 
+                    height={scorpioNodeStyles[3].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[3].r * 2}
+                      cy={scorpioNodeStyles[3].r * 2}
+                      r={scorpioNodeStyles[3].r}
+                      fill={scorpioNodeStyles[3].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -465,12 +304,26 @@ export default function ResumePage() {
                 client dashboards and internal tools. Built production-ready frontend components and maintained design systems.
               </p>
                   </div>
+
             </div>
 
             {/* ZeroCater Designer */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '3.4s', animationDuration: '6.7s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[4].r * 4} 
+                    height={scorpioNodeStyles[4].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[4].r * 2}
+                      cy={scorpioNodeStyles[4].r * 2}
+                      r={scorpioNodeStyles[4].r}
+                      fill={scorpioNodeStyles[4].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -484,12 +337,26 @@ export default function ResumePage() {
                 graphic design services for events.
               </p>
                   </div>
+
             </div>
 
             {/* AnyPerk */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.3s', animationDuration: '5.9s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[5].r * 4} 
+                    height={scorpioNodeStyles[5].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[5].r * 2}
+                      cy={scorpioNodeStyles[5].r * 2}
+                      r={scorpioNodeStyles[5].r}
+                      fill={scorpioNodeStyles[5].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -552,14 +419,48 @@ export default function ResumePage() {
           <div className="max-w-4xl mx-auto">
             {/* Timeline Container */}
             <div className="relative">
-              {/* Vertical Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent from-[2px] to-accent-light to-[8px] dark:bg-gradient-to-b dark:from-transparent dark:from-[2px] dark:to-accent-dark dark:to-[8px]"></div>
-              
+              {/* Star-to-Star Connecting Line - Like Scorpio upper claw */}
+              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
+                <defs>
+                  <filter id="education-line-glow" x="-100%" y="-100%" width="300%" height="300%">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                {/* Education connecting line - vertical line connecting both education dots */}
+                <line 
+                  x1="33" y1="50" 
+                  x2="33" y2="300" 
+                  stroke="#5cc6ff" 
+                  strokeWidth="3" 
+                  opacity="1"
+                  style={{ 
+                    animation: 'timelineLineBlue 3.5s ease-in-out infinite 0.5s',
+                    filter: 'drop-shadow(0 0 6px #5cc6ff)'
+                  }}
+                />
+              </svg>
               <div className="space-y-8">
                 {/* BFA New Media Art */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '1.8s', animationDuration: '6.2s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[6].r * 4} 
+                    height={scorpioNodeStyles[6].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[6].r * 2}
+                      cy={scorpioNodeStyles[6].r * 2}
+                      r={scorpioNodeStyles[6].r}
+                      fill={scorpioNodeStyles[6].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
@@ -568,12 +469,27 @@ export default function ResumePage() {
                     </div>
                     <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
                   </div>
+
+
                 </div>
 
                 {/* BFA Drawing and Painting */}
                 <div className="relative flex items-center group">
-                  {/* Timeline Node */}
-                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.9s', animationDuration: '5.6s' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={scorpioNodeStyles[7].r * 4} 
+                    height={scorpioNodeStyles[7].r * 4}
+                  >
+                    <circle
+                      cx={scorpioNodeStyles[7].r * 2}
+                      cy={scorpioNodeStyles[7].r * 2}
+                      r={scorpioNodeStyles[7].r}
+                      fill={scorpioNodeStyles[7].fill}
+                      opacity={0.95}
+                      filter="url(#glow)"
+                    />
+                  </svg>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
