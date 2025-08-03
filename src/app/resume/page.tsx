@@ -188,6 +188,15 @@ export default function ResumePage() {
                 Portfolio
               </a>
               <a 
+                href="/projects"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/30 dark:border-gray-600/30 text-accent-light dark:text-accent-dark hover:bg-white/90 dark:hover:bg-gray-800/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm md:text-base"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                Projects
+              </a>
+              <a 
                 href="/images/Resume-ChristinaDay2025.pdf"
                 download="Christina_Day_Resume_2025.pdf"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm md:text-base"
