@@ -79,16 +79,18 @@ export default function ResumePage() {
     }
   }, []);
 
-  // Exact Scorpio constellation star properties
-  const scorpioNodeStyles = [
-    { r: 5, fill: '#fffbe6' }, // Antares (largest, cream)
-    { r: 3.2, fill: '#5cc6ff' }, // Blue 
-    { r: 2.8, fill: '#fff' }, // White
-    { r: 2.5, fill: '#ffd1dc' }, // Pink
-    { r: 2.2, fill: '#fff' }, // White
-    { r: 2, fill: '#fffbe6' }, // Cream
-    { r: 2.7, fill: '#fff' }, // White
-    { r: 2.3, fill: '#5cc6ff' }, // Blue
+  // Timeline node properties (expanded for complete timeline)
+  const timelineNodeStyles = [
+    { r: 5.5, fill: '#fffbe6' },   // 0: Rotary Pictures
+    { r: 3.7, fill: '#5cc6ff' }, // 1: Local Language  
+    { r: 3.3, fill: '#fff' },    // 2: HackerDAO
+    { r: 3, fill: '#ffd1dc' }, // 3: Betterview
+    { r: 2.7, fill: '#fff' },    // 4: Ten Spot
+    { r: 3.5, fill: '#5cc6ff' },   // 5: Thrive Global
+    { r: 3.2, fill: '#fff' },    // 6: ZeroCater Product
+    { r: 2.8, fill: '#5cc6ff' }, // 7: ZeroCater Designer
+    { r: 2.9, fill: '#fff' },    // 8: MakerSquare
+    { r: 2.6, fill: '#fffbe6' }, // 9: AnyPerk
   ];
 
   return (
@@ -207,13 +209,13 @@ export default function ResumePage() {
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[0].r * 4} 
-                    height={scorpioNodeStyles[0].r * 4}
+                    width={timelineNodeStyles[0].r * 4} 
+                    height={timelineNodeStyles[0].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[0].r * 2}
-                      cy={scorpioNodeStyles[0].r * 2}
-                      r={scorpioNodeStyles[0].r}
+                      cx={timelineNodeStyles[0].r * 2}
+                      cy={timelineNodeStyles[0].r * 2}
+                      r={timelineNodeStyles[0].r}
                       fill="#5cc6ff"
                       opacity={0.95}
                       filter="url(#glow)"
@@ -241,17 +243,17 @@ export default function ResumePage() {
                   
                   {/* Connecting line - second to third dot */}
                   <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
-                       style={{ height: '270px', animation: 'var(--timeline-animation, timelineRainbowSheen) 14s ease-in-out 2.1s infinite' }}></div>
+                       style={{ height: '251px', animation: 'var(--timeline-animation, timelineRainbowSheen) 14s ease-in-out 2.1s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[1].r * 4} 
-                    height={scorpioNodeStyles[1].r * 4}
+                    width={timelineNodeStyles[1].r * 4} 
+                    height={timelineNodeStyles[1].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[1].r * 2}
-                      cy={scorpioNodeStyles[1].r * 2}
-                      r={scorpioNodeStyles[1].r}
+                      cx={timelineNodeStyles[1].r * 2}
+                      cy={timelineNodeStyles[1].r * 2}
+                      r={timelineNodeStyles[1].r}
                       fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
@@ -274,23 +276,61 @@ export default function ResumePage() {
 
             </div>
 
-            {/* Betterview */}
+            {/* HackerDAO */}
                 <div className="relative flex items-center group">
                   
-                  {/* Connecting line - third to fourth dot */}
+                  {/* Connecting line - HackerDAO to Betterview */}
                   <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
-                       style={{ height: '270px', animation: 'var(--timeline-animation, timelineRainbowSheen) 16s ease-in-out 3.3s infinite' }}></div>
+                       style={{ height: '265px', animation: 'var(--timeline-animation, timelineRainbowSheen) 15s ease-in-out 1.8s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[2].r * 4} 
-                    height={scorpioNodeStyles[2].r * 4}
+                    width={timelineNodeStyles[2].r * 4} 
+                    height={timelineNodeStyles[2].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[2].r * 2}
-                      cy={scorpioNodeStyles[2].r * 2}
-                      r={scorpioNodeStyles[2].r}
+                      cx={timelineNodeStyles[2].r * 2}
+                      cy={timelineNodeStyles[2].r * 2}
+                      r={timelineNodeStyles[2].r}
                       fill="#5cc6ff"
+                      opacity={0.95}
+                      filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 6.7s ease-in-out 2.6s infinite' }}
+                    />
+                  </svg>
+                  {/* Content Card */}
+                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2021 - Jan 2022</span>
+              </div>
+                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium mb-4">HackerDAO</h5>
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                Created the visual identity for a web3 learning collective, inspired by zine culture and early internet aesthetics. 
+                Designed a matrix of logo options, a glitchy, typographic brand system, and a homepage hero treatment to establish 
+                the tone for the community's launch.
+              </p>
+                  </div>
+
+            </div>
+
+            {/* Betterview */}
+                <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - Betterview to Ten Spot */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '264px', animation: 'var(--timeline-animation, timelineRainbowSheen) 16s ease-in-out 3.3s infinite' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={timelineNodeStyles[3].r * 4} 
+                    height={timelineNodeStyles[3].r * 4}
+                  >
+                    <circle
+                      cx={timelineNodeStyles[3].r * 2}
+                      cy={timelineNodeStyles[3].r * 2}
+                      r={timelineNodeStyles[3].r}
+                      fill="#ffd1dc"
                       opacity={0.95}
                       filter="url(#glow)"
                       style={{ animation: 'timelineDotColorTransition 6.7s ease-in-out 2.6s infinite' }}
@@ -312,22 +352,95 @@ export default function ResumePage() {
 
             </div>
 
-                {/* ZeroCater Product Designer */}
+            {/* Ten Spot */}
                 <div className="relative flex items-center group">
                   
-                  {/* Connecting line - fourth to fifth dot */}
+                  {/* Connecting line - Ten Spot to Thrive Global */}
                   <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
-                       style={{ height: '255px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
+                       style={{ height: '226px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13.5s ease-in-out 3.2s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[3].r * 4} 
-                    height={scorpioNodeStyles[3].r * 4}
+                    width={timelineNodeStyles[3].r * 4} 
+                    height={timelineNodeStyles[3].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[3].r * 2}
-                      cy={scorpioNodeStyles[3].r * 2}
-                      r={scorpioNodeStyles[3].r}
+                      cx={timelineNodeStyles[3].r * 2}
+                      cy={timelineNodeStyles[3].r * 2}
+                      r={timelineNodeStyles[3].r}
+                      fill="#fff"
+                      opacity={0.95}
+                      filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 5.4s ease-in-out 0.9s infinite' }}
+                    />
+                  </svg>
+                  {/* Content Card */}
+                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Design Consultant</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2020 - Feb 2021</span>
+              </div>
+                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium mb-4">Ten Spot • San Francisco, CA</h5>
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                TenSpot wanted to refresh their website with all of their new product offerings. I helped them build and design 
+                the new look and feel of TenSpot.com as well as the launch of their new streaming engagement platform.
+              </p>
+                  </div>
+
+            </div>
+
+            {/* Thrive Global */}
+                <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - Thrive Global to ZeroCater Product Designer */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '235px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={timelineNodeStyles[4].r * 4} 
+                    height={timelineNodeStyles[4].r * 4}
+                  >
+                    <circle
+                      cx={timelineNodeStyles[4].r * 2}
+                      cy={timelineNodeStyles[4].r * 2}
+                      r={timelineNodeStyles[4].r}
+                      fill="#5cc6ff"
+                      opacity={0.95}
+                      filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 6.9s ease-in-out 3.1s infinite' }}
+                    />
+                  </svg>
+                  {/* Content Card */}
+                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Product Design Consultant</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2019 - Dec 2019</span>
+              </div>
+                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium mb-4">Thrive Global • San Francisco Bay Area</h5>
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                I helped build and design ThriveBot, Thrive app's personal wellness coach AI.
+              </p>
+                  </div>
+
+            </div>
+
+                {/* ZeroCater Product Designer */}
+                <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - ZeroCater Product Designer to ZeroCater Designer */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '251px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={timelineNodeStyles[3].r * 4} 
+                    height={timelineNodeStyles[3].r * 4}
+                  >
+                    <circle
+                      cx={timelineNodeStyles[3].r * 2}
+                      cy={timelineNodeStyles[3].r * 2}
+                      r={timelineNodeStyles[3].r}
                       fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
@@ -352,19 +465,19 @@ export default function ResumePage() {
             {/* ZeroCater Designer */}
                 <div className="relative flex items-center group">
                   
-                  {/* Connecting line - fifth to sixth dot */}
+                  {/* Connecting line - ZeroCater Designer to MakerSquare */}
                   <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
-                       style={{ height: '255px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
+                       style={{ height: '263px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[4].r * 4} 
-                    height={scorpioNodeStyles[4].r * 4}
+                    width={timelineNodeStyles[4].r * 4} 
+                    height={timelineNodeStyles[4].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[4].r * 2}
-                      cy={scorpioNodeStyles[4].r * 2}
-                      r={scorpioNodeStyles[4].r}
+                      cx={timelineNodeStyles[4].r * 2}
+                      cy={timelineNodeStyles[4].r * 2}
+                      r={timelineNodeStyles[4].r}
                       fill="#5cc6ff"
                       opacity={0.95}
                       filter="url(#glow)"
@@ -387,18 +500,56 @@ export default function ResumePage() {
 
             </div>
 
+            {/* MakerSquare */}
+                <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - ZeroCater Designer to MakerSquare */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                       style={{ height: '265px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
+
+                  <svg 
+                    className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
+                    width={timelineNodeStyles[5].r * 4} 
+                    height={timelineNodeStyles[5].r * 4}
+                  >
+                    <circle
+                      cx={timelineNodeStyles[5].r * 2}
+                      cy={timelineNodeStyles[5].r * 2}
+                      r={timelineNodeStyles[5].r}
+                      fill="#fff"
+                      opacity={0.95}
+                      filter="url(#glow)"
+                      style={{ animation: 'timelineDotColorTransition 5.6s ease-in-out 1.7s infinite' }}
+                    />
+                  </svg>
+                  {/* Content Card */}
+                  <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Graphic Designer, Illustrator, Branding</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Dec 2013 - Aug 2014</span>
+              </div>
+                    <h5 className="text-lg text-accent-light dark:text-accent-dark font-medium mb-4">MakerSquare • San Francisco, CA / Austin, TX</h5>
+                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
+                I crafted MakerSquare's (now called Hack Reactor) branding as their Lead Designer in both Austin and San Francisco. 
+                In this role I developed their logo, designed and built the interior wall installations for their San Francisco location, 
+                and developed a branding update and style guide in conjunction with the marketing team.
+              </p>
+                  </div>
+
+            </div>
+
             {/* AnyPerk */}
                 <div className="relative flex items-center group">
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
-                    width={scorpioNodeStyles[5].r * 4} 
-                    height={scorpioNodeStyles[5].r * 4}
+                    width={timelineNodeStyles[5].r * 4} 
+                    height={timelineNodeStyles[5].r * 4}
                   >
                     <circle
-                      cx={scorpioNodeStyles[5].r * 2}
-                      cy={scorpioNodeStyles[5].r * 2}
-                      r={scorpioNodeStyles[5].r}
+                      cx={timelineNodeStyles[5].r * 2}
+                      cy={timelineNodeStyles[5].r * 2}
+                      r={timelineNodeStyles[5].r}
                       fill="#fff"
                       opacity={0.95}
                       filter="url(#glow)"
