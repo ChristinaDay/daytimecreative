@@ -6,7 +6,7 @@ import { MainLayout } from './MainLayout';
 export function ConditionalMainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   
-  // Skip MainLayout wrapper for art-fabrication page since it has its own styling
+  // Skip MainLayout wrapper for pages with custom cosmic backgrounds
   if (pathname === '/art-fabrication') {
     return <>{children}</>;
   }
