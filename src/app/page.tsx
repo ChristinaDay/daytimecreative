@@ -280,6 +280,12 @@ export default function Home() {
                 >
                   View Projects
                 </button>
+                <Link 
+                  href="/resume"
+                  className="px-6 py-3 border-2 border-accent-light/30 dark:border-accent-dark/30 text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-all duration-300 text-center shadow-lg hover:shadow-xl relative z-40 cursor-pointer"
+                >
+                  View Resume
+                </Link>
                 <button 
                   onClick={() => {
                     // More robust scroll implementation  
@@ -294,7 +300,6 @@ export default function Home() {
                           const targetPosition = aboutSection.offsetTop - 100; // Offset for header
                           window.scrollTo({
                             top: targetPosition,
-                            behavior: 'smooth'
                           });
                         }
                       } else {
