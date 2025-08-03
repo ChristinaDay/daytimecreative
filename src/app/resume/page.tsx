@@ -129,55 +129,75 @@ export default function ResumePage() {
 
       <article className="max-w-[100rem] mx-auto pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-24 px-4 md:px-6 lg:px-8 relative z-40">
         {/* Header */}
-        <header className="text-center mb-8 md:mb-16">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-normal text-gray-900 dark:text-white leading-tight mb-4 md:mb-6">
-            Christina Day
-          </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl font-serif font-normal text-accent-light dark:text-accent-dark mb-6 md:mb-8 max-w-4xl mx-auto px-4">
-            Senior Product Designer | UX/UI + Branding + Frontend Dev | AI Tools • Systems Design • Web + Mobile • Figma • React
-          </h2>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-sm md:text-base text-gray-700 dark:text-gray-200 mb-8">
-            <div className="flex items-center gap-2">
-              <span>Oakland, California</span>
+        <header className="text-center mb-12 md:mb-20">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-normal text-gray-900 dark:text-white leading-tight mb-6 md:mb-8">
+              Christina Day
+            </h1>
+            <div className="mb-8 md:mb-10">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-serif font-normal text-accent-light dark:text-accent-dark mb-4 md:mb-6 max-w-4xl mx-auto px-4 leading-relaxed">
+                Senior Product Designer
+              </h2>
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
+                UX/UI + Branding + Frontend Dev | AI Tools • Systems Design • Web + Mobile • Figma • React
+              </p>
             </div>
-            <a 
-              href="mailto:christinamday@gmail.com"
-              className="flex items-center gap-2 text-accent-light dark:text-accent-dark hover:underline font-medium"
-            >
-              christinamday@gmail.com
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/christinaday"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-accent-light dark:text-accent-dark hover:underline font-medium"
-            >
-              LinkedIn 
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-            <a 
-              href="https://christinamday.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-accent-light dark:text-accent-dark hover:underline font-medium"
-            >
-              Portfolio 
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
-            <a 
-              href="/images/Resume-ChristinaDay2025.pdf"
-              download="Christina_Day_Resume_2025.pdf"
-              className="flex items-center gap-2 text-accent-light dark:text-accent-dark hover:underline font-medium"
-            >
-              Download Resume 
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </a>
+            
+            {/* Location */}
+            <div className="mb-6 md:mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-full border border-white/30 dark:border-gray-600/30">
+                <svg className="w-4 h-4 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="text-sm md:text-base font-medium text-gray-700 dark:text-gray-200">Oakland, California</span>
+              </div>
+            </div>
+
+            {/* Contact Links */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 lg:gap-6">
+              <a 
+                href="mailto:christinamday@gmail.com"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/30 dark:border-gray-600/30 text-accent-light dark:text-accent-dark hover:bg-white/90 dark:hover:bg-gray-800/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm md:text-base"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Email
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/christinaday"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/30 dark:border-gray-600/30 text-accent-light dark:text-accent-dark hover:bg-white/90 dark:hover:bg-gray-800/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm md:text-base"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a 
+                href="https://christinamday.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg border border-white/30 dark:border-gray-600/30 text-accent-light dark:text-accent-dark hover:bg-white/90 dark:hover:bg-gray-800/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm md:text-base"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                </svg>
+                Portfolio
+              </a>
+              <a 
+                href="/images/Resume-ChristinaDay2025.pdf"
+                download="Christina_Day_Resume_2025.pdf"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm md:text-base"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download PDF
+              </a>
+            </div>
           </div>
         </header>
 
