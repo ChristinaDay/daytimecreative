@@ -238,16 +238,26 @@ export default function ResumePage() {
           <div className="max-w-4xl mx-auto">
             {/* Timeline Container */}
             <div className="relative">
+              {/* Mobile Timeline - Single Line with Dots */}
+              <div className="md:hidden absolute top-6 bottom-0 w-0.5 bg-[#5cc6ff] opacity-70 z-5" 
+                   style={{ left: 'calc(1rem - 1px)', height: 'calc(100% - 1.5rem)' }}></div>
+              
+
+              
               <div className="space-y-8 md:space-y-12">
             {/* Rotary Pictures */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[0].r * 4} height={timelineNodeStyles[0].r * 4}>
+                    <circle cx={timelineNodeStyles[0].r * 2} cy={timelineNodeStyles[0].r * 2} r={timelineNodeStyles[0].r} fill="#fffbe6" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - first to second dot */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ animation: 'var(--timeline-animation, timelineRainbowSheen) 12s ease-in-out 0.4s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[0].r * 4} 
                     height={timelineNodeStyles[0].r * 4}
                   >
@@ -279,13 +289,17 @@ export default function ResumePage() {
 
             {/* Local Language */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[1].r * 4} height={timelineNodeStyles[1].r * 4}>
+                    <circle cx={timelineNodeStyles[1].r * 2} cy={timelineNodeStyles[1].r * 2} r={timelineNodeStyles[1].r} fill="#5cc6ff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - second to third dot */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '251px', animation: 'var(--timeline-animation, timelineRainbowSheen) 14s ease-in-out 2.1s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[1].r * 4} 
                     height={timelineNodeStyles[1].r * 4}
                   >
@@ -317,13 +331,17 @@ export default function ResumePage() {
 
             {/* HackerDAO */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[2].r * 4} height={timelineNodeStyles[2].r * 4}>
+                    <circle cx={timelineNodeStyles[2].r * 2} cy={timelineNodeStyles[2].r * 2} r={timelineNodeStyles[2].r} fill="#fff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - HackerDAO to Betterview */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '265px', animation: 'var(--timeline-animation, timelineRainbowSheen) 15s ease-in-out 1.8s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[2].r * 4} 
                     height={timelineNodeStyles[2].r * 4}
                   >
@@ -355,13 +373,17 @@ export default function ResumePage() {
 
             {/* Betterview */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[3].r * 4} height={timelineNodeStyles[3].r * 4}>
+                    <circle cx={timelineNodeStyles[3].r * 2} cy={timelineNodeStyles[3].r * 2} r={timelineNodeStyles[3].r} fill="#ffd1dc" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - Betterview to Ten Spot */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '264px', animation: 'var(--timeline-animation, timelineRainbowSheen) 16s ease-in-out 3.3s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[3].r * 4} 
                     height={timelineNodeStyles[3].r * 4}
                   >
@@ -393,13 +415,17 @@ export default function ResumePage() {
 
             {/* Ten Spot */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[4].r * 4} height={timelineNodeStyles[4].r * 4}>
+                    <circle cx={timelineNodeStyles[4].r * 2} cy={timelineNodeStyles[4].r * 2} r={timelineNodeStyles[4].r} fill="#fff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - Ten Spot to Thrive Global */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '226px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13.5s ease-in-out 3.2s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[3].r * 4} 
                     height={timelineNodeStyles[3].r * 4}
                   >
@@ -430,13 +456,17 @@ export default function ResumePage() {
 
             {/* Thrive Global */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[5].r * 4} height={timelineNodeStyles[5].r * 4}>
+                    <circle cx={timelineNodeStyles[5].r * 2} cy={timelineNodeStyles[5].r * 2} r={timelineNodeStyles[5].r} fill="#5cc6ff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - Thrive Global to ZeroCater Product Designer */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '235px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[4].r * 4} 
                     height={timelineNodeStyles[4].r * 4}
                   >
@@ -466,13 +496,17 @@ export default function ResumePage() {
 
                 {/* ZeroCater Product Designer */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[6].r * 4} height={timelineNodeStyles[6].r * 4}>
+                    <circle cx={timelineNodeStyles[6].r * 2} cy={timelineNodeStyles[6].r * 2} r={timelineNodeStyles[6].r} fill="#fff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - ZeroCater Product Designer to ZeroCater Designer */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '251px', animation: 'var(--timeline-animation, timelineRainbowSheen) 11s ease-in-out 1.6s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[3].r * 4} 
                     height={timelineNodeStyles[3].r * 4}
                   >
@@ -503,13 +537,17 @@ export default function ResumePage() {
 
             {/* ZeroCater Designer */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[7].r * 4} height={timelineNodeStyles[7].r * 4}>
+                    <circle cx={timelineNodeStyles[7].r * 2} cy={timelineNodeStyles[7].r * 2} r={timelineNodeStyles[7].r} fill="#5cc6ff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - ZeroCater Designer to MakerSquare */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '263px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[4].r * 4} 
                     height={timelineNodeStyles[4].r * 4}
                   >
@@ -541,13 +579,17 @@ export default function ResumePage() {
 
             {/* MakerSquare */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[8].r * 4} height={timelineNodeStyles[8].r * 4}>
+                    <circle cx={timelineNodeStyles[8].r * 2} cy={timelineNodeStyles[8].r * 2} r={timelineNodeStyles[8].r} fill="#fff" opacity={0.95} filter="url(#glow)" />
+                  </svg>
                   
                   {/* Connecting line - ZeroCater Designer to MakerSquare */}
-                  <div className="absolute left-4 md:left-[2.063rem] top-8 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
+                  <div className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 w-0.5 -translate-x-1/2 bg-[#5cc6ff] opacity-70 z-5 dark:animate-none"
                        style={{ height: '265px', animation: 'var(--timeline-animation, timelineRainbowSheen) 13s ease-in-out 0.8s infinite' }}></div>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[5].r * 4} 
                     height={timelineNodeStyles[5].r * 4}
                   >
@@ -579,9 +621,13 @@ export default function ResumePage() {
 
             {/* AnyPerk */}
                 <div className="relative flex items-start md:items-center group">
+                  {/* Mobile Timeline Dot */}
+                  <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[9].r * 4} height={timelineNodeStyles[9].r * 4}>
+                    <circle cx={timelineNodeStyles[9].r * 2} cy={timelineNodeStyles[9].r * 2} r={timelineNodeStyles[9].r} fill="#fffbe6" opacity={0.95} filter="url(#glow)" />
+                  </svg>
 
                   <svg 
-                    className="absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                    className="hidden md:block absolute left-4 md:left-[2.063rem] top-6 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                     width={timelineNodeStyles[5].r * 4} 
                     height={timelineNodeStyles[5].r * 4}
                   >

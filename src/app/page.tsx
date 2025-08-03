@@ -246,7 +246,7 @@ export default function Home() {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Area - isolated container */}
         <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-transparent">
-          <div className="flex flex-col items-start justify-center flex-1 pt-12 pb-8 md:pt-64 md:pb-12">
+          <div className="flex flex-col items-start justify-center flex-1 pt-32 pb-8 md:pt-64 md:pb-12">
             <FlexibleHeroText>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
