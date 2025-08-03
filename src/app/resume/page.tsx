@@ -151,33 +151,13 @@ export default function ResumePage() {
           <div className="max-w-4xl mx-auto">
             {/* Timeline Container */}
             <div className="relative">
-              {/* Star-to-Star Connecting Lines - Like Scorpio constellation */}
-              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
-                <defs>
-                  <filter id="experience-line-glow" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                    <feMerge> 
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                {/* Experience connecting lines - vertical line connecting all dots */}
-                <line 
-                  x1="33" y1="50" 
-                  x2="33" y2="1500" 
-                  stroke="#fffbe6" 
-                  strokeWidth="3" 
-                  opacity="1"
-                  style={{ 
-                    animation: 'timelineLinePulse 4s ease-in-out infinite',
-                    filter: 'drop-shadow(0 0 6px #fffbe6)'
-                  }}
-                />
-              </svg>
               <div className="space-y-12">
             {/* Rotary Pictures */}
                 <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - first to second dot */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 h-64 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
+                       style={{ filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -419,27 +399,28 @@ export default function ResumePage() {
           <div className="max-w-4xl mx-auto">
             {/* Timeline Container */}
             <div className="relative">
-              {/* Star-to-Star Connecting Line - Like Scorpio upper claw */}
-              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
+              {/* Education timeline constellation line */}
+              <svg className="absolute left-0 top-0 w-full h-full pointer-events-none z-5">
                 <defs>
-                  <filter id="education-line-glow" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <filter id="education-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
                     <feMerge> 
                       <feMergeNode in="coloredBlur"/>
                       <feMergeNode in="SourceGraphic"/>
                     </feMerge>
                   </filter>
                 </defs>
-                {/* Education connecting line - vertical line connecting both education dots */}
-                <line 
-                  x1="33" y1="50" 
-                  x2="33" y2="300" 
-                  stroke="#5cc6ff" 
-                  strokeWidth="3" 
-                  opacity="1"
-                  style={{ 
-                    animation: 'timelineLineBlue 3.5s ease-in-out infinite 0.5s',
-                    filter: 'drop-shadow(0 0 6px #5cc6ff)'
+                {/* Education timeline dots positions - space-y-8 = 64px spacing */}
+                <line
+                  x1={33}
+                  y1={100}
+                  x2={33}
+                  y2={164}
+                  stroke="#5cc6ff"
+                  strokeWidth="1.5"
+                  opacity={0.6}
+                  style={{
+                    animation: 'timelineLineBlue 3.5s ease-in-out 0.5s infinite',
                   }}
                 />
               </svg>
