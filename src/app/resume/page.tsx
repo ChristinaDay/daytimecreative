@@ -228,6 +228,10 @@ export default function ResumePage() {
 
             {/* Betterview */}
                 <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - third to fourth dot */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
+                       style={{ height: '270px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 0.6s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
