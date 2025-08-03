@@ -3,156 +3,299 @@
 import React, { useEffect } from 'react';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 
-// Timeline node animations CSS - mimicking starfield constellation with color cycling
+// Timeline node animations CSS - mimicking starfield constellation with color cycling and twinkling
 const timelineAnimationsCSS = `
 @keyframes timelineNodeTwinkle {
   0% { 
     background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 12px 2px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
+    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1) rotate(0deg);
+    filter: blur(0.5px);
+  }
+  12% {
+    opacity: 0.95;
+    transform: translateX(-50%) scale(1.1) rotate(45deg);
+    filter: blur(0.2px);
+  }
+  18% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(0.9) rotate(90deg);
+    filter: blur(0.7px);
+  }
+  25% {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(1.05) rotate(135deg);
+    filter: blur(0.3px);
+  }
+  32% {
+    opacity: 0.75;
+    transform: translateX(-50%) scale(0.95) rotate(180deg);
+    filter: blur(0.6px);
+  }
+  40% {
     opacity: 0.9;
+    transform: translateX(-50%) scale(1.08) rotate(225deg);
+    filter: blur(0.2px);
+  }
+  48% {
+    opacity: 0.65;
+    transform: translateX(-50%) scale(0.92) rotate(270deg);
+    filter: blur(0.8px);
+  }
+  55% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(1.02) rotate(315deg);
+    filter: blur(0.4px);
   }
   58% { 
     background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 12px 2px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
+    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
     opacity: 0.9;
+    transform: translateX(-50%) scale(1) rotate(360deg);
+    filter: blur(0.5px);
   }
   64% { 
     background-color: rgb(147, 51, 234);
-    box-shadow: 0 0 12px 2px rgba(147, 51, 234, 0.12), 0 0 24px 4px rgba(168, 85, 247, 0.06);
+    box-shadow: 0 0 8px 1px rgba(147, 51, 234, 0.12), 0 0 24px 4px rgba(168, 85, 247, 0.06);
     opacity: 1;
+    transform: translateX(-50%) scale(1.15) rotate(405deg);
+    filter: blur(0.1px);
   }
   65% { 
     background-color: rgb(252, 165, 165);
-    box-shadow: 0 0 12px 2px rgba(252, 165, 165, 0.12), 0 0 24px 4px rgba(254, 202, 202, 0.06);
+    box-shadow: 0 0 8px 1px rgba(252, 165, 165, 0.12), 0 0 24px 4px rgba(254, 202, 202, 0.06);
     opacity: 1;
+    transform: translateX(-50%) scale(1.2) rotate(420deg);
+    filter: blur(0px);
   }
   66% { 
     background-color: rgb(249, 115, 22);
-    box-shadow: 0 0 12px 2px rgba(249, 115, 22, 0.12), 0 0 24px 4px rgba(251, 146, 60, 0.06);
+    box-shadow: 0 0 8px 1px rgba(249, 115, 22, 0.12), 0 0 24px 4px rgba(251, 146, 60, 0.06);
     opacity: 1;
+    transform: translateX(-50%) scale(1.18) rotate(435deg);
+    filter: blur(0px);
   }
   67% { 
     background-color: rgb(234, 179, 8);
-    box-shadow: 0 0 12px 2px rgba(234, 179, 8, 0.12), 0 0 24px 4px rgba(250, 204, 21, 0.06);
+    box-shadow: 0 0 8px 1px rgba(234, 179, 8, 0.12), 0 0 24px 4px rgba(250, 204, 21, 0.06);
     opacity: 1;
+    transform: translateX(-50%) scale(1.22) rotate(450deg);
+    filter: blur(0px);
   }
   68% { 
     background-color: rgb(244, 217, 131);
-    box-shadow: 0 0 12px 2px rgba(244, 217, 131, 0.13), 0 0 24px 4px rgba(252, 236, 178, 0.07);
+    box-shadow: 0 0 8px 1px rgba(244, 217, 131, 0.13), 0 0 24px 4px rgba(252, 236, 178, 0.07);
     opacity: 1;
+    transform: translateX(-50%) scale(1.25) rotate(465deg);
+    filter: blur(0px);
   }
   70% { 
     background-color: rgb(248, 250, 255);
-    box-shadow: 0 0 15px 3px rgba(248, 250, 255, 0.25), 0 0 30px 6px rgba(240, 245, 255, 0.15);
+    box-shadow: 0 0 8px 1px rgba(248, 250, 255, 0.25), 0 0 16px 2px rgba(240, 245, 255, 0.15);
     opacity: 1;
+    transform: translateX(-50%) scale(1.1) rotate(480deg);
+    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.15));
   }
   74% { 
     background-color: rgb(240, 245, 255);
-    box-shadow: 0 0 18px 4px rgba(240, 245, 255, 0.3), 0 0 36px 8px rgba(230, 240, 255, 0.18);
+    box-shadow: 0 0 8px 1px rgba(240, 245, 255, 0.3), 0 0 12px 2px rgba(230, 240, 255, 0.18);
     opacity: 1;
+    transform: translateX(-50%) scale(1.15) rotate(495deg);
+    filter: blur(0px) drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
   }
   78% { 
     background-color: rgb(235, 245, 255);
-    box-shadow: 0 0 15px 3px rgba(235, 245, 255, 0.25), 0 0 30px 6px rgba(220, 235, 255, 0.15);
+    box-shadow: 0 0 8px 1px rgba(235, 245, 255, 0.25), 0 0 16px 2px rgba(220, 235, 255, 0.15);
     opacity: 1;
+    transform: translateX(-50%) scale(1.05) rotate(510deg);
+    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.15));
   }
   85% { 
     background-color: rgb(177, 210, 253);
-    box-shadow: 0 0 10px 2px rgba(177, 210, 253, 0.14), 0 0 20px 4px rgba(205, 228, 254, 0.07);
+    box-shadow: 0 0 10px 2px rgba(177, 210, 253, 0.14), 0 0 12px 2px rgba(205, 228, 254, 0.07);
     opacity: 0.95;
+    transform: translateX(-50%) scale(1.1) rotate(525deg);
+    filter: blur(0.2px);
   }
   88% { 
     background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.10), 0 0 20px 4px rgba(96, 165, 250, 0.05);
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.10), 0 0 12px 2px rgba(96, 165, 250, 0.05);
     opacity: 0.95;
+    transform: translateX(-50%) scale(1.05) rotate(540deg);
+    filter: blur(0.3px);
+  }
+  92% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(0.98) rotate(555deg);
+    filter: blur(0.4px);
+  }
+  96% {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(1.02) rotate(570deg);
+    filter: blur(0.3px);
   }
   100% { 
     background-color: rgb(59, 130, 246);
-    box-shadow: 0 0 12px 2px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
-    opacity: 0.9;
+    box-shadow: 0 0 8px 1px rgba(59, 130, 246, 0.08), 0 0 24px 4px rgba(96, 165, 250, 0.04);
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1) rotate(720deg);
+    filter: blur(0.5px);
   }
 }
 
 @keyframes timelineNodeTwinkleDark {
   0% { 
     background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 12px 2px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
+    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
+    opacity: 0.75;
+    transform: translateX(-50%) scale(1) rotate(0deg);
+    filter: blur(0.5px);
+  }
+  12% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.12) rotate(45deg);
+    filter: blur(0.1px);
+  }
+  18% {
+    opacity: 0.65;
+    transform: translateX(-50%) scale(0.88) rotate(90deg);
+    filter: blur(0.8px);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateX(-50%) scale(1.06) rotate(135deg);
+    filter: blur(0.2px);
+  }
+  32% {
+    opacity: 0.8;
+    transform: translateX(-50%) scale(0.94) rotate(180deg);
+    filter: blur(0.7px);
+  }
+  40% {
+    opacity: 0.95;
+    transform: translateX(-50%) scale(1.1) rotate(225deg);
+    filter: blur(0.1px);
+  }
+  48% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(0.9) rotate(270deg);
+    filter: blur(0.9px);
+  }
+  55% {
     opacity: 0.85;
+    transform: translateX(-50%) scale(1.04) rotate(315deg);
+    filter: blur(0.3px);
   }
   58% { 
     background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 12px 2px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
+    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
     opacity: 0.85;
+    transform: translateX(-50%) scale(1) rotate(360deg);
+    filter: blur(0.5px);
   }
   64% { 
     background-color: rgb(168, 85, 247);
-    box-shadow: 0 0 12px 2px rgba(168, 85, 247, 0.18), 0 0 24px 4px rgba(196, 125, 251, 0.08);
+    box-shadow: 0 0 8px 1px rgba(168, 85, 247, 0.18), 0 0 24px 4px rgba(196, 125, 251, 0.08);
     opacity: 1;
+    transform: translateX(-50%) scale(1.18) rotate(405deg);
+    filter: blur(0px);
   }
   65% { 
     background-color: rgb(252, 165, 165);
-    box-shadow: 0 0 12px 2px rgba(252, 165, 165, 0.18), 0 0 24px 4px rgba(254, 202, 202, 0.08);
+    box-shadow: 0 0 8px 1px rgba(252, 165, 165, 0.18), 0 0 24px 4px rgba(254, 202, 202, 0.08);
     opacity: 1;
+    transform: translateX(-50%) scale(1.25) rotate(420deg);
+    filter: blur(0px);
   }
   66% { 
     background-color: rgb(251, 146, 60);
-    box-shadow: 0 0 12px 2px rgba(251, 146, 60, 0.18), 0 0 24px 4px rgba(253, 186, 116, 0.08);
+    box-shadow: 0 0 8px 1px rgba(251, 146, 60, 0.18), 0 0 24px 4px rgba(253, 186, 116, 0.08);
     opacity: 1;
+    transform: translateX(-50%) scale(1.22) rotate(435deg);
+    filter: blur(0px);
   }
   67% { 
     background-color: rgb(250, 204, 21);
-    box-shadow: 0 0 12px 2px rgba(250, 204, 21, 0.18), 0 0 24px 4px rgba(254, 240, 138, 0.08);
+    box-shadow: 0 0 8px 1px rgba(250, 204, 21, 0.18), 0 0 24px 4px rgba(254, 240, 138, 0.08);
     opacity: 1;
+    transform: translateX(-50%) scale(1.28) rotate(450deg);
+    filter: blur(0px);
   }
   68% { 
     background-color: rgb(252, 229, 138);
-    box-shadow: 0 0 12px 2px rgba(252, 229, 138, 0.19), 0 0 24px 4px rgba(254, 243, 199, 0.09);
+    box-shadow: 0 0 8px 1px rgba(252, 229, 138, 0.19), 0 0 24px 4px rgba(254, 243, 199, 0.09);
     opacity: 1;
+    transform: translateX(-50%) scale(1.32) rotate(465deg);
+    filter: blur(0px);
   }
   70% { 
     background-color: rgb(248, 250, 255);
-    box-shadow: 0 0 15px 3px rgba(248, 250, 255, 0.3), 0 0 30px 6px rgba(240, 245, 255, 0.18);
+    box-shadow: 0 0 8px 1px rgba(248, 250, 255, 0.3), 0 0 16px 2px rgba(240, 245, 255, 0.18);
     opacity: 1;
+    transform: translateX(-50%) scale(1.12) rotate(480deg);
+    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.18));
   }
   74% { 
     background-color: rgb(240, 245, 255);
-    box-shadow: 0 0 18px 4px rgba(240, 245, 255, 0.35), 0 0 36px 8px rgba(230, 240, 255, 0.22);
+    box-shadow: 0 0 8px 1px rgba(240, 245, 255, 0.35), 0 0 12px 2px rgba(230, 240, 255, 0.22);
     opacity: 1;
+    transform: translateX(-50%) scale(1.18) rotate(495deg);
+    filter: blur(0px) drop-shadow(0 0 3px rgba(255, 255, 255, 0.22));
   }
   78% { 
     background-color: rgb(235, 245, 255);
-    box-shadow: 0 0 15px 3px rgba(235, 245, 255, 0.3), 0 0 30px 6px rgba(220, 235, 255, 0.18);
+    box-shadow: 0 0 8px 1px rgba(235, 245, 255, 0.3), 0 0 16px 2px rgba(220, 235, 255, 0.18);
     opacity: 1;
+    transform: translateX(-50%) scale(1.08) rotate(510deg);
+    filter: blur(0px) drop-shadow(0 0 2px rgba(255, 255, 255, 0.18));
   }
   85% { 
     background-color: rgb(191, 219, 254);
-    box-shadow: 0 0 10px 2px rgba(191, 219, 254, 0.19), 0 0 20px 4px rgba(219, 234, 254, 0.09);
+    box-shadow: 0 0 10px 2px rgba(191, 219, 254, 0.19), 0 0 12px 2px rgba(219, 234, 254, 0.09);
     opacity: 0.95;
+    transform: translateX(-50%) scale(1.15) rotate(525deg);
+    filter: blur(0.1px);
   }
   88% { 
     background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 10px 2px rgba(96, 165, 250, 0.15), 0 0 20px 4px rgba(147, 197, 253, 0.07);
+    box-shadow: 0 0 10px 2px rgba(96, 165, 250, 0.15), 0 0 12px 2px rgba(147, 197, 253, 0.07);
     opacity: 0.9;
+    transform: translateX(-50%) scale(1.08) rotate(540deg);
+    filter: blur(0.2px);
+  }
+  92% {
+    opacity: 0.82;
+    transform: translateX(-50%) scale(0.96) rotate(555deg);
+    filter: blur(0.4px);
+  }
+  96% {
+    opacity: 0.88;
+    transform: translateX(-50%) scale(1.03) rotate(570deg);
+    filter: blur(0.3px);
   }
   100% { 
     background-color: rgb(96, 165, 250);
-    box-shadow: 0 0 12px 2px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
-    opacity: 0.85;
+    box-shadow: 0 0 8px 1px rgba(96, 165, 250, 0.12), 0 0 24px 4px rgba(147, 197, 253, 0.06);
+    opacity: 0.75;
+    transform: translateX(-50%) scale(1) rotate(720deg);
+    filter: blur(0.5px);
   }
 }
 
 .timeline-node {
-  animation: timelineNodeTwinkle 4s ease-in-out infinite;
-  filter: blur(0.5px);
+  animation: timelineNodeTwinkle 6s ease-in-out infinite;
+  transform-origin: center;
+  transition: filter 0.3s ease;
 }
 
 .dark .timeline-node {
-  animation: timelineNodeTwinkleDark 4s ease-in-out infinite;
+  animation: timelineNodeTwinkleDark 6s ease-in-out infinite;
 }
 
 .timeline-node:hover {
-  animation-duration: 2s;
-  filter: blur(0.3px);
+  animation-duration: 3s;
+  filter: blur(0.1px) brightness(1.2);
 }
 `;
 
@@ -247,13 +390,13 @@ export default function ResumePage() {
             {/* Timeline Container */}
             <div className="relative">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-light/40 via-accent-light/20 to-transparent dark:from-accent-dark/40 dark:via-accent-dark/20"></div>
+              <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent from-[2px] to-accent-light to-[8px] dark:bg-gradient-to-b dark:from-transparent dark:from-[2px] dark:to-accent-dark dark:to-[8px]"></div>
               
               <div className="space-y-12">
             {/* Rotary Pictures */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.7s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.7s', animationDuration: '5.8s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -271,7 +414,7 @@ export default function ResumePage() {
             {/* Local Language */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.1s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.1s', animationDuration: '6.4s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -290,7 +433,7 @@ export default function ResumePage() {
             {/* Betterview */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '4.3s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '4.3s', animationDuration: '7.1s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -309,7 +452,7 @@ export default function ResumePage() {
                 {/* ZeroCater Product Designer */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '1.2s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '1.2s', animationDuration: '5.3s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -327,7 +470,7 @@ export default function ResumePage() {
             {/* ZeroCater Designer */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '3.4s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '3.4s', animationDuration: '6.7s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -346,7 +489,7 @@ export default function ResumePage() {
             {/* AnyPerk */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.3s', animationDuration: '5.9s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
@@ -410,13 +553,13 @@ export default function ResumePage() {
             {/* Timeline Container */}
             <div className="relative">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-light/40 via-accent-light/20 to-transparent dark:from-accent-dark/40 dark:via-accent-dark/20"></div>
+              <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent from-[2px] to-accent-light to-[8px] dark:bg-gradient-to-b dark:from-transparent dark:from-[2px] dark:to-accent-dark dark:to-[8px]"></div>
               
               <div className="space-y-8">
                 {/* BFA New Media Art */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '0.3s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '1.8s', animationDuration: '6.2s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
@@ -430,7 +573,7 @@ export default function ResumePage() {
                 {/* BFA Drawing and Painting */}
                 <div className="relative flex items-center group">
                   {/* Timeline Node */}
-                  <div className="timeline-node absolute left-[27px] top-1/2 -translate-y-1/2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.9s' }}></div>
+                  <div className="timeline-node absolute left-8 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 bg-accent-light dark:bg-accent-dark rounded-full border-2 border-white dark:border-gray-900 shadow-md group-hover:scale-110 transition-transform duration-300 z-10" style={{ animationDelay: '2.9s', animationDuration: '5.6s' }}></div>
                   {/* Content Card */}
                   <div className="ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">

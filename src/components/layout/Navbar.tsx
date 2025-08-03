@@ -39,6 +39,9 @@ export function Navbar() {
             <Link href="/projects" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
               Projects
             </Link>
+            <Link href="/resume" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
+              Resume
+            </Link>
             <a href="mailto:christinamday@gmail.com" className="text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark">
               Contact
             </a>
@@ -104,6 +107,13 @@ export function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Projects
+              </Link>
+              <Link 
+                href="/resume" 
+                className="block text-text-light dark:text-text-dark hover:text-accent-light dark:hover:text-accent-dark py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Resume
               </Link>
               <a 
                 href="mailto:christinamday@gmail.com" 
