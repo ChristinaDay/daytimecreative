@@ -79,7 +79,7 @@ export default function ResumePage() {
           <StarfieldSVG />
       </div>
 
-      <article className="max-w-[100rem] mx-auto pt-12 pb-24 relative z-10">
+      <article className="max-w-[100rem] mx-auto pt-12 pb-24 relative z-40">
         {/* Header */}
         <header className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-gray-900 dark:text-white leading-tight mb-6">
