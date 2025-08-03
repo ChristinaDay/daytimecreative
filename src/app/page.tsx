@@ -17,6 +17,8 @@ export default function Home() {
   const pinkGradientRef = useRef<HTMLDivElement>(null);
   const blueGradientRef = useRef<HTMLDivElement>(null);
 
+
+
   useEffect(() => {
     let latestScrollY = window.scrollY;
     let ticking = false;
@@ -243,8 +245,8 @@ export default function Home() {
       {/* Main content and footer layout */}
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Hero Area - isolated container */}
-        <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 md:px-8 bg-transparent">
-          <div className="flex flex-col items-start justify-center flex-1 pt-8 pb-8 md:pt-56 md:pb-12">
+        <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-transparent">
+          <div className="flex flex-col items-start justify-center flex-1 pt-12 pb-8 md:pt-64 md:pb-12">
             <FlexibleHeroText>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -254,7 +256,6 @@ export default function Home() {
               >
                 <button 
                   onClick={() => {
-                    console.log('View Projects button clicked!');
                     // More robust scroll implementation
                     setTimeout(() => {
                       const projectsSection = document.getElementById('projects');
@@ -281,7 +282,6 @@ export default function Home() {
                 </button>
                 <button 
                   onClick={() => {
-                    console.log('About Me button clicked!');
                     // More robust scroll implementation  
                     setTimeout(() => {
                       const aboutSection = document.getElementById('about');
@@ -435,7 +435,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
-            className="w-full pt-16 pb-24 text-center"
+            className="w-full pt-16 pb-8 text-center"
           >
             <div className="px-4 md:px-12 lg:px-20">
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-light dark:text-text-dark mb-6">
