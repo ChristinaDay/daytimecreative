@@ -265,6 +265,10 @@ export default function ResumePage() {
 
                 {/* ZeroCater Product Designer */}
                 <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - fourth to fifth dot */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
+                       style={{ height: '255px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 0.9s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
@@ -297,6 +301,10 @@ export default function ResumePage() {
 
             {/* ZeroCater Designer */}
                 <div className="relative flex items-center group">
+                  
+                  {/* Connecting line - fifth to sixth dot */}
+                  <div className="absolute left-[2.063rem] top-1/2 w-0.5 -translate-x-1/2 bg-[#fffbe6] opacity-70 z-5"
+                       style={{ height: '255px', filter: 'drop-shadow(0 0 3px #fffbe6)', animation: 'timelineLinePulse 4s ease-in-out 1.2s infinite' }}></div>
 
                   <svg 
                     className="absolute left-[2.063rem] top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 group-hover:scale-110 transition-transform duration-300"
