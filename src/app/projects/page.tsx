@@ -5,6 +5,13 @@ import Link from 'next/link';
 import { ProjectCard } from '@/components/projects/ProjectCard';
 import { allProjects } from '@/data/projects';
 
+// Extract the latest year from strings like "2024-2025" or "2016-2018" or "2021"
+function getLatestYear(yearString: string): number {
+  const matches = yearString.match(/\d{4}/g);
+  if (!matches || matches.length === 0) return 0;
+  return Math.max(...matches.map((y) => Number(y)));
+}
+
 export default function ProjectsPage() {
   return (
     <>
@@ -27,7 +34,9 @@ export default function ProjectsPage() {
         {/* All Projects */}
         <section className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {allProjects.map((project) => (
+            {[...allProjects]
+              .sort((a, b) => getLatestYear(b.year) - getLatestYear(a.year))
+              .map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
