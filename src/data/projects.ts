@@ -86,6 +86,29 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
+    title: 'Customizable UI System',
+    description: 'Modular dashboard system empowering users to personalize their data visualization experience.',
+    designLeaderDescription: 'Led the design strategy for a customizable dashboard system, conducting user research to understand how different user types interact with data and designing flexible components that adapt to varied workflows.',
+    designerDeveloperDescription: 'Built a completely customizable dashboard system with drag-and-drop components, user-defined layouts, and persistent personalization using React and a custom component architecture.',
+    image: '/images/betterview-customizableUI1.png',
+    link: '/projects/customizableui',
+    tags: ['Design Systems', 'User Personalization', 'Dashboard Design'],
+    designLeaderTags: ['User Research', 'Personalization Strategy', 'Component Systems', 'User Experience', 'Design Flexibility'],
+    designerDeveloperTags: ['React', 'Drag and Drop', 'Component Architecture', 'State Management', 'Responsive Design'],
+    year: '2021',
+    bgColor: 'from-pink-500/15 via-3% via-transparent via-97% to-rose-600/12 dark:from-pink-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-rose-500/10',
+    designHighlights: [
+      'Designed flexible component system that adapts to user workflows',
+      'Conducted user research to understand personalization needs',
+      'Created intuitive drag-and-drop interface for complex data'
+    ],
+    technicalHighlights: [
+      'Built drag-and-drop dashboard with React DnD',
+      'Implemented user preference persistence with local storage',
+      'Created modular component architecture for unlimited customization'
+    ]
+  },
+  {
     title: 'TenSpot Workforce Engagement Platform',
     description: 'Comprehensive workforce engagement platform connecting teams through wellness, challenges, and community building.',
     designerDeveloperDescription: 'Designed and developed the complete marketing website and digital presence for TenSpot, creating conversion-focused landing pages and brand collateral that helped acquire enterprise clients and insurance partnerships.',
@@ -211,29 +234,6 @@ export const projectsData: ProjectData[] = [
       'Integrated Web3 wallet connections with React and ethers.js',
       'Built smart contract interaction interfaces',
       'Implemented decentralized identity and governance features'
-    ]
-  },
-  {
-    title: 'Customizable UI System',
-    description: 'Modular dashboard system empowering users to personalize their data visualization experience.',
-    designLeaderDescription: 'Led the design strategy for a customizable dashboard system, conducting user research to understand how different user types interact with data and designing flexible components that adapt to varied workflows.',
-    designerDeveloperDescription: 'Built a completely customizable dashboard system with drag-and-drop components, user-defined layouts, and persistent personalization using React and a custom component architecture.',
-    image: '/images/betterview-customizableUI1.png',
-    link: '/projects/customizableui',
-    tags: ['Design Systems', 'User Personalization', 'Dashboard Design'],
-    designLeaderTags: ['User Research', 'Personalization Strategy', 'Component Systems', 'User Experience', 'Design Flexibility'],
-    designerDeveloperTags: ['React', 'Drag and Drop', 'Component Architecture', 'State Management', 'Responsive Design'],
-    year: '2021',
-    bgColor: 'from-pink-500/15 via-3% via-transparent via-97% to-rose-600/12 dark:from-pink-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-rose-500/10',
-    designHighlights: [
-      'Designed flexible component system that adapts to user workflows',
-      'Conducted user research to understand personalization needs',
-      'Created intuitive drag-and-drop interface for complex data'
-    ],
-    technicalHighlights: [
-      'Built drag-and-drop dashboard with React DnD',
-      'Implemented user preference persistence with local storage',
-      'Created modular component architecture for unlimited customization'
     ]
   }
 ];
