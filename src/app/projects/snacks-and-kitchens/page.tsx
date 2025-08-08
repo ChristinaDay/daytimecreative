@@ -71,7 +71,7 @@ export default function SnacksAndKitchensPage() {
                 preload="auto"
                 poster="/images/zerocater_snacks-dashboard3.jpg"
               >
-                <source src="/images/zerocater-dashboard.mp4" type="video/mp4" />
+                <source src="/images/zerocater-dashboard-compressed.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
