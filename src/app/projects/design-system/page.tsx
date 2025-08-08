@@ -607,6 +607,34 @@ export default function DesignSystemPage() {
         </div>
       </motion.section>
 
+      {/* Comprehensive Communications System */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.82 }}
+        className="mb-20"
+      >
+        <h2 className="text-3xl font-bold mb-8 text-text-light dark:text-text-dark">Comprehensive Communications System</h2>
+        <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-8 max-w-3xl">
+          Beyond the dashboard, we developed a robust email design system to ensure consistent, effective communication with clients, vendors, and internal teams across transactional, marketing, and notification channels.
+        </p>
+        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          <div className="relative aspect-[3/2] bg-white">
+            <Image
+              src="/images/zerocater-email-system-comprehensive.png"
+              alt="Comprehensive email design system"
+              fill
+              className="object-contain p-6"
+            />
+          </div>
+          <div className="p-6">
+            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
+              Unified email templates for confirmations, delivery updates, and feedback requests—reducing support overhead and improving client clarity.
+            </p>
+          </div>
+        </div>
+      </motion.section>
+
       {/* Design Process & User Flows */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
