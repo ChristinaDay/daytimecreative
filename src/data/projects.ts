@@ -175,6 +175,22 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
+    title: 'ZeroCater Snacks & Kitchens',
+    description: 'Operations and inventory dashboards powering office snacks and kitchens programs.',
+    designerDeveloperDescription: 'Designed and implemented cross-platform dashboards for office snacks and kitchens programs, including inventory, vendor coordination, and customer feedback loops — built with reusable design-system components.',
+    image: '/images/zerocater-snacks1.png',
+    link: '/projects/snacks-and-kitchens',
+    tags: ['Product Design', 'Operations', 'Dashboards', 'ZeroCater'],
+    designerDeveloperTags: ['React', 'Design Systems', 'Dashboard UI', 'Data Visualization'],
+    year: '2016-2018',
+    bgColor: 'from-orange-500/15 via-3% via-transparent via-97% to-amber-600/12 dark:from-orange-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-amber-500/10',
+    technicalHighlights: [
+      'Reusable dashboard components aligned with company design system',
+      'Responsive layouts for customer and admin roles',
+      'Data-rich interfaces with clear hierarchy and visual balance'
+    ]
+  },
+  {
     title: 'HackerDAO',
     description: 'Brand identity and platform design for Web3 developers to collaborate and build together.',
     designLeaderDescription: 'Created a complete brand identity for a Web3 developer platform, establishing visual language that appeals to technical users while maintaining approachability for broader collaboration.',
