@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { getImageUrl } from '@/utils/imageUtils';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
 export default function SnacksAndKitchensPage() {
@@ -28,23 +29,23 @@ export default function SnacksAndKitchensPage() {
   return (
     <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-32 pb-40 text-[#0f172a] dark:text-white">
       {/* Header */}
-      <motion.div
+        <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         className="mb-16"
-      >
+        >
         <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
           ZeroCater – Snacks & Kitchens
-        </h1>
+            </h1>
         <ProjectSubtitle>
           Designing a subscription-based office snack and kitchen service for modern workplaces.
         </ProjectSubtitle>
-        <ProjectDetailTags
-          role="Product Designer & Front-End Engineer"
-          employer="ZeroCater"
-          platforms="React, Web, SaaS, GitHub"
-          areas="Product Design, Front-End Development, UX Research"
+            <ProjectDetailTags
+              role="Product Designer & Front-End Engineer"
+              employer="ZeroCater"
+              platforms="React, Web, SaaS, GitHub"
+              areas="Product Design, Front-End Development, UX Research"
           year="2016-2018"
         />
       </motion.div>
@@ -131,9 +132,9 @@ export default function SnacksAndKitchensPage() {
                 Faster coordination, higher customer clarity, and a repeatable model used across product teams.
               </p>
             </div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
       {/* Overview Section */}
       <div className="py-16">
@@ -196,9 +197,9 @@ export default function SnacksAndKitchensPage() {
           <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
             <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Budgets</h4>
             <p className="text-sm text-text-light/70 dark:text-text-dark/70">Spend tracking, caps, approvals.</p>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
       {/* Process Section */}
       <div className="py-16">
@@ -232,8 +233,8 @@ export default function SnacksAndKitchensPage() {
                       alt="Data-driven insights for optimizing office snack programs."
                       fill
                       className="object-cover"
-                    />
-                  </div>
+                />
+              </div>
                 </div>
               </motion.div>
               <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
@@ -267,10 +268,10 @@ export default function SnacksAndKitchensPage() {
       </div>
 
       {/* Operational Workflow & Feedback */}
-      <motion.section
+        <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8 }}
         className="mb-16"
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Operational Workflow & Feedback</h3>
@@ -284,7 +285,7 @@ export default function SnacksAndKitchensPage() {
                 className="object-contain p-4"
               />
             </div>
-          </div>
+              </div>
           <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
             <div className="relative aspect-[16/9] bg-white">
               <Image
@@ -299,7 +300,13 @@ export default function SnacksAndKitchensPage() {
         <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
           Feedback flows connected service quality to reorders and scheduling, closing the loop between customers and operations.
         </p>
-      </motion.section>
+        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+          Email templates for this program are part of the{' '}
+          <Link href="/projects/design-system" className="underline decoration-dotted hover:text-accent-light dark:hover:text-accent-dark">
+            ZeroCater Design System
+          </Link>.
+        </p>
+        </motion.section>
 
       {/* Communications System moved to Design System page */}
 

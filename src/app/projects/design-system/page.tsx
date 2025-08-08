@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { ScrollableImageContainer } from '@/components/ScrollableImageContainer';
@@ -630,6 +631,12 @@ export default function DesignSystemPage() {
           <div className="p-6">
             <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
               Unified email templates for confirmations, delivery updates, and feedback requests—reducing support overhead and improving client clarity.
+            </p>
+            <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
+              Used across the{' '}
+              <Link href="/projects/snacks-and-kitchens" className="underline decoration-dotted hover:text-accent-light dark:hover:text-accent-dark">
+                Snacks & Kitchens
+              </Link>{' '}operations dashboard.
             </p>
           </div>
         </div>
