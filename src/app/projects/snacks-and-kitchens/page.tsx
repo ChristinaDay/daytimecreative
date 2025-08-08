@@ -5,8 +5,26 @@ import Image from 'next/image';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { getImageUrl } from '@/utils/imageUtils';
+import { useEffect, useRef } from 'react';
 
 export default function SnacksAndKitchensPage() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    try {
+      video.muted = true;
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+          // Ignore autoplay block errors; user interaction will start playback
+        });
+      }
+    } catch (_) {
+      // no-op
+    }
+  }, []);
   return (
     <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-32 pb-40 text-[#0f172a] dark:text-white">
       {/* Header */}
@@ -43,12 +61,14 @@ export default function SnacksAndKitchensPage() {
           <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
             <div className="w-full relative aspect-[16/9]">
               <video
+                ref={videoRef}
                 className="w-full h-full object-cover"
                 controls
                 playsInline
                 muted
                 autoPlay
                 loop
+                preload="auto"
                 poster="/images/zerocater_snacks-dashboard3.jpg"
               >
                 <source src="/images/zerocater-dashboard.mp4" type="video/mp4" />
