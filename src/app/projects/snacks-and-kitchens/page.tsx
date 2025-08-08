@@ -84,6 +84,37 @@ export default function SnacksAndKitchensPage() {
         </p>
       </div>
 
+      {/* Executive Summary */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-16"
+      >
+        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-rose-400 dark:text-rose-300 mb-3">Problem</h3>
+              <p className="text-text-light/80 dark:text-text-dark/80">
+                Offices needed a scalable, subscription-based snacks & kitchens service with clear inventory, scheduling, and feedback—without operational chaos.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-emerald-400 dark:text-emerald-300 mb-3">Solution</h3>
+              <p className="text-text-light/80 dark:text-text-dark/80">
+                A unified dashboard with reusable components, operational workflows, and feedback loops that connected customers, operations, and vendors.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-violet-400 dark:text-violet-300 mb-3">Impact</h3>
+              <p className="text-text-light/80 dark:text-text-dark/80">
+                Faster coordination, higher customer clarity, and a repeatable model used across product teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* Overview Section */}
       <div className="py-16">
         <motion.section
@@ -120,6 +151,34 @@ export default function SnacksAndKitchensPage() {
           </div>
         </motion.section>
       </div>
+
+      {/* Dashboard Modules */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Dashboard Modules</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Inventory</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Stock levels, reorder points, consumption patterns.</p>
+          </div>
+          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Scheduling</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Deliveries, lead times, service windows.</p>
+          </div>
+          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Vendors</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Supplier coordination, substitutions, specials.</p>
+          </div>
+          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
+            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Budgets</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Spend tracking, caps, approvals.</p>
+          </div>
+        </div>
+      </motion.section>
 
       {/* Process Section */}
       <div className="py-16">
@@ -186,6 +245,64 @@ export default function SnacksAndKitchensPage() {
           
         </motion.section>
       </div>
+
+      {/* Operational Workflow & Feedback */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Operational Workflow & Feedback</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="relative aspect-[16/9] bg-white">
+              <Image
+                src="/images/zerocater-delivery-feedback_webform.png"
+                alt="Delivery feedback webform for continuous improvement"
+                fill
+                className="object-contain p-4"
+              />
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="relative aspect-[16/9] bg-white">
+              <Image
+                src="/images/zerocater-delivery-feedback_email.png"
+                alt="Email notification variant used in the feedback loop"
+                fill
+                className="object-contain p-4"
+              />
+            </div>
+          </div>
+        </div>
+        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
+          Feedback flows connected service quality to reorders and scheduling, closing the loop between customers and operations.
+        </p>
+      </motion.section>
+
+      {/* Communications System */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mb-16"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Communications System</h3>
+        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          <div className="relative aspect-[16/9] bg-white">
+            <Image
+              src="/images/zerocater-email-system-comprehensive.png"
+              alt="Comprehensive email design system used for operations and customer updates"
+              fill
+              className="object-contain p-4"
+            />
+          </div>
+        </div>
+        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
+          Cohesive templates for confirmations, delivery updates, and feedback requests kept customers informed and reduced support overhead.
+        </p>
+      </motion.section>
 
       {/* My Contributions */}
       <div className="py-16">
