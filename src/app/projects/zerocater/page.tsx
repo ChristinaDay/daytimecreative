@@ -26,7 +26,7 @@ export default function DesignSystemPage() {
           <ProjectDetailTags
             role="Lead Product Designer & Front-End Engineer"
             employer="ZeroCater"
-            year="2014-2017"
+            year="2016-2018"
             platforms="React, Sketch, InVision, Sass, GitHub, Style Guide"
             areas="Design Systems, Component Architecture, Front-End Development, Brand Guidelines"
           />
