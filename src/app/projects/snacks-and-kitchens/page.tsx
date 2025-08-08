@@ -187,6 +187,51 @@ export default function SnacksAndKitchensPage() {
         </motion.section>
       </div>
 
+      {/* My Contributions */}
+      <div className="py-16">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">My Contributions</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <ul className="space-y-3 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+                <li>• Led product design for Snacks & Kitchens from research to delivery</li>
+                <li>• Built production UI as a designer-developer with individual PRs</li>
+                <li>• Established dashboard component patterns and design tokens</li>
+                <li>• Created user flows, prototypes, and ran feedback sessions</li>
+                <li>• Collaborated with engineering on code reviews and releases</li>
+              </ul>
+            </div>
+            <div>
+              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-6">
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Role</div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">Product Designer & Front-End Engineer</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Focus</div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">Dashboard UX, Components, Tokens</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Collaboration</div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">Cross-functional with Eng & Ops</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Outcomes</div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">Faster shipping, higher adoption</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+      </div>
+
       {/* User Flows Section */}
       <div className="py-16">
         <section>
