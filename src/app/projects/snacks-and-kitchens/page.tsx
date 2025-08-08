@@ -281,28 +281,7 @@ export default function SnacksAndKitchensPage() {
         </p>
       </motion.section>
 
-      {/* Communications System */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="mb-16"
-      >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Communications System</h3>
-        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
-          <div className="relative aspect-[16/9] bg-white">
-            <Image
-              src="/images/zerocater-email-system-comprehensive.png"
-              alt="Comprehensive email design system used for operations and customer updates"
-              fill
-              className="object-contain p-4"
-            />
-          </div>
-        </div>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
-          Cohesive templates for confirmations, delivery updates, and feedback requests kept customers informed and reduced support overhead.
-        </p>
-      </motion.section>
+      {/* Communications System moved to Design System page */}
 
       {/* My Contributions */}
       <div className="py-16">
