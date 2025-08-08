@@ -27,7 +27,7 @@ export default function MarketplacePage() {
           employer="ZeroCater"
           platforms="React, Web, Mobile, API Integration"
           areas="Marketplace Design, Vendor Onboarding, Order Management, UX Research"
-          year="2015-2017"
+          year="2016-2018"
         />
       </motion.div>
 

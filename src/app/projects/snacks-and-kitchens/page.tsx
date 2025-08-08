@@ -27,7 +27,7 @@ export default function SnacksAndKitchensPage() {
           employer="ZeroCater"
           platforms="React, Web, SaaS, GitHub"
           areas="Product Design, Front-End Development, UX Research"
-          year="2014-2017"
+          year="2016-2018"
         />
       </motion.div>
 
