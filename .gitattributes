@@ -4,4 +4,6 @@
 *.pdf filter=lfs diff=lfs merge=lfs -text
 public/images/**/*.png filter=lfs diff=lfs merge=lfs -text
 public/images/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+# Exclude specific public mp4 from LFS to ensure direct deploy pickup
+public/images/zerocater-dashboard.mp4 -filter -diff -merge text
 *.mp4 filter=lfs diff=lfs merge=lfs -text

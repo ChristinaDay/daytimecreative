@@ -40,6 +40,10 @@ next-env.d.ts
 *.sketch
 *.pdf
 
+# Allow media in public/images for deployment
+!public/images/*.mp4
+!public/images/*.mov
+
 # Keynote presentations (large files)
 keynote decks/
 "keynote decks/"
