@@ -197,7 +197,7 @@ export default function ResumePage() {
                 Projects
               </a>
               <a 
-                href="/images/Resume-ChristinaDay2025.pdf"
+                href="https://christinamday.com/images/Resume-ChristinaDay2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Christina_Day_Resume_2025.pdf"
@@ -806,7 +806,7 @@ export default function ResumePage() {
                 Get a PDF copy of my complete resume with all experience details.
               </p>
             <a 
-              href="/images/Resume-ChristinaDay2025.pdf"
+              href="https://christinamday.com/images/Resume-ChristinaDay2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download="Christina_Day_Resume_2025.pdf"
