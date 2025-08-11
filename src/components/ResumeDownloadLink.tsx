@@ -33,9 +33,13 @@ export function ResumeDownloadLink({ className, children, downloadFileName = 'Ch
     const externalCdn = (process.env.NEXT_PUBLIC_EXTERNAL_CDN_URL || '').replace(/\/$/, '');
     const external = externalCdn ? `${externalCdn}/images/${PDF_NAME}` : '';
 
+    // GitHub raw fallback (guaranteed reachable if repo is public)
+    const githubRaw = `https://raw.githubusercontent.com/ChristinaDay/daytimecreative/main/public/images/${PDF_NAME}`;
+
     // Try order optimized for subpath hosting: one-up, relative, root-absolute, origin-absolute, external CDN (if available)
     const urls: string[] = [oneUp, relative, rootAbsolute, absoluteOrigin];
     if (external) urls.push(external);
+    urls.push(githubRaw);
     return urls;
   }, []);
 
