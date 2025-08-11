@@ -236,6 +236,23 @@ export const projectsData: ProjectData[] = [
       'Implemented decentralized identity and governance features'
     ]
   }
+  ,
+  {
+    title: 'Thrive Global – Mental Health Platform',
+    description: 'AI-powered mental health chatbot and wellness platform with empathetic conversational UI across iOS, Android, and Web.',
+    designerDeveloperDescription: 'Designed and prototyped an AI-powered mental health chatbot and wellness platform with empathetic conversational UI, crisis-aware safety mechanisms, and accessibility-first mobile interfaces.',
+    image: '/images/thrive-interface-main.png',
+    link: '/projects/thrive',
+    tags: ['Conversational UI', 'Mental Health UX', 'Motion Design', 'AI', 'Mobile Design'],
+    designerDeveloperTags: ['Product Design', 'Conversational UX', 'Accessibility', 'Motion Graphics'],
+    year: '2019-2020',
+    bgColor: 'from-blue-500/15 via-3% via-transparent via-97% to-indigo-600/12 dark:from-blue-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-indigo-500/10',
+    technicalHighlights: [
+      'Crisis-aware safety mechanisms and escalation pathways',
+      'Optimized character motion graphics for performant mobile delivery',
+      'Accessibility-first conversational flows and calming visual hierarchy'
+    ]
+  }
 ];
 
 export const featuredProjects = projectsData.slice(0, 3);
