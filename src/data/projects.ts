@@ -206,7 +206,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Product Design', 'Operations', 'Dashboards', 'ZeroCater'],
     designerDeveloperTags: ['React', 'Design Systems', 'Dashboard UI', 'Data Visualization'],
     year: '2016-2018',
-    bgColor: 'from-orange-500/15 via-3% via-transparent via-97% to-amber-600/12 dark:from-orange-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-amber-500/10',
+    bgColor: 'from-white to-white dark:from-white dark:to-white',
     technicalHighlights: [
       'Reusable dashboard components aligned with company design system',
       'Responsive layouts for customer and admin roles',
