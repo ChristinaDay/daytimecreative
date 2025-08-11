@@ -33,8 +33,8 @@ export function ResumeDownloadLink({ className, children, downloadFileName = 'Ch
     const externalCdn = (process.env.NEXT_PUBLIC_EXTERNAL_CDN_URL || '').replace(/\/$/, '');
     const external = externalCdn ? `${externalCdn}/images/${PDF_NAME}` : '';
 
-    // Try order: origin-absolute, root-absolute, path-relative, one-up relative, external CDN (if available)
-    const urls: string[] = [absoluteOrigin, rootAbsolute, relative, oneUp];
+    // Try order optimized for subpath hosting: one-up, relative, root-absolute, origin-absolute, external CDN (if available)
+    const urls: string[] = [oneUp, relative, rootAbsolute, absoluteOrigin];
     if (external) urls.push(external);
     return urls;
   }, []);
@@ -44,10 +44,15 @@ export function ResumeDownloadLink({ className, children, downloadFileName = 'Ch
     async function resolveFirstWorkingUrl() {
       for (const url of candidates) {
         try {
-          const res = await fetch(url, { method: 'HEAD' });
-          if (res.ok) {
+          // Some static hosts mishandle HEAD for non-HTML assets. Use a tiny GET and accept 200/206.
+          const res = await fetch(url, { method: 'GET', headers: { Range: 'bytes=0-0' } as any, cache: 'no-store' });
+          if (res.ok || res.status === 206) {
+            const contentType = res.headers.get('content-type') || '';
+            // Prefer URLs that actually look like PDFs
+            if (contentType.includes('pdf') || url.endsWith('.pdf')) {
             if (!cancelled) setHref(url);
             return;
+            }
           }
         } catch (_) {
           // continue trying next candidate
