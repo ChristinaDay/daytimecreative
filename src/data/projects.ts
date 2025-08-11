@@ -73,7 +73,7 @@ export const projectsData: ProjectData[] = [
     designLeaderTags: ['Product Strategy', 'User Research', 'Data Visualization', 'AI/ML Design', 'Stakeholder Collaboration'],
     designerDeveloperTags: ['React', 'D3.js', 'Data Visualization', 'API Integration', 'Interactive Maps'],
     year: '2021',
-    bgColor: 'from-emerald-500/15 via-3% via-transparent via-97% to-teal-600/12 dark:from-emerald-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-teal-500/10',
+    bgColor: 'from-white to-white dark:from-white dark:to-white',
     designHighlights: [
       'Reduced claim processing time by 40% through intuitive design',
       'Improved underwriter decision-making accuracy with clear data presentation',
@@ -96,7 +96,7 @@ export const projectsData: ProjectData[] = [
     designLeaderTags: ['User Research', 'Personalization Strategy', 'Component Systems', 'User Experience', 'Design Flexibility'],
     designerDeveloperTags: ['React', 'Drag and Drop', 'Component Architecture', 'State Management', 'Responsive Design'],
     year: '2021',
-    bgColor: 'from-pink-500/15 via-3% via-transparent via-97% to-rose-600/12 dark:from-pink-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-rose-500/10',
+    bgColor: 'from-white to-white dark:from-white dark:to-white',
     designHighlights: [
       'Designed flexible component system that adapts to user workflows',
       'Conducted user research to understand personalization needs',
