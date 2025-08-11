@@ -55,7 +55,7 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
                 : `bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`
             }`}>
             {project.constrainWhiteBg ? (
-              <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden">
+              <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden p-3 md:p-4">
                 <Image
                   src={project.image}
                   alt={project.title}
