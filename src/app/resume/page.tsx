@@ -198,6 +198,8 @@ export default function ResumePage() {
               </a>
               <a 
                 href="/images/Resume-ChristinaDay2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Christina_Day_Resume_2025.pdf"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm md:text-base"
               >
@@ -272,7 +274,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Brand and Product Consultant</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2022 - Present</span>
@@ -314,7 +316,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Fabrication Artist</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Jul 2024 - Mar 2025</span>
@@ -356,7 +358,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2021 - Jan 2022</span>
@@ -398,7 +400,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">UX Designer</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Feb 2021 - Jul 2021</span>
@@ -440,7 +442,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Consultant</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2020 - Feb 2021</span>
@@ -481,7 +483,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Design Consultant</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2019 - Dec 2019</span>
@@ -521,7 +523,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Jul 2017 - Apr 2018</span>
@@ -562,7 +564,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Feb 2016 - Jul 2017</span>
@@ -604,7 +606,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Graphic Designer, Illustrator, Branding</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Dec 2013 - Aug 2014</span>
@@ -642,7 +644,7 @@ export default function ResumePage() {
                     />
                   </svg>
                   {/* Content Card */}
-                  <div className="ml-12 md:ml-16 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
+                  <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Aug 2014 - Sep 2015</span>
@@ -663,7 +665,7 @@ export default function ResumePage() {
         <section className="mb-8 md:mb-16">
           <h3 className="text-2xl md:text-3xl font-serif font-normal mb-6 md:mb-8 text-center">Core Skills</h3>
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2 md:mb-3 text-sm md:text-base">Design & UX</h4>
               <ul className="text-xs md:text-sm text-gray-600 dark:text-gray-300 space-y-1 md:space-y-2 leading-relaxed">
                 <li>• End-to-end product design</li>
@@ -673,7 +675,7 @@ export default function ResumePage() {
                 <li>• Brand & visual identity</li>
               </ul>
             </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2 md:mb-3 text-sm md:text-base">Frontend Development</h4>
               <ul className="text-xs md:text-sm text-gray-600 dark:text-gray-300 space-y-1 md:space-y-2 leading-relaxed">
                 <li>• React & Next.js</li>
@@ -683,7 +685,7 @@ export default function ResumePage() {
                 <li>• Responsive design</li>
               </ul>
             </div>
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300">
               <h4 className="font-semibold text-gray-900 dark:text-white mb-2 md:mb-3 text-sm md:text-base">AI & Emerging Tech</h4>
               <ul className="text-xs md:text-sm text-gray-600 dark:text-gray-300 space-y-1 md:space-y-2 leading-relaxed">
                 <li>• AI-integrated workflows</li>
@@ -704,21 +706,21 @@ export default function ResumePage() {
             {/* Education Cards - Side by Side */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {/* Studio Art and Music */}
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-2 md:mb-3 inline-block">2005-2006</span>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-1 md:mb-2">Studio Art, Music</h4>
                 <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium">University of Oklahoma</h5>
               </div>
 
               {/* BFA Drawing and Painting */}
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-2 md:mb-3 inline-block">Graduated 2010</span>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-1 md:mb-2">BFA, Drawing and Painting</h4>
                 <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
               </div>
 
               {/* BFA New Media Art */}
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                 <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mb-2 md:mb-3 inline-block">Graduated 2010</span>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-1 md:mb-2">BFA, New Media Art</h4>
                 <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium">University of North Texas</h5>
@@ -741,7 +743,7 @@ export default function ResumePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {/* Email CTA */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
               <div className="w-12 h-12 bg-accent-light/20 dark:bg-accent-dark/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-4 h-4 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -765,7 +767,7 @@ export default function ResumePage() {
             </div>
 
             {/* Portfolio CTA */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
               <div className="w-12 h-12 bg-accent-light/20 dark:bg-accent-dark/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-4 h-4 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -791,7 +793,7 @@ export default function ResumePage() {
             </div>
 
             {/* Download Resume CTA */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl rounded-xl p-4 md:p-6 text-center border border-white/30 dark:border-gray-600/30 shadow-lg">
               <div className="w-12 h-12 bg-accent-light/20 dark:bg-accent-dark/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-4 h-4 text-accent-light dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -805,6 +807,8 @@ export default function ResumePage() {
               </p>
             <a 
               href="/images/Resume-ChristinaDay2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               download="Christina_Day_Resume_2025.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg font-semibold hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 transition-all duration-300 text-sm"
             >
