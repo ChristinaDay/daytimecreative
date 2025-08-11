@@ -60,7 +60,7 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
                   src={project.image}
                   alt={project.title}
                   fill
-                  className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} group-hover:scale-105 transition-transform duration-300`}
+                  className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} scale-95 group-hover:scale-100 transition-transform duration-300`}
                   sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
                 />
               </div>
