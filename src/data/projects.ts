@@ -73,7 +73,7 @@ export const projectsData: ProjectData[] = [
     designLeaderTags: ['Product Strategy', 'User Research', 'Data Visualization', 'AI/ML Design', 'Stakeholder Collaboration'],
     designerDeveloperTags: ['React', 'D3.js', 'Data Visualization', 'API Integration', 'Interactive Maps'],
     year: '2021',
-    bgColor: 'from-white to-white dark:from-white dark:to-white',
+    constrainWhiteBg: true,
     designHighlights: [
       'Reduced claim processing time by 40% through intuitive design',
       'Improved underwriter decision-making accuracy with clear data presentation',
@@ -96,7 +96,7 @@ export const projectsData: ProjectData[] = [
     designLeaderTags: ['User Research', 'Personalization Strategy', 'Component Systems', 'User Experience', 'Design Flexibility'],
     designerDeveloperTags: ['React', 'Drag and Drop', 'Component Architecture', 'State Management', 'Responsive Design'],
     year: '2021',
-    bgColor: 'from-white to-white dark:from-white dark:to-white',
+    constrainWhiteBg: true,
     designHighlights: [
       'Designed flexible component system that adapts to user workflows',
       'Conducted user research to understand personalization needs',
@@ -206,7 +206,7 @@ export const projectsData: ProjectData[] = [
     tags: ['Product Design', 'Operations', 'Dashboards', 'ZeroCater'],
     designerDeveloperTags: ['React', 'Design Systems', 'Dashboard UI', 'Data Visualization'],
     year: '2016-2018',
-    bgColor: 'from-white to-white dark:from-white dark:to-white',
+    constrainWhiteBg: true,
     technicalHighlights: [
       'Reusable dashboard components aligned with company design system',
       'Responsive layouts for customer and admin roles',
