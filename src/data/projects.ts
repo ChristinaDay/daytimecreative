@@ -63,7 +63,7 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
-    title: 'Property Intelligence Platform',
+    title: 'Betterview: Property Intelligence Platform',
     description: 'Designed an intuitive data visualization platform that processes complex property risk data.',
     designLeaderDescription: 'Led the design vision for an AI-powered property intelligence platform, collaborating with data scientists and product teams to transform complex risk data into actionable insights for insurance underwriters.',
     designerDeveloperDescription: 'Designed and prototyped an AI-powered data visualization platform with complex filtering, interactive maps, and real-time data processing, implemented with React and D3.js.',
@@ -86,7 +86,7 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
-    title: 'Customizable UI System',
+    title: 'Designing a Customizable Interface for Betterview',
     description: 'Modular dashboard system empowering users to personalize their data visualization experience.',
     designLeaderDescription: 'Led the design strategy for a customizable dashboard system, conducting user research to understand how different user types interact with data and designing flexible components that adapt to varied workflows.',
     designerDeveloperDescription: 'Built a completely customizable dashboard system with drag-and-drop components, user-defined layouts, and persistent personalization using React and a custom component architecture.',
