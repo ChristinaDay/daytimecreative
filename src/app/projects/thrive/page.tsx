@@ -23,7 +23,7 @@ export default function ThrivePage() {
           Designing an AI-powered mental health chatbot and wellness platform to provide accessible, personalized mental health support and resources
         </ProjectSubtitle>
         <ProjectDetailTags
-          role="Lead Product Designer & UX Researcher"
+          role="Product Designer & UX Researcher"
           employer="Thrive"
           platforms="iOS, Android, Web Platform"
           areas="Product Design, UX Research, Conversational UI, Mental Health UX, Motion Graphics"
@@ -68,7 +68,7 @@ export default function ThrivePage() {
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-          Thrive was an innovative mental health platform designed to make mental wellness support accessible, personalized, and engaging through AI-powered conversations. As the Lead Product Designer, I created a comprehensive user experience that combined evidence-based therapeutic techniques with conversational AI to provide users with 24/7 mental health support.
+          Thrive was an innovative mental health platform designed to make mental wellness support accessible, personalized, and engaging through AI-powered conversations. As the Product Designer, I created a comprehensive user experience that combined evidence-based therapeutic techniques with conversational AI to provide users with 24/7 mental health support.
         </p>
         <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
           The platform featured "Thrivebot," an empathetic AI assistant that guided users through personalized mental health journeys, mood tracking, coping strategies, and resource recommendations. My role encompassed the entire design process from user research and persona development to interface design and conversational flow optimization.
