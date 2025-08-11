@@ -457,7 +457,7 @@ export default function Home() {
                   Get In Touch
                 </Link>
                 <a 
-                  href="/images/Resume-ChristinaDay2025.pdf"
+                  href="images/Resume-ChristinaDay2025.pdf"
                   className="px-8 py-4 border-2 border-text-light/20 dark:border-text-dark/20 text-text-light dark:text-text-dark rounded-lg font-semibold hover:border-accent-light dark:hover:border-accent-dark hover:text-accent-light dark:hover:text-accent-dark transition-all duration-300"
                 >
                   Download Resume
