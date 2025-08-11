@@ -51,20 +51,18 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
         <div className={`bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
           <div className={`relative ${featured ? 'lg:w-1/2' : ''} aspect-[4/3] ${
               project.constrainWhiteBg
-                ? 'bg-transparent'
-                : `bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'}`
-            } overflow-hidden`}>
+                ? 'bg-transparent p-6'
+                : `bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`
+            }`}>
             {project.constrainWhiteBg ? (
-              <div className="absolute inset-0 p-6">
-                <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} group-hover:scale-105 transition-transform duration-300`}
-                    sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-                  />
-                </div>
+              <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} group-hover:scale-105 transition-transform duration-300`}
+                  sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+                />
               </div>
             ) : (
               <Image
