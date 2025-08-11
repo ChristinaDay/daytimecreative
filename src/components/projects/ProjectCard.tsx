@@ -54,18 +54,27 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
                 ? 'bg-transparent'
                 : `bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'}`
             } overflow-hidden`}>
-            {project.constrainWhiteBg && (
+            {project.constrainWhiteBg ? (
               <div className="absolute inset-0 p-6">
-                <div className="w-full h-full bg-white rounded-lg shadow-sm" />
+                <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} group-hover:scale-105 transition-transform duration-300`}
+                    sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+                  />
+                </div>
               </div>
+            ) : (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className={`${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} p-6 group-hover:scale-105 transition-transform duration-300`}
+                sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+              />
             )}
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className={`relative z-10 ${project.imageFit === 'cover' ? 'object-cover' : 'object-contain'} ${project.imagePosition === 'top' ? 'object-top' : project.imagePosition === 'bottom' ? 'object-bottom' : 'object-center'} p-6 group-hover:scale-105 transition-transform duration-300`}
-              sizes={featured ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-            />
           </div>
           
           <div className={`p-6 flex-1 flex flex-col ${featured ? 'lg:w-1/2' : ''}`}>
