@@ -323,7 +323,7 @@ export default function ArtFabrication2Page() {
   }, [lightbox]);
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark relative overflow-visible flex flex-col">
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -380,7 +380,7 @@ export default function ArtFabrication2Page() {
       {/* Dark mode aurora background */}
       {/* Base aurora haze */}
       <div
-        className="absolute inset-0 hidden dark:block"
+        className="fixed inset-0 hidden dark:block z-10"
         style={{
           background:
             'radial-gradient(40% 60% at 15% 50%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 70%), ' +
@@ -415,7 +415,7 @@ export default function ArtFabrication2Page() {
 
       {/* Horizon band - taller to span more area */}
       <div
-        className="absolute left-[-10vw] right-[-10vw] top-[46%] h-[40vh] hidden dark:block"
+        className="fixed left-[-10vw] right-[-10vw] top-[46%] h-[40vh] hidden dark:block z-10"
         style={{
           background:
             'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 10%, rgba(127,230,176,0.44) 45%, rgba(35,189,184,0.34) 65%, rgba(200,80,192,0.16) 90%, rgba(106,79,179,0) 100%)',
@@ -426,7 +426,7 @@ export default function ArtFabrication2Page() {
 
       {/* Wide glows to fill sides */}
       <div
-        className="absolute hidden dark:block top-[10%] left-[-10%] w-[70vw] h-[70vh]"
+        className="fixed hidden dark:block top-[10%] left-[-10%] w-[70vw] h-[70vh] z-10"
         style={{
           background:
             'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.26) 0%, rgba(11,16,34,0) 70%)',
@@ -434,7 +434,7 @@ export default function ArtFabrication2Page() {
         }}
       />
       <div
-        className="absolute hidden dark:block top-[6%] right-[-8%] w-[65vw] h-[65vh]"
+        className="fixed hidden dark:block top-[6%] right-[-8%] w-[65vw] h-[65vh] z-10"
         style={{
           background:
             'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.22) 0%, rgba(11,16,34,0) 72%)',
@@ -444,7 +444,7 @@ export default function ArtFabrication2Page() {
 
       {/* Vertical beams */}
       <div
-        className="absolute hidden dark:block top-[6%] left-[12%] w-[9vw] h-[70vh]"
+        className="fixed hidden dark:block top-[6%] left-[12%] w-[9vw] h-[70vh] z-10"
         style={{
           background: 'linear-gradient(to bottom, rgba(200,80,192,0) 0%, rgba(200,80,192,0.3) 40%, rgba(127,230,176,0.24) 70%, rgba(11,16,34,0) 100%)',
           filter: 'blur(30px)',
@@ -452,7 +452,7 @@ export default function ArtFabrication2Page() {
         }}
       />
       <div
-        className="absolute hidden dark:block top-[4%] left-[38%] w-[8vw] h-[68vh]"
+        className="fixed hidden dark:block top-[4%] left-[38%] w-[8vw] h-[68vh] z-10"
         style={{
           background: 'linear-gradient(to bottom, rgba(106,79,179,0) 0%, rgba(106,79,179,0.28) 35%, rgba(127,230,176,0.24) 65%, rgba(11,16,34,0) 100%)',
           filter: 'blur(28px)',
@@ -460,7 +460,7 @@ export default function ArtFabrication2Page() {
         }}
       />
       <div
-        className="absolute hidden dark:block top-[8%] right-[14%] w-[10vw] h-[66vh]"
+        className="fixed hidden dark:block top-[8%] right-[14%] w-[10vw] h-[66vh] z-10"
         style={{
           background: 'linear-gradient(to bottom, rgba(35,189,184,0) 0%, rgba(35,189,184,0.28) 45%, rgba(200,80,192,0.2) 75%, rgba(11,16,34,0) 100%)',
           filter: 'blur(30px)',
@@ -469,7 +469,7 @@ export default function ArtFabrication2Page() {
       />
       {/* Extra faint beams for coverage */}
       <div
-        className="absolute hidden dark:block top-[12%] left-[58%] w-[6vw] h-[60vh]"
+        className="fixed hidden dark:block top-[12%] left-[58%] w-[6vw] h-[60vh] z-10"
         style={{
           background: 'linear-gradient(to bottom, rgba(127,230,176,0) 0%, rgba(127,230,176,0.22) 40%, rgba(35,189,184,0.18) 70%, rgba(11,16,34,0) 100%)',
           filter: 'blur(26px)',
