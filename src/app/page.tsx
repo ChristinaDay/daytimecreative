@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <>
       {/* Backgrounds: starfield + aurora */}
-      <div className="absolute z-0 inset-0 pointer-events-none">
+      <div className="absolute z-0 inset-0 pointer-events-none min-h-[180vh]">
         {/* Starfield overlay for dark mode */}
         <div ref={starfieldRef} style={{ willChange: 'transform' }}>
           <StarfieldSVG />

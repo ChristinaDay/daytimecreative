@@ -18,7 +18,7 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Backgrounds */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none min-h-[180vh]">
         <StarfieldSVG />
         <AuroraBackground zIndexClass="z-[25]" />
       </div>

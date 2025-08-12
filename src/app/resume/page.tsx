@@ -97,7 +97,7 @@ export default function ResumePage() {
   return (
     <>
       {/* Backgrounds */}
-      <div className="fixed inset-0 pointer-events-none z-10">
+      <div className="fixed inset-0 pointer-events-none z-10 min-h-[180vh]">
         <StarfieldSVG />
         <AuroraBackground zIndexClass="z-[25]" />
       </div>
