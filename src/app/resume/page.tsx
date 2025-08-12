@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import ResumeDownloadLink from '@/components/ResumeDownloadLink';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 
 // Timeline styling CSS - constellation-inspired with connecting lines between nodes
@@ -197,14 +196,17 @@ export default function ResumePage() {
                 </svg>
                 Projects
               </a>
-              <ResumeDownloadLink 
+              <a
+                href="https://raw.githubusercontent.com/ChristinaDay/daytimecreative/main/public/images/Resume-ChristinaDay2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm md:text-base"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Download PDF
-              </ResumeDownloadLink>
+              </a>
             </div>
           </div>
         </header>
@@ -802,14 +804,17 @@ export default function ResumePage() {
               <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-6 text-xs md:text-sm">
                 Get a PDF copy of my complete resume with all experience details.
               </p>
-            <ResumeDownloadLink 
+            <a
+              href="https://raw.githubusercontent.com/ChristinaDay/daytimecreative/main/public/images/Resume-ChristinaDay2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg font-semibold hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 transition-all duration-300 text-sm"
             >
               Download PDF
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-            </ResumeDownloadLink>
+            </a>
             </div>
           </div>
         </section>
