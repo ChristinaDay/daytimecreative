@@ -9,7 +9,7 @@ interface AuroraBackgroundProps {
 // Fixed, full-viewport aurora layers used across pages. Matches the art-fabrication page styling.
 export function AuroraBackground({ zIndexClass = "z-[30]" }: AuroraBackgroundProps) {
   return (
-    <div className={`fixed inset-0 hidden dark:block pointer-events-none ${zIndexClass}`}>
+    <div className={`fixed inset-0 hidden dark:block pointer-events-none will-change-transform ${zIndexClass}`}>
       {/* Base aurora haze */}
       <div
         className="fixed inset-0"

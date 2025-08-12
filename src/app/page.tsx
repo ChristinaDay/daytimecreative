@@ -45,11 +45,24 @@ export default function Home() {
       }
     };
 
+    // Add scroll state class to pause heavy animations
+    const onScrollStart = () => document.documentElement.classList.add('is-scrolling');
+    const onScrollEnd = () => {
+      clearTimeout((onScrollEnd as any)._t);
+      (onScrollEnd as any)._t = setTimeout(() => document.documentElement.classList.remove('is-scrolling'), 120);
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScrollStart, { passive: true });
+    window.addEventListener('scroll', onScrollEnd, { passive: true });
     // Initial set
     updateParallax();
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScrollStart);
+      window.removeEventListener('scroll', onScrollEnd);
+    };
   }, []);
 
   return (

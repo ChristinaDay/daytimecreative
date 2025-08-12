@@ -80,6 +80,21 @@ export default function ResumePage() {
     }
   }, []);
 
+  // Pause aurora animations during scroll to reduce jank
+  useEffect(() => {
+    const onScrollStart = () => document.documentElement.classList.add('is-scrolling');
+    const onScrollEnd = () => {
+      clearTimeout((onScrollEnd as any)._t);
+      (onScrollEnd as any)._t = setTimeout(() => document.documentElement.classList.remove('is-scrolling'), 120);
+    };
+    window.addEventListener('scroll', onScrollStart, { passive: true });
+    window.addEventListener('scroll', onScrollEnd, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScrollStart);
+      window.removeEventListener('scroll', onScrollEnd);
+    };
+  }, []);
+
   // Timeline node properties (expanded for complete timeline)
   const timelineNodeStyles = [
     { r: 5.5, fill: '#fffbe6' },   // 0: Rotary Pictures

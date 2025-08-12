@@ -102,6 +102,28 @@ body {
   animation: auroraPulse 6s ease-in-out infinite;
 }
 
+.is-scrolling .aurora-animate-slow,
+.is-scrolling .aurora-animate-med,
+.is-scrolling .aurora-animate-fast,
+.is-scrolling .aurora-drift,
+.is-scrolling .aurora-pulse-slow,
+.is-scrolling .aurora-pulse-fast,
+.is-scrolling .aurora-ribbon {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-animate-slow,
+  .aurora-animate-med,
+  .aurora-animate-fast,
+  .aurora-drift,
+  .aurora-pulse-slow,
+  .aurora-pulse-fast,
+  .aurora-ribbon {
+    animation: none !important;
+  }
+}
+
 .aurora-ribbon {
   animation: auroraRibbon 16s ease-in-out infinite;
 }
