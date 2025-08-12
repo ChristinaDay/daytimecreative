@@ -13,8 +13,7 @@ import { allProjects } from '@/data/projects';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  // Parallax refs
-  const starfieldRef = useRef<HTMLDivElement>(null);
+  // Parallax refs (starfield static on home; only gradients move)
   const pinkGradientRef = useRef<HTMLDivElement>(null);
   const blueGradientRef = useRef<HTMLDivElement>(null);
 
@@ -25,14 +24,11 @@ export default function Home() {
     let ticking = false;
 
     const updateParallax = () => {
-      if (starfieldRef.current) {
-        starfieldRef.current.style.transform = `translateY(${latestScrollY * 0.15}px)`;
-      }
       if (pinkGradientRef.current) {
-        pinkGradientRef.current.style.transform = `translateY(${latestScrollY * 0.25}px)`;
+        pinkGradientRef.current.style.transform = `translate3d(0, ${latestScrollY * 0.25}px, 0)`;
       }
       if (blueGradientRef.current) {
-        blueGradientRef.current.style.transform = `translateY(${latestScrollY * 0.35}px)`;
+        blueGradientRef.current.style.transform = `translate3d(0, ${latestScrollY * 0.35}px, 0)`;
       }
       ticking = false;
     };
@@ -45,34 +41,21 @@ export default function Home() {
       }
     };
 
-    // Add scroll state class to pause heavy animations
-    const onScrollStart = () => document.documentElement.classList.add('is-scrolling');
-    const onScrollEnd = () => {
-      clearTimeout((onScrollEnd as any)._t);
-      (onScrollEnd as any)._t = setTimeout(() => document.documentElement.classList.remove('is-scrolling'), 120);
-    };
-
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('scroll', onScrollStart, { passive: true });
-    window.addEventListener('scroll', onScrollEnd, { passive: true });
     // Initial set
     updateParallax();
 
     return () => {
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('scroll', onScrollStart);
-      window.removeEventListener('scroll', onScrollEnd);
     };
   }, []);
 
   return (
     <>
-      {/* Backgrounds: starfield + aurora */}
-      <div className="absolute z-0 inset-0 pointer-events-none min-h-[180vh]">
-        {/* Starfield overlay for dark mode */}
-        <div ref={starfieldRef} className="relative z-[40]" style={{ willChange: 'transform' }}>
-          <StarfieldSVG />
-        </div>
+      {/* Backgrounds: starfield (static) + aurora */}
+      <div className="fixed inset-0 pointer-events-none z-10 min-h-[180vh]">
+        {/* Starfield overlay */}
+        <div className="relative z-[40]"><StarfieldSVG /></div>
         {/* Aurora layers behind content */}
         <AuroraBackground zIndexClass="z-[25]" />
         {/* Foreground gradients above SVG starfield (dark mode only) */}
