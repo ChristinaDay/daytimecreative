@@ -510,6 +510,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_7832.jpeg"
   ],
   "Whales-and-Surf-Boards": [
+    "1752907300225.jpeg",
     "IMG_9140.jpeg",
     "IMG_9177.jpeg",
     "IMG_9181.jpeg",
