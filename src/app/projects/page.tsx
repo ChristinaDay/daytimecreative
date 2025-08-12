@@ -1,6 +1,6 @@
+"use client";
 import { StarfieldSVG } from '@/components/StarfieldSVG';
 import { AuroraBackground } from '@/components/AuroraBackground';
-'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
