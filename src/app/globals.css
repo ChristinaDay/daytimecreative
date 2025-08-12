@@ -74,6 +74,13 @@ body {
   50%      { opacity: 1; }
 }
 
+/* Subtle ribbon motion for the horizon band */
+@keyframes auroraRibbon {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Utility classes for aurora layers */
 .aurora-animate-slow {
   animation: auroraShift 18s ease-in-out infinite;
@@ -93,6 +100,10 @@ body {
 }
 .aurora-pulse-fast {
   animation: auroraPulse 6s ease-in-out infinite;
+}
+
+.aurora-ribbon {
+  animation: auroraRibbon 24s ease-in-out infinite;
 }
 
 /* Masonry grid styles */

@@ -429,11 +429,12 @@ export default function ArtFabrication2Page() {
 
       {/* Horizon band - taller to span more area */}
       <div
-        className="fixed left-[-12vw] right-[-12vw] top-[50%] h-[60vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast"
+        className="fixed left-[-15vw] right-[-15vw] top-[52%] h-[48vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast aurora-ribbon"
         style={{
           background:
-            'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 10%, rgba(127,230,176,0.44) 45%, rgba(35,189,184,0.34) 65%, rgba(200,80,192,0.16) 90%, rgba(106,79,179,0) 100%)',
-          filter: 'blur(32px)',
+            'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 12%, rgba(127,230,176,0.44) 48%, rgba(35,189,184,0.34) 68%, rgba(200,80,192,0.16) 88%, rgba(106,79,179,0) 100%)',
+          backgroundSize: '200% 100%',
+          filter: 'blur(36px)',
           transform: 'translateY(-50%)'
         }}
       />
@@ -458,19 +459,19 @@ export default function ArtFabrication2Page() {
 
       {/* Bottom glows to extend vertical coverage */}
       <div
-        className="fixed hidden dark:block bottom-[-8%] left-[-12%] w-[80vw] h-[80vh] z-10 aurora-animate-slow"
+        className="fixed hidden dark:block bottom-[-12%] left-[-12%] w-[85vw] h-[90vh] z-10 aurora-animate-slow"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-purple), 0.18) 0%, rgba(11,16,34,0) 75%)',
-          filter: 'blur(36px)'
+            'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(var(--aurora-purple), 0.16) 0%, rgba(11,16,34,0) 78%)',
+          filter: 'blur(42px)'
         }}
       />
       <div
-        className="fixed hidden dark:block bottom-[-10%] right-[-12%] w-[80vw] h-[80vh] z-10 aurora-animate-slow"
+        className="fixed hidden dark:block bottom-[-14%] right-[-12%] w-[85vw] h-[90vh] z-10 aurora-animate-slow"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-rose), 0.16) 0%, rgba(11,16,34,0) 75%)',
-          filter: 'blur(36px)'
+            'radial-gradient(ellipse 70% 55% at 50% 44%, rgba(var(--aurora-rose), 0.14) 0%, rgba(11,16,34,0) 80%)',
+          filter: 'blur(42px)'
         }}
       />
 
