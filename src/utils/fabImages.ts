@@ -1,5 +1,5 @@
 // Auto-generated fab lab project images
-// Generated on 2025-08-12T04:22:41.039Z
+// Generated on 2025-08-12T07:04:53.880Z
 
 export interface FabProject {
   name: string;
@@ -400,7 +400,7 @@ export const fabProjectImages: Record<string, string[]> = {
   "Scales": [
     "IMG_9454.jpeg",
     "IMG_9455.jpeg",
-    "image-asset2.jpeg"
+    "zzz-1752907300225.jpeg"
   ],
   "Sevens-Piece": [
     "IMG_8239.jpeg"
