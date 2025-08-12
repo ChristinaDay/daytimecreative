@@ -61,7 +61,7 @@ export default function Home() {
           <StarfieldSVG />
         </div>
         {/* Aurora layers behind content */}
-        <AuroraBackground zIndexClass="z-10" />
+        <AuroraBackground zIndexClass="z-[15]" />
         {/* Foreground gradients above SVG starfield (dark mode only) */}
         <div
           ref={pinkGradientRef}
