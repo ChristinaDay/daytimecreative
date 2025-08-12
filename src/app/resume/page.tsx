@@ -128,10 +128,7 @@ export default function ResumePage() {
         </defs>
       </svg>
 
-      {/* Starfield Background */}
-      <div className="fixed inset-0 pointer-events-none z-30">
-          <StarfieldSVG />
-      </div>
+      {/* Starfield rendered once above via Backgrounds */}
 
       <article className="max-w-[100rem] mx-auto pt-24 md:pt-28 lg:pt-32 pb-24 md:pb-40 px-4 md:px-6 lg:px-8 relative z-40">
         {/* Header */}
