@@ -388,19 +388,19 @@ export default function ArtFabrication2Page() {
         className="fixed inset-0 hidden dark:block z-10 aurora-animate-slow aurora-pulse-slow"
         style={{
           background:
-            'radial-gradient(55% 80% at 12% 45%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 75%), ' +
-            'radial-gradient(55% 80% at 88% 50%, rgba(var(--aurora-magenta), 0.26) 0%, rgba(11,16,34,0) 75%), ' +
-            'radial-gradient(75% 65% at 50% -5%, rgba(var(--aurora-purple), 0.22) 0%, rgba(11,16,34,0) 75%), ' +
-            'radial-gradient(75% 70% at 50% 105%, rgba(var(--aurora-teal), 0.20) 0%, rgba(11,16,34,0) 75%)',
+            'radial-gradient(60% 85% at 12% 45%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 88%), ' +
+            'radial-gradient(60% 85% at 88% 50%, rgba(var(--aurora-magenta), 0.26) 0%, rgba(11,16,34,0) 88%), ' +
+            'radial-gradient(85% 70% at 50% -8%, rgba(var(--aurora-purple), 0.22) 0%, rgba(11,16,34,0) 90%), ' +
+            'radial-gradient(85% 75% at 50% 108%, rgba(var(--aurora-teal), 0.20) 0%, rgba(11,16,34,0) 90%)',
           mixBlendMode: 'screen',
-          filter: 'blur(16px)',
+          filter: 'blur(22px)',
           pointerEvents: 'none'
         }}
       />
 
       {/* Full overlay wash to extend color across entire viewport */}
       <div
-        className="absolute inset-0 hidden dark:block opacity-70"
+        className="fixed inset-0 hidden dark:block opacity-70"
         style={{
           background:
             'linear-gradient(180deg, rgba(18,26,52,0) 0%, rgba(18,26,52,0.35) 60%, rgba(18,26,52,0.55) 100%)'
@@ -409,12 +409,21 @@ export default function ArtFabrication2Page() {
 
       {/* Soft vertical gradient wash for top/bottom balancing */}
       <div
-        className="absolute inset-0 hidden dark:block"
+        className="fixed inset-0 hidden dark:block"
         style={{
           background:
             'linear-gradient( to right, rgba(106,79,179,0.12), rgba(11,16,34,0.0), rgba(200,80,192,0.12) )',
           filter: 'blur(18px)',
           mixBlendMode: 'screen'
+        }}
+      />
+
+      {/* Edge feather vignette to avoid abrupt ends on laptop view */}
+      <div
+        className="fixed inset-0 hidden dark:block z-10 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(120% 100% at 50% 50%, rgba(11,16,34,0) 60%, rgba(11,16,34,0.18) 82%, rgba(11,16,34,0.38) 100%)'
         }}
       />
 
