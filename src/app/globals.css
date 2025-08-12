@@ -54,6 +54,35 @@ body {
   background: transparent;
 }
 
+/* Aurora animation keyframes */
+@keyframes auroraShift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  25%  { transform: translate3d(-2%, -1%, 0) scale(1.02); opacity: 0.9; }
+  50%  { transform: translate3d(1%, 1.5%, 0) scale(1.015); opacity: 0.82; }
+  75%  { transform: translate3d(2%, -1%, 0) scale(1.01); opacity: 0.88; }
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+}
+
+@keyframes auroraDrift {
+  0%   { transform: translateX(-2%) translateY(0) rotate(-1deg); }
+  50%  { transform: translateX(2%) translateY(-1%) rotate(1deg); }
+  100% { transform: translateX(-2%) translateY(0) rotate(-1deg); }
+}
+
+/* Utility classes for aurora layers */
+.aurora-animate-slow {
+  animation: auroraShift 28s ease-in-out infinite;
+}
+.aurora-animate-med {
+  animation: auroraShift 22s ease-in-out infinite;
+}
+.aurora-animate-fast {
+  animation: auroraShift 16s ease-in-out infinite;
+}
+.aurora-drift {
+  animation: auroraDrift 36s ease-in-out infinite;
+}
+
 /* Masonry grid styles */
 .masonry-grid {
   display: flex;
