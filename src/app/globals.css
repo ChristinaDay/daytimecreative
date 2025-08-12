@@ -56,17 +56,22 @@ body {
 
 /* Aurora animation keyframes */
 @keyframes auroraShift {
-  0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
-  25%  { transform: translate3d(-2%, -1%, 0) scale(1.02); opacity: 0.9; }
-  50%  { transform: translate3d(1%, 1.5%, 0) scale(1.015); opacity: 0.82; }
-  75%  { transform: translate3d(2%, -1%, 0) scale(1.01); opacity: 0.88; }
-  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+  20%  { transform: translate3d(-3%, -2%, 0) scale(1.04) rotate(-1deg); opacity: 0.9; }
+  50%  { transform: translate3d(4%, 3%, 0) scale(1.06) rotate(1.2deg); opacity: 0.78; }
+  80%  { transform: translate3d(2%, -3%, 0) scale(1.03) rotate(-0.6deg); opacity: 0.88; }
+  100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); opacity: 0.8; }
 }
 
 @keyframes auroraDrift {
-  0%   { transform: translateX(-2%) translateY(0) rotate(-1deg); }
-  50%  { transform: translateX(2%) translateY(-1%) rotate(1deg); }
-  100% { transform: translateX(-2%) translateY(0) rotate(-1deg); }
+  0%   { transform: translateX(-4%) translateY(0) rotate(-2deg); }
+  50%  { transform: translateX(4%) translateY(-2%) rotate(2deg); }
+  100% { transform: translateX(-4%) translateY(0) rotate(-2deg); }
+}
+
+@keyframes auroraPulse {
+  0%, 100% { opacity: 0.65; }
+  50%      { opacity: 1; }
 }
 
 /* Utility classes for aurora layers */
@@ -80,7 +85,14 @@ body {
   animation: auroraShift 16s ease-in-out infinite;
 }
 .aurora-drift {
-  animation: auroraDrift 36s ease-in-out infinite;
+  animation: auroraDrift 48s ease-in-out infinite;
+}
+
+.aurora-pulse-slow {
+  animation: auroraPulse 20s ease-in-out infinite;
+}
+.aurora-pulse-fast {
+  animation: auroraPulse 12s ease-in-out infinite;
 }
 
 /* Masonry grid styles */

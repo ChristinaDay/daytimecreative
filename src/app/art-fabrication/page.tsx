@@ -385,7 +385,7 @@ export default function ArtFabrication2Page() {
       {/* Dark mode aurora background (above starfield) */}
       {/* Base aurora haze */}
       <div
-        className="fixed inset-0 hidden dark:block z-10 aurora-animate-slow"
+        className="fixed inset-0 hidden dark:block z-10 aurora-animate-slow aurora-pulse-slow"
         style={{
           background:
             'radial-gradient(40% 60% at 15% 50%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 70%), ' +
@@ -420,7 +420,7 @@ export default function ArtFabrication2Page() {
 
       {/* Horizon band - taller to span more area */}
       <div
-        className="fixed left-[-10vw] right-[-10vw] top-[46%] h-[40vh] hidden dark:block z-10 aurora-drift"
+        className="fixed left-[-10vw] right-[-10vw] top-[46%] h-[40vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast"
         style={{
           background:
             'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 10%, rgba(127,230,176,0.44) 45%, rgba(35,189,184,0.34) 65%, rgba(200,80,192,0.16) 90%, rgba(106,79,179,0) 100%)',
@@ -431,7 +431,7 @@ export default function ArtFabrication2Page() {
 
       {/* Wide glows to fill sides */}
       <div
-        className="fixed hidden dark:block top-[10%] left-[-10%] w-[70vw] h-[70vh] z-10 aurora-animate-med"
+        className="fixed hidden dark:block top-[10%] left-[-10%] w-[70vw] h-[70vh] z-10 aurora-animate-med aurora-pulse-slow"
         style={{
           background:
             'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.26) 0%, rgba(11,16,34,0) 70%)',
@@ -439,7 +439,7 @@ export default function ArtFabrication2Page() {
         }}
       />
       <div
-        className="fixed hidden dark:block top-[6%] right-[-8%] w-[65vw] h-[65vh] z-10 aurora-animate-med"
+        className="fixed hidden dark:block top-[6%] right-[-8%] w-[65vw] h-[65vh] z-10 aurora-animate-med aurora-pulse-slow"
         style={{
           background:
             'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.22) 0%, rgba(11,16,34,0) 72%)',
