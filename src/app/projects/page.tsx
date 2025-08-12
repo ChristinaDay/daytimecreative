@@ -22,18 +22,18 @@ export default function ProjectsPage() {
         <div className="relative z-[40]"><StarfieldSVG /></div>
         <AuroraBackground zIndexClass="z-[25]" />
       </div>
-      <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-32 md:pb-40">
+      <article className="relative z-[60] max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-32 md:pb-40">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 will-change-contents"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-tight mb-6">
             All Projects
           </h1>
-          <p className="text-lg text-text-light/80 dark:text-text-dark/80 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-text-light/90 dark:text-text-dark/90 max-w-3xl mx-auto mb-8 [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased]">
             A comprehensive look at my design and development work, showcasing technical implementation, system architecture, and problem-solving approaches.
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        className="w-full bg-gradient-to-br from-surface-light/5 to-accent-light/5 dark:from-surface-dark/5 dark:to-accent-dark/5 py-16 px-4 md:px-12 lg:px-20 mb-16"
+        className="relative z-[60] w-full bg-gradient-to-br from-surface-light/5 to-accent-light/5 dark:from-surface-dark/5 dark:to-accent-dark/5 py-16 px-4 md:px-12 lg:px-20 mb-16"
       >
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark mb-4">
