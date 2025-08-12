@@ -383,11 +383,33 @@ export default function ArtFabrication2Page() {
         className="absolute inset-0 hidden dark:block"
         style={{
           background:
-            'radial-gradient(150% 110% at 50% 120%, rgba(var(--aurora-teal), 0.18) 0%, rgba(11,16,34,0) 65%), ' +
-            'radial-gradient(140% 100% at 50% -10%, rgba(var(--aurora-purple), 0.16) 0%, rgba(11,16,34,0) 65%), ' +
-            'radial-gradient(100% 80% at 10% 30%, rgba(var(--aurora-magenta), 0.12) 0%, rgba(11,16,34,0) 75%), ' +
-            'radial-gradient(100% 80% at 90% 40%, rgba(var(--aurora-rose), 0.1) 0%, rgba(11,16,34,0) 75%)',
-          filter: 'blur(10px)'
+            'radial-gradient(40% 60% at 15% 50%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 70%), ' +
+            'radial-gradient(40% 60% at 85% 45%, rgba(var(--aurora-magenta), 0.26) 0%, rgba(11,16,34,0) 70%), ' +
+            'radial-gradient(60% 50% at 50% 0%, rgba(var(--aurora-purple), 0.22) 0%, rgba(11,16,34,0) 70%), ' +
+            'radial-gradient(60% 55% at 50% 100%, rgba(var(--aurora-teal), 0.20) 0%, rgba(11,16,34,0) 70%)',
+          mixBlendMode: 'screen',
+          filter: 'blur(16px)',
+          pointerEvents: 'none'
+        }}
+      />
+
+      {/* Full overlay wash to extend color across entire viewport */}
+      <div
+        className="absolute inset-0 hidden dark:block opacity-70"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(18,26,52,0) 0%, rgba(18,26,52,0.35) 60%, rgba(18,26,52,0.55) 100%)'
+        }}
+      />
+
+      {/* Soft vertical gradient wash for top/bottom balancing */}
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          background:
+            'linear-gradient( to right, rgba(106,79,179,0.12), rgba(11,16,34,0.0), rgba(200,80,192,0.12) )',
+          filter: 'blur(18px)',
+          mixBlendMode: 'screen'
         }}
       />
 
@@ -404,19 +426,19 @@ export default function ArtFabrication2Page() {
 
       {/* Wide glows to fill sides */}
       <div
-        className="absolute hidden dark:block top-[20%] left-[-10%] w-[55vw] h-[55vh]"
+        className="absolute hidden dark:block top-[10%] left-[-10%] w-[70vw] h-[70vh]"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.22) 0%, rgba(11,16,34,0) 70%)',
-          filter: 'blur(28px)'
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.26) 0%, rgba(11,16,34,0) 70%)',
+          filter: 'blur(32px)'
         }}
       />
       <div
-        className="absolute hidden dark:block top-[10%] right-[-8%] w-[50vw] h-[50vh]"
+        className="absolute hidden dark:block top-[6%] right-[-8%] w-[65vw] h-[65vh]"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.18) 0%, rgba(11,16,34,0) 72%)',
-          filter: 'blur(28px)'
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.22) 0%, rgba(11,16,34,0) 72%)',
+          filter: 'blur(32px)'
         }}
       />
 
