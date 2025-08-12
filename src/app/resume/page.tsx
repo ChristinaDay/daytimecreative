@@ -98,7 +98,7 @@ export default function ResumePage() {
     <>
       {/* Backgrounds */}
       <div className="fixed inset-0 pointer-events-none z-10 min-h-[180vh]">
-        <StarfieldSVG />
+        <div className="relative z-[40]"><StarfieldSVG /></div>
         <AuroraBackground zIndexClass="z-[25]" />
       </div>
       {/* SVG Filter Definitions - Exact match to Scorpio constellation */}
