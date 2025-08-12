@@ -46,12 +46,12 @@ export function AuroraBackground({ zIndexClass = "z-[30]" }: AuroraBackgroundPro
 
       {/* Horizon band */}
       <div
-        className="fixed left-[-15vw] right-[-15vw] top-[52%] h-[48vh] aurora-drift aurora-pulse-fast aurora-ribbon"
+        className="fixed left-[-18vw] right-[-18vw] top-[60%] h-[65vh] aurora-drift aurora-pulse-fast aurora-ribbon"
         style={{
           background:
             'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 12%, rgba(127,230,176,0.44) 48%, rgba(35,189,184,0.34) 68%, rgba(200,80,192,0.16) 88%, rgba(106,79,179,0) 100%)',
           backgroundSize: '200% 100%',
-          filter: 'blur(36px)',
+          filter: 'blur(42px)',
           transform: 'translateY(-50%)'
         }}
       />
@@ -76,19 +76,32 @@ export function AuroraBackground({ zIndexClass = "z-[30]" }: AuroraBackgroundPro
 
       {/* Bottom glows to extend vertical coverage */}
       <div
-        className="fixed bottom-[-12%] left-[-12%] w-[85vw] h-[90vh] aurora-animate-slow"
+        className="fixed bottom-[-22%] left-[-14%] w-[95vw] h-[110vh] aurora-animate-slow"
         style={{
           background:
-            'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(var(--aurora-purple), 0.16) 0%, rgba(11,16,34,0) 78%)',
-          filter: 'blur(42px)'
+            'radial-gradient(ellipse 75% 60% at 50% 44%, rgba(var(--aurora-purple), 0.14) 0%, rgba(11,16,34,0) 80%)',
+          filter: 'blur(48px)'
         }}
       />
       <div
-        className="fixed bottom-[-14%] right-[-12%] w-[85vw] h-[90vh] aurora-animate-slow"
+        className="fixed bottom-[-24%] right-[-14%] w-[95vw] h-[110vh] aurora-animate-slow"
         style={{
           background:
-            'radial-gradient(ellipse 70% 55% at 50% 44%, rgba(var(--aurora-rose), 0.14) 0%, rgba(11,16,34,0) 80%)',
-          filter: 'blur(42px)'
+            'radial-gradient(ellipse 75% 60% at 50% 46%, rgba(var(--aurora-rose), 0.12) 0%, rgba(11,16,34,0) 82%)',
+          filter: 'blur(48px)'
+        }}
+      />
+
+      {/* Bottom center wash to carry color towards fold */}
+      <div
+        className="fixed left-1/2 bottom-[-12%] w-[120vw] h-[120vh]"
+        style={{
+          transform: 'translateX(-50%)',
+          background:
+            'radial-gradient(ellipse 65% 55% at 50% 60%, rgba(var(--aurora-teal), 0.12) 0%, rgba(11,16,34,0) 80%), ' +
+            'radial-gradient(ellipse 60% 50% at 50% 70%, rgba(var(--aurora-purple), 0.1) 0%, rgba(11,16,34,0) 85%)',
+          filter: 'blur(42px)',
+          mixBlendMode: 'screen'
         }}
       />
 
@@ -157,5 +170,7 @@ export function AuroraBackground({ zIndexClass = "z-[30]" }: AuroraBackgroundPro
     </div>
   );
 }
+
+
 
 

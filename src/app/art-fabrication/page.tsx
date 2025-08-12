@@ -429,14 +429,14 @@ export default function ArtFabrication2Page() {
 
       {/* Horizon band - taller to span more area with ribbon motion */}
       <div
-        className="fixed left-[-15vw] right-[-15vw] top-[52%] h-[48vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast aurora-ribbon"
+        className="fixed left-[-18vw] right-[-18vw] top-[60%] h-[65vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast aurora-ribbon"
         style={{
           background:
             'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 12%, rgba(127,230,176,0.44) 48%, rgba(35,189,184,0.34) 68%, rgba(200,80,192,0.16) 88%, rgba(106,79,179,0) 100%), ' +
-            'linear-gradient(180deg, rgba(11,16,34,0) 0%, rgba(11,16,34,0.2) 80%, rgba(11,16,34,0.45) 100%)',
-          backgroundSize: '220% 100%, 100% 100%',
+            'linear-gradient(180deg, rgba(11,16,34,0) 0%, rgba(11,16,34,0.24) 78%, rgba(11,16,34,0.5) 100%)',
+          backgroundSize: '240% 100%, 100% 100%',
           backgroundBlendMode: 'screen',
-          filter: 'blur(40px)',
+          filter: 'blur(44px)',
           transform: 'translateY(-50%)'
         }}
       />
