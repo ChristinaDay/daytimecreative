@@ -76,23 +76,23 @@ body {
 
 /* Utility classes for aurora layers */
 .aurora-animate-slow {
-  animation: auroraShift 28s ease-in-out infinite;
+  animation: auroraShift 18s ease-in-out infinite;
 }
 .aurora-animate-med {
-  animation: auroraShift 22s ease-in-out infinite;
+  animation: auroraShift 12s ease-in-out infinite;
 }
 .aurora-animate-fast {
-  animation: auroraShift 16s ease-in-out infinite;
+  animation: auroraShift 8s ease-in-out infinite;
 }
 .aurora-drift {
-  animation: auroraDrift 48s ease-in-out infinite;
+  animation: auroraDrift 30s ease-in-out infinite;
 }
 
 .aurora-pulse-slow {
-  animation: auroraPulse 20s ease-in-out infinite;
+  animation: auroraPulse 10s ease-in-out infinite;
 }
 .aurora-pulse-fast {
-  animation: auroraPulse 12s ease-in-out infinite;
+  animation: auroraPulse 6s ease-in-out infinite;
 }
 
 /* Masonry grid styles */
