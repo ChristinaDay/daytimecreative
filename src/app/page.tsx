@@ -259,7 +259,7 @@ export default function Home() {
       </div>
 
       {/* Main content and footer layout */}
-      <div className="relative z-10 flex flex-col min-h-[120vh]">
+      <div className="relative z-[60] flex flex-col min-h-[120vh]">
         {/* Hero Area - isolated container */}
         <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-transparent">
           <div className="flex flex-col items-start justify-center flex-1 pt-52 pb-8 md:pt-64 md:pb-12">

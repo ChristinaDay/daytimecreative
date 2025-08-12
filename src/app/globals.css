@@ -102,15 +102,13 @@ body {
   animation: auroraPulse 6s ease-in-out infinite;
 }
 
-.is-scrolling .aurora-animate-slow,
-.is-scrolling .aurora-animate-med,
-.is-scrolling .aurora-animate-fast,
-.is-scrolling .aurora-drift,
-.is-scrolling .aurora-pulse-slow,
-.is-scrolling .aurora-pulse-fast,
-.is-scrolling .aurora-ribbon {
-  animation-play-state: paused !important;
-}
+.is-scrolling .aurora-animate-slow { animation-duration: 22s; }
+.is-scrolling .aurora-animate-med { animation-duration: 16s; }
+.is-scrolling .aurora-animate-fast { animation-duration: 12s; }
+.is-scrolling .aurora-drift { animation-duration: 36s; }
+.is-scrolling .aurora-pulse-slow { animation-duration: 12s; }
+.is-scrolling .aurora-pulse-fast { animation-duration: 8s; }
+.is-scrolling .aurora-ribbon { animation-duration: 22s; }
 
 @media (prefers-reduced-motion: reduce) {
   .aurora-animate-slow,
