@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 
 type ResumeDownloadLinkProps = {
   className?: string;
@@ -10,69 +10,13 @@ type ResumeDownloadLinkProps = {
 };
 
 const PDF_NAME = 'Resume-ChristinaDay2025.pdf';
+const GITHUB_RAW_URL = `https://raw.githubusercontent.com/ChristinaDay/daytimecreative/main/public/images/${PDF_NAME}`;
 
 export function ResumeDownloadLink({ className, children, downloadFileName = 'Christina_Day_Resume_2025.pdf' }: ResumeDownloadLinkProps) {
-  const [href, setHref] = useState<string>('');
-
-  const candidates = useMemo(() => {
-    if (typeof window === 'undefined') return [] as string[];
-    const origin = window.location.origin;
-    const pathParts = window.location.pathname.split('/').filter(Boolean);
-
-    // Build a relative candidate like "images/..." and also one directory up "../images/..."
-    const relative = `images/${PDF_NAME}`;
-    const oneUp = `../images/${PDF_NAME}`;
-
-    // Absolute at site root
-    const rootAbsolute = `/images/${PDF_NAME}`;
-
-    // Absolute with origin
-    const absoluteOrigin = `${origin}/images/${PDF_NAME}`;
-
-    // Optional external CDN env
-    const externalCdn = (process.env.NEXT_PUBLIC_EXTERNAL_CDN_URL || '').replace(/\/$/, '');
-    const external = externalCdn ? `${externalCdn}/images/${PDF_NAME}` : '';
-
-    // GitHub raw fallback (guaranteed reachable if repo is public)
-    const githubRaw = `https://raw.githubusercontent.com/ChristinaDay/daytimecreative/main/public/images/${PDF_NAME}`;
-
-    // Try order optimized for subpath hosting: one-up, relative, root-absolute, origin-absolute, external CDN (if available)
-    const urls: string[] = [oneUp, relative, rootAbsolute, absoluteOrigin];
-    if (external) urls.push(external);
-    urls.push(githubRaw);
-    return urls;
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    async function resolveFirstWorkingUrl() {
-      for (const url of candidates) {
-        try {
-          // Some static hosts mishandle HEAD for non-HTML assets. Use a tiny GET and accept 200/206.
-          const res = await fetch(url, { method: 'GET', headers: { Range: 'bytes=0-0' } as any, cache: 'no-store' });
-          if (res.ok || res.status === 206) {
-            const contentType = res.headers.get('content-type') || '';
-            // Prefer URLs that actually look like PDFs
-            if (contentType.includes('pdf') || url.endsWith('.pdf')) {
-            if (!cancelled) setHref(url);
-            return;
-            }
-          }
-        } catch (_) {
-          // continue trying next candidate
-        }
-      }
-      // As a very last resort, set to root path to allow manual correction if needed
-      if (!cancelled) setHref(`/images/${PDF_NAME}`);
-    }
-    resolveFirstWorkingUrl();
-    return () => {
-      cancelled = true;
-    };
-  }, [candidates]);
-
+  const explicit = process.env.NEXT_PUBLIC_RESUME_URL || '';
+  const href = explicit || GITHUB_RAW_URL;
   return (
-    <a href={href || '#'} download={downloadFileName} className={className}>
+    <a href={href} download={downloadFileName} className={className} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );
