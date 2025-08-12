@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export && cp .htaccess out/.htaccess && touch out/.nojekyll",
     "optimize-images": "node scripts/optimize-images.js",
     "build-optimized": "npm run optimize-images && npm run build",
     "format": "prettier --write .",
