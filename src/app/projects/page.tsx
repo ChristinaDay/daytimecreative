@@ -22,7 +22,7 @@ export default function ProjectsPage() {
         <StarfieldSVG />
         <AuroraBackground zIndexClass="z-[5]" />
       </div>
-      <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-24">
+      <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-32 md:pb-40">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -137,8 +137,9 @@ export function AuroraBackground({ zIndexClass = "z-20" }: AuroraBackgroundProps
       <div
         className="fixed inset-x-0 bottom-0 h-[35vh]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(11,16,34,0) 0%, rgba(11,16,34,0.25) 35%, rgba(11,16,34,0.6) 100%)',
-          filter: 'blur(16px)'
+          background: 'linear-gradient(to bottom, rgba(11,16,34,0) 0%, rgba(11,16,34,0.28) 40%, rgba(11,16,34,0.7) 100%)',
+          filter: 'blur(18px)',
+          height: '50vh'
         }}
       />
     </div>
