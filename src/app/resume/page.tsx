@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { AuroraBackground } from '@/components/AuroraBackground';
 
 // Timeline styling CSS - constellation-inspired with connecting lines between nodes
 const timelineAnimationsCSS = `
@@ -95,6 +96,11 @@ export default function ResumePage() {
 
   return (
     <>
+      {/* Backgrounds */}
+      <div className="fixed inset-0 pointer-events-none z-10">
+        <StarfieldSVG />
+        <AuroraBackground zIndexClass="z-[5]" />
+      </div>
       {/* SVG Filter Definitions - Exact match to Scorpio constellation */}
       <svg width="0" height="0" className="absolute">
         <defs>

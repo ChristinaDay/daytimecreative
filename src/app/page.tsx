@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Blockquote } from '@/components/typography/DropQuote';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { AuroraBackground } from '@/components/AuroraBackground';
 import { FlexibleHeroText, FlexibleBioText, FlexibleQuickStats } from '@/components/FlexibleAbout';
 import { useEffect, useRef } from 'react';
 import { allProjects } from '@/data/projects';
@@ -53,12 +54,14 @@ export default function Home() {
 
   return (
     <>
-      {/* Swirl and Opal Gradient Background */}
+      {/* Backgrounds: starfield + aurora */}
       <div className="absolute z-0 inset-0 pointer-events-none">
         {/* Starfield overlay for dark mode */}
         <div ref={starfieldRef} style={{ willChange: 'transform' }}>
           <StarfieldSVG />
         </div>
+        {/* Aurora layers behind content */}
+        <AuroraBackground zIndexClass="z-10" />
         {/* Foreground gradients above SVG starfield (dark mode only) */}
         <div
           ref={pinkGradientRef}
