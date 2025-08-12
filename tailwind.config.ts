@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         background: {
           light: '#ffffff',
-          dark: '#0f172a',
+          dark: '#0b1022',
         },
         text: {
           light: '#1a365d',
@@ -20,11 +20,18 @@ const config: Config = {
         },
         accent: {
           light: '#3b82f6',
-          dark: '#aee7ff',
+          dark: '#7fe6b0',
         },
         surface: {
           light: '#f1f5f9',
           dark: '#1e293b',
+        },
+        aurora: {
+          green: '#7fe6b0',
+          teal: '#23bdb8',
+          magenta: '#c850c0',
+          purple: '#6a4fb3',
+          rose: '#ff7ab6',
         },
         opal: {
           light: {
@@ -35,11 +42,11 @@ const config: Config = {
             green: '#e0f7fa',
           },
           dark: {
-            base: '#0f172a',
-            pink: '#4a1e3a',
-            blue: '#1a365d',
-            purple: '#2d1b3b',
-            green: '#1a3a3a',
+            base: '#0b1022',
+            pink: '#3a1230',
+            blue: '#0f264b',
+            purple: '#25183f',
+            green: '#0f2d24',
           },
         },
       },

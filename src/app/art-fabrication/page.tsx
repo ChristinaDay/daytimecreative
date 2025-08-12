@@ -323,7 +323,7 @@ export default function ArtFabrication2Page() {
   }, [lightbox]);
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -367,19 +367,97 @@ export default function ArtFabrication2Page() {
         }}
       />
       
-      {/* Base gradient layer */}
+      {/* Base gradient layer - light mode pastel haze */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
           background: 'radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.3), rgba(173, 216, 230, 0.3), rgba(221, 160, 221, 0.3))',
           opacity: 1,
           filter: 'blur(6px)'
         }}
       />
+
+      {/* Dark mode aurora background */}
+      {/* Base aurora haze */}
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          background:
+            'radial-gradient(150% 110% at 50% 120%, rgba(var(--aurora-teal), 0.18) 0%, rgba(11,16,34,0) 65%), ' +
+            'radial-gradient(140% 100% at 50% -10%, rgba(var(--aurora-purple), 0.16) 0%, rgba(11,16,34,0) 65%), ' +
+            'radial-gradient(100% 80% at 10% 30%, rgba(var(--aurora-magenta), 0.12) 0%, rgba(11,16,34,0) 75%), ' +
+            'radial-gradient(100% 80% at 90% 40%, rgba(var(--aurora-rose), 0.1) 0%, rgba(11,16,34,0) 75%)',
+          filter: 'blur(10px)'
+        }}
+      />
+
+      {/* Horizon band - taller to span more area */}
+      <div
+        className="absolute left-[-10vw] right-[-10vw] top-[46%] h-[40vh] hidden dark:block"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 10%, rgba(127,230,176,0.44) 45%, rgba(35,189,184,0.34) 65%, rgba(200,80,192,0.16) 90%, rgba(106,79,179,0) 100%)',
+          filter: 'blur(32px)',
+          transform: 'translateY(-50%)'
+        }}
+      />
+
+      {/* Wide glows to fill sides */}
+      <div
+        className="absolute hidden dark:block top-[20%] left-[-10%] w-[55vw] h-[55vh]"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.22) 0%, rgba(11,16,34,0) 70%)',
+          filter: 'blur(28px)'
+        }}
+      />
+      <div
+        className="absolute hidden dark:block top-[10%] right-[-8%] w-[50vw] h-[50vh]"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.18) 0%, rgba(11,16,34,0) 72%)',
+          filter: 'blur(28px)'
+        }}
+      />
+
+      {/* Vertical beams */}
+      <div
+        className="absolute hidden dark:block top-[6%] left-[12%] w-[9vw] h-[70vh]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(200,80,192,0) 0%, rgba(200,80,192,0.3) 40%, rgba(127,230,176,0.24) 70%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(30px)',
+          transform: 'rotate(-6deg)'
+        }}
+      />
+      <div
+        className="absolute hidden dark:block top-[4%] left-[38%] w-[8vw] h-[68vh]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(106,79,179,0) 0%, rgba(106,79,179,0.28) 35%, rgba(127,230,176,0.24) 65%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(28px)',
+          transform: 'rotate(4deg)'
+        }}
+      />
+      <div
+        className="absolute hidden dark:block top-[8%] right-[14%] w-[10vw] h-[66vh]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(35,189,184,0) 0%, rgba(35,189,184,0.28) 45%, rgba(200,80,192,0.2) 75%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(30px)',
+          transform: 'rotate(-2deg)'
+        }}
+      />
+      {/* Extra faint beams for coverage */}
+      <div
+        className="absolute hidden dark:block top-[12%] left-[58%] w-[6vw] h-[60vh]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(127,230,176,0) 0%, rgba(127,230,176,0.22) 40%, rgba(35,189,184,0.18) 70%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(26px)',
+          transform: 'rotate(2deg)'
+        }}
+      />
       
-      {/* Pink light leak from top right */}
+      {/* Light-mode subtle light leaks */}
       <div 
-        className="absolute top-0 right-0 w-[20vw] h-[20vw]"
+        className="absolute top-0 right-0 w-[20vw] h-[20vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.3), transparent 70%)',
           transform: 'translate(10%, -10%)',
@@ -387,10 +465,8 @@ export default function ArtFabrication2Page() {
           filter: 'blur(6px)'
         }}
       />
-      
-      {/* Blue light leak from bottom left */}
       <div 
-        className="absolute bottom-0 left-0 w-[20vw] h-[20vw]"
+        className="absolute bottom-0 left-0 w-[20vw] h-[20vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.3), transparent 70%)',
           transform: 'translate(-10%, 10%)',
@@ -398,10 +474,8 @@ export default function ArtFabrication2Page() {
           filter: 'blur(6px)'
         }}
       />
-      
-      {/* Purple light leak from center */}
       <div 
-        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw]"
+        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 50% 50%, rgba(221, 160, 221, 0.22), transparent 70%)',
           transform: 'translate(-50%, -50%)',

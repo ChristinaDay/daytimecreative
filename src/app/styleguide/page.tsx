@@ -163,6 +163,38 @@ export default function StyleGuidePage() {
               <span className="text-xs text-gray-400 font-mono">surface-dark</span>
             </div>
           </div>
+
+          {/* Aurora Palette */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Aurora Palette</h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 rounded-lg border border-gray-200 dark:border-gray-700 mb-2" style={{ backgroundColor: '#7fe6b0' }}></div>
+                <span className="text-xs text-center font-mono">Aurora Green</span>
+                <span className="text-xs text-gray-500 font-mono">#7fe6b0</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 rounded-lg border border-gray-200 dark:border-gray-700 mb-2" style={{ backgroundColor: '#23bdb8' }}></div>
+                <span className="text-xs text-center font-mono">Aurora Teal</span>
+                <span className="text-xs text-gray-500 font-mono">#23bdb8</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 rounded-lg border border-gray-200 dark:border-gray-700 mb-2" style={{ backgroundColor: '#c850c0' }}></div>
+                <span className="text-xs text-center font-mono">Aurora Magenta</span>
+                <span className="text-xs text-gray-500 font-mono">#c850c0</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 rounded-lg border border-gray-200 dark:border-gray-700 mb-2" style={{ backgroundColor: '#6a4fb3' }}></div>
+                <span className="text-xs text-center font-mono">Aurora Purple</span>
+                <span className="text-xs text-gray-500 font-mono">#6a4fb3</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 rounded-lg border border-gray-200 dark:border-gray-700 mb-2" style={{ backgroundColor: '#ff7ab6' }}></div>
+                <span className="text-xs text-center font-mono">Aurora Rose</span>
+                <span className="text-xs text-gray-500 font-mono">#ff7ab6</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Opal Colors - Light Theme */}

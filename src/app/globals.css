@@ -34,12 +34,18 @@
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  /* Aurora palette for global use */
+  --aurora-green: 127, 230, 176;   /* #7fe6b0 */
+  --aurora-teal: 35, 189, 184;     /* #23bdb8 */
+  --aurora-magenta: 200, 80, 192;  /* #c850c0 */
+  --aurora-purple: 106, 79, 179;   /* #6a4fb3 */
+  --aurora-rose: 255, 122, 182;    /* #ff7ab6 */
 }
 
 .dark :root {
   --foreground-rgb: 248, 250, 252;
-  --background-start-rgb: 15, 23, 42;
-  --background-end-rgb: 15, 23, 42;
+  --background-start-rgb: 11, 16, 34;  /* #0b1022 */
+  --background-end-rgb: 11, 16, 34;
 }
 
 body {
