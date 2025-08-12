@@ -7,11 +7,11 @@ import Image from 'next/image';
 
 const colors = [
   { name: 'Background Light', class: 'bg-background-light', hex: '#ffffff' },
-  { name: 'Background Dark', class: 'bg-background-dark', hex: '#0f172a' },
+  { name: 'Background Dark', class: 'bg-background-dark', hex: '#0b1022' },
   { name: 'Text Light', class: 'bg-text-light', hex: '#1e293b' },
   { name: 'Text Dark', class: 'bg-text-dark', hex: '#f8fafc' },
   { name: 'Accent Light', class: 'bg-accent-light', hex: '#3b82f6' },
-  { name: 'Accent Dark', class: 'bg-accent-dark', hex: '#60a5fa' },
+  { name: 'Accent Dark', class: 'bg-accent-dark', hex: '#7fe6b0' },
   { name: 'Surface Light', class: 'bg-surface-light', hex: '#f1f5f9' },
   { name: 'Surface Dark', class: 'bg-surface-dark', hex: '#1e293b' },
   { name: 'Opal Pink Light', class: '', hex: '#ffd1dc' },

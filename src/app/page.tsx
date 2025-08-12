@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Blockquote } from '@/components/typography/DropQuote';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { AuroraBackground } from '@/components/AuroraBackground';
 import { FlexibleHeroText, FlexibleBioText, FlexibleQuickStats } from '@/components/FlexibleAbout';
 import { useEffect, useRef } from 'react';
 import { allProjects } from '@/data/projects';
@@ -44,21 +45,36 @@ export default function Home() {
       }
     };
 
+    // Add scroll state class to pause heavy animations
+    const onScrollStart = () => document.documentElement.classList.add('is-scrolling');
+    const onScrollEnd = () => {
+      clearTimeout((onScrollEnd as any)._t);
+      (onScrollEnd as any)._t = setTimeout(() => document.documentElement.classList.remove('is-scrolling'), 120);
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScrollStart, { passive: true });
+    window.addEventListener('scroll', onScrollEnd, { passive: true });
     // Initial set
     updateParallax();
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScrollStart);
+      window.removeEventListener('scroll', onScrollEnd);
+    };
   }, []);
 
   return (
     <>
-      {/* Swirl and Opal Gradient Background */}
-      <div className="absolute z-0 inset-0 pointer-events-none">
+      {/* Backgrounds: starfield + aurora */}
+      <div className="absolute z-0 inset-0 pointer-events-none min-h-[180vh]">
         {/* Starfield overlay for dark mode */}
-        <div ref={starfieldRef} style={{ willChange: 'transform' }}>
+        <div ref={starfieldRef} className="relative z-[40]" style={{ willChange: 'transform' }}>
           <StarfieldSVG />
         </div>
+        {/* Aurora layers behind content */}
+        <AuroraBackground zIndexClass="z-[25]" />
         {/* Foreground gradients above SVG starfield (dark mode only) */}
         <div
           ref={pinkGradientRef}
@@ -243,7 +259,7 @@ export default function Home() {
       </div>
 
       {/* Main content and footer layout */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-[60] flex flex-col min-h-[120vh]">
         {/* Hero Area - isolated container */}
         <div className="w-full min-h-[60vh] flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-transparent">
           <div className="flex flex-col items-start justify-center flex-1 pt-52 pb-8 md:pt-64 md:pb-12">

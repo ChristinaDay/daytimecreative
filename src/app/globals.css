@@ -34,18 +34,96 @@
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  /* Aurora palette for global use */
+  --aurora-green: 127, 230, 176;   /* #7fe6b0 */
+  --aurora-teal: 35, 189, 184;     /* #23bdb8 */
+  --aurora-magenta: 200, 80, 192;  /* #c850c0 */
+  --aurora-purple: 106, 79, 179;   /* #6a4fb3 */
+  --aurora-rose: 255, 122, 182;    /* #ff7ab6 */
 }
 
 .dark :root {
   --foreground-rgb: 248, 250, 252;
-  --background-start-rgb: 15, 23, 42;
-  --background-end-rgb: 15, 23, 42;
+  --background-start-rgb: 11, 16, 34;  /* #0b1022 */
+  --background-end-rgb: 11, 16, 34;
 }
 
 body {
   font-family: var(--font-inter), sans-serif;
   color: rgb(var(--foreground-rgb));
   background: transparent;
+}
+
+/* Aurora animation keyframes */
+@keyframes auroraShift {
+  0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+  20%  { transform: translate3d(-3%, -2%, 0) scale(1.04) rotate(-1deg); opacity: 0.9; }
+  50%  { transform: translate3d(4%, 3%, 0) scale(1.06) rotate(1.2deg); opacity: 0.78; }
+  80%  { transform: translate3d(2%, -3%, 0) scale(1.03) rotate(-0.6deg); opacity: 0.88; }
+  100% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); opacity: 0.8; }
+}
+
+@keyframes auroraDrift {
+  0%   { transform: translateX(-4%) translateY(0) rotate(-2deg); }
+  50%  { transform: translateX(4%) translateY(-2%) rotate(2deg); }
+  100% { transform: translateX(-4%) translateY(0) rotate(-2deg); }
+}
+
+@keyframes auroraPulse {
+  0%, 100% { opacity: 0.65; }
+  50%      { opacity: 1; }
+}
+
+/* Subtle ribbon motion for the horizon band */
+@keyframes auroraRibbon {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Utility classes for aurora layers */
+.aurora-animate-slow {
+  animation: auroraShift 18s ease-in-out infinite;
+}
+.aurora-animate-med {
+  animation: auroraShift 12s ease-in-out infinite;
+}
+.aurora-animate-fast {
+  animation: auroraShift 8s ease-in-out infinite;
+}
+.aurora-drift {
+  animation: auroraDrift 30s ease-in-out infinite;
+}
+
+.aurora-pulse-slow {
+  animation: auroraPulse 10s ease-in-out infinite;
+}
+.aurora-pulse-fast {
+  animation: auroraPulse 6s ease-in-out infinite;
+}
+
+.is-scrolling .aurora-animate-slow { animation-duration: 22s; }
+.is-scrolling .aurora-animate-med { animation-duration: 16s; }
+.is-scrolling .aurora-animate-fast { animation-duration: 12s; }
+.is-scrolling .aurora-drift { animation-duration: 36s; }
+.is-scrolling .aurora-pulse-slow { animation-duration: 12s; }
+.is-scrolling .aurora-pulse-fast { animation-duration: 8s; }
+.is-scrolling .aurora-ribbon { animation-duration: 22s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-animate-slow,
+  .aurora-animate-med,
+  .aurora-animate-fast,
+  .aurora-drift,
+  .aurora-pulse-slow,
+  .aurora-pulse-fast,
+  .aurora-ribbon {
+    animation: none !important;
+  }
+}
+
+.aurora-ribbon {
+  animation: auroraRibbon 16s ease-in-out infinite;
 }
 
 /* Masonry grid styles */

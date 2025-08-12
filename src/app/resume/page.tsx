@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { StarfieldSVG } from '@/components/StarfieldSVG';
+import { AuroraBackground } from '@/components/AuroraBackground';
 
 // Timeline styling CSS - constellation-inspired with connecting lines between nodes
 const timelineAnimationsCSS = `
@@ -79,6 +80,21 @@ export default function ResumePage() {
     }
   }, []);
 
+  // Pause aurora animations during scroll to reduce jank
+  useEffect(() => {
+    const onScrollStart = () => document.documentElement.classList.add('is-scrolling');
+    const onScrollEnd = () => {
+      clearTimeout((onScrollEnd as any)._t);
+      (onScrollEnd as any)._t = setTimeout(() => document.documentElement.classList.remove('is-scrolling'), 120);
+    };
+    window.addEventListener('scroll', onScrollStart, { passive: true });
+    window.addEventListener('scroll', onScrollEnd, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScrollStart);
+      window.removeEventListener('scroll', onScrollEnd);
+    };
+  }, []);
+
   // Timeline node properties (expanded for complete timeline)
   const timelineNodeStyles = [
     { r: 5.5, fill: '#fffbe6' },   // 0: Rotary Pictures
@@ -95,6 +111,11 @@ export default function ResumePage() {
 
   return (
     <>
+      {/* Backgrounds */}
+      <div className="fixed inset-0 pointer-events-none z-10 min-h-[180vh]">
+        <div className="relative z-[40]"><StarfieldSVG /></div>
+        <AuroraBackground zIndexClass="z-[25]" />
+      </div>
       {/* SVG Filter Definitions - Exact match to Scorpio constellation */}
       <svg width="0" height="0" className="absolute">
         <defs>
@@ -122,12 +143,9 @@ export default function ResumePage() {
         </defs>
       </svg>
 
-      {/* Starfield Background */}
-      <div className="fixed inset-0 pointer-events-none z-30">
-          <StarfieldSVG />
-      </div>
+      {/* Starfield rendered once above via Backgrounds */}
 
-      <article className="max-w-[100rem] mx-auto pt-24 md:pt-28 lg:pt-32 pb-12 md:pb-24 px-4 md:px-6 lg:px-8 relative z-40">
+      <article className="max-w-[100rem] mx-auto pt-24 md:pt-28 lg:pt-32 pb-24 md:pb-40 px-4 md:px-6 lg:px-8 relative z-40">
         {/* Header */}
         <header className="text-center mb-12 md:mb-20">
           <div className="max-w-5xl mx-auto">

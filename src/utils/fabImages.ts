@@ -1,5 +1,5 @@
 // Auto-generated fab lab project images
-// Generated on 2025-06-27T07:44:41.911Z
+// Generated on 2025-08-12T07:04:53.880Z
 
 export interface FabProject {
   name: string;
@@ -399,7 +399,8 @@ export const fabProjectImages: Record<string, string[]> = {
   ],
   "Scales": [
     "IMG_9454.jpeg",
-    "IMG_9455.jpeg"
+    "IMG_9455.jpeg",
+    "zzz-1752907300225.jpeg"
   ],
   "Sevens-Piece": [
     "IMG_8239.jpeg"
@@ -510,6 +511,7 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_7832.jpeg"
   ],
   "Whales-and-Surf-Boards": [
+    "1752907300225.jpeg",
     "IMG_9140.jpeg",
     "IMG_9177.jpeg",
     "IMG_9181.jpeg",
@@ -531,7 +533,9 @@ export const fabProjectImages: Record<string, string[]> = {
     "IMG_9261.jpeg",
     "IMG_9263.jpeg",
     "IMG_9332.jpeg",
-    "IMG_9333.jpeg"
+    "IMG_9333.jpeg",
+    "image-asset.jpg",
+    "image-asset2.jpeg"
   ],
   "White-Leafs": [
     "IMG_9600.jpeg",

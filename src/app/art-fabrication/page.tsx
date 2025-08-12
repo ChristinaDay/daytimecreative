@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 import { ThemeToggle } from '../../components/layout/ThemeToggle';
 import BackToTopButton from '../../components/ui/BackToTopButton';
 import Masonry from 'react-masonry-css';
+import { StarfieldSVG } from '../../components/StarfieldSVG';
 
 // Project data interface
 interface FabProject {
@@ -323,7 +324,11 @@ export default function ArtFabrication2Page() {
   }, [lightbox]);
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-[#0f172a] text-text-light dark:text-text-dark relative overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark relative overflow-visible flex flex-col">
+      {/* Starfield (dark mode) under aurora, above base background */}
+      <div className="fixed inset-0 hidden dark:block z-[5] pointer-events-none">
+        <StarfieldSVG />
+      </div>
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -367,19 +372,149 @@ export default function ArtFabrication2Page() {
         }}
       />
       
-      {/* Base gradient layer */}
+      {/* Base gradient layer - light mode pastel haze */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
           background: 'radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.3), rgba(173, 216, 230, 0.3), rgba(221, 160, 221, 0.3))',
           opacity: 1,
           filter: 'blur(6px)'
         }}
       />
+
+      {/* Dark mode aurora background (above starfield) */}
+      {/* Base aurora haze */}
+      <div
+        className="fixed inset-0 hidden dark:block z-10 aurora-animate-slow aurora-pulse-slow"
+        style={{
+          background:
+            'radial-gradient(60% 85% at 12% 45%, rgba(var(--aurora-teal), 0.28) 0%, rgba(11,16,34,0) 88%), ' +
+            'radial-gradient(60% 85% at 88% 50%, rgba(var(--aurora-magenta), 0.26) 0%, rgba(11,16,34,0) 88%), ' +
+            'radial-gradient(85% 70% at 50% -8%, rgba(var(--aurora-purple), 0.22) 0%, rgba(11,16,34,0) 90%), ' +
+            'radial-gradient(85% 75% at 50% 108%, rgba(var(--aurora-teal), 0.20) 0%, rgba(11,16,34,0) 90%)',
+          mixBlendMode: 'screen',
+          filter: 'blur(22px)',
+          pointerEvents: 'none'
+        }}
+      />
+
+      {/* Full overlay wash to extend color across entire viewport */}
+      <div
+        className="fixed inset-0 hidden dark:block opacity-70"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(18,26,52,0) 0%, rgba(18,26,52,0.35) 60%, rgba(18,26,52,0.55) 100%)'
+        }}
+      />
+
+      {/* Soft vertical gradient wash for top/bottom balancing */}
+      <div
+        className="fixed inset-0 hidden dark:block"
+        style={{
+          background:
+            'linear-gradient( to right, rgba(106,79,179,0.12), rgba(11,16,34,0.0), rgba(200,80,192,0.12) )',
+          filter: 'blur(18px)',
+          mixBlendMode: 'screen'
+        }}
+      />
+
+      {/* Edge feather vignette to avoid abrupt ends on laptop view */}
+      <div
+        className="fixed inset-0 hidden dark:block z-10 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(120% 100% at 50% 50%, rgba(11,16,34,0) 60%, rgba(11,16,34,0.18) 82%, rgba(11,16,34,0.38) 100%)'
+        }}
+      />
+
+      {/* Horizon band - taller to span more area with ribbon motion */}
+      <div
+        className="fixed left-[-18vw] right-[-18vw] top-[60%] h-[65vh] hidden dark:block z-10 aurora-drift aurora-pulse-fast aurora-ribbon"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(106,79,179,0) 0%, rgba(200,80,192,0.22) 12%, rgba(127,230,176,0.44) 48%, rgba(35,189,184,0.34) 68%, rgba(200,80,192,0.16) 88%, rgba(106,79,179,0) 100%), ' +
+            'linear-gradient(180deg, rgba(11,16,34,0) 0%, rgba(11,16,34,0.24) 78%, rgba(11,16,34,0.5) 100%)',
+          backgroundSize: '240% 100%, 100% 100%',
+          backgroundBlendMode: 'screen',
+          filter: 'blur(44px)',
+          transform: 'translateY(-50%)'
+        }}
+      />
+
+      {/* Wide glows to fill sides */}
+      <div
+        className="fixed hidden dark:block top-[-4%] left-[-15%] w-[85vw] h-[90vh] z-10 aurora-animate-med aurora-pulse-slow"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-teal), 0.26) 0%, rgba(11,16,34,0) 70%)',
+          filter: 'blur(32px)'
+        }}
+      />
+      <div
+        className="fixed hidden dark:block top-[-6%] right-[-10%] w-[85vw] h-[90vh] z-10 aurora-animate-med aurora-pulse-slow"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(var(--aurora-magenta), 0.22) 0%, rgba(11,16,34,0) 72%)',
+          filter: 'blur(32px)'
+        }}
+      />
+
+      {/* Bottom glows to extend vertical coverage */}
+      <div
+        className="fixed hidden dark:block bottom-[-12%] left-[-12%] w-[85vw] h-[90vh] z-10 aurora-animate-slow"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 55% at 50% 42%, rgba(var(--aurora-purple), 0.16) 0%, rgba(11,16,34,0) 78%)',
+          filter: 'blur(42px)'
+        }}
+      />
+      <div
+        className="fixed hidden dark:block bottom-[-14%] right-[-12%] w-[85vw] h-[90vh] z-10 aurora-animate-slow"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 55% at 50% 44%, rgba(var(--aurora-rose), 0.14) 0%, rgba(11,16,34,0) 80%)',
+          filter: 'blur(42px)'
+        }}
+      />
+
+      {/* Vertical beams */}
+      <div
+        className="fixed hidden dark:block top-[6%] left-[12%] w-[9vw] h-[70vh] z-10 aurora-animate-fast"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(200,80,192,0) 0%, rgba(200,80,192,0.3) 40%, rgba(127,230,176,0.24) 70%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(30px)',
+          transform: 'rotate(-6deg)'
+        }}
+      />
+      <div
+        className="fixed hidden dark:block top-[4%] left-[38%] w-[8vw] h-[68vh] z-10 aurora-animate-fast"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(106,79,179,0) 0%, rgba(106,79,179,0.28) 35%, rgba(127,230,176,0.24) 65%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(28px)',
+          transform: 'rotate(4deg)'
+        }}
+      />
+      <div
+        className="fixed hidden dark:block top-[8%] right-[14%] w-[10vw] h-[66vh] z-10 aurora-animate-fast"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(35,189,184,0) 0%, rgba(35,189,184,0.28) 45%, rgba(200,80,192,0.2) 75%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(30px)',
+          transform: 'rotate(-2deg)'
+        }}
+      />
+      {/* Extra faint beams for coverage */}
+      <div
+        className="fixed hidden dark:block top-[12%] left-[58%] w-[6vw] h-[60vh] z-10 aurora-animate-fast"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(127,230,176,0) 0%, rgba(127,230,176,0.22) 40%, rgba(35,189,184,0.18) 70%, rgba(11,16,34,0) 100%)',
+          filter: 'blur(26px)',
+          transform: 'rotate(2deg)'
+        }}
+      />
       
-      {/* Pink light leak from top right */}
+      {/* Light-mode subtle light leaks */}
       <div 
-        className="absolute top-0 right-0 w-[20vw] h-[20vw]"
+        className="absolute top-0 right-0 w-[20vw] h-[20vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.3), transparent 70%)',
           transform: 'translate(10%, -10%)',
@@ -387,10 +522,8 @@ export default function ArtFabrication2Page() {
           filter: 'blur(6px)'
         }}
       />
-      
-      {/* Blue light leak from bottom left */}
       <div 
-        className="absolute bottom-0 left-0 w-[20vw] h-[20vw]"
+        className="absolute bottom-0 left-0 w-[20vw] h-[20vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.3), transparent 70%)',
           transform: 'translate(-10%, 10%)',
@@ -398,10 +531,8 @@ export default function ArtFabrication2Page() {
           filter: 'blur(6px)'
         }}
       />
-      
-      {/* Purple light leak from center */}
       <div 
-        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw]"
+        className="absolute top-1/2 left-1/2 w-[25vw] h-[25vw] dark:hidden"
         style={{
           background: 'radial-gradient(circle at 50% 50%, rgba(221, 160, 221, 0.22), transparent 70%)',
           transform: 'translate(-50%, -50%)',
