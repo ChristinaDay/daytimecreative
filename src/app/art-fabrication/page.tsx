@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 import { ThemeToggle } from '../../components/layout/ThemeToggle';
 import BackToTopButton from '../../components/ui/BackToTopButton';
 import Masonry from 'react-masonry-css';
+import { StarfieldSVG } from '../../components/StarfieldSVG';
 
 // Project data interface
 interface FabProject {
@@ -324,6 +325,10 @@ export default function ArtFabrication2Page() {
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark relative overflow-visible flex flex-col">
+      {/* Starfield (dark mode) under aurora, above base background */}
+      <div className="fixed inset-0 hidden dark:block z-[5] pointer-events-none">
+        <StarfieldSVG />
+      </div>
       {/* Light mode daytime sky background */}
       <div 
         className="absolute inset-0 dark:hidden"
@@ -377,7 +382,7 @@ export default function ArtFabrication2Page() {
         }}
       />
 
-      {/* Dark mode aurora background */}
+      {/* Dark mode aurora background (above starfield) */}
       {/* Base aurora haze */}
       <div
         className="fixed inset-0 hidden dark:block z-10"
