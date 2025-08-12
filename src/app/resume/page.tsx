@@ -197,7 +197,7 @@ export default function ResumePage() {
                 Projects
               </a>
               <a
-                href="/images/Resume-ChristinaDay2025.pdf"
+                href="https://upfetch.me/resume-christina-day.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm md:text-base"
@@ -805,7 +805,7 @@ export default function ResumePage() {
                 Get a PDF copy of my complete resume with all experience details.
               </p>
             <a
-              href="/images/Resume-ChristinaDay2025.pdf"
+              href="https://upfetch.me/resume-christina-day.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-light to-accent-light/80 dark:from-accent-dark dark:to-accent-dark/80 text-white dark:text-gray-900 rounded-lg font-semibold hover:from-accent-light/90 hover:to-accent-light/70 dark:hover:from-accent-dark/90 dark:hover:to-accent-dark/70 transition-all duration-300 text-sm"
