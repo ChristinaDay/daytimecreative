@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       {/* Backgrounds */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <StarfieldSVG />
-        <AuroraBackground zIndexClass="z-[5]" />
+        <AuroraBackground zIndexClass="z-[25]" />
       </div>
       <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-24 pb-32 md:pb-40">
         {/* Header */}
