@@ -103,7 +103,7 @@ body {
 }
 
 .aurora-ribbon {
-  animation: auroraRibbon 24s ease-in-out infinite;
+  animation: auroraRibbon 16s ease-in-out infinite;
 }
 
 /* Masonry grid styles */

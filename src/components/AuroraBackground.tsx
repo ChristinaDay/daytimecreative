@@ -126,12 +126,19 @@ export function AuroraBackground({ zIndexClass = "z-20" }: AuroraBackgroundProps
         }}
       />
 
-      {/* Edge feather vignette */}
+      {/* Edge feather vignette and bottom fade */}
       <div
         className="fixed inset-0"
         style={{
           background:
-            'radial-gradient(120% 100% at 50% 50%, rgba(11,16,34,0) 60%, rgba(11,16,34,0.18) 82%, rgba(11,16,34,0.38) 100%)'
+            'radial-gradient(130% 110% at 50% 50%, rgba(11,16,34,0) 58%, rgba(11,16,34,0.16) 80%, rgba(11,16,34,0.34) 100%)'
+        }}
+      />
+      <div
+        className="fixed inset-x-0 bottom-0 h-[35vh]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(11,16,34,0) 0%, rgba(11,16,34,0.25) 35%, rgba(11,16,34,0.6) 100%)',
+          filter: 'blur(16px)'
         }}
       />
     </div>
