@@ -346,7 +346,7 @@ export default function Home() {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                   >
                     <Link href={project.link} className="block group">
-                      <div className="bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-2xl p-6 h-full hover:bg-white/30 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-xl overflow-hidden clip-fix">
+                      <div className="relative bg-white/20 dark:bg-white/5 backdrop-blur-xl border border-white/10 dark:border-white/8 rounded-2xl p-6 h-full hover:bg-white/30 dark:hover:bg-white/10 transition-all duration-300 hover:shadow-xl overflow-hidden clip-fix before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(110deg,rgba(255,255,255,0)_20%,rgba(26,54,93,0.18)_33%,rgba(200,80,192,0.18)_44%,rgba(35,189,184,0.18)_55%,rgba(255,255,255,0)_68%)] before:opacity-0 before:translate-x-[-60%] group-hover:before:opacity-100 group-hover:before:translate-x-[120%] before:transition before:duration-500 before:ease-out before:pointer-events-none before:blur-[30px] motion-reduce:before:opacity-0 motion-reduce:group-hover:before:opacity-0">
                         <div className="aspect-video mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-white/60 to-white/30 dark:from-white/10 dark:to-white/5">
                           <img 
                             src={project.image} 
