@@ -48,12 +48,12 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
       className={`group ${className}`}
     >
       <Link href={project.link} className="block h-full">
-        <div className={`bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
+        <div className={`bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden clip-fix h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
           <div className={`relative ${featured ? 'lg:w-1/2' : ''} aspect-[4/3] ${
               project.constrainWhiteBg
                 ? 'bg-transparent p-6'
                 : `bg-gradient-to-br ${project.bgColor || 'from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20'} overflow-hidden`
-            }`}>
+            } clip-fix`}>
             {project.constrainWhiteBg ? (
               <div className="relative w-full h-full bg-white rounded-lg shadow-sm overflow-hidden p-6 md:p-8">
                 <Image
