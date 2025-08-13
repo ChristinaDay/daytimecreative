@@ -44,7 +44,12 @@ export default function ProjectsPage() {
             {[...allProjects]
               .sort((a, b) => getLatestYear(b.year) - getLatestYear(a.year))
               .map((project) => (
-              <ProjectCard key={project.title} project={project} variant="glass" />
+              <ProjectCard
+                key={project.title}
+                project={project}
+                variant="glass"
+                className="relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(110deg,rgba(255,255,255,0)_20%,rgba(255,255,255,0.6)_35%,rgba(255,255,255,0)_50%)] before:opacity-0 before:translate-x-[-60%] hover:before:opacity-100 hover:before:translate-x-[120%] before:transition before:duration-700 before:ease-out before:pointer-events-none motion-reduce:before:opacity-0 motion-reduce:hover:before:opacity-0"
+              />
             ))}
           </div>
         </section>
