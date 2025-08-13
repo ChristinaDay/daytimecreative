@@ -44,7 +44,7 @@ export default function ProjectsPage() {
             {[...allProjects]
               .sort((a, b) => getLatestYear(b.year) - getLatestYear(a.year))
               .map((project) => (
-              <ProjectCard key={project.title} project={project} />
+              <ProjectCard key={project.title} project={project} variant="glass" />
             ))}
           </div>
         </section>
