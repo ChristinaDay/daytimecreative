@@ -48,7 +48,7 @@ export default function ProjectsPage() {
                 key={project.title}
                 project={project}
                 variant="glass"
-                className="relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(110deg,rgba(255,255,255,0)_20%,rgba(35,189,184,0.18)_35%,rgba(255,255,255,0)_50%)] before:opacity-0 before:translate-x-[-60%] hover:before:opacity-100 hover:before:translate-x-[120%] before:transition before:duration-500 before:ease-out before:pointer-events-none before:blur-[20px] motion-reduce:before:opacity-0 motion-reduce:hover:before:opacity-0"
+                className="relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(110deg,rgba(255,255,255,0)_20%,rgba(35,189,184,0.18)_34%,rgba(200,80,192,0.18)_45%,rgba(255,255,255,0)_60%)] before:opacity-0 before:translate-x-[-60%] hover:before:opacity-100 hover:before:translate-x-[120%] before:transition before:duration-500 before:ease-out before:pointer-events-none before:blur-[20px] motion-reduce:before:opacity-0 motion-reduce:hover:before:opacity-0"
               />
             ))}
           </div>
