@@ -31,9 +31,10 @@ interface ProjectCardProps {
   project: ProjectData;
   featured?: boolean;
   className?: string;
+  variant?: 'default' | 'glass';
 }
 
-export function ProjectCard({ project, featured = false, className = '' }: ProjectCardProps) {
+export function ProjectCard({ project, featured = false, className = '', variant = 'default' }: ProjectCardProps) {
   // Use designer-developer content when available
   const description = project.designerDeveloperDescription || project.description;
   const tags = project.designerDeveloperTags || project.tags;
@@ -48,7 +49,12 @@ export function ProjectCard({ project, featured = false, className = '' }: Proje
       className={`group ${className}`}
     >
       <Link href={project.link} className="block h-full">
-        <div className={`bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 rounded-xl shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20 transition-all duration-300 overflow-hidden clip-fix h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
+        <div className={`
+            ${variant === 'glass'
+              ? 'bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-lg hover:shadow-xl hover:bg-white/15 dark:hover:bg-white/10'
+              : 'bg-white/50 dark:bg-white/15 backdrop-blur-3xl border border-white/60 dark:border-white/30 shadow-2xl hover:shadow-3xl hover:bg-white/60 dark:hover:bg-white/20'
+            }
+            rounded-xl transition-all duration-300 overflow-hidden clip-fix h-full flex flex-col ${featured ? 'lg:flex-row' : ''}`}>
           <div className={`relative ${featured ? 'lg:w-1/2' : ''} aspect-[4/3] ${
               project.constrainWhiteBg
                 ? 'bg-transparent p-6'
