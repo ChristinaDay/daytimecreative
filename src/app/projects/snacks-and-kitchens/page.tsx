@@ -59,7 +59,7 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6"
         >
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
             <div className="w-full relative aspect-[16/9]">
               <video
                 ref={videoRef}
@@ -88,7 +88,7 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
             <div className="w-full relative aspect-[16/9]">
               <Image
                 src={getImageUrl("zerocater_snacks.jpg")}
@@ -155,7 +155,7 @@ export default function SnacksAndKitchensPage() {
               </p>
             </div>
             <div>
-              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
                 <div className="relative aspect-[5/4]">
                   <Image
                     src="/images/zerocater-catering-snacks-customer-dashboards.jpg"
@@ -226,7 +226,7 @@ export default function SnacksAndKitchensPage() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="w-full"
               >
-                <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+                <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
                   <div className="relative aspect-[16/9]">
                     <Image
                       src="/images/zc_snacks_data-driven.jpg"
@@ -276,7 +276,7 @@ export default function SnacksAndKitchensPage() {
       >
         <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Operational Workflow & Feedback</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
             <div className="relative aspect-[16/9] bg-white">
               <Image
                 src="/images/zerocater-delivery-feedback_webform.png"

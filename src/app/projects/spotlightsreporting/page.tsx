@@ -37,7 +37,7 @@ export default function SpotlightsReportingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden"
+          className="mb-16 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden clip-fix"
         >
           <Image
             src="/images/betterview-spotlights1.png"
