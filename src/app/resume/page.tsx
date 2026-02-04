@@ -234,18 +234,13 @@ export default function ResumePage() {
           <h3 className="text-2xl md:text-3xl font-serif font-normal mb-6 md:mb-8 text-center">Summary</h3>
           <div className="max-w-4xl mx-auto space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed text-text-light/90 dark:text-text-dark/90">
             <p>
-              I'm a multidisciplinary product designer who thrives at the intersection of UX, brand, and frontend development. 
-              With over a decade of experience spanning B2B SaaS, consumer platforms, and immersive installations, I design 
-              elegant, scalable solutions grounded in empathy and craft.
+              I'm a Senior Product Designer with 10+ years of experience designing data-rich platforms, internal tools, and customer-facing products across B2B SaaS and emerging technology. I specialize in turning complex, ambiguous problem spaces into clear, intuitive experiences—working from first principles and balancing user needs, technical constraints, and business goals.
             </p>
             <p>
-              My work spans early-stage startups to global brands, with specialties in end-to-end product design (UX/UI, 
-              interaction, visual systems), frontend development (React, Next.js, Tailwind), branding and storytelling for 
-              digital experiences, and AI-integrated workflows and emerging tech.
+              I've led end-to-end product design for systems that support high-stakes decision-making, partnering closely with product, engineering, and data teams from discovery through launch.
             </p>
             <p>
-              I've helped build everything from internal enterprise platforms to AI-driven health tools, from spatial 
-              installations to browser-based IDEs. Whether I'm in Figma or VS Code, I move fluidly from idea to implementation.
+              My work often sits at the intersection of data, systems, and human judgment, where clarity and trust are essential, and I'm most excited by products where thoughtful design has real leverage on decisions, outcomes, and scale.
             </p>
           </div>
         </section>
@@ -293,13 +288,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Brand and Product Consultant</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2022 - Present</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Studio</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2025 - 2026</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Rotary Pictures • Boston, MA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Williams-Sonoma, Inc. • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Led end-to-end product and brand design for an innovative sound studio reinvigorating film production in Boston. 
-                Delivered identity systems, marketing assets, and digital touchpoints to support brand growth and industry partnerships.
+                Contributed to high-volume e-commerce photography production as part of a cross-functional team.
               </p>
                   </div>
 
@@ -335,14 +329,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Fabrication Artist</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Jul 2024 - Mar 2025</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Studio</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2024 - 2025</span>
               </div>
                     <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Local Language • Oakland, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Fabricated custom art and architectural elements for luxury hospitality, galleries, and public art clients. 
-                Spanned hands-on production, surface prep, component assembly, logistics, and installation coordination—bringing 
-                creative vision into physical reality.
+                Executed custom architectural and production work for hospitality and public art clients, translating conceptual designs into production-ready systems under real-world constraints.
               </p>
                   </div>
 
@@ -377,14 +369,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2021 - Jan 2022</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2022 - 2024</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">HackerDAO</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Rotary Pictures • Boston, MA (Remote)</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Created the visual identity for a web3 learning collective, inspired by zine culture and early internet aesthetics. 
-                Designed a matrix of logo options, a glitchy, typographic brand system, and a homepage hero treatment to establish 
-                the tone for the community's launch.
+                Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
               </p>
                   </div>
 
@@ -419,14 +409,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">UX Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Feb 2021 - Jul 2021</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Visual Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2013 - 2015</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Betterview • San Francisco, CA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">HackerDAO • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Collaborated closely with the Director of Design as the sole supporting designer on Betterview's property intelligence platform. 
-                Contributed UX and UI design for new features including a modular property detail view, risk overlay maps, and parcel-level 
-                visualizations. Developed flexible, component-based systems to support customizable insurer workflows.
+                Created the visual identity and early product direction for a web3 learning collective. Designed a modular brand system, homepage hero experience, and supporting assets to establish tone, storytelling, and community identity at launch.
               </p>
                   </div>
 
@@ -461,13 +449,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Consultant</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2020 - Feb 2021</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">UX Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2021</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Ten Spot • San Francisco, CA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Betterview • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                TenSpot wanted to refresh their website with all of their new product offerings. I helped them build and design 
-                the new look and feel of TenSpot.com as well as the launch of their new streaming engagement platform.
+                Designed UX and UI for a data-heavy property intelligence platform used by insurers to assess risk and make high-impact decisions. Led feature design for modular property views, layered risk overlays, and parcel-level visualizations. Partnered closely with product managers, engineers, and data scientists to translate complex datasets into clear, configurable workflows.
               </p>
                   </div>
 
@@ -502,12 +489,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Design Consultant</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Nov 2019 - Dec 2019</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Web Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2020 - 2021</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Thrive Global • San Francisco Bay Area</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Ten Spot • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                I helped build and design ThriveBot, Thrive app's personal wellness coach AI.
+                Designed and helped build a refreshed marketing website and supporting digital experiences to showcase new product offerings, including the launch of a streaming engagement platform.
               </p>
                   </div>
 
@@ -543,12 +530,11 @@ export default function ResumePage() {
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Jul 2017 - Apr 2018</span>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2019</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">ZeroCater • San Francisco, CA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Thrive Global • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Helped launch new Kitchens & Snacks product. Collaborated with cross-functional teams and engineering to improve 
-                client dashboards and internal tools. Built production-ready frontend components and maintained design systems.
+                Founded by Ariana Huffington. I contributed product design to ThriveBot, an AI-powered wellness assistant focused on interaction patterns, clarity, and trust in human-AI experiences.
               </p>
                   </div>
 
@@ -583,14 +569,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Feb 2016 - Jul 2017</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2016 - 2018</span>
               </div>
                     <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">ZeroCater • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Worked with Director of Design to create company style guide, marketing campaign layouts and assets, 
-                manage printed materials and vendors, create web and app assets, illustrations for icon systems, and 
-                graphic design services for events.
+                Designed and launched ZeroCater's Kitchens & Snacks product, creating client dashboards and internal tools in close collaboration with engineering. Also contributed to the company's foundational visual system and design standards across product and brand surfaces during a period of rapid growth.
               </p>
                   </div>
 
@@ -625,14 +609,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Graphic Designer, Illustrator, Branding</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Dec 2013 - Aug 2014</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2014 - 2015</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">MakerSquare • San Francisco, CA / Austin, TX</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Fond.co • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                I crafted MakerSquare's (now called Hack Reactor) branding as their Lead Designer in both Austin and San Francisco. 
-                In this role I developed their logo, designed and built the interior wall installations for their San Francisco location, 
-                and developed a branding update and style guide in conjunction with the marketing team.
+                Designed illustrations, marketing assets, and the company website for AnyPerk (now Fond), supporting brand storytelling and product marketing for a fast-growing employee perks platform.
               </p>
                   </div>
 
@@ -664,12 +646,11 @@ export default function ResumePage() {
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                       <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">Aug 2014 - Sep 2015</span>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2012 - 2013</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">AnyPerk (Fond) • San Francisco Bay Area</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">MakerSquare • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Provided illustrations and collateral while designing, developing, and maintaining the company's marketing website. 
-                Worked on employee perks platform serving companies from 10 to 100,000+ employees.
+                Led branding and visual design for MakerSquare (now Hack Reactor), including logo design, interior installations, marketing collateral, and a foundational style guide in collaboration with the executive team.
               </p>
                   </div>
                 </div>

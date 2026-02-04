@@ -12,96 +12,71 @@ Oakland, California, United States
 
 ## Summary
 
-I'm a multidisciplinary product designer who thrives at the intersection of UX, brand, and frontend development. With over a decade of experience spanning B2B SaaS, consumer platforms, and immersive installations, I design elegant, scalable solutions grounded in empathy and craft.
+I'm a Senior Product Designer with 10+ years of experience designing data-rich platforms, internal tools, and customer-facing products across B2B SaaS and emerging technology. I specialize in turning complex, ambiguous problem spaces into clear, intuitive experiences—working from first principles and balancing user needs, technical constraints, and business goals.
 
-My work spans early-stage startups to global brands, with specialties in:
-
-• End-to-end product design (UX/UI, interaction, visual systems)
-• Frontend development (React, Next.js, Tailwind)
-• Branding and storytelling for digital experiences
-• AI-integrated workflows and emerging tech
-
-I've helped build everything from internal enterprise platforms to AI-driven health tools, from spatial installations to browser-based IDEs. Whether I'm in Figma or VS Code, I move fluidly from idea to implementation.
-
-Currently seeking roles where thoughtful design, storytelling, and technology meet.
+I've led end-to-end product design for systems that support high-stakes decision-making, partnering closely with product, engineering, and data teams from discovery through launch. My work often sits at the intersection of data, systems, and human judgment, where clarity and trust are essential, and I'm most excited by products where thoughtful design has real leverage on decisions, outcomes, and scale.
 
 ## Experience
 
-### Brand and Product Consultant
-**Rotary Pictures** • Boston, Massachusetts  
-*November 2022 - Present (2 years 9 months)*
+### Design Studio
+**Williams-Sonoma, Inc.** • San Francisco, CA  
+*2025 - 2026*
 
-Led end-to-end product and brand design for an innovative sound studio reinvigorating film production in Boston. Delivered identity systems, marketing assets, and digital touchpoints to support brand growth and industry partnerships.
+Contributed to high-volume e-commerce photography production as part of a cross-functional team.
 
-### Fabrication Artist
-**Local Language** • Oakland, California  
-*July 2024 - March 2025 (9 months)*
+### Design Studio
+**Local Language** • Oakland, CA  
+*2024 - 2025*
 
-I fabricated custom art and architectural elements for luxury hospitality, galleries, and public art clients. My role spanned hands-on production, surface prep, component assembly, logistics, and installation coordination—bringing creative vision into physical reality.
+Executed custom architectural and production work for hospitality and public art clients, translating conceptual designs into production-ready systems under real-world constraints.
 
-### Designer
-**HackerDAO**  
-*November 2021 - January 2022 (3 months)*
+### Product Designer
+**Rotary Pictures** • Boston, MA (Remote)  
+*2022 - 2024*
 
-Created the visual identity for a web3 learning collective, inspired by zine culture and early internet aesthetics. Designed a matrix of logo options, a glitchy, typographic brand system, and a homepage hero treatment to establish the tone for the community's launch. Delivered custom illustrations, typographic assets, and layout guidance to support storytelling and early-stage product vision.
+Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
+
+### Visual Designer
+**HackerDAO** • San Francisco, CA  
+*2013 - 2015*
+
+Created the visual identity and early product direction for a web3 learning collective. Designed a modular brand system, homepage hero experience, and supporting assets to establish tone, storytelling, and community identity at launch.
 
 ### UX Designer
-**Betterview** • San Francisco, California  
-*February 2021 - July 2021 (6 months)*
+**Betterview** • San Francisco, CA  
+*2021*
 
-Collaborated closely with the Director of Design as the sole supporting designer on Betterview's property intelligence platform. Contributed UX and UI design for new features including a modular property detail view, risk overlay maps, and parcel-level visualizations. Developed flexible, component-based systems to support customizable insurer workflows, working cross-functionally with product managers, engineers, and data scientists to bring complex property data to life in a user-friendly format.
+Designed UX and UI for a data-heavy property intelligence platform used by insurers to assess risk and make high-impact decisions. Led feature design for modular property views, layered risk overlays, and parcel-level visualizations. Partnered closely with product managers, engineers, and data scientists to translate complex datasets into clear, configurable workflows.
 
-### Design Consultant
-**Ten Spot** • San Francisco, California  
-*November 2020 - February 2021 (4 months)*
+### Web Designer
+**Ten Spot** • San Francisco, CA  
+*2020 - 2021*
 
-TenSpot wanted to refresh their website with all of their new product offerings. I helped them build and design the new look and feel of TenSpot.com as well as the launch of their new streaming engagement platform.
+Designed and helped build a refreshed marketing website and supporting digital experiences to showcase new product offerings, including the launch of a streaming engagement platform.
 
-### Product Design Consultant
-**Thrive Global** • San Francisco Bay Area  
-*November 2019 - December 2019 (2 months)*
+### Product Designer
+**Thrive Global** • San Francisco, CA  
+*2019*
 
-I helped build and design ThriveBot, Thrive app's personal wellness coach AI.
+Founded by Ariana Huffington. I contributed product design to ThriveBot, an AI-powered wellness assistant focused on interaction patterns, clarity, and trust in human-AI experiences.
 
-### ZeroCater
-*2 years 3 months total*
+### Product Designer
+**ZeroCater** • San Francisco, CA  
+*2016 - 2018*
 
-#### Product Designer
-*July 2017 - April 2018 (10 months)*  
-San Francisco
-
-At ZeroCater I helped launch our new Kitchens & Snacks product. I have had the privilege to work on several cross-functional teams. Lately I spend most of my time collaborating with our engineering team to continue improving our client dashboards and honing our arsenal of internal tools.
-
-#### Designer
-*February 2016 - July 2017 (1 year 6 months)*  
-San Francisco
-
-Worked with the Director of Design to create the company style guide, create layouts and assets for marking campaigns, manage all printed needs and vendors, create assets for web and apps, illustrations for icon system, graphic design services for events.
+Designed and launched ZeroCater's Kitchens & Snacks product, creating client dashboards and internal tools in close collaboration with engineering. Also contributed to the company's foundational visual system and design standards across product and brand surfaces during a period of rapid growth.
 
 ### Designer
-**Fond (formerly AnyPerk)** • San Francisco Bay Area  
-*August 2014 - September 2015 (1 year 2 months)*
+**Fond.co** • San Francisco, CA  
+*2014 - 2015*
 
-As a designer at AnyPerk, I provided illustrations and collateral while also designing, developing, and maintaining our company's marketing website, www.anyperk.com. AnyPerk partners with companies to provide hundreds of great perks and discounts for their employees, helping them create a rewarding work environment. We strive to help businesses of all sizes attract and retain top talent and believe that every employee, whether working for a company of 10 or a company of 100,000, should have access to high-quality employee perks. The AnyPerk platform is accessible, easy-to-use, and is a gateway to discounts of up to 50% in wellness programs, entertainment, shopping, and travel.
+Designed illustrations, marketing assets, and the company website for AnyPerk (now Fond), supporting brand storytelling and product marketing for a fast-growing employee perks platform.
 
-### Graphic Designer, Illustrator, Branding
-**MakerSquare** • San Francisco, CA / Austin, TX  
-*December 2013 - August 2014 (9 months)*
+### Designer
+**MakerSquare** • San Francisco, CA  
+*2012 - 2013*
 
-I crafted MakerSquare's (now called Hack Reactor) branding as their Lead Designer in both Austin and San Francisco. In this role I developed their logo, designed and built the interior wall installations for their San Francisco location, developed a branding update and style guide in conjunction with the marketing team, crafted numerous fliers, business cards, letterheads and banners for the business and was involved critically in most design choices the company has made since its inception.
-
-### The University of Texas at Austin
-*1 year 9 months total*
-
-#### IT Coordinator, Landmarks
-*August 2013 - August 2014 (1 year 1 month)*
-
-I served as the lead content and development specialist for Landmarks. I was instrumental in the rollout of the site for a new on-campus installation by artist James Turrell in collaboration with the New York City-based creative agency Funny Garbage.
-
-#### Web Consultant, College of Fine Arts
-*December 2012 - December 2013 (1 year 1 month)*
-
-As a member of the Web Team, I spearheaded the development, growth, and maintenance of the College of Fine Arts' family of websites. In this role, I assisted with everything from implementing responsive design, interpreting and reporting data from Google Analytics, to researching and applying Section 508 Web Accessibility practices. I defined an updated workflow for our staff members that contributed to creating web content. This included ushering-in a large-scale migration from an older .net-based framework into a Drupal and Wordpress-based platform, guiding the transition of professor-created content from the old framework, as well as providing training sessions, resources and data-based monthly reports that helped to build an enthusiastic community of contributors and evangelists. As part of this process, I also established a precedent of using data from Google Analytics and similar services to help guide content creation and budgeting decisions.
+Led branding and visual design for MakerSquare (now Hack Reactor), including logo design, interior installations, marketing collateral, and a foundational style guide in collaboration with the executive team.
 
 ## Education
 
