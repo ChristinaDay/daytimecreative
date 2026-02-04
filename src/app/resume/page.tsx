@@ -288,7 +288,7 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Studio</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Production Design</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2025 - 2026</span>
               </div>
                     <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Williams-Sonoma, Inc. • San Francisco, CA</h5>
@@ -329,7 +329,7 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Studio</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Fabrication</h4>
                       <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2024 - 2025</span>
               </div>
                     <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Local Language • Oakland, CA</h5>

@@ -18,13 +18,13 @@ I've led end-to-end product design for systems that support high-stakes decision
 
 ## Experience
 
-### Design Studio
+### Production Design
 **Williams-Sonoma, Inc.** • San Francisco, CA  
 *2025 - 2026*
 
 Contributed to high-volume e-commerce photography production as part of a cross-functional team.
 
-### Design Studio
+### Design Fabrication
 **Local Language** • Oakland, CA  
 *2024 - 2025*
 
