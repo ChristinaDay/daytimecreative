@@ -161,7 +161,6 @@ export default function DataGraphicsCaseStudyPage() {
         </div>
 
         <Callout>
-          <p className="text-lg font-semibold text-teal-900 dark:text-teal-200 mb-2">4 weeks. Start to finish.</p>
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
             From design thesis to Figma variables to interactive Vega implementations with light/dark mode theming—all documented and shipped as a portfolio-ready demo.
           </p>
