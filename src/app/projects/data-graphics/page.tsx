@@ -19,7 +19,7 @@ function ChartPlaceholder({ label }: { label: string }) {
 }
 
 // Figma file embed
-function FigmaEmbed({ url, height = '600px', caption }: { url: string; height?: string; caption?: string }) {
+function FigmaEmbed({ url, height = '600px', caption, label }: { url: string; height?: string; caption?: string; label?: string }) {
   const embedSrc = `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
   return (
     <div className="w-full my-6">
@@ -30,14 +30,14 @@ function FigmaEmbed({ url, height = '600px', caption }: { url: string; height?: 
           <div className="w-3 h-3 bg-green-500 rounded-full" />
         </div>
         <div className="flex-1 bg-gray-700 dark:bg-gray-600 rounded px-3 py-1 text-xs text-gray-300 font-mono truncate">
-          figma.com — Visual System
+          figma.com — {label ?? 'Visual System'}
         </div>
       </div>
       <iframe
         src={embedSrc}
         style={{ height }}
         className="w-full border-x border-b border-gray-700 rounded-b-lg"
-        title="Figma — Visual System"
+        title={`Figma — ${label ?? 'Visual System'}`}
         allowFullScreen
         loading="lazy"
       />
@@ -286,6 +286,7 @@ export default function DataGraphicsCaseStudyPage() {
           <FigmaEmbed
             url="https://www.figma.com/design/zlwrUcdxzKj6Hi0usSbqHv/Visual-System?node-id=0-1"
             height="600px"
+            label="Visual System — Foundations"
             caption="Figma file — color variables, spacing system, typography styles"
           />
         </div>
@@ -321,7 +322,12 @@ export default function DataGraphicsCaseStudyPage() {
             </p>
           </Callout>
 
-          <ChartPlaceholder label="screenshot: all 6 chart primitives in Figma with annotations" />
+          <FigmaEmbed
+            url="https://www.figma.com/design/zlwrUcdxzKj6Hi0usSbqHv/Visual-System?node-id=15-113"
+            height="600px"
+            label="Visual System — Chart Primitives"
+            caption="Figma file — 6 chart primitives with usage annotations"
+          />
         </div>
 
         {/* Week 3 */}
