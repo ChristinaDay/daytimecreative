@@ -2,6 +2,27 @@ import { ProjectData } from '@/components/projects/ProjectCard';
 
 export const projectsData: ProjectData[] = [
   {
+    title: 'Operational Data Graphics',
+    description: 'A complete data visualization design system for operational monitoring—from design tokens and Figma variables to interactive Vega charts with real-time simulations. Built for data engineers and infrastructure teams who need high-signal, low-noise graphics.',
+    designerDeveloperDescription: 'Designed and implemented a full visualization design system: W3C design tokens, 6 Figma chart primitives grounded in Grammar of Graphics theory, and 4 production Vega chart implementations with interactive real-time simulations and light/dark mode theming.',
+    image: '/images/data-graphics-hero.png',
+    link: '/projects/data-graphics',
+    tags: ['Data Visualization', 'Design Systems', 'Vega', 'Design Engineering'],
+    designerDeveloperTags: ['Vega', 'JavaScript', 'Figma', 'Design Tokens', 'Design Systems', 'Data Visualization'],
+    year: '2026',
+    bgColor: 'from-teal-500/15 via-3% via-transparent via-97% to-cyan-600/12 dark:from-teal-400/12 dark:via-3% dark:via-transparent dark:via-97% dark:to-cyan-500/10',
+    designHighlights: [
+      'Grounded system in Grammar of Graphics (Leland Wilkinson) theory',
+      'Dark mode-first design for terminal-native operational users',
+      'Designed 6 chart primitives with documented usage guidelines'
+    ],
+    technicalHighlights: [
+      'Full Vega implementations (~500 lines JSON each) with custom scales and marks',
+      'Real-time simulations: live streaming, traffic spikes, cascading incidents',
+      'Dynamic light/dark theming with OS preference detection and localStorage'
+    ]
+  },
+  {
     title: 'UpDrift: Cosmic Design System Case Study',
     description: 'Next-generation job search platform featuring mathematical animation systems, comprehensive Figma design token integration, and cutting-edge MCP development workflow. Demonstrates unique visual identity through 60fps cosmic elements and systematic design thinking.',
     designerDeveloperDescription: 'Built a comprehensive job search platform with mathematical precision cosmic design system, integrated Figma design tokens, and MCP-assisted development workflow. Features 15+ theme variations, real-time sine wave animations, particle systems, and systematic documentation of complex visual elements.',
