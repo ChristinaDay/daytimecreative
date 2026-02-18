@@ -603,13 +603,6 @@ export default function DataGraphicsCaseStudyPage() {
             </ul>
           </div>
         </div>
-
-        <Callout>
-          <p className="text-lg font-semibold text-teal-900 dark:text-teal-200 mb-3">Why this project matters for companies like Fivetran, Datadog, or any infrastructure-focused team</p>
-          <p className="text-[1.0625rem] text-text-light/80 dark:text-text-dark/80">
-            This project proves I can define visual systems, implement them with precision, and understand operational workflows deeply enough to design for them—not just translate a Figma file into code, but make principled decisions about what a visualization should do, why, and for whom.
-          </p>
-        </Callout>
       </motion.section>
 
       {/* ── CTA ── */}
