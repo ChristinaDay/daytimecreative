@@ -83,7 +83,7 @@ function StatCard({ number, label }: { number: string; label: string }) {
 function ChartCard({ spec, label }: { spec: Record<string, unknown>; label: string }) {
   return (
     <div className="rounded-xl overflow-hidden bg-[#0D0D0E] border border-[#33353A] p-4">
-      <VegaChart spec={spec} />
+      <VegaChart spec={spec} animate />
       <p className="mt-2 text-xs text-[#999AA6] font-mono text-center">{label}</p>
     </div>
   );
