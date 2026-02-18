@@ -406,9 +406,9 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <div className="rounded-xl overflow-hidden bg-[#0D0D0E] dark:bg-[#f9fafb] border border-[#33353A] dark:border-gray-200 p-4">
+        <div className="rounded-xl overflow-hidden bg-[#f9fafb] dark:bg-[#0D0D0E] border border-gray-200 dark:border-[#33353A] p-4">
           <VegaChart spec={chart1Spec} />
-          <p className="mt-2 text-xs text-[#999AA6] dark:text-gray-500 font-mono text-center">
+          <p className="mt-2 text-xs text-gray-500 dark:text-[#999AA6] font-mono text-center">
             Toggle light/dark mode using the button in the nav — this chart re-renders instantly
           </p>
         </div>
