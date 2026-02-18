@@ -18,6 +18,12 @@ I've led end-to-end product design for systems that support high-stakes decision
 
 ## Experience
 
+### Product Designer
+**Rotary Pictures** • Boston, MA (Remote)  
+*2022 - 2026*
+
+Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
+
 ### Production Design
 **Williams-Sonoma, Inc.** • San Francisco, CA  
 *2025 - 2026*
@@ -29,12 +35,6 @@ Contributed to high-volume e-commerce photography production as part of a cross-
 *2024 - 2025*
 
 Executed custom architectural and production work for hospitality and public art clients, translating conceptual designs into production-ready systems under real-world constraints.
-
-### Product Designer
-**Rotary Pictures** • Boston, MA (Remote)  
-*2022 - 2024*
-
-Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
 
 ### Visual Designer
 **HackerDAO** • San Francisco, CA  

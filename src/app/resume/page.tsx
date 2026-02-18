@@ -259,7 +259,7 @@ export default function ResumePage() {
 
               
               <div className="space-y-8 md:space-y-12">
-            {/* Rotary Pictures */}
+            {/* Rotary Pictures — most recent */}
                 <div className="relative flex items-start md:items-center group">
                   {/* Mobile Timeline Dot */}
                   <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[0].r * 4} height={timelineNodeStyles[0].r * 4}>
@@ -288,19 +288,19 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Production Design</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2025 - 2026</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2022 - 2026</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Williams-Sonoma, Inc. • San Francisco, CA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Rotary Pictures • Boston, MA (Remote)</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Contributed to high-volume e-commerce photography production as part of a cross-functional team.
+                Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
               </p>
                   </div>
 
 
             </div>
 
-            {/* Local Language */}
+            {/* Williams-Sonoma */}
                 <div className="relative flex items-start md:items-center group">
                   {/* Mobile Timeline Dot */}
                   <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[1].r * 4} height={timelineNodeStyles[1].r * 4}>
@@ -329,18 +329,18 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Fabrication</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2024 - 2025</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Production Design</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2025 - 2026</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Local Language • Oakland, CA</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Williams-Sonoma, Inc. • San Francisco, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Executed custom architectural and production work for hospitality and public art clients, translating conceptual designs into production-ready systems under real-world constraints.
+                Contributed to high-volume e-commerce photography production as part of a cross-functional team.
               </p>
                   </div>
 
             </div>
 
-            {/* HackerDAO */}
+            {/* Local Language */}
                 <div className="relative flex items-start md:items-center group">
                   {/* Mobile Timeline Dot */}
                   <svg className="md:hidden absolute left-4 top-6 -translate-x-1/2 z-10" width={timelineNodeStyles[2].r * 4} height={timelineNodeStyles[2].r * 4}>
@@ -369,12 +369,12 @@ export default function ResumePage() {
                   {/* Content Card */}
                   <div className="ml-12 md:ml-16 bg-white dark:bg-gray-800 md:bg-white/80 md:dark:bg-gray-800/80 md:backdrop-blur-xl border border-white/30 dark:border-gray-600/30 rounded-xl p-4 md:p-6 md:hover:bg-white/90 md:dark:hover:bg-gray-800/90 transition-all duration-300 shadow-lg hover:shadow-xl w-full">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Product Designer</h4>
-                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2022 - 2024</span>
+                      <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">Design Fabrication</h4>
+                      <span className="text-accent-light dark:text-accent-dark font-medium text-xs md:text-sm bg-accent-light/20 dark:bg-accent-dark/20 px-3 py-1 rounded-full mt-2 sm:mt-0">2024 - 2025</span>
               </div>
-                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Rotary Pictures • Boston, MA (Remote)</h5>
+                    <h5 className="text-base md:text-lg text-accent-light dark:text-accent-dark font-medium mb-3 md:mb-4">Local Language • Oakland, CA</h5>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
-                Led end-to-end product and systems design for an innovative sound studio supporting film production. Defined design direction across digital tools, brand systems, and partner-facing touch points. Collaborated with leadership and engineering to create scalable, flexible workflows that supported growth, partnerships, and evolving business needs.
+                Executed custom architectural and production work for hospitality and public art clients, translating conceptual designs into production-ready systems under real-world constraints.
               </p>
                   </div>
 
