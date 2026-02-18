@@ -246,7 +246,6 @@ export default function DataGraphicsCaseStudyPage() {
         {/* Week 1 */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <span className="px-3 py-1 bg-[#22BF4A]/15 text-[#22BF4A] text-xs font-semibold uppercase tracking-wider rounded-full">Week 1</span>
             <h3 className="text-2xl font-semibold text-text-light dark:text-text-dark">Foundations</h3>
           </div>
 
@@ -289,7 +288,6 @@ export default function DataGraphicsCaseStudyPage() {
         {/* Week 2 */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <span className="px-3 py-1 bg-[#3B82F5]/15 text-[#3B82F5] text-xs font-semibold uppercase tracking-wider rounded-full">Week 2</span>
             <h3 className="text-2xl font-semibold text-text-light dark:text-text-dark">Chart Primitives</h3>
           </div>
 
