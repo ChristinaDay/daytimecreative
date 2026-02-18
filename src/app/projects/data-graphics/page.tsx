@@ -154,7 +154,6 @@ export default function DataGraphicsCaseStudyPage() {
             { spec: chart4Spec, label: '04 — Histogram / Distribution' },
             { spec: chart5Spec, label: '05 — Throughput Bar Comparison' },
             { spec: chart6Spec, label: '06 — Status Timeline (Health Bands)' },
-            { spec: chart7Spec, label: '07 — Error Rate Distribution' },
           ].map(({ spec, label }) => (
             <motion.div
               key={label}
