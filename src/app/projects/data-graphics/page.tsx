@@ -96,7 +96,7 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Header ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         className="mb-16 pt-24"
       >
@@ -118,8 +118,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Hero chart grid — all 6 primitives ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-16 w-full"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -145,8 +145,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Overview ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Overview</h2>
@@ -171,8 +171,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── The Problem ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.25 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">The Problem</h2>
@@ -203,8 +203,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Approach ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Approach</h2>
@@ -237,8 +237,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Design Process ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.35 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-12 text-text-light dark:text-text-dark">Design Process</h2>
@@ -359,8 +359,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Interactive Enhancements ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Interactive Enhancements</h2>
@@ -417,8 +417,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Outcomes ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.45 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Outcomes & Deliverables</h2>
@@ -480,8 +480,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Key Learnings ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-10 text-text-light dark:text-text-dark">Key Learnings</h2>
@@ -523,8 +523,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── Reflection ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.55 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Reflection</h2>
@@ -559,8 +559,8 @@ export default function DataGraphicsCaseStudyPage() {
       {/* ── CTA ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
         className="mb-12"
       >
         <div className="p-8 md:p-12 bg-[#0D0D0E] border border-[#33353A] rounded-2xl text-center">
