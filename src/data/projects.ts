@@ -6,8 +6,6 @@ export const projectsData: ProjectData[] = [
     description: 'A complete data visualization design system for operational monitoring—from design tokens and Figma variables to interactive Vega charts with real-time simulations. Built for data engineers and infrastructure teams who need high-signal, low-noise graphics.',
     designerDeveloperDescription: 'Designed and implemented a full visualization design system: W3C design tokens, 6 Figma chart primitives grounded in Grammar of Graphics theory, and 4 production Vega chart implementations with interactive real-time simulations and light/dark mode theming.',
     image: '/images/data-graphics-hero.png',
-    imageFit: 'cover',
-    imagePosition: 'top',
     link: '/projects/data-graphics',
     tags: ['Data Visualization', 'Design Systems', 'Vega', 'Design Engineering'],
     designerDeveloperTags: ['Vega', 'JavaScript', 'Figma', 'Design Tokens', 'Design Systems', 'Data Visualization'],
