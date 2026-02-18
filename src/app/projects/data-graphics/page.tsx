@@ -18,6 +18,36 @@ function ChartPlaceholder({ label }: { label: string }) {
   );
 }
 
+// Figma file embed
+function FigmaEmbed({ url, height = '600px', caption }: { url: string; height?: string; caption?: string }) {
+  const embedSrc = `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
+  return (
+    <div className="w-full my-6">
+      <div className="bg-gray-800 dark:bg-gray-900 rounded-t-lg px-4 py-3 flex items-center space-x-3">
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 bg-red-500 rounded-full" />
+          <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+        </div>
+        <div className="flex-1 bg-gray-700 dark:bg-gray-600 rounded px-3 py-1 text-xs text-gray-300 font-mono truncate">
+          figma.com — Visual System
+        </div>
+      </div>
+      <iframe
+        src={embedSrc}
+        style={{ height }}
+        className="w-full border-x border-b border-gray-700 rounded-b-lg"
+        title="Figma — Visual System"
+        allowFullScreen
+        loading="lazy"
+      />
+      {caption && (
+        <p className="text-center mt-3 text-sm text-text-light/60 dark:text-text-dark/60">{caption}</p>
+      )}
+    </div>
+  );
+}
+
 // Live embedded demo in a browser chrome frame
 function DemoEmbed({ src, height = '700px', caption }: { src: string; height?: string; caption?: string }) {
   return (
@@ -253,7 +283,11 @@ export default function DataGraphicsCaseStudyPage() {
             </p>
           </Callout>
 
-          <ChartPlaceholder label="screenshot: Figma — color variables, spacing system, typography styles" />
+          <FigmaEmbed
+            url="https://www.figma.com/design/zlwrUcdxzKj6Hi0usSbqHv/Visual-System?node-id=0-1"
+            height="600px"
+            caption="Figma file — color variables, spacing system, typography styles"
+          />
         </div>
 
         {/* Week 2 */}
