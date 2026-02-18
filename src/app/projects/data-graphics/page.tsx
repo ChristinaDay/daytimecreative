@@ -116,20 +116,33 @@ export default function DataGraphicsCaseStudyPage() {
       </motion.div>
 
       {/* ── Hero chart grid — all 6 primitives ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.6 }}
-        className="mb-16 w-full"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <ChartCard spec={chart1Spec} label="01 — High-Density Time-Series Line" />
-          <ChartCard spec={chart2Spec} label="02 — Multi-Series Comparison" />
-          <ChartCard spec={chart3Spec} label="03 — Stacked Area Trend" />
-          <ChartCard spec={chart4Spec} label="04 — Histogram / Distribution" />
-          <ChartCard spec={chart5Spec} label="05 — Throughput Bar Comparison" />
-          <ChartCard spec={chart6Spec} label="06 — Status Timeline (Health Bands)" />
-        </div>
+      <div className="mb-16 w-full">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.05 }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
+        >
+          {[
+            { spec: chart1Spec, label: '01 — High-Density Time-Series Line' },
+            { spec: chart2Spec, label: '02 — Multi-Series Comparison' },
+            { spec: chart3Spec, label: '03 — Stacked Area Trend' },
+            { spec: chart4Spec, label: '04 — Histogram / Distribution' },
+            { spec: chart5Spec, label: '05 — Throughput Bar Comparison' },
+            { spec: chart6Spec, label: '06 — Status Timeline (Health Bands)' },
+          ].map(({ spec, label }) => (
+            <motion.div
+              key={label}
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+              }}
+            >
+              <ChartCard spec={spec} label={label} />
+            </motion.div>
+          ))}
+        </motion.div>
         <div className="text-center">
           <a
             href="https://github.com/ChristinaDay/datagraphics"
@@ -140,7 +153,7 @@ export default function DataGraphicsCaseStudyPage() {
             View source on GitHub →
           </a>
         </div>
-      </motion.div>
+      </div>
 
       {/* ── Overview ── */}
       <motion.section
