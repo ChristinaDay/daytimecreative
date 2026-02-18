@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart 03 — Stacked Area Trend</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0D0D0E; font-family: 'Inter', -apple-system, sans-serif; padding: 24px; }
+    .header { margin-bottom: 16px; }
+    .tag { display: inline-block; background: #22BF4A; color: white; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .title { font-size: 18px; font-weight: 500; color: #D9D9E0; margin-bottom: 4px; }
+    .desc { font-size: 13px; color: #999AA6; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="tag">Chart 03</span>
+    <div class="title">Stacked Area Trend</div>
+    <div class="desc">Resource allocation and composition over time. Shows how parts contribute to a changing whole.</div>
+  </div>
+  <div id="vis"></div>
+
+  <script>
+    const spec = {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "width": "container", "height": 280,
+      "padding": {"top": 16, "left": 60, "right": 20, "bottom": 50},
+      "background": "#171719",
+      "autosize": {"type": "fit", "contains": "padding"},
+      "data": [{
+        "name": "table",
+        "values": [
+          {"week":"Mon","Compute":420,"Storage":180,"Network":95},
+          {"week":"Tue","Compute":480,"Storage":200,"Network":110},
+          {"week":"Wed","Compute":610,"Storage":220,"Network":140},
+          {"week":"Thu","Compute":590,"Storage":235,"Network":130},
+          {"week":"Fri","Compute":720,"Storage":260,"Network":165},
+          {"week":"Sat","Compute":380,"Storage":195,"Network":80},
+          {"week":"Sun","Compute":310,"Storage":175,"Network":70}
+        ],
+        "transform": [
+          {"type":"fold","fields":["Compute","Storage","Network"],"as":["category","value"]},
+          {"type":"stack","groupby":["week"],"field":"value","as":["y0","y1"],"sort":{"field":"category"}}
+        ]
+      }],
+      "scales": [
+        {"name":"x","type":"point","domain":{"data":"table","field":"week"},"range":"width","padding":0.5},
+        {"name":"y","type":"linear","domain":{"data":"table","field":"y1"},"range":"height","nice":true,"zero":true},
+        {"name":"color","type":"ordinal","domain":["Compute","Storage","Network"],"range":["#3B82F5","#22BF4A","#F2CB05"]}
+      ],
+      "axes": [
+        {"orient":"bottom","scale":"x","labelColor":"#999AA6","labelFontSize":11,"labelFont":"Inter,sans-serif","labelPadding":8,"tickColor":"#4D4E56","tickSize":5,"domain":false,"grid":false,"title":null},
+        {"orient":"left","scale":"y","labelColor":"#999AA6","labelFontSize":11,"labelFont":"Inter,sans-serif","labelPadding":8,"tickColor":"#4D4E56","tickSize":5,"tickCount":5,"domain":false,"grid":true,"gridColor":"#4D4E56","gridOpacity":0.4,"title":null}
+      ],
+      "marks": [{"type":"group","from":{"facet":{"name":"series","data":"table","groupby":"category"}},"marks":[
+        {"type":"area","from":{"data":"series"},"encode":{"enter":{
+          "x":{"scale":"x","field":"week"},
+          "y":{"scale":"y","field":"y0"},
+          "y2":{"scale":"y","field":"y1"},
+          "fill":{"scale":"color","field":"category"},
+          "fillOpacity":{"value":0.75},
+          "interpolate":{"value":"monotone"}
+        },"update":{"fillOpacity":{"value":0.75}},"hover":{"fillOpacity":{"value":0.9}}}},
+        {"type":"line","from":{"data":"series"},"encode":{"enter":{
+          "x":{"scale":"x","field":"week"},
+          "y":{"scale":"y","field":"y1"},
+          "stroke":{"scale":"color","field":"category"},
+          "strokeWidth":{"value":1.5},
+          "strokeOpacity":{"value":0.6},
+          "interpolate":{"value":"monotone"}
+        }}}
+      ]}],
+      "legends": [{"fill":"color","title":null,"orient":"bottom","direction":"horizontal","symbolType":"square","symbolSize":80,"symbolOffset":8,"labelColor":"#D9D9E0","labelFont":"Inter,sans-serif","labelFontSize":11,"labelOffset":8,"offset":20,"padding":10}]
+    };
+    vegaEmbed('#vis', spec, {actions:false});
+  </script>
+</body>
+</html>

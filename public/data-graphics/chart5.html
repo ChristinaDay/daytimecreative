@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart 05 — Throughput Bar Comparison</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0D0D0E; font-family: 'Inter', -apple-system, sans-serif; padding: 24px; }
+    .header { margin-bottom: 16px; }
+    .tag { display: inline-block; background: #22BF4A; color: white; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .title { font-size: 18px; font-weight: 500; color: #D9D9E0; margin-bottom: 4px; }
+    .desc { font-size: 13px; color: #999AA6; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="tag">Chart 05</span>
+    <div class="title">Throughput Bar Comparison</div>
+    <div class="desc">Endpoint and service volume ranking. Identifies highest-traffic paths at a glance.</div>
+  </div>
+  <div id="vis"></div>
+
+  <script>
+    const spec = {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "width": "container", "height": 280,
+      "padding": {"top": 10, "left": 160, "right": 40, "bottom": 40},
+      "background": "#171719",
+      "autosize": {"type": "fit", "contains": "padding"},
+      "data": [{"name":"table","values":[
+        {"endpoint":"POST /api/events",     "requests":18420},
+        {"endpoint":"GET /api/metrics",     "requests":14380},
+        {"endpoint":"GET /api/health",      "requests":12100},
+        {"endpoint":"PUT /api/config",      "requests":7650},
+        {"endpoint":"GET /api/pipelines",   "requests":5930},
+        {"endpoint":"DELETE /api/jobs",     "requests":2840},
+        {"endpoint":"POST /api/transform",  "requests":1720}
+      ], "transform": [{"type":"collect","sort":{"field":"requests","order":"descending"}}]}],
+      "scales": [
+        {"name":"y","type":"band","domain":{"data":"table","field":"endpoint","sort":{"field":"requests","order":"descending"}},"range":"height","padding":0.25},
+        {"name":"x","type":"linear","domain":{"data":"table","field":"requests"},"range":"width","nice":true,"zero":true}
+      ],
+      "axes": [
+        {"orient":"left","scale":"y","labelColor":"#D9D9E0","labelFontSize":11,"labelFont":"'JetBrains Mono', 'Courier New', monospace","labelPadding":8,"tickSize":0,"domain":false,"grid":false,"title":null},
+        {"orient":"bottom","scale":"x","labelColor":"#999AA6","labelFontSize":11,"labelFont":"Inter,sans-serif","labelPadding":8,"tickColor":"#4D4E56","tickSize":5,"tickCount":5,"domain":false,"grid":true,"gridColor":"#4D4E56","gridOpacity":0.4,"title":null,"format":"~s"}
+      ],
+      "marks": [
+        {"type":"rect","from":{"data":"table"},"encode":{
+          "enter":{"y":{"scale":"y","field":"endpoint"},"height":{"scale":"y","band":1},"x":{"scale":"x","value":0},"x2":{"scale":"x","field":"requests"},"fill":{"value":"#3B82F5"},"cornerRadiusTopRight":{"value":3},"cornerRadiusBottomRight":{"value":3}},
+          "update":{"fillOpacity":{"value":0.85}},"hover":{"fillOpacity":{"value":1}}
+        }},
+        {"type":"text","from":{"data":"table"},"encode":{"enter":{
+          "x":{"scale":"x","field":"requests","offset":6},
+          "y":{"scale":"y","field":"endpoint","offset":{"scale":"y","band":0.5}},
+          "baseline":{"value":"middle"},
+          "text":{"signal":"format(datum.requests, ',.0f')"},
+          "fill":{"value":"#999AA6"},
+          "fontSize":{"value":11},
+          "font":{"value":"Inter, sans-serif"}
+        }}}
+      ]
+    };
+    vegaEmbed('#vis', spec, {actions:false});
+  </script>
+</body>
+</html>

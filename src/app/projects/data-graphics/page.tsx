@@ -48,27 +48,16 @@ function FigmaEmbed({ url, height = '600px', caption, label }: { url: string; he
   );
 }
 
-// Live embedded demo in a browser chrome frame
-function DemoEmbed({ src, height = '700px', caption }: { src: string; height?: string; caption?: string }) {
+// Individual chart embed
+function ChartEmbed({ chartNum, height = '420px', caption }: { chartNum: number; height?: string; caption?: string }) {
+  const src = `/data-graphics/chart${chartNum}.html`;
   return (
-    <div className="w-full my-6">
-      {/* Browser chrome */}
-      <div className="bg-gray-800 dark:bg-gray-900 rounded-t-lg px-4 py-3 flex items-center space-x-3">
-        <div className="flex space-x-2">
-          <div className="w-3 h-3 bg-red-500 rounded-full" />
-          <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-          <div className="w-3 h-3 bg-green-500 rounded-full" />
-        </div>
-        <div className="flex-1 bg-gray-700 dark:bg-gray-600 rounded px-3 py-1 text-xs text-gray-300 font-mono truncate">
-          {src}
-        </div>
-      </div>
-      {/* iframe */}
+    <div className="w-full">
       <iframe
         src={src}
         style={{ height }}
-        className="w-full border-x border-b border-gray-700 rounded-b-lg bg-[#0D0D0E]"
-        title="Operational Data Graphics — Live Demo"
+        className="w-full rounded-xl bg-[#0D0D0E] border border-[#33353A]"
+        title={`Chart 0${chartNum}`}
         loading="lazy"
       />
       {caption && (
@@ -130,12 +119,15 @@ export default function DataGraphicsCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mb-16 w-full"
       >
-        <DemoEmbed
-          src="/data-graphics/demo.html"
-          height="800px"
-          caption="Live interactive demo — click Simulate buttons to see real-time updates"
-        />
-        <div className="mt-2 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <ChartEmbed chartNum={1} height="380px" />
+          <ChartEmbed chartNum={2} height="380px" />
+          <ChartEmbed chartNum={3} height="380px" />
+          <ChartEmbed chartNum={4} height="380px" />
+          <ChartEmbed chartNum={5} height="380px" />
+          <ChartEmbed chartNum={6} height="380px" />
+        </div>
+        <div className="text-center">
           <a
             href="https://github.com/ChristinaDay/datagraphics"
             target="_blank"
@@ -324,10 +316,18 @@ export default function DataGraphicsCaseStudyPage() {
 
           <FigmaEmbed
             url="https://www.figma.com/design/zlwrUcdxzKj6Hi0usSbqHv/Visual-System?node-id=15-113"
-            height="600px"
+            height="500px"
             label="Visual System — Chart Primitives"
-            caption="Figma file — 6 chart primitives with usage annotations"
+            caption="Figma designs — 6 chart primitives with usage annotations"
           />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <ChartEmbed chartNum={1} height="360px" />
+            <ChartEmbed chartNum={2} height="360px" />
+            <ChartEmbed chartNum={3} height="360px" />
+            <ChartEmbed chartNum={4} height="360px" />
+            <ChartEmbed chartNum={5} height="360px" />
+            <ChartEmbed chartNum={6} height="360px" />
+          </div>
         </div>
 
         {/* Week 3 */}
@@ -359,11 +359,12 @@ export default function DataGraphicsCaseStudyPage() {
             </p>
           </Callout>
 
-          <DemoEmbed
-            src="/data-graphics/demo.html#chart1"
-            height="600px"
-            caption="Interactive demo — scroll through all 4 charts, try the Simulate buttons"
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ChartEmbed chartNum={1} height="380px" caption="Chart 01 — Time-Series Line" />
+            <ChartEmbed chartNum={2} height="380px" caption="Chart 02 — Multi-Series Comparison" />
+            <ChartEmbed chartNum={4} height="380px" caption="Chart 04 — Histogram / Distribution" />
+            <ChartEmbed chartNum={6} height="380px" caption="Chart 06 — Status Timeline" />
+          </div>
         </div>
       </motion.section>
 
@@ -394,11 +395,7 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <DemoEmbed
-          src="/data-graphics/demo.html#chart6"
-          height="550px"
-          caption="Chart 6: Status Timeline — click 'Simulate Incident' to watch the cascading failure"
-        />
+        <ChartEmbed chartNum={6} height="460px" caption="Click 'Simulate Incident' to watch the cascading failure unfold in real time" />
 
         {/* Theming */}
         <h3 className="text-xl font-semibold mt-12 mb-4 text-text-light dark:text-text-dark">Light/Dark Mode Theming</h3>
@@ -417,11 +414,7 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <DemoEmbed
-          src="/data-graphics/demo.html#chart2"
-          height="520px"
-          caption="Use the ☀️ / 🌙 toggle in the demo's nav bar to switch themes — all charts re-render instantly"
-        />
+        <ChartEmbed chartNum={1} height="400px" caption="Chart 01 shown here — all charts respond to the same re-render logic when themes switch" />
       </motion.section>
 
       {/* ── Outcomes ── */}

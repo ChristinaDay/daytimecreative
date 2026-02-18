@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart 04 — Histogram / Distribution</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0D0D0E; font-family: 'Inter', -apple-system, sans-serif; padding: 24px; }
+    .header { margin-bottom: 16px; }
+    .tag { display: inline-block; background: #22BF4A; color: white; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .title { font-size: 18px; font-weight: 500; color: #D9D9E0; margin-bottom: 4px; }
+    .desc { font-size: 13px; color: #999AA6; }
+    .sim-bar { display: flex; align-items: center; gap: 10px; margin: 14px 0 10px; padding: 10px 14px; background: rgba(59,130,245,0.08); border: 1px solid rgba(59,130,245,0.25); border-radius: 6px; }
+    .btn { border: none; padding: 6px 14px; border-radius: 4px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; }
+    .btn-start { background: #3B82F5; color: white; }
+    .btn-pause { background: #F28500; color: white; }
+    .btn-reset { background: #4b5563; color: white; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .status { color: #999AA6; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+    .status.live { color: #22BF4A; }
+    .pulse { width: 7px; height: 7px; background: #22BF4A; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .alert { margin-top: 10px; padding: 8px 12px; background: rgba(204,61,61,0.15); border: 1px solid rgba(204,61,61,0.4); border-radius: 4px; color: #CC3D3D; font-size: 12px; display: none; }
+    .alert.show { display: block; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="tag">Chart 04</span>
+    <div class="title">Histogram / Distribution</div>
+    <div class="desc">Frequency distribution of continuous variables. Latency percentiles, response time patterns.</div>
+  </div>
+  <div class="sim-bar">
+    <button class="btn btn-start" id="s1" onclick="start()">▶ Simulate Degradation</button>
+    <button class="btn btn-pause" id="p1" onclick="pause()" disabled>⏸ Pause</button>
+    <button class="btn btn-reset" id="r1" onclick="reset()">↺ Reset</button>
+    <div class="status" id="st1">Ready to simulate</div>
+  </div>
+  <div class="alert" id="al1"></div>
+  <div id="vis"></div>
+
+  <script>
+    const spec = {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "width": "container", "height": 260,
+      "padding": {"top": 10, "left": 60, "right": 20, "bottom": 40},
+      "background": "#171719",
+      "autosize": {"type": "fit", "contains": "padding"},
+      "data": [{"name":"table","values":[
+        {"bin":"0–50ms","count":1240},{"bin":"50–100ms","count":3580},
+        {"bin":"100–150ms","count":2150},{"bin":"150–200ms","count":890},{"bin":"200+ms","count":320}
+      ]}],
+      "scales": [
+        {"name":"x","type":"band","domain":{"data":"table","field":"bin"},"range":"width","padding":0.2},
+        {"name":"y","type":"linear","domain":{"data":"table","field":"count"},"range":"height","nice":true,"zero":true}
+      ],
+      "axes": [
+        {"orient":"bottom","scale":"x","labelColor":"#999AA6","labelFontSize":11,"labelFont":"Inter,sans-serif","labelPadding":8,"tickColor":"#4D4E56","tickSize":5,"domain":false,"grid":false,"title":null},
+        {"orient":"left","scale":"y","labelColor":"#999AA6","labelFontSize":11,"labelFont":"Inter,sans-serif","labelPadding":8,"tickColor":"#4D4E56","tickSize":5,"tickCount":5,"domain":false,"grid":true,"gridColor":"#4D4E56","gridOpacity":0.4,"title":null,"format":"~s"}
+      ],
+      "marks": [{"type":"rect","from":{"data":"table"},"encode":{
+        "enter":{"x":{"scale":"x","field":"bin"},"width":{"scale":"x","band":1},"y":{"scale":"y","field":"count"},"y2":{"scale":"y","value":0},"fill":{"value":"#3B82F5"},"cornerRadiusTopLeft":{"value":3},"cornerRadiusTopRight":{"value":3}},
+        "update":{"fillOpacity":{"value":0.85}},"hover":{"fillOpacity":{"value":1}}
+      }}]
+    };
+
+    vegaEmbed('#vis', spec, {actions:false});
+    let data = spec.data[0].values.map(d=>({...d}));
+    const init = JSON.parse(JSON.stringify(data));
+    let interval, iter = 0;
+
+    function start() {
+      iter = 0;
+      document.getElementById('s1').disabled = true;
+      document.getElementById('p1').disabled = false;
+      setStatus('Simulating performance degradation...', true);
+      interval = setInterval(() => {
+        iter++;
+        data = data.map((bin,i) => ({...bin, count: Math.max(100, bin.count + (i-2)*150 + (Math.random()-0.5)*100)}));
+        spec.data[0].values = data;
+        vegaEmbed('#vis', spec, {actions:false});
+        const right = data[3].count + data[4].count;
+        const total = data.reduce((s,b)=>s+b.count,0);
+        if (right/total > 0.4) showAlert('⚠ Response time degradation: median shifted to 150–200ms');
+        if (iter >= 6) { pause(); setStatus('Degradation simulation complete'); }
+      }, 1000);
+    }
+    function pause() {
+      clearInterval(interval);
+      document.getElementById('s1').disabled = false;
+      document.getElementById('p1').disabled = true;
+      setStatus('Paused');
+    }
+    function reset() {
+      clearInterval(interval);
+      data = JSON.parse(JSON.stringify(init));
+      spec.data[0].values = data;
+      vegaEmbed('#vis', spec, {actions:false});
+      document.getElementById('s1').disabled = false;
+      document.getElementById('p1').disabled = true;
+      setStatus('Ready to simulate');
+      document.getElementById('al1').className = 'alert';
+    }
+    function setStatus(msg, live=false) {
+      const el = document.getElementById('st1');
+      el.className = live ? 'status live' : 'status';
+      el.innerHTML = live ? `<span class="pulse"></span>${msg}` : msg;
+    }
+    function showAlert(msg) {
+      const el = document.getElementById('al1');
+      el.textContent = msg; el.className = 'alert show';
+      setTimeout(() => el.className = 'alert', 5000);
+    }
+  </script>
+</body>
+</html>
