@@ -379,11 +379,32 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <SimulateEmbed
+            chartNum={1}
+            height="360px"
+            caption="Chart 01 — Live metric stream with CPU alert threshold"
+          />
+          <SimulateEmbed
+            chartNum={2}
+            height="360px"
+            caption="Chart 02 — Traffic spike across environments"
+          />
+        </div>
+
         <SimulateEmbed
           chartNum={6}
           height="460px"
-          caption="Click 'Simulate Incident' to watch the cascading failure unfold in real time"
+          caption="Chart 06 — Click 'Simulate Incident' to watch the cascading failure unfold in real time"
         />
+
+        <div className="mt-6">
+          <SimulateEmbed
+            chartNum={4}
+            height="360px"
+            caption="Chart 04 — Performance degradation as latency distribution shifts"
+          />
+        </div>
 
         {/* Theming */}
         <h3 className="text-xl font-semibold mt-12 mb-4 text-text-light dark:text-text-dark">Light/Dark Mode Theming</h3>
