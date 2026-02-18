@@ -18,6 +18,36 @@ function ChartPlaceholder({ label }: { label: string }) {
   );
 }
 
+// Live embedded demo in a browser chrome frame
+function DemoEmbed({ src, height = '700px', caption }: { src: string; height?: string; caption?: string }) {
+  return (
+    <div className="w-full my-6">
+      {/* Browser chrome */}
+      <div className="bg-gray-800 dark:bg-gray-900 rounded-t-lg px-4 py-3 flex items-center space-x-3">
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 bg-red-500 rounded-full" />
+          <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+          <div className="w-3 h-3 bg-green-500 rounded-full" />
+        </div>
+        <div className="flex-1 bg-gray-700 dark:bg-gray-600 rounded px-3 py-1 text-xs text-gray-300 font-mono truncate">
+          {src}
+        </div>
+      </div>
+      {/* iframe */}
+      <iframe
+        src={src}
+        style={{ height }}
+        className="w-full border-x border-b border-gray-700 rounded-b-lg bg-[#0D0D0E]"
+        title="Operational Data Graphics — Live Demo"
+        loading="lazy"
+      />
+      {caption && (
+        <p className="text-center mt-3 text-sm text-text-light/60 dark:text-text-dark/60">{caption}</p>
+      )}
+    </div>
+  );
+}
+
 // Styled highlight/callout box
 function Callout({ children }: { children: React.ReactNode }) {
   return (
@@ -70,19 +100,20 @@ export default function DataGraphicsCaseStudyPage() {
         transition={{ duration: 0.8, delay: 0.1 }}
         className="mb-16 w-full"
       >
-        <ChartPlaceholder label="screenshot: demo page — all 4 charts, dark mode, sticky nav" />
-        <div className="mt-4 text-center">
-          <p className="text-base text-text-light/60 dark:text-text-dark/60">
-            Interactive demo with real-time simulations.{' '}
-            <a
-              href="https://github.com/ChristinaDay/datagraphics"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent-light dark:text-accent-dark underline underline-offset-2"
-            >
-              View on GitHub →
-            </a>
-          </p>
+        <DemoEmbed
+          src="/data-graphics/demo.html"
+          height="800px"
+          caption="Live interactive demo — click Simulate buttons to see real-time updates"
+        />
+        <div className="mt-2 text-center">
+          <a
+            href="https://github.com/ChristinaDay/datagraphics"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-accent-light dark:text-accent-dark underline underline-offset-2"
+          >
+            View source on GitHub →
+          </a>
         </div>
       </motion.div>
 
@@ -288,7 +319,11 @@ export default function DataGraphicsCaseStudyPage() {
             </p>
           </Callout>
 
-          <ChartPlaceholder label="screenshot: demo page with sticky nav and all 4 charts" />
+          <DemoEmbed
+            src="/data-graphics/demo.html#chart1"
+            height="600px"
+            caption="Interactive demo — scroll through all 4 charts, try the Simulate buttons"
+          />
         </div>
       </motion.section>
 
@@ -319,7 +354,11 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <ChartPlaceholder label="gif: Chart 6 simulation — cascading service incident" />
+        <DemoEmbed
+          src="/data-graphics/demo.html#chart6"
+          height="550px"
+          caption="Chart 6: Status Timeline — click 'Simulate Incident' to watch the cascading failure"
+        />
 
         {/* Theming */}
         <h3 className="text-xl font-semibold mt-12 mb-4 text-text-light dark:text-text-dark">Light/Dark Mode Theming</h3>
@@ -338,7 +377,11 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <ChartPlaceholder label="side-by-side: same chart in dark and light mode" />
+        <DemoEmbed
+          src="/data-graphics/demo.html#chart2"
+          height="520px"
+          caption="Use the ☀️ / 🌙 toggle in the demo's nav bar to switch themes — all charts re-render instantly"
+        />
       </motion.section>
 
       {/* ── Outcomes ── */}
