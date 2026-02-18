@@ -3,22 +3,16 @@
 import { motion } from 'framer-motion';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
+import dynamic from 'next/dynamic';
+import {
+  chart1Spec, chart2Spec, chart3Spec,
+  chart4Spec, chart5Spec, chart6Spec,
+} from '@/data/chartSpecs';
 
-// Reusable image placeholder styled to match the data graphics dark aesthetic
-function ChartPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="w-full h-64 bg-[#0D0D0E] border border-[#33353A] rounded-xl flex flex-col items-center justify-center gap-3">
-      <div className="flex gap-1.5">
-        <div className="w-2 h-2 rounded-full bg-[#CC3D3D]" />
-        <div className="w-2 h-2 rounded-full bg-[#F28500]" />
-        <div className="w-2 h-2 rounded-full bg-[#22BF4A]" />
-      </div>
-      <p className="text-[#999AA6] text-sm font-mono text-center px-6">[ {label} ]</p>
-    </div>
-  );
-}
+// Load VegaChart client-side only (uses vega-embed, which needs the browser)
+const VegaChart = dynamic(() => import('@/components/ui/VegaChart'), { ssr: false });
 
-// Figma file embed
+// Figma file embed with faked browser chrome
 function FigmaEmbed({ url, height = '600px', caption, label }: { url: string; height?: string; caption?: string; label?: string }) {
   const embedSrc = `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(url)}`;
   return (
@@ -48,16 +42,15 @@ function FigmaEmbed({ url, height = '600px', caption, label }: { url: string; he
   );
 }
 
-// Individual chart embed
-function ChartEmbed({ chartNum, height = '420px', caption }: { chartNum: number; height?: string; caption?: string }) {
-  const src = `/data-graphics/chart${chartNum}.html`;
+// iframe embed kept only for the simulate demo (needs JS event loop)
+function SimulateEmbed({ chartNum, height = '480px', caption }: { chartNum: number; height?: string; caption?: string }) {
   return (
     <div className="w-full">
       <iframe
-        src={src}
+        src={`/data-graphics/chart${chartNum}.html`}
         style={{ height }}
         className="w-full rounded-xl bg-[#0D0D0E] border border-[#33353A]"
-        title={`Chart 0${chartNum}`}
+        title={`Chart 0${chartNum} — Interactive Simulation`}
         loading="lazy"
       />
       {caption && (
@@ -67,7 +60,7 @@ function ChartEmbed({ chartNum, height = '420px', caption }: { chartNum: number;
   );
 }
 
-// Styled highlight/callout box
+// Styled highlight / callout box
 function Callout({ children }: { children: React.ReactNode }) {
   return (
     <div className="p-5 md:p-6 bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20 border border-teal-200 dark:border-teal-700 rounded-xl my-6 md:my-8">
@@ -82,6 +75,16 @@ function StatCard({ number, label }: { number: string; label: string }) {
     <div className="p-5 bg-text-light/5 dark:bg-text-dark/5 border border-text-light/10 dark:border-text-dark/10 rounded-xl text-center">
       <div className="text-3xl font-bold font-mono text-accent-light dark:text-accent-dark mb-1">{number}</div>
       <div className="text-sm text-text-light/60 dark:text-text-dark/60">{label}</div>
+    </div>
+  );
+}
+
+// Labelled chart card used in the hero grid
+function ChartCard({ spec, label }: { spec: Record<string, unknown>; label: string }) {
+  return (
+    <div className="rounded-xl overflow-hidden bg-[#0D0D0E] border border-[#33353A] p-4">
+      <VegaChart spec={spec} />
+      <p className="mt-2 text-xs text-[#999AA6] font-mono text-center">{label}</p>
     </div>
   );
 }
@@ -112,7 +115,7 @@ export default function DataGraphicsCaseStudyPage() {
         />
       </motion.div>
 
-      {/* ── Hero ── */}
+      {/* ── Hero chart grid — all 6 primitives ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -120,12 +123,12 @@ export default function DataGraphicsCaseStudyPage() {
         className="mb-16 w-full"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <ChartEmbed chartNum={1} height="380px" />
-          <ChartEmbed chartNum={2} height="380px" />
-          <ChartEmbed chartNum={3} height="380px" />
-          <ChartEmbed chartNum={4} height="380px" />
-          <ChartEmbed chartNum={5} height="380px" />
-          <ChartEmbed chartNum={6} height="380px" />
+          <ChartCard spec={chart1Spec} label="01 — High-Density Time-Series Line" />
+          <ChartCard spec={chart2Spec} label="02 — Multi-Series Comparison" />
+          <ChartCard spec={chart3Spec} label="03 — Stacked Area Trend" />
+          <ChartCard spec={chart4Spec} label="04 — Histogram / Distribution" />
+          <ChartCard spec={chart5Spec} label="05 — Throughput Bar Comparison" />
+          <ChartCard spec={chart6Spec} label="06 — Status Timeline (Health Bands)" />
         </div>
         <div className="text-center">
           <a
@@ -320,14 +323,6 @@ export default function DataGraphicsCaseStudyPage() {
             label="Visual System — Chart Primitives"
             caption="Figma designs — 6 chart primitives with usage annotations"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <ChartEmbed chartNum={1} height="360px" />
-            <ChartEmbed chartNum={2} height="360px" />
-            <ChartEmbed chartNum={3} height="360px" />
-            <ChartEmbed chartNum={4} height="360px" />
-            <ChartEmbed chartNum={5} height="360px" />
-            <ChartEmbed chartNum={6} height="360px" />
-          </div>
         </div>
 
         {/* Week 3 */}
@@ -337,9 +332,9 @@ export default function DataGraphicsCaseStudyPage() {
             <h3 className="text-2xl font-semibold text-text-light dark:text-text-dark">Implementation</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-              Implemented 4 of 6 charts in full Vega. Each spec runs ~500 lines of JSON, using declarative data transformations, custom scales and axes, and precise mark encoding. Dark mode styling and hover interactions are defined in the spec itself—not applied via CSS after the fact.
+              Implemented 4 of 6 charts in full Vega. Each spec uses declarative data transformations, custom scales and axes, and precise mark encoding. Dark mode styling and hover interactions are defined in the spec itself—not applied via CSS after the fact.
             </p>
             <div className="p-5 bg-text-light/5 dark:bg-text-dark/5 border border-text-light/10 dark:border-text-dark/10 rounded-xl">
               <p className="text-sm font-semibold uppercase tracking-wide text-text-light/50 dark:text-text-dark/50 mb-4">Charts implemented</p>
@@ -358,13 +353,6 @@ export default function DataGraphicsCaseStudyPage() {
               During implementation I caught that initial chart specs used <code className="px-1 py-0.5 bg-text-light/10 dark:bg-text-dark/10 rounded text-sm font-mono">padding: 5</code> instead of the documented <code className="px-1 py-0.5 bg-text-light/10 dark:bg-text-dark/10 rounded text-sm font-mono">&#123;top: 10, left: 60, right: 20, bottom: 40&#125;</code>. I systematically audited all 5 files and applied proper <code className="px-1 py-0.5 bg-text-light/10 dark:bg-text-dark/10 rounded text-sm font-mono">labelPadding: 8px</code> and <code className="px-1 py-0.5 bg-text-light/10 dark:bg-text-dark/10 rounded text-sm font-mono">symbolOffset: 8px</code> throughout. Design systems only work when implementation matches documentation exactly.
             </p>
           </Callout>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ChartEmbed chartNum={1} height="380px" caption="Chart 01 — Time-Series Line" />
-            <ChartEmbed chartNum={2} height="380px" caption="Chart 02 — Multi-Series Comparison" />
-            <ChartEmbed chartNum={4} height="380px" caption="Chart 04 — Histogram / Distribution" />
-            <ChartEmbed chartNum={6} height="380px" caption="Chart 06 — Status Timeline" />
-          </div>
         </div>
       </motion.section>
 
@@ -395,7 +383,11 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <ChartEmbed chartNum={6} height="460px" caption="Click 'Simulate Incident' to watch the cascading failure unfold in real time" />
+        <SimulateEmbed
+          chartNum={6}
+          height="460px"
+          caption="Click 'Simulate Incident' to watch the cascading failure unfold in real time"
+        />
 
         {/* Theming */}
         <h3 className="text-xl font-semibold mt-12 mb-4 text-text-light dark:text-text-dark">Light/Dark Mode Theming</h3>
@@ -414,7 +406,12 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <ChartEmbed chartNum={1} height="400px" caption="Chart 01 shown here — all charts respond to the same re-render logic when themes switch" />
+        <div className="rounded-xl overflow-hidden bg-[#0D0D0E] dark:bg-[#f9fafb] border border-[#33353A] dark:border-gray-200 p-4">
+          <VegaChart spec={chart1Spec} />
+          <p className="mt-2 text-xs text-[#999AA6] dark:text-gray-500 font-mono text-center">
+            Toggle light/dark mode using the button in the nav — this chart re-renders instantly
+          </p>
+        </div>
       </motion.section>
 
       {/* ── Outcomes ── */}
