@@ -326,7 +326,6 @@ export default function DataGraphicsCaseStudyPage() {
         {/* Week 3 */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-6">
-            <span className="px-3 py-1 bg-[#F28500]/15 text-[#F28500] text-xs font-semibold uppercase tracking-wider rounded-full">Week 3</span>
             <h3 className="text-2xl font-semibold text-text-light dark:text-text-dark">Implementation</h3>
           </div>
 
