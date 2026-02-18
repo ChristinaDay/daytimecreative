@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { ProjectDetailTags } from '@/components/projects/ProjectDetailTags';
 import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import dynamic from 'next/dynamic';
@@ -85,6 +86,28 @@ function ChartCard({ spec, label }: { spec: Record<string, unknown>; label: stri
     <div className="rounded-xl overflow-hidden bg-[#0D0D0E] border border-[#33353A] p-4">
       <VegaChart spec={spec} animate />
       <p className="mt-2 text-xs text-[#999AA6] font-mono text-center">{label}</p>
+    </div>
+  );
+}
+
+// Chart with its own theme toggle (independent of global theme)
+function ThemedChartDemo({ spec, label }: { spec: Record<string, unknown>; label: string }) {
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const isDark = theme === 'dark';
+
+  return (
+    <div className="rounded-xl overflow-hidden bg-[#f9fafb] dark:bg-[#0D0D0E] border border-gray-200 dark:border-[#33353A] p-4">
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-xs font-mono text-gray-500 dark:text-[#999AA6]">{label}</p>
+        <button
+          onClick={() => setTheme(isDark ? 'light' : 'dark')}
+          className="px-3 py-1.5 text-xs font-medium rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+          aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+        >
+          {isDark ? '☀️ Light' : '🌙 Dark'}
+        </button>
+      </div>
+      <VegaChart spec={spec} forcedTheme={theme} />
     </div>
   );
 }
@@ -436,11 +459,9 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <div className="rounded-xl overflow-hidden bg-[#f9fafb] dark:bg-[#0D0D0E] border border-gray-200 dark:border-[#33353A] p-4">
-          <VegaChart spec={chart1Spec} />
-          <p className="mt-2 text-xs text-gray-500 dark:text-[#999AA6] font-mono text-center">
-            Toggle light/dark mode using the button in the nav — this chart re-renders instantly
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ThemedChartDemo spec={chart1Spec} label="Chart 01 — Time-series line" />
+          <ThemedChartDemo spec={chart2Spec} label="Chart 02 — Multi-series comparison" />
         </div>
       </motion.section>
 

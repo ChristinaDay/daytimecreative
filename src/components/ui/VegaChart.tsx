@@ -8,6 +8,8 @@ interface VegaChartProps {
   className?: string;
   /** When true the chart data animates from 0 → target on first scroll-into-view */
   animate?: boolean;
+  /** Override the global theme. 'light' | 'dark' | undefined (uses global theme) */
+  forcedTheme?: 'light' | 'dark';
 }
 
 // Colours that swap with the portfolio's dark/light mode
@@ -118,14 +120,14 @@ async function setupDataAnimation(
   observer.observe(container);
 }
 
-export default function VegaChart({ spec, className = '', animate = false }: VegaChartProps) {
+export default function VegaChart({ spec, className = '', animate = false, forcedTheme }: VegaChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef<unknown>(null);
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     if (!containerRef.current) return;
-    const isDark = resolvedTheme !== 'light';
+    const isDark = forcedTheme ? forcedTheme === 'dark' : resolvedTheme !== 'light';
     const themedSpec = applyTheme(spec, isDark);
 
     import('vega-embed').then(({ default: vegaEmbed }) => {
@@ -177,7 +179,7 @@ export default function VegaChart({ spec, className = '', animate = false }: Veg
       }
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [resolvedTheme]);
+  }, [resolvedTheme, forcedTheme]);
 
   return <div ref={containerRef} className={`w-full overflow-x-auto ${className}`} />;
 }
