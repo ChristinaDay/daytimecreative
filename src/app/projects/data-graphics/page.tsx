@@ -7,7 +7,7 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 import dynamic from 'next/dynamic';
 import {
   chart1Spec, chart2Spec, chart3Spec,
-  chart4Spec, chart5Spec, chart6Spec,
+  chart4Spec, chart5Spec, chart6Spec, chart7Spec,
 } from '@/data/chartSpecs';
 
 // Load VegaChart client-side only (uses vega-embed, which needs the browser)
@@ -154,6 +154,7 @@ export default function DataGraphicsCaseStudyPage() {
             { spec: chart4Spec, label: '04 — Histogram / Distribution' },
             { spec: chart5Spec, label: '05 — Throughput Bar Comparison' },
             { spec: chart6Spec, label: '06 — Status Timeline (Health Bands)' },
+            { spec: chart7Spec, label: '07 — Error Rate Distribution' },
           ].map(({ spec, label }) => (
             <motion.div
               key={label}
@@ -434,11 +435,16 @@ export default function DataGraphicsCaseStudyPage() {
           caption="Chart 06 — Click 'Simulate Incident' to watch the cascading failure unfold in real time"
         />
 
-        <div className="mt-6">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <SimulateEmbed
             chartNum={4}
             height="360px"
             caption="Chart 04 — Performance degradation as latency distribution shifts"
+          />
+          <SimulateEmbed
+            chartNum={7}
+            height="360px"
+            caption="Chart 07 — Error rate spike as 4xx/5xx responses increase"
           />
         </div>
 

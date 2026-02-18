@@ -188,3 +188,30 @@ export const chart6Spec = {
   } }],
   legends: [{ fill: 'color', title: null, orient: 'bottom', direction: 'horizontal', symbolType: 'square', symbolSize: 100, symbolOffset: 8, labelColor: '#D9D9E0', labelFont: 'Inter,sans-serif', labelFontSize: 11, labelOffset: 8, offset: 8 }],
 };
+
+export const chart7Spec = {
+  $schema: 'https://vega.github.io/schema/vega/v5.json',
+  description: 'Histogram — error rate distribution by status code',
+  width: 560, height: 260,
+  padding: { top: 10, left: 56, right: 16, bottom: 36 },
+  background: '#171719',
+  data: [{ name: 'table', values: [
+    { status: '2xx', count: 12450 },
+    { status: '3xx', count: 890 },
+    { status: '4xx', count: 2340 },
+    { status: '5xx', count: 420 },
+  ] }],
+  scales: [
+    { name: 'x', type: 'band', domain: { data: 'table', field: 'status' }, range: 'width', padding: 0.2 },
+    { name: 'y', type: 'linear', domain: { data: 'table', field: 'count' }, range: 'height', nice: true, zero: true },
+    { name: 'color', type: 'ordinal', domain: ['2xx', '3xx', '4xx', '5xx'], range: ['#22BF4A', '#F2CB05', '#F28500', '#CC3D3D'] },
+  ],
+  axes: [
+    { orient: 'bottom', scale: 'x', labelColor: '#999AA6', labelFontSize: 11, labelFont: 'Inter,sans-serif', labelPadding: 8, tickColor: '#4D4E56', tickSize: 5, domain: false, grid: false, title: null },
+    { orient: 'left', scale: 'y', labelColor: '#999AA6', labelFontSize: 11, labelFont: 'Inter,sans-serif', labelPadding: 8, tickColor: '#4D4E56', tickSize: 5, tickCount: 5, domain: false, grid: true, gridColor: '#4D4E56', gridOpacity: 0.4, title: null, format: '~s' },
+  ],
+  marks: [{ type: 'rect', from: { data: 'table' }, encode: {
+    enter: { x: { scale: 'x', field: 'status' }, width: { scale: 'x', band: 1 }, y: { scale: 'y', field: 'count' }, y2: { scale: 'y', value: 0 }, fill: { scale: 'color', field: 'status' }, cornerRadiusTopLeft: { value: 3 }, cornerRadiusTopRight: { value: 3 } },
+    update: { fillOpacity: { value: 0.85 } }, hover: { fillOpacity: { value: 1 } },
+  } }],
+};
