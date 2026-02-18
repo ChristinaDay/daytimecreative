@@ -418,31 +418,31 @@ export default function DataGraphicsCaseStudyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <SimulateEmbed
             chartNum={1}
-            height="360px"
+            height="420px"
             caption="Chart 01 — Live metric stream with CPU alert threshold"
           />
           <SimulateEmbed
             chartNum={2}
-            height="360px"
+            height="420px"
             caption="Chart 02 — Traffic spike across environments"
           />
         </div>
 
         <SimulateEmbed
           chartNum={6}
-          height="460px"
+          height="500px"
           caption="Chart 06 — Click 'Simulate Incident' to watch the cascading failure unfold in real time"
         />
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <SimulateEmbed
             chartNum={4}
-            height="360px"
+            height="420px"
             caption="Chart 04 — Performance degradation as latency distribution shifts"
           />
           <SimulateEmbed
             chartNum={7}
-            height="360px"
+            height="420px"
             caption="Chart 07 — Error rate spike as 4xx/5xx responses increase"
           />
         </div>
