@@ -161,7 +161,7 @@ export default function VegaChart({ spec, className = '', animate = false }: Veg
 
           if (rows.length > 0) {
             setupDataAnimation(
-              result.view as Parameters<typeof setupDataAnimation>[0],
+              result.view as unknown as Parameters<typeof setupDataAnimation>[0],
               rows,
               containerRef.current,
             );
