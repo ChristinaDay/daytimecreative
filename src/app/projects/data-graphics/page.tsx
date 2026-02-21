@@ -189,10 +189,10 @@ export default function DataGraphicsCaseStudyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            A data visualization system for operational monitoring—built for data engineers and infrastructure teams who need high-signal, low-noise graphics for real-time metrics, system health, and performance data.
+            Operational monitoring teams don't have a shared visual language. Every team assembles dashboards from generic libraries—inconsistent signals, inconsistent color semantics, no common foundation. The question this project addresses isn't how to make better-looking charts, but how to establish the grammar that makes any chart legible at 2am.
           </p>
           <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-            End-to-end design systems work: visual foundations and interaction patterns in Figma, design tokens in W3C format, and production-ready Vega charts with real-time simulations.
+            I built a complete visualization design system: defined primitives, composition rules, and design tokens that flow from Figma to Vega to production code. Not better-looking components—a shared grammar teams can build from consistently.
           </p>
         </div>
 
@@ -321,7 +321,7 @@ export default function DataGraphicsCaseStudyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-              Designed 6 chart types in Figma using TalkToFigma MCP for programmatic creation. Each includes usage guidelines, data structure requirements, interaction patterns, and accessibility considerations.
+              I designed 6 chart types in Figma using TalkToFigma MCP for programmatic creation. Each includes usage guidelines, data structure requirements, interaction patterns, and accessibility considerations.
             </p>
             <div className="p-5 bg-text-light/5 dark:bg-text-dark/5 border border-text-light/10 dark:border-text-dark/10 rounded-xl">
               <p className="text-sm font-semibold uppercase tracking-wide text-text-light/50 dark:text-text-dark/50 mb-4">6 chart primitives</p>
@@ -359,7 +359,7 @@ export default function DataGraphicsCaseStudyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-              Four of 6 charts delivered in full Vega. Each spec uses declarative data transformations, custom scales and axes, and precise mark encoding—dark mode and hover interactions defined in the spec, not applied via CSS after the fact.
+              I delivered four of 6 charts in full Vega. Each spec uses declarative data transformations, custom scales and axes, and precise mark encoding—dark mode and hover interactions defined in the spec, not applied via CSS after the fact.
             </p>
             <div className="p-5 bg-text-light/5 dark:bg-text-dark/5 border border-text-light/10 dark:border-text-dark/10 rounded-xl">
               <p className="text-sm font-semibold uppercase tracking-wide text-text-light/50 dark:text-text-dark/50 mb-4">Charts implemented</p>
@@ -472,6 +472,10 @@ export default function DataGraphicsCaseStudyPage() {
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Outcomes & Deliverables</h2>
 
+        <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-10">
+          The goal was a system complete enough to actually use—not a proof of concept, but a working foundation a team could extend.
+        </p>
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <StatCard number="17" label="documentation files" />
           <StatCard number="6" label="chart primitives designed" />
@@ -540,8 +544,8 @@ export default function DataGraphicsCaseStudyPage() {
             },
             {
               number: '03',
-              title: 'Theory + practice = credibility',
-              body: 'Grounding the project in Grammar of Graphics demonstrates visualization theory, not just tool fluency. Vega implementation shows systems-level execution. Senior roles require both—design without implementation is incomplete; implementation without theory is shallow.',
+              title: 'Writing specs is a design act',
+              body: 'Once I was authoring Vega, I was thinking in the same terms as the design: marks, transforms, scales. The vocabulary maps directly. The boundary between design tool and implementation tool blurred in a way I didn\'t expect—and that changes how you think about handoff. When design and code share a conceptual language, most of the translation cost disappears.',
             },
             {
               number: '04',
