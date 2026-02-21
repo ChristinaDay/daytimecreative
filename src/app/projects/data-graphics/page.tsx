@@ -196,11 +196,6 @@ export default function DataGraphicsCaseStudyPage() {
           </p>
         </div>
 
-        <Callout>
-          <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-            From design thesis and visual foundations to Figma variables and interactive Vega implementations with light/dark theming—fully documented and production-ready.
-          </p>
-        </Callout>
       </motion.section>
 
       {/* ── The Problem ── */}
@@ -211,7 +206,6 @@ export default function DataGraphicsCaseStudyPage() {
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">The Problem</h2>
-        <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Generic BI Tools Don't Fit Operational Workflows</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
@@ -243,7 +237,6 @@ export default function DataGraphicsCaseStudyPage() {
         className="mb-28"
       >
         <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Approach</h2>
-        <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Position as a Design System, Not Just a Chart Library</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
@@ -402,7 +395,7 @@ export default function DataGraphicsCaseStudyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
-            Most portfolios show static mockups. These simulations demonstrate how charts behave under real operational conditions: live metric streaming, traffic spikes, performance degradation, cascading failures. Static displays tell; simulations demonstrate.
+            Most portfolios show static mockups. These simulations demonstrate how charts behave under real operational conditions: live metric streaming, traffic spikes, performance degradation, cascading failures. Static displays tell; simulations prove it.
           </p>
           <div className="p-5 bg-text-light/5 dark:bg-text-dark/5 border border-text-light/10 dark:border-text-dark/10 rounded-xl">
             <p className="text-sm font-semibold uppercase tracking-wide text-text-light/50 dark:text-text-dark/50 mb-4">4 simulation scenarios</p>
@@ -522,15 +515,6 @@ export default function DataGraphicsCaseStudyPage() {
           </div>
         </div>
 
-        <Callout>
-          <p className="text-sm font-semibold uppercase tracking-wide text-teal-700 dark:text-teal-300 mb-3">What makes this different</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[1.0625rem] text-text-light/80 dark:text-text-dark/80">
-            <div className="flex gap-2"><span className="text-teal-600 dark:text-teal-400 font-bold">✓</span> Interactive, not static mockups</div>
-            <div className="flex gap-2"><span className="text-teal-600 dark:text-teal-400 font-bold">✓</span> Complete system, not isolated components</div>
-            <div className="flex gap-2"><span className="text-teal-600 dark:text-teal-400 font-bold">✓</span> Theory-grounded (Grammar of Graphics)</div>
-            <div className="flex gap-2"><span className="text-teal-600 dark:text-teal-400 font-bold">✓</span> Audience-specific (operational, not generic BI)</div>
-          </div>
-        </Callout>
       </motion.section>
 
       {/* ── Key Learnings ── */}
@@ -547,7 +531,7 @@ export default function DataGraphicsCaseStudyPage() {
             {
               number: '01',
               title: 'Design systems require implementation integrity',
-              body: 'Documentation is worthless if the code doesn\'t match it. When I found the spacing inconsistency, I ran a systematic audit rather than patching individual files. Design systems succeed only when documentation and code align.',
+              body: 'A design system is only as strong as the contract between its documentation and its code. When those diverge—even by a few pixels of padding—the system\'s credibility unravels. Precision in implementation isn\'t pedantry; it\'s the proof of concept.',
             },
             {
               number: '02',
@@ -576,35 +560,6 @@ export default function DataGraphicsCaseStudyPage() {
         </div>
       </motion.section>
 
-      {/* ── Reflection ── */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.6 }}
-        className="mb-28"
-      >
-        <h2 className="text-3xl md:text-4xl font-serif font-normal mb-8 text-text-light dark:text-text-dark">Reflection</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Successes</h3>
-            <ul className="space-y-3 text-[1.0625rem] text-text-light/80 dark:text-text-dark/80">
-              <li><strong className="text-text-light dark:text-text-dark">Strategic workflow optimization</strong> — TalkToFigma MCP for programmatic chart creation compressed what would have been days of manual work into a single week.</li>
-              <li><strong className="text-text-light dark:text-text-dark">Documentation-first approach</strong> — Writing the design thesis before any implementation clarified audience needs, constraints, and principles. Every subsequent decision had a clear framework.</li>
-              <li><strong className="text-text-light dark:text-text-dark">Systematic quality assurance</strong> — When spacing inconsistencies surfaced, I ran a comprehensive audit and resolved root causes rather than patching individual files.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Future Considerations</h3>
-            <ul className="space-y-3 text-[1.0625rem] text-text-light/80 dark:text-text-dark/80">
-              <li><strong className="text-text-light dark:text-text-dark">Earlier alignment validation</strong> — Cross-referencing spacing specs during initial Vega development would have caught the inconsistency before implementation.</li>
-              <li><strong className="text-text-light dark:text-text-dark">User validation</strong> — Testing simulations with operational engineers would confirm the scenarios accurately reflect real-world monitoring contexts.</li>
-              <li><strong className="text-text-light dark:text-text-dark">Complete implementation</strong> — Charts 3 and 5 (Stacked Area and Throughput Bar) are designed but not yet implemented in Vega.</li>
-            </ul>
-          </div>
-        </div>
-      </motion.section>
-
       {/* ── CTA ── */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
@@ -613,9 +568,9 @@ export default function DataGraphicsCaseStudyPage() {
         className="mb-12"
       >
         <div className="p-8 md:p-12 bg-[#0D0D0E] border border-[#33353A] rounded-2xl text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-normal text-white mb-4">Try It Yourself</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-normal text-white mb-4">Explore the Source</h2>
           <p className="text-[#999AA6] text-lg mb-8 max-w-xl mx-auto">
-            Toggle between light and dark mode. Click the Simulate buttons. Watch the Status Timeline incident unfold in real time.
+            The full system—Vega specs, design tokens, simulation logic—is on GitHub.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
