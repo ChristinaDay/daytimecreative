@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import CyclingText from './ui/CyclingText';
 
@@ -62,6 +63,26 @@ export function FlexibleBioText() {
       <p>
         I create design systems, prototype with real data, and build interfaces that developers
         can actually implement. This hybrid approach helps teams ship better products faster.
+      </p>
+      <p>
+        Outside of product work, I work on my{' '}
+        <a
+          href="https://www.instagram.com/xtinamakes/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-1 underline-offset-2 transition-colors hover:text-accent-light dark:hover:text-accent-dark"
+        >
+          personal art practice
+        </a>{' '}
+        and help other artists and studios produce large-scale pieces that require multiple hands
+        to finish.{' '}
+        <Link
+          href="/art-fabrication"
+          className="underline decoration-1 underline-offset-2 transition-colors hover:text-accent-light dark:hover:text-accent-dark"
+        >
+          Check out some of that work here
+        </Link>
+        .
       </p>
     </div>
   );
