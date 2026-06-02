@@ -7,11 +7,11 @@ interface CyclingTextProps {
   fancyWords?: string[]; // Words that should use fancy styling
 }
 
-export default function CyclingText({ 
-  words, 
-  interval = 3000, 
+export default function CyclingText({
+  words,
+  interval = 3000,
   className = '',
-  fancyWords = [] 
+  fancyWords = [],
 }: CyclingTextProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -31,29 +31,28 @@ export default function CyclingText({
   useEffect(() => {
     const timer = setInterval(() => {
       setIsTyping(true);
-      
+
       // Fade out current text
       setTimeout(() => {
         setDisplayText('');
-        setCurrentIndex((prev) => (prev + 1) % words.length);
+        setCurrentIndex(prev => (prev + 1) % words.length);
       }, 400);
 
       // Start typing new text after fade out
       setTimeout(() => {
         const newWord = words[(currentIndex + 1) % words.length];
         let charIndex = 0;
-        
+
         const typeInterval = setInterval(() => {
           setDisplayText(newWord.substring(0, charIndex + 1));
           charIndex++;
-          
+
           if (charIndex >= newWord.length) {
             clearInterval(typeInterval);
             setIsTyping(false);
           }
         }, 60); // Character typing speed
       }, 600);
-      
     }, interval);
 
     return () => clearInterval(timer);
@@ -72,11 +71,11 @@ export default function CyclingText({
   // Cohesive, professional color palette
   const magnetColors = [
     'bg-slate-600',
-    'bg-slate-700', 
+    'bg-slate-700',
     'bg-gray-600',
     'bg-zinc-600',
     'bg-neutral-600',
-    'bg-stone-600'
+    'bg-stone-600',
   ];
 
   const currentColor = magnetColors[currentIndex % magnetColors.length];
@@ -84,41 +83,33 @@ export default function CyclingText({
   return (
     <>
       {/* Hidden measurement element */}
-      <span 
+      <span
         ref={measureRef}
-        className={`absolute -top-full opacity-0 pointer-events-none px-1.5 py-0.5 md:px-2 md:py-1 rounded font-medium ${className}`}
+        className={`pointer-events-none absolute -top-full rounded px-1.5 py-0.5 font-medium opacity-0 md:px-2 md:py-1 ${className}`}
         style={{ whiteSpace: 'nowrap' }}
       >
         B2B
       </span>
-      
+
       {/* Visible cycling text with typing effect */}
-      <span 
+      <span
         className={`relative inline-block align-baseline ${className}`}
-        style={{ 
+        style={{
           minWidth: minWidth > 0 ? `${minWidth}px` : '3em',
-          verticalAlign: 'baseline'
+          verticalAlign: 'baseline',
         }}
       >
-        <span 
-          className={`
-            inline-block text-center transition-opacity duration-500 ease-out
-            px-1.5 py-0.5 md:px-2 md:py-1 rounded border-0
-            ${currentColor} text-white font-medium tracking-normal
-            ${displayText === '' ? 'opacity-0' : 'opacity-100'}
-            ${isFancyWord ? 'font-serif italic bg-gradient-to-r from-purple-500 to-pink-500' : ''}
-          `}
-          style={{ 
+        <span
+          className={`inline-block rounded border-0 px-1.5 py-0.5 text-center transition-opacity duration-500 ease-out md:px-2 md:py-1 ${currentColor} font-medium tracking-normal text-white ${displayText === '' ? 'opacity-0' : 'opacity-100'} ${isFancyWord ? 'bg-gradient-to-r from-purple-500 to-pink-500 font-serif italic' : ''} `}
+          style={{
             boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-            verticalAlign: 'baseline'
+            verticalAlign: 'baseline',
           }}
         >
           {currentWord}
-          {isTyping && displayText !== '' && (
-            <span className="animate-pulse">|</span>
-          )}
+          {isTyping && displayText !== '' && <span className="animate-pulse">|</span>}
         </span>
       </span>
     </>
   );
-} 
+}

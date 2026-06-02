@@ -8,7 +8,7 @@ import { ProjectSubtitle } from '@/components/typography/DropQuote';
 
 export default function PropertyIntelligencePage() {
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 py-16 pb-12 md:pb-24 lg:pb-40 text-[#0f172a] dark:text-white">
+    <article className="mx-auto max-w-[100rem] px-4 py-16 pb-12 text-[#0f172a] dark:text-white md:px-12 md:pb-24 lg:px-20 lg:pb-40">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -16,11 +16,12 @@ export default function PropertyIntelligencePage() {
         transition={{ duration: 0.8 }}
         className="mb-16 pt-24"
       >
-        <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
+        <h1 className="mb-8 text-left font-serif text-5xl font-normal leading-hero text-text-light dark:text-text-dark md:text-5xl lg:text-6xl">
           Property Intelligence Platform
         </h1>
         <ProjectSubtitle>
-          Transforming property risk assessment for insurance underwriters through AI-powered insights and intuitive data visualization—reducing claim processing time by 40%.
+          Transforming property risk assessment for insurance underwriters through AI-powered
+          insights and intuitive data visualization, reducing claim processing time by 40%.
         </ProjectSubtitle>
         <ProjectDetailTags
           role="Lead UX/Product Designer"
@@ -37,7 +38,7 @@ export default function PropertyIntelligencePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-2 w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block clip-fix"
+          className="clip-fix relative mb-2 inline-block aspect-[16/9] w-full overflow-hidden rounded-lg bg-white shadow-xl"
         >
           <Image
             src="/images/betterview-propertyintelligence2.png"
@@ -57,17 +58,24 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-            Insurance underwriters were drowning in manual processes, spending hours analyzing property data from multiple disconnected sources. The challenge was to design an AI-powered platform that would transform complex property data into actionable insights, reducing claim processing time by 40%.
+          <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">Overview</h3>
+          <p className="mb-6 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            Insurance underwriters were drowning in manual processes, spending hours analyzing
+            property data from multiple disconnected sources. The challenge was to design an
+            AI-powered platform that would transform complex property data into actionable insights,
+            reducing claim processing time by 40%.
           </p>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-            As a Lead UX/Product Designer, my role was to lead the creation of an intuitive data visualization platform that would make complex property risk data accessible and actionable for insurance underwriters.
+          <p className="mb-6 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            As a Lead UX/Product Designer, my role was to lead the creation of an intuitive data
+            visualization platform that would make complex property risk data accessible and
+            actionable for insurance underwriters.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 mb-16">
+
+          <div className="mb-16 grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">My Contribution</h4>
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                My Contribution
+              </h4>
               <ul className="list-none space-y-1 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>UX Design</li>
                 <li>Product Strategy</li>
@@ -76,7 +84,9 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">The Team</h4>
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                The Team
+              </h4>
               <ul className="list-none space-y-1 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>1x Product Manager</li>
                 <li>4x Engineers</li>
@@ -87,21 +97,35 @@ export default function PropertyIntelligencePage() {
           </div>
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">40%</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Faster Processing</div>
+          <div className="mb-12 grid grid-cols-2 gap-6 md:grid-cols-4">
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-6 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mb-2 text-3xl font-bold text-accent-light dark:text-accent-dark">
+                40%
+              </div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">
+                Faster Processing
+              </div>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">60%</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Improved Accuracy</div>
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-6 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mb-2 text-3xl font-bold text-accent-light dark:text-accent-dark">
+                60%
+              </div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">
+                Improved Accuracy
+              </div>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">$2M+</div>
-              <div className="text-sm text-text-light/70 dark:text-text-dark/70">Annual Savings</div>
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-6 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mb-2 text-3xl font-bold text-accent-light dark:text-accent-dark">
+                $2M+
+              </div>
+              <div className="text-sm text-text-light/70 dark:text-text-dark/70">
+                Annual Savings
+              </div>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-6 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <div className="text-3xl font-bold text-accent-light dark:text-accent-dark mb-2">500+</div>
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-6 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mb-2 text-3xl font-bold text-accent-light dark:text-accent-dark">
+                500+
+              </div>
               <div className="text-sm text-text-light/70 dark:text-text-dark/70">Active Users</div>
             </div>
           </div>
@@ -116,14 +140,19 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Research & Discovery</h3>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-            The project began with a deep dive into the current landscape of insurance underwriting processes and the challenges faced by underwriters when analyzing property data.
+          <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+            Research & Discovery
+          </h3>
+          <p className="mb-6 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The project began with a deep dive into the current landscape of insurance underwriting
+            processes and the challenges faced by underwriters when analyzing property data.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+          <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Pain Points</h4>
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                User Pain Points
+              </h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• 3-5 hours per property for manual data analysis</li>
                 <li>• Inconsistent risk assessment methods across teams</li>
@@ -132,7 +161,9 @@ export default function PropertyIntelligencePage() {
               </ul>
             </div>
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">User Needs</h4>
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                User Needs
+              </h4>
               <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Automated risk scoring with high accuracy</li>
                 <li>• Real-time property monitoring and alerts</li>
@@ -142,12 +173,12 @@ export default function PropertyIntelligencePage() {
             </div>
           </div>
 
-          <div className="text-center mb-10">
+          <div className="mb-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="w-full relative aspect-[16/9] bg-white rounded-lg overflow-hidden shadow-xl inline-block mb-4"
+              className="relative mb-4 inline-block aspect-[16/9] w-full overflow-hidden rounded-lg bg-white shadow-xl"
             >
               <Image
                 src="/images/betterview-propertyintelligence1.png"
@@ -156,7 +187,7 @@ export default function PropertyIntelligencePage() {
                 className="object-contain p-4"
               />
             </motion.div>
-            <p className="text-lg text-text-light/80 dark:text-text-dark/80 text-center">
+            <p className="text-center text-lg text-text-light/80 dark:text-text-dark/80">
               Property intelligence user research and wireframes
             </p>
           </div>
@@ -171,16 +202,23 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Design Development</h3>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
-            The design process focused on creating an AI-powered platform that would transform complex property data into actionable insights. Through iterative design and user testing, we developed an intuitive interface that could handle real-time data processing while maintaining usability.
+          <h3 className="mb-8 text-2xl font-bold text-text-light dark:text-text-dark">
+            Design Development
+          </h3>
+          <p className="mb-12 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The design process focused on creating an AI-powered platform that would transform
+            complex property data into actionable insights. Through iterative design and user
+            testing, we developed an intuitive interface that could handle real-time data processing
+            while maintaining usability.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+              <div className="grid grid-cols-1 gap-8 pt-6 md:grid-cols-2">
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Key Features</h4>
+                  <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                    Key Features
+                  </h4>
                   <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                     <li>• AI Risk Scoring</li>
                     <li>• Data Visualization</li>
@@ -189,7 +227,9 @@ export default function PropertyIntelligencePage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Design Process</h4>
+                  <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                    Design Process
+                  </h4>
                   <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                     <li>• User Research</li>
                     <li>• Wireframing</li>
@@ -204,7 +244,7 @@ export default function PropertyIntelligencePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
-                className="w-full h-[400px] relative bg-white rounded-lg overflow-hidden shadow-xl mb-4"
+                className="relative mb-4 h-[400px] w-full overflow-hidden rounded-lg bg-white shadow-xl"
               >
                 <Image
                   src="/images/betterview-propertyintelligence3.png"
@@ -213,7 +253,7 @@ export default function PropertyIntelligencePage() {
                   className="object-contain p-4"
                 />
               </motion.div>
-              <p className="text-lg text-text-light/80 dark:text-text-dark/80 text-center">
+              <p className="text-center text-lg text-text-light/80 dark:text-text-dark/80">
                 Property intelligence data visualization and interface design
               </p>
             </div>
@@ -229,33 +269,44 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Platform Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <h3 className="mb-8 text-2xl font-bold text-text-light dark:text-text-dark">
+            Platform Features
+          </h3>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 group rounded-2xl border border-white/20 bg-white/50 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-accent-light/10 transition-transform duration-300 group-hover:scale-110 dark:bg-accent-dark/10">
                 <span className="text-3xl">🤖</span>
               </div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">AI Risk Scoring</h4>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                Machine learning algorithms analyze property data to generate accurate risk scores automatically.
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                AI Risk Scoring
+              </h4>
+              <p className="leading-relaxed text-text-light/80 dark:text-text-dark/80">
+                Machine learning algorithms analyze property data to generate accurate risk scores
+                automatically.
               </p>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 group rounded-2xl border border-white/20 bg-white/50 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-accent-light/10 transition-transform duration-300 group-hover:scale-110 dark:bg-accent-dark/10">
                 <span className="text-3xl">📊</span>
               </div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Data Visualization</h4>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                Interactive dashboards that make complex property data intuitive and actionable for underwriters.
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                Data Visualization
+              </h4>
+              <p className="leading-relaxed text-text-light/80 dark:text-text-dark/80">
+                Interactive dashboards that make complex property data intuitive and actionable for
+                underwriters.
               </p>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 text-center hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300 group">
-              <div className="w-20 h-20 bg-accent-light/10 dark:bg-accent-dark/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 group rounded-2xl border border-white/20 bg-white/50 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-accent-light/10 transition-transform duration-300 group-hover:scale-110 dark:bg-accent-dark/10">
                 <span className="text-3xl">⚡</span>
               </div>
-              <h4 className="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Real-time Monitoring</h4>
-              <p className="text-text-light/80 dark:text-text-dark/80 leading-relaxed">
-                Continuous property monitoring with instant alerts for condition changes and risk factors.
+              <h4 className="mb-4 text-xl font-semibold text-text-light dark:text-text-dark">
+                Real-time Monitoring
+              </h4>
+              <p className="leading-relaxed text-text-light/80 dark:text-text-dark/80">
+                Continuous property monitoring with instant alerts for condition changes and risk
+                factors.
               </p>
             </div>
           </div>
@@ -270,19 +321,32 @@ export default function PropertyIntelligencePage() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-8 text-text-light dark:text-text-dark">Results & Impact</h3>
-          <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-12">
-            The platform revolutionized how insurance underwriters assess property risk, delivering measurable improvements in efficiency, accuracy, and cost savings.
+          <h3 className="mb-8 text-2xl font-bold text-text-light dark:text-text-dark">
+            Results & Impact
+          </h3>
+          <p className="mb-12 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+            The platform revolutionized how insurance underwriters assess property risk, delivering
+            measurable improvements in efficiency, accuracy, and cost savings.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-lg">Operational Efficiency</h4>
-              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">Reduced claim processing time by 40% and improved data accuracy by 60% through automated AI-powered risk assessment</p>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-8 backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <h4 className="mb-3 text-lg font-semibold text-text-light dark:text-text-dark">
+                Operational Efficiency
+              </h4>
+              <p className="leading-relaxed text-text-light/70 dark:text-text-dark/70">
+                Reduced claim processing time by 40% and improved data accuracy by 60% through
+                automated AI-powered risk assessment
+              </p>
             </div>
-            <div className="bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/15 rounded-2xl p-8 hover:bg-white/60 dark:hover:bg-white/12 transition-all duration-300">
-              <h4 className="font-semibold text-text-light dark:text-text-dark mb-3 text-lg">Business Impact</h4>
-              <p className="text-text-light/70 dark:text-text-dark/70 leading-relaxed">Generated $2M+ in annual cost savings while serving 500+ active users across multiple insurance companies</p>
+            <div className="dark:bg-white/8 dark:hover:bg-white/12 rounded-2xl border border-white/20 bg-white/50 p-8 backdrop-blur-xl transition-all duration-300 hover:bg-white/60 dark:border-white/15">
+              <h4 className="mb-3 text-lg font-semibold text-text-light dark:text-text-dark">
+                Business Impact
+              </h4>
+              <p className="leading-relaxed text-text-light/70 dark:text-text-dark/70">
+                Generated $2M+ in annual cost savings while serving 500+ active users across
+                multiple insurance companies
+              </p>
             </div>
           </div>
         </motion.section>
@@ -296,25 +360,29 @@ export default function PropertyIntelligencePage() {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/projects" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent-light dark:bg-accent-dark text-white dark:text-gray-900 rounded-lg font-semibold hover:bg-accent-light/90 dark:hover:bg-accent-dark/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 rounded-lg bg-accent-light px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-accent-light/90 hover:shadow-xl dark:bg-accent-dark dark:text-gray-900 dark:hover:bg-accent-dark/90"
           >
             View All Projects
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </Link>
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light dark:hover:bg-accent-dark hover:text-white dark:hover:text-gray-900 transition-all duration-300"
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 rounded-lg border-2 border-accent-light px-8 py-4 font-semibold text-accent-light transition-all duration-300 hover:bg-accent-light hover:text-white dark:border-accent-dark dark:text-accent-dark dark:hover:bg-accent-dark dark:hover:text-gray-900"
           >
             Back to Home
           </Link>
         </div>
       </motion.section>
-
     </article>
   );
-} 
+}

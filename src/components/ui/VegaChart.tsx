@@ -33,11 +33,11 @@ function applyTheme(spec: Record<string, unknown>, isDark: boolean) {
   const s = JSON.parse(JSON.stringify(spec)) as Record<string, unknown>;
   s.background = c.background;
 
-  type VegaAxis   = Record<string, unknown>;
+  type VegaAxis = Record<string, unknown>;
   type VegaLegend = Record<string, unknown>;
 
   if (Array.isArray(s.axes)) {
-    s.axes = (s.axes as VegaAxis[]).map((ax) => ({
+    s.axes = (s.axes as VegaAxis[]).map(ax => ({
       ...ax,
       labelColor: c.labelColor,
       tickColor: c.stroke,
@@ -46,7 +46,7 @@ function applyTheme(spec: Record<string, unknown>, isDark: boolean) {
     }));
   }
   if (Array.isArray(s.legends)) {
-    s.legends = (s.legends as VegaLegend[]).map((lg) => ({
+    s.legends = (s.legends as VegaLegend[]).map(lg => ({
       ...lg,
       labelColor: c.legendLabel,
     }));
@@ -54,7 +54,7 @@ function applyTheme(spec: Record<string, unknown>, isDark: boolean) {
   return s;
 }
 
-/** Ease-out cubic — fast start, soft finish */
+/** Ease-out cubic, fast start, soft finish */
 function easeOutCubic(t: number) {
   return 1 - Math.pow(1 - t, 3);
 }
@@ -70,25 +70,30 @@ async function setupDataAnimation(
   view: { change: (n: string, c: unknown) => unknown; runAsync: () => Promise<void> },
   originalRows: DataRow[],
   container: HTMLElement,
-  duration = 1500,
+  duration = 1500
 ) {
-  // We need vega's changeset() helper — import dynamically to keep SSR safe
+  // We need vega's changeset() helper, import dynamically to keep SSR safe
   const { changeset } = await import('vega');
 
   // Initial state: all numerics → 0
-  const zeroed = originalRows.map((row) => {
+  const zeroed = originalRows.map(row => {
     const r: DataRow = {};
     for (const [k, v] of Object.entries(row)) r[k] = typeof v === 'number' ? 0 : v;
     return r;
   });
 
   // Push the zeroed data immediately so the chart renders with flat/empty marks
-  view.change('table', changeset().remove(() => true).insert(zeroed));
+  view.change(
+    'table',
+    changeset()
+      .remove(() => true)
+      .insert(zeroed)
+  );
   await view.runAsync();
 
   // Start animating as soon as the chart scrolls into view
   const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
       if (!entries[0].isIntersecting) return;
       observer.disconnect();
 
@@ -96,9 +101,9 @@ async function setupDataAnimation(
 
       function frame(now: number) {
         const progress = Math.min((now - start) / duration, 1);
-        const eased    = easeOutCubic(progress);
+        const eased = easeOutCubic(progress);
 
-        const current = originalRows.map((row) => {
+        const current = originalRows.map(row => {
           const r: DataRow = {};
           for (const [k, v] of Object.entries(row)) {
             r[k] = typeof v === 'number' ? (v as number) * eased : v;
@@ -106,7 +111,12 @@ async function setupDataAnimation(
           return r;
         });
 
-        view.change('table', changeset().remove(() => true).insert(current));
+        view.change(
+          'table',
+          changeset()
+            .remove(() => true)
+            .insert(current)
+        );
         view.runAsync();
 
         if (progress < 1) requestAnimationFrame(frame);
@@ -114,13 +124,18 @@ async function setupDataAnimation(
 
       requestAnimationFrame(frame);
     },
-    { threshold: 0.25 },
+    { threshold: 0.25 }
   );
 
   observer.observe(container);
 }
 
-export default function VegaChart({ spec, className = '', animate = false, forcedTheme }: VegaChartProps) {
+export default function VegaChart({
+  spec,
+  className = '',
+  animate = false,
+  forcedTheme,
+}: VegaChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef<unknown>(null);
   const { resolvedTheme } = useTheme();
@@ -137,10 +152,10 @@ export default function VegaChart({ spec, className = '', animate = false, force
       let renderSpec = themedSpec;
       if (animate) {
         const specCopy = JSON.parse(JSON.stringify(themedSpec)) as Record<string, unknown>;
-        const dataArr  = specCopy.data as Array<{ name?: string; values?: DataRow[] }> | undefined;
-        const tableDs  = dataArr?.find((d) => d.name === 'table' || !d.name);
+        const dataArr = specCopy.data as Array<{ name?: string; values?: DataRow[] }> | undefined;
+        const tableDs = dataArr?.find(d => d.name === 'table' || !d.name);
         if (tableDs?.values) {
-          tableDs.values = tableDs.values.map((row) => {
+          tableDs.values = tableDs.values.map(row => {
             const r: DataRow = {};
             for (const [k, v] of Object.entries(row)) r[k] = typeof v === 'number' ? 0 : v;
             return r;
@@ -152,20 +167,22 @@ export default function VegaChart({ spec, className = '', animate = false, force
       vegaEmbed(containerRef.current, renderSpec as never, {
         actions: false,
         renderer: 'svg',
-      }).then((result) => {
+      }).then(result => {
         viewRef.current = result.view;
 
         if (animate && containerRef.current) {
           // Extract original (non-zeroed) table values from the unmodified themedSpec
-          const dataArr = (themedSpec.data as Array<{ name?: string; values?: DataRow[] }> | undefined);
-          const tableDs = dataArr?.find((d) => d.name === 'table' || !d.name);
-          const rows    = tableDs?.values ?? [];
+          const dataArr = themedSpec.data as
+            | Array<{ name?: string; values?: DataRow[] }>
+            | undefined;
+          const tableDs = dataArr?.find(d => d.name === 'table' || !d.name);
+          const rows = tableDs?.values ?? [];
 
           if (rows.length > 0) {
             setupDataAnimation(
               result.view as unknown as Parameters<typeof setupDataAnimation>[0],
               rows,
-              containerRef.current,
+              containerRef.current
             );
           }
         }
@@ -178,7 +195,7 @@ export default function VegaChart({ spec, className = '', animate = false, force
         viewRef.current = null;
       }
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resolvedTheme, forcedTheme]);
 
   return <div ref={containerRef} className={`w-full overflow-x-auto ${className}`} />;

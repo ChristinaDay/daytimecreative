@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -27,25 +27,25 @@ export default function SnacksAndKitchensPage() {
     }
   }, []);
   return (
-    <article className="max-w-[100rem] mx-auto px-4 md:px-12 lg:px-20 pt-32 pb-40 text-[#0f172a] dark:text-white">
+    <article className="mx-auto max-w-[100rem] px-4 pb-40 pt-32 text-[#0f172a] dark:text-white md:px-12 lg:px-20">
       {/* Header */}
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         className="mb-16"
-        >
-        <h1 className="text-left text-5xl md:text-5xl lg:text-6xl font-serif font-normal text-text-light dark:text-text-dark leading-hero mb-8">
+      >
+        <h1 className="mb-8 text-left font-serif text-5xl font-normal leading-hero text-text-light dark:text-text-dark md:text-5xl lg:text-6xl">
           ZeroCater – Snacks & Kitchens
-            </h1>
+        </h1>
         <ProjectSubtitle>
           Designing a subscription-based office snack and kitchen service for modern workplaces.
         </ProjectSubtitle>
-            <ProjectDetailTags
-              role="Product Designer & Front-End Engineer"
-              employer="ZeroCater"
-              platforms="React, Web, SaaS, GitHub"
-              areas="Product Design, Front-End Development, UX Research"
+        <ProjectDetailTags
+          role="Product Designer & Front-End Engineer"
+          employer="ZeroCater"
+          platforms="React, Web, SaaS, GitHub"
+          areas="Product Design, Front-End Development, UX Research"
           year="2016-2018"
         />
       </motion.div>
@@ -59,11 +59,11 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6"
         >
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
-            <div className="w-full relative aspect-[16/9]">
+          <div className="clip-fix overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
+            <div className="relative aspect-[16/9] w-full">
               <video
                 ref={videoRef}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
                 controls
                 playsInline
                 muted
@@ -77,7 +77,7 @@ export default function SnacksAndKitchensPage() {
             </div>
           </div>
         </motion.div>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mb-8">
+        <p className="mb-8 text-center text-sm text-text-light/60 dark:text-text-dark/60">
           Live product demo of the Snacks & Kitchens dashboard in action.
         </p>
 
@@ -88,10 +88,10 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
-            <div className="w-full relative aspect-[16/9]">
+          <div className="clip-fix overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
+            <div className="relative aspect-[16/9] w-full">
               <Image
-                src={getImageUrl("zerocater_snacks.jpg")}
+                src={getImageUrl('zerocater_snacks.jpg')}
                 alt="Curated snack selections for every office."
                 fill
                 className="object-cover"
@@ -100,7 +100,7 @@ export default function SnacksAndKitchensPage() {
             </div>
           </div>
         </motion.div>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mb-12">
+        <p className="mb-12 text-center text-sm text-text-light/60 dark:text-text-dark/60">
           Curated snack selections for every office.
         </p>
       </div>
@@ -112,29 +112,38 @@ export default function SnacksAndKitchensPage() {
         transition={{ duration: 0.8 }}
         className="mb-16"
       >
-        <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 p-8 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div>
-              <h3 className="text-lg font-semibold text-rose-400 dark:text-rose-300 mb-3">Problem</h3>
+              <h3 className="mb-3 text-lg font-semibold text-rose-400 dark:text-rose-300">
+                Problem
+              </h3>
               <p className="text-text-light/80 dark:text-text-dark/80">
-                Offices needed a scalable, subscription-based snacks & kitchens service with clear inventory, scheduling, and feedback—without operational chaos.
+                Offices needed a scalable, subscription-based snacks & kitchens service with clear
+                inventory, scheduling, and feedback, without operational chaos.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-emerald-400 dark:text-emerald-300 mb-3">Solution</h3>
+              <h3 className="mb-3 text-lg font-semibold text-emerald-400 dark:text-emerald-300">
+                Solution
+              </h3>
               <p className="text-text-light/80 dark:text-text-dark/80">
-                A unified dashboard with reusable components, operational workflows, and feedback loops that connected customers, operations, and vendors.
+                A unified dashboard with reusable components, operational workflows, and feedback
+                loops that connected customers, operations, and vendors.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-violet-400 dark:text-violet-300 mb-3">Impact</h3>
+              <h3 className="mb-3 text-lg font-semibold text-violet-400 dark:text-violet-300">
+                Impact
+              </h3>
               <p className="text-text-light/80 dark:text-text-dark/80">
-                Faster coordination, higher customer clarity, and a repeatable model used across product teams.
+                Faster coordination, higher customer clarity, and a repeatable model used across
+                product teams.
               </p>
-            </div>
             </div>
           </div>
-        </motion.section>
+        </div>
+      </motion.section>
 
       {/* Overview Section */}
       <div className="py-16">
@@ -144,18 +153,26 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center mb-8">
+          <div className="mb-8 grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Overview</h3>
-              <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-4">
-                As Product Designer and Front-End Engineer, I led the creation of ZeroCater's Snacks & Kitchens dashboard—a subscription-based platform that redefined office catering. Through user research, market analysis, and hands-on development work, I delivered a seamless experience for office managers to manage snack and kitchen supplies, track usage, and optimize workplace satisfaction.
+              <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+                Overview
+              </h3>
+              <p className="mb-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+                As Product Designer and Front-End Engineer, I led the creation of ZeroCater's Snacks
+                & Kitchens dashboard, a subscription-based platform that redefined office catering.
+                Through user research, market analysis, and hands-on development work, I delivered a
+                seamless experience for office managers to manage snack and kitchen supplies, track
+                usage, and optimize workplace satisfaction.
               </p>
               <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
-                The dashboard's intuitive design and data-driven insights empowered clients to make informed decisions, setting a new standard for workplace food services and driving ZeroCater's market expansion.
+                The dashboard's intuitive design and data-driven insights empowered clients to make
+                informed decisions, setting a new standard for workplace food services and driving
+                ZeroCater's market expansion.
               </p>
             </div>
             <div>
-              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
+              <div className="clip-fix overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
                 <div className="relative aspect-[5/4]">
                   <Image
                     src="/images/zerocater-catering-snacks-customer-dashboards.jpg"
@@ -165,7 +182,7 @@ export default function SnacksAndKitchensPage() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
+              <p className="mt-2 text-center text-sm text-text-light/60 dark:text-text-dark/60">
                 Customer dashboard for managing snack and kitchen subscriptions.
               </p>
             </div>
@@ -180,26 +197,36 @@ export default function SnacksAndKitchensPage() {
         transition={{ duration: 0.8 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Dashboard Modules</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Inventory</h4>
-            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Stock levels, reorder points, consumption patterns.</p>
+        <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+          Dashboard Modules
+        </h3>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="dark:bg-white/8 rounded-xl border border-white/20 bg-white/50 p-6 backdrop-blur-xl dark:border-white/10">
+            <h4 className="mb-2 font-semibold text-text-light dark:text-text-dark">Inventory</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Stock levels, reorder points, consumption patterns.
+            </p>
           </div>
-          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Scheduling</h4>
-            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Deliveries, lead times, service windows.</p>
+          <div className="dark:bg-white/8 rounded-xl border border-white/20 bg-white/50 p-6 backdrop-blur-xl dark:border-white/10">
+            <h4 className="mb-2 font-semibold text-text-light dark:text-text-dark">Scheduling</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Deliveries, lead times, service windows.
+            </p>
           </div>
-          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Vendors</h4>
-            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Supplier coordination, substitutions, specials.</p>
+          <div className="dark:bg-white/8 rounded-xl border border-white/20 bg-white/50 p-6 backdrop-blur-xl dark:border-white/10">
+            <h4 className="mb-2 font-semibold text-text-light dark:text-text-dark">Vendors</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Supplier coordination, substitutions, specials.
+            </p>
           </div>
-          <div className="p-6 bg-white/50 dark:bg-white/8 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-xl">
-            <h4 className="font-semibold mb-2 text-text-light dark:text-text-dark">Budgets</h4>
-            <p className="text-sm text-text-light/70 dark:text-text-dark/70">Spend tracking, caps, approvals.</p>
-            </div>
+          <div className="dark:bg-white/8 rounded-xl border border-white/20 bg-white/50 p-6 backdrop-blur-xl dark:border-white/10">
+            <h4 className="mb-2 font-semibold text-text-light dark:text-text-dark">Budgets</h4>
+            <p className="text-sm text-text-light/70 dark:text-text-dark/70">
+              Spend tracking, caps, approvals.
+            </p>
           </div>
-        </motion.section>
+        </div>
+      </motion.section>
 
       {/* Process Section */}
       <div className="py-16">
@@ -209,14 +236,28 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Process</h3>
-              <ul className="space-y-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
-                <li>• Conducted stakeholder interviews, market analysis, and user behavior studies to inform design.</li>
-                <li>• Synthesized complex information into user-friendly dashboard designs through iterative feedback.</li>
-                <li>• Implemented front-end code directly, participating in engineering workflows with GitHub pull requests and code reviews.</li>
-                <li>• Developed a design system and dashboard model for future product development at ZeroCater.</li>
+              <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+                Process
+              </h3>
+              <ul className="mb-8 space-y-4 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+                <li>
+                  • Conducted stakeholder interviews, market analysis, and user behavior studies to
+                  inform design.
+                </li>
+                <li>
+                  • Synthesized complex information into user-friendly dashboard designs through
+                  iterative feedback.
+                </li>
+                <li>
+                  • Implemented front-end code directly, participating in engineering workflows with
+                  GitHub pull requests and code reviews.
+                </li>
+                <li>
+                  • Developed a design system and dashboard model for future product development at
+                  ZeroCater.
+                </li>
               </ul>
             </div>
             <div>
@@ -226,18 +267,18 @@ export default function SnacksAndKitchensPage() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="w-full"
               >
-                <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
+                <div className="clip-fix overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
                   <div className="relative aspect-[16/9]">
                     <Image
                       src="/images/zc_snacks_data-driven.jpg"
                       alt="Data-driven insights for optimizing office snack programs."
                       fill
                       className="object-cover"
-                />
-              </div>
+                    />
+                  </div>
                 </div>
               </motion.div>
-              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
+              <p className="mt-2 text-center text-sm text-text-light/60 dark:text-text-dark/60">
                 Data-driven insights for optimizing office snack programs.
               </p>
             </div>
@@ -246,9 +287,9 @@ export default function SnacksAndKitchensPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-16 mb-8 w-full"
+            className="mb-8 mt-16 w-full"
           >
-            <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
               <div className="relative aspect-[16/9]">
                 <Image
                   src="/images/zerocater_snacks-dashboard3.jpg"
@@ -259,24 +300,24 @@ export default function SnacksAndKitchensPage() {
               </div>
             </div>
           </motion.div>
-          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mb-8">
+          <p className="mb-8 text-center text-sm text-text-light/60 dark:text-text-dark/60">
             Snacks & Kitchens dashboard for office managers.
           </p>
-
-          
         </motion.section>
       </div>
 
       {/* Operational Workflow & Feedback */}
-        <motion.section
+      <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8 }}
         className="mb-16"
       >
-        <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Operational Workflow & Feedback</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden clip-fix">
+        <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+          Operational Workflow & Feedback
+        </h3>
+        <div className="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="clip-fix overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
             <div className="relative aspect-[16/9] bg-white">
               <Image
                 src="/images/zerocater-delivery-feedback_webform.png"
@@ -285,8 +326,8 @@ export default function SnacksAndKitchensPage() {
                 className="object-contain p-4"
               />
             </div>
-              </div>
-          <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
             <div className="relative aspect-[16/9] bg-white">
               <Image
                 src="/images/zerocater-delivery-feedback_email.png"
@@ -297,16 +338,21 @@ export default function SnacksAndKitchensPage() {
             </div>
           </div>
         </div>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center">
-          Feedback flows connected service quality to reorders and scheduling, closing the loop between customers and operations.
+        <p className="text-center text-sm text-text-light/60 dark:text-text-dark/60">
+          Feedback flows connected service quality to reorders and scheduling, closing the loop
+          between customers and operations.
         </p>
-        <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-4">
+        <p className="mt-4 text-center text-sm text-text-light/60 dark:text-text-dark/60">
           Email templates for this program are part of the{' '}
-          <Link href="/projects/design-system" className="underline decoration-dotted hover:text-accent-light dark:hover:text-accent-dark">
+          <Link
+            href="/projects/design-system"
+            className="underline decoration-dotted hover:text-accent-light dark:hover:text-accent-dark"
+          >
             ZeroCater Design System
-          </Link>.
+          </Link>
+          .
         </p>
-        </motion.section>
+      </motion.section>
 
       {/* Communications System moved to Design System page */}
 
@@ -318,8 +364,10 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">My Contributions</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+            My Contributions
+          </h3>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div>
               <ul className="space-y-3 text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Led product design for Snacks & Kitchens from research to delivery</li>
@@ -330,23 +378,39 @@ export default function SnacksAndKitchensPage() {
               </ul>
             </div>
             <div>
-              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl p-6">
+              <div className="rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 p-6 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Role</div>
-                    <div className="text-text-light/70 dark:text-text-dark/70">Product Designer & Front-End Engineer</div>
+                    <div className="mb-1 font-semibold text-text-light dark:text-text-dark">
+                      Role
+                    </div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">
+                      Product Designer & Front-End Engineer
+                    </div>
                   </div>
                   <div>
-                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Focus</div>
-                    <div className="text-text-light/70 dark:text-text-dark/70">Dashboard UX, Components, Tokens</div>
+                    <div className="mb-1 font-semibold text-text-light dark:text-text-dark">
+                      Focus
+                    </div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">
+                      Dashboard UX, Components, Tokens
+                    </div>
                   </div>
                   <div>
-                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Collaboration</div>
-                    <div className="text-text-light/70 dark:text-text-dark/70">Cross-functional with Eng & Ops</div>
+                    <div className="mb-1 font-semibold text-text-light dark:text-text-dark">
+                      Collaboration
+                    </div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">
+                      Cross-functional with Eng & Ops
+                    </div>
                   </div>
                   <div>
-                    <div className="font-semibold text-text-light dark:text-text-dark mb-1">Outcomes</div>
-                    <div className="text-text-light/70 dark:text-text-dark/70">Faster shipping, higher adoption</div>
+                    <div className="mb-1 font-semibold text-text-light dark:text-text-dark">
+                      Outcomes
+                    </div>
+                    <div className="text-text-light/70 dark:text-text-dark/70">
+                      Faster shipping, higher adoption
+                    </div>
                   </div>
                 </div>
               </div>
@@ -358,9 +422,13 @@ export default function SnacksAndKitchensPage() {
       {/* User Flows Section */}
       <div className="py-16">
         <section>
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">User Flows & Research</h3>
-          <p className="text-[1.125rem] text-text-light/80 dark:text-text-dark/80 mb-8 max-w-2xl">
-            Understanding user journeys was central to the design process. We mapped out comprehensive user flows to ensure the snacks and kitchen management experience was intuitive and efficient for office managers.
+          <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">
+            User Flows & Research
+          </h3>
+          <p className="mb-8 max-w-2xl text-[1.125rem] text-text-light/80 dark:text-text-dark/80">
+            Understanding user journeys was central to the design process. We mapped out
+            comprehensive user flows to ensure the snacks and kitchen management experience was
+            intuitive and efficient for office managers.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -368,7 +436,7 @@ export default function SnacksAndKitchensPage() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="mb-8 w-full"
           >
-            <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
               <div className="relative aspect-[16/9]">
                 <Image
                   src="/images/zerocater_snacks-user-flows.png"
@@ -379,7 +447,7 @@ export default function SnacksAndKitchensPage() {
               </div>
             </div>
           </motion.div>
-          <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mb-8">
+          <p className="mb-8 text-center text-sm text-text-light/60 dark:text-text-dark/60">
             User flows for the Snacks & Kitchens platform.
           </p>
         </section>
@@ -393,20 +461,23 @@ export default function SnacksAndKitchensPage() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Results</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+          <h3 className="mb-6 text-2xl font-bold text-text-light dark:text-text-dark">Results</h3>
+          <div className="grid grid-cols-1 items-center justify-center gap-8 md:grid-cols-2">
             <div>
-              <p className="text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-6">
-                The Snacks & Kitchens product launch expanded ZeroCater's market reach, improved customer satisfaction, and became a benchmark for future product development. The dashboard design enhanced user engagement and streamlined subscription management for clients.
+              <p className="mb-6 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
+                The Snacks & Kitchens product launch expanded ZeroCater's market reach, improved
+                customer satisfaction, and became a benchmark for future product development. The
+                dashboard design enhanced user engagement and streamlined subscription management
+                for clients.
               </p>
-              <ul className="space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80 mb-8">
+              <ul className="mb-8 space-y-2 text-[1.375rem] text-text-light/80 dark:text-text-dark/80">
                 <li>• Successful launch and market expansion</li>
                 <li>• Enhanced customer satisfaction and engagement</li>
                 <li>• Model for future product development at ZeroCater</li>
               </ul>
             </div>
             <div>
-              <div className="bg-gradient-to-br from-white/90 to-gray-50/90 dark:from-gray-900/20 dark:to-gray-800/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl overflow-hidden">
+              <div className="overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-xl dark:border-white/10 dark:from-gray-900/20 dark:to-gray-800/20">
                 <div className="relative aspect-[7/5]">
                   <Image
                     src="/images/zerocater-onsite-staff-powered-by-technology.jpg"
@@ -416,7 +487,7 @@ export default function SnacksAndKitchensPage() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-text-light/60 dark:text-text-dark/60 text-center mt-2">
+              <p className="mt-2 text-center text-sm text-text-light/60 dark:text-text-dark/60">
                 Onsite staff powered by technology for seamless service.
               </p>
             </div>
@@ -425,4 +496,4 @@ export default function SnacksAndKitchensPage() {
       </div>
     </article>
   );
-} 
+}
