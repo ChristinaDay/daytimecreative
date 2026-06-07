@@ -30,6 +30,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# job discovery pipeline state + digests (private)
+/data/seen-jobs.json
+/data/digests/
+/data/spend.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

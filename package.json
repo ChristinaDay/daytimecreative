@@ -23,9 +23,13 @@
     "screenshot-updrift": "node scripts/screenshot-updrift.js",
     "screenshot-updrift-logged-in": "node scripts/screenshot-updrift-logged-in.js",
     "screenshot-updrift-logged-in-secure": "node scripts/screenshot-updrift-logged-in-secure.js",
-    "screenshot-updrift-debug": "node scripts/screenshot-updrift-debug.js"
+    "screenshot-updrift-debug": "node scripts/screenshot-updrift-debug.js",
+    "jobs": "node scripts/jobs/run.js",
+    "jobs:reset": "node scripts/jobs/run.js --reset",
+    "jobs:spend": "node scripts/jobs/spend.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.102.0",
     "@eslint/config-array": "^0.20.0",
     "@eslint/object-schema": "^2.1.6",
     "framer-motion": "^11.0.3",
