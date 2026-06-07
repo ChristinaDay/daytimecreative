@@ -8,11 +8,10 @@
 //   node scripts/jobs/run.js --no-score     # skip LLM scoring (offline mode)
 //   node scripts/jobs/run.js --limit 10     # cap scored jobs (cost control)
 
-const fs = require('fs');
 const { fetchRemoteOK } = require('./sources/remoteok');
 const { fetchHackerNews } = require('./sources/hackernews');
 const { fetchWeWorkRemotely } = require('./sources/weworkremotely');
-const { dedupe, persistScores, SEEN_FILE } = require('./dedup');
+const { dedupe, persistScores, resetSeen } = require('./db');
 const { renderDigest, writeDigest } = require('./digest');
 const { scoreJobs, estimateCost } = require('./score');
 const { recordRun } = require('./spend');
@@ -38,7 +37,8 @@ async function main() {
   const args = parseArgs(process.argv);
 
   if (args.reset) {
-    try { fs.unlinkSync(SEEN_FILE); console.log('Cleared dedup state.'); } catch {}
+    resetSeen();
+    console.log('Cleared dedup state.');
   }
 
   // 1. Fetch from each source

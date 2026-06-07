@@ -34,6 +34,9 @@ yarn-error.log*
 /data/seen-jobs.json
 /data/digests/
 /data/spend.json
+/data/jobs.db
+/data/jobs.db-*
+/data/dashboard.html
 
 # typescript
 *.tsbuildinfo
